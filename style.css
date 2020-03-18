@@ -1,7 +1,7 @@
 ﻿body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
-    font-weight:100;
+    font-weight:400;
     color: #6A6A6A;
 }
 
@@ -14,7 +14,9 @@
 }
 
 #widget {
-    padding-top:60px;
+    padding-top: 60px;
+    -webkit-user-select: none;
+    
 }
 
 #title {
