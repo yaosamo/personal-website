@@ -1,44 +1,103 @@
 ﻿body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
-}
-.check {display:none;}
-
-div {margin:auto;
-    column-count:2;
-    max-width: 260px;
-    padding-top: 20px;
- 
-    
-}
-
-#checkmark {display:none;
-}
-ul {padding-left:0px;
-    list-style: none;
-    line-height: 2.4;
+    font-weight:100;
     color: #6A6A6A;
-    font-weight: 100;
 }
 
-#cars {width:240px;
-       float:left;
-}
-#count {
-    float:right;
-    width: 40px;
-    text-align: right;
+::selection {
+    background: #FFF4E3;
 }
 
-ul li {
-    transition: 0.1s;
-    color: #6A6A6A;
-    transform: translateX(0px);
+.col {
+    height:34px;
 }
 
-ul li:hover {
-    cursor:pointer;
+#widget {
+    padding-top:60px;
+}
+
+#title {
+    color: #222222;
+    margin: 0 auto;
+    max-width: 260px; 
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#filters {
+    margin:auto;
+    padding-top: 20px; 
+}
+div {
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.div:hover {
+    cursor: pointer;
     color: #222222;
     transform: translateX(2px);
 }
 
+#cars .div:hover {
+    cursor: pointer; 
+}
+
+label {
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.col input[type="checkbox"] {
+    display: none;  
+}
+
+
+.col label::before {
+    opacity:0;
+    content: "";
+    left: -34px;
+    top:-8px;
+    transition: 150ms ease-in-out;
+    position:absolute;
+    height: 32px;
+    width: 32px;
+    background-image: url(Checked.svg);
+    background-repeat:no-repeat;
+   
+    
+}
+.col input[type="checkbox"] + label {
+
+    display: inline-block;
+}
+
+/*Unhide on the checked state*/
+.col input[type="checkbox"]:checked + label {
+    content: "";
+    display: inline-block;
+    transform: translateX(28px);
+
+}
+
+.col input[type="checkbox"]:checked + label::before {
+        visibility: visible;
+        opacity: 1;
+    }
+
+ul {
+    list-style: none;
+    padding: 0px 0;
+    margin: 0 auto;
+    max-width: 260px;
+}
+
+ul li {
+    display: flex;
+    width: 100%;
+}
+
+ul li a {
+    margin-left: auto;
+}
