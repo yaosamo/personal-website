@@ -47,14 +47,14 @@ div {
 label {
     transition: 100ms ease-in-out;
     cursor: pointer;
-}
-
+} 
+ 
 .col input[type="checkbox"] {
     display: none;  
 }
 
 
-.col label::before {
+.col label::before { 
     opacity:0;
     content: "";
     left: -34px;
@@ -93,7 +93,7 @@ ul {
     max-width: 260px;
 }
 
-ul li {
+ul li { 
     display: flex;
     width: 100%;
 }
