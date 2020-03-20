@@ -1,106 +1,62 @@
-﻿body {
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight:400;
-    color: #6A6A6A;
+@keyframes hello {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
 }
-
-::selection {
-    background: #FFF4E3;
-}
-
-.col {
-    height:34px;
-}
-
-#widget {
-    padding-top: 60px;
-    -webkit-user-select: none;
-    
-}
-
-#title {
-    color: #222222;
-    margin: 0 auto;
-    max-width: 260px; 
-    font-size: 16px;
-    font-weight: 600;
-}
-
-#filters {
-    margin:auto;
-    padding-top: 20px; 
-}
-div {
-    transition: 100ms ease-in-out;
-    cursor: pointer;
-}
-
-.div:hover {
-    cursor: pointer;
-    color: #222222;
-    transform: translateX(2px);
-}
-
-#cars .div:hover {
-    cursor: pointer; 
-}
-
-label {
-    transition: 100ms ease-in-out;
-    cursor: pointer;
-} 
- 
-.col input[type="checkbox"] {
-    display: none;  
-}
-
-
-.col label::before { 
-    opacity:0;
-    content: "";
-    left: -34px;
-    top:-8px;
-    transition: 150ms ease-in-out;
-    position:absolute;
-    height: 32px;
-    width: 32px;
-    background-image: url(Checked.svg);
-    background-repeat:no-repeat;
-   
-    
-}
-.col input[type="checkbox"] + label {
-
-    display: inline-block;
-}
-
-/*Unhide on the checked state*/
-.col input[type="checkbox"]:checked + label {
-    content: "";
-    display: inline-block;
-    transform: translateX(28px);
-    color: #222222;
-
-}
-
-.col input[type="checkbox"]:checked + label::before {
-        visibility: visible;
+    100% {
         opacity: 1;
+        transform: translateY(0px);
     }
+}
 
-ul {
-    list-style: none;
-    padding: 0px 0;
+body {
+    animation: hello 1s 0 1 ease-out;
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight:400;
+    color: #222;
+}
+a:link {
+    color: #222;
+    text-decoration: none;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
     margin: 0 auto;
-    max-width: 260px;
+    z-index: 2;
 }
 
-ul li { 
-    display: flex;
-    width: 100%;
+#grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 50px;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 40px;
+}
+.group {
+    margin: 0 auto;
+    border: 4px;
+    border-color: #000;
+    transition: 0.3s ease-out;
 }
 
-ul li a {
-    margin-left: auto;
+.group:hover {
+    transform: translate3d(10px, 0px, 0px);
+    cursor: pointer;
+}
+
+.image {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    width: 1000px;
+    
+}
+
+.title {
+    margin-top: 30px;
 }
