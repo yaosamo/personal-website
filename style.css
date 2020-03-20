@@ -21,6 +21,10 @@ a:link {
     text-decoration: none;
 }
 
+a:visited {
+    color: #222;
+    text-decoration: none;
+}
 .sticky {
     position: -webkit-sticky;
     position: sticky;
