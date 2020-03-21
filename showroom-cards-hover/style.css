@@ -25,11 +25,11 @@ body {
 }
 
 .card {
-    max-width: 420px;
+    width: 420px;
     background-color: #f9f9f9;
     border-radius: 10px;
     transition: 0.2s ease-out;
-    margin: 10px;
+    margin: 0 auto 20px;
 }
 
 .card:hover {
@@ -93,7 +93,7 @@ body {
     animation: 1s ease-in-out 0s 1 hello;
     background-image: url(cla@2x.png);
     background-size: 380px 254px;
-    width: 380px;
+    max-width: 380px;
     height: 254px;
     margin: 20px;
 }
