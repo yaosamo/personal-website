@@ -16,7 +16,6 @@
 #widget {
     padding-top: 60px;
     -webkit-user-select: none;
-    
 }
 
 #title {
@@ -55,7 +54,6 @@ label {
     display: none;  
 }
 
-
 .col label::before { 
     opacity:0;
     content: "";
@@ -67,8 +65,6 @@ label {
     width: 32px;
     background-image: url(Checked.svg);
     background-repeat:no-repeat;
-   
-    
 }
 .col input[type="checkbox"] + label {
 

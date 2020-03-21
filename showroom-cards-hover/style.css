@@ -9,7 +9,6 @@
     }
 }
 
-
 body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
@@ -18,21 +17,19 @@ body {
 }
 
 #grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap:20px;
+    display: flex;
+    flex-wrap: wrap-reverse;
     margin: 0 auto;
-    width: 870px;
     padding-top: 40px;
-    
+    max-width: 900px;
 }
 
 .card {
-    width: 420px;
-    height: 445px;
+    max-width: 420px;
     background-color: #f9f9f9;
     border-radius: 10px;
     transition: 0.2s ease-out;
+    margin: 10px;
 }
 
 .card:hover {
