@@ -1,4 +1,19 @@
-﻿#Hook {
+﻿#bg {
+    width: 80px;
+    height: 80px;
+    background-color: #777777;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#icon {
+    padding-top: 18px;
+    width: 40px;
+    margin: 0 auto;
+}
+
+
+#Hook {
     
     animation: 3s ease-in-out infinite lock;
     transform-origin: 26px;
