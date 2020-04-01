@@ -93,12 +93,20 @@ button:hover {
 }
 
 #mask {
-    display: none;
-}
-.cross {
-    opacity: 0;
+   opacity: 0;
 }
 
 .i_mic:hover .cross {
-    opacity: 1;
-}
+    stroke-dasharray: 40;
+    animation: dash 1s ease-in-out forwards;
+  }
+
+ 
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 0;
+    }
+    from {
+        stroke-dashoffset: 40;
+      }
+  }
