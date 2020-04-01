@@ -101,7 +101,6 @@ button:hover {
     animation: dash 1s ease-in-out forwards;
   }
 
- 
   @keyframes dash {
     from {
       stroke-dashoffset: 0;
