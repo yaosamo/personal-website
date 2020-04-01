@@ -1,0 +1,104 @@
+﻿body {
+    background-color: #777777;
+}
+
+#bg {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#icon {
+    width: 32px;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+/* Clickable button */
+
+button {
+    outline: 0px;
+    border: none;
+    background: none;
+    transform-origin: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Transition for Full screen and Exit full screen icons */
+
+#corners path {
+    transition: 0.1s ease-out;
+}
+
+/* Full Screen Icon */
+
+.i_fullscr {
+    stroke: white;
+ }
+
+.i_fullscr:hover .tr-corner {
+    transform: translate(1px, -1px); 
+}
+
+.i_fullscr:hover .tl-corner {
+    transform: translate(-1px, -1px); 
+}
+
+.i_fullscr:hover .br-corner {
+    transform: translate(1px, 1px); 
+}
+
+.i_fullscr:hover .bl-corner {
+    transform: translate(-1px, 1px); 
+}
+
+
+/* Exit Full Screen Icon */
+
+.i_exit_fullscr {
+    stroke: white;
+ }
+
+.i_exit_fullscr:hover .tr-corner {
+    transform: translate(-1px, 1px); 
+}
+
+.i_exit_fullscr:hover .tl-corner {
+    transform: translate(1px, 1px); 
+}
+
+.i_exit_fullscr:hover .br-corner {
+    transform: translate(-1px, -1px); 
+}
+
+.i_exit_fullscr:hover .bl-corner {
+    transform: translate(1px, -1px); 
+}
+
+/* Mic Icon */
+
+.body-masked, .leg {
+    fill: white;
+}
+
+.cross {
+    stroke: white;
+}
+
+#Mic path {
+    transition: 0.5s ease-out;
+}
+
+#mask {
+    display: none;
+}
+.cross {
+    opacity: 0;
+}
+
+.i_mic:hover .cross {
+    opacity: 1;
+}

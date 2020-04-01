@@ -1,4 +1,19 @@
-﻿#Hook {
+﻿#bg {
+    width: 80px;
+    height: 80px;
+    background-color: #777777;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#icon {
+    padding-top: 18px;
+    width: 40px;
+    margin: 0 auto;
+}
+
+
+#Hook {
     
     animation: 3s ease-in-out infinite lock;
     transform-origin: 26px;
@@ -13,17 +28,17 @@
     
     30% {
         transform: rotateY(180deg) translateY(0px);
-        clip-path: inset(-10px -10px 0px -20px);
+        
     }
 
     40% {
         transform: rotateY(180deg) translateY(4px);
-        clip-path: inset(-10px -10px 4px -20px);
+        
     }
 
     50%,100% {
         transform: rotateY(180deg) translateY(2px);
-        clip-path: inset(-10px -10px 2px -20px);
+        
     }
 }
 
