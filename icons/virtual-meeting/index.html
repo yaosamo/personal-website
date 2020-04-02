@@ -5,13 +5,19 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">   
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Virtual Meeting Icons</title>
+  <script>$(document).ready(function() {
+    $('button.i_mic').click(function() {
+      $(this).toggleClass("mute");
+    });
+  });</script>
 </head>
 <body>
     <div id="bg">
         <!-- Full screen icon -->
-        <div id="icon">
+        <div class="icon">
             <button class="i_fullscr">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <g id="corners">
@@ -25,7 +31,7 @@
             </div>
 
         <!-- Exit full screen icon -->
-        <div id="icon">
+        <div class="icon">
             <button class="i_exit_fullscr">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <g id="corners">
@@ -39,8 +45,9 @@
             </div>
 
         <!-- Mic -->
-        <div id="icon">
+        <div class="icon">
             <button class="i_mic">
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <g id="Mic">
                         <rect class="leg" x="13" y="26" width="6" height="2" rx="1"/>
@@ -56,7 +63,7 @@
                         <path class="body" fill-rule="evenodd" clip-rule="evenodd" d="M16 5C13.7909 5 12 6.79086 12 9V17C12 19.2091 13.7909 21 16 21C18.2091 21 20 19.2091 20 17V9C20 6.79086 18.2091 5 16 5ZM10 14C10 13.4477 9.55228 13 9 13C8.44772 13 8 13.4477 8 14V17C8 21.4183 11.5817 25 16 25C20.4183 25 24 21.4183 24 17V14C24 13.4477 23.5523 13 23 13C22.4477 13 22 13.4477 22 14V17C22 20.3137 19.3137 23 16 23C12.6863 23 10 20.3137 10 17V14Z" />
                         </g>
                         </g>
-                        <path class="cross" d="M22.7778 5L8 24.95" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <path class="cross" d="M22.7778 5L8 24.95" stroke-width="2" stroke-linecap="round"/>
                         </g>
                         </svg>
             </button>
