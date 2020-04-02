@@ -4,14 +4,19 @@
 
 #bg {
     display: flex;
-    width: 50%;
+    max-width: 860px;
+    justify-content: center;
     margin: 0 auto;
 }
 
 #icon {
-    width: 32px;
-    margin: 0 auto;
-    padding-top: 32px;
+    margin: 10px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Clickable button */
@@ -88,23 +93,30 @@ button:hover {
     stroke: white;
 }
 
-#Mic path {
-    transition: 0.5s ease-out;
+.rects {
+    
+    transform: rotate(-54deg);
 }
 
-#mask {
-   opacity: 0;
+.i_mic:hover .shutter {
+    animation: shut 0.3s linear;
 }
+
+@keyframes shut {
+    from {
+        transform: translateX(-9px);
+      }
+      to {
+        transform: translateX(-52px);
+      }
+  }
 
 .i_mic:hover .cross {
     stroke-dasharray: 40;
-    animation: dash 1s ease-in-out forwards;
+    animation: dash 0.3s linear;
   }
 
   @keyframes dash {
-    from {
-      stroke-dashoffset: 0;
-    }
     from {
         stroke-dashoffset: 40;
       }
