@@ -106,7 +106,7 @@ button:hover {
 
 /* Animation to mute */
 .i_mic.mute .shutter {
-    animation: close-shut 0.4s ease-in; 
+    animation: close-shut 0.4s ease-in-out; 
 }
 
 @keyframes close-shut {
@@ -120,8 +120,8 @@ button:hover {
 
 .i_mic.mute .cross {
     opacity: 1;
-    stroke-dasharray: 80;
-    animation: close-cross 0.4s ease-in forwards;
+    animation: close-cross 0.4s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
   @keyframes close-cross {
@@ -136,12 +136,12 @@ button:hover {
   /* Animation to unmute */
 
 .i_mic .shutter {
-    animation: open-shut 0.4s ease-in; 
+    animation: open-shut 0.4s ease-in-out;
 }
 
 @keyframes open-shut {
     from {
-        transform: translateX(-42px);
+        transform: translateX(-72px);
       }
      to {
         transform: translateX(-5px);
@@ -151,7 +151,8 @@ button:hover {
 .i_mic .cross {
     opacity: 1;
     stroke-dasharray: 80;
-    animation: open-cross 0.4s ease-out;
+    animation: open-cross 0.4s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes open-cross {
