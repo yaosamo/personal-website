@@ -2,7 +2,7 @@
     background-color: #777777;
 }
 
-#bg {
+.row {
     display: flex;
     max-width: 860px;
     justify-content: center;
@@ -95,7 +95,7 @@ button:hover {
 .cross {
     stroke-dashoffset: 40;
     stroke: white;
-    opacity: 0;
+   
 }
 
 /* Turn mask on -54degree */
