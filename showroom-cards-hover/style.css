@@ -40,6 +40,7 @@ body {
 }
 
 .card {
+    display: none;
     animation: .3s 0s ease-out 1 hello;
     width: 420px;
     background-color: #fff;

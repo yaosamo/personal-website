@@ -13,9 +13,20 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8" />
     <title>Showroom card hover</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    
 </head>
 <body>
+    <script>
+        $('.card').each(function(i){
+    var card = $(this);
+    card.delay( i + '100' ).fadeIn('400')
+});
+    </script>
     <div id="grid">
+       
         <div class="card">
             <div class="info"></div>
                 <div class="header">
