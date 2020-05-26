@@ -98,6 +98,7 @@ body {
     
 }
 
+/* buttons start  */
 .button {
     transition: 1s linear;
     width: 46px;
@@ -121,103 +122,135 @@ body {
     width: 100%;
     height: 100%;
     background-color: #DB4A67;
-
-   
     border-radius: 100%;
     transform: scale(1);
 }
 
 .button:hover {
-    cursor: pointer;
-   
-    
+    cursor: pointer; 
 }
+
 .button:hover::before {
     transform: scale(25);
     z-index: -10;
     visibility: visible;
 }
 
-.title_a .button:hover::before {
-    color: #fff;
+/* buttons start  */
+.button2 {
+    transition: 1s linear;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    float: right;
+    position: relative;
+    
 }
 
-/* .ripple {
-    position: relative;
-    overflow: hidden;
-} 
-
-
-.ripple:after {
-    z-index: -1;
-    content: "";
-    background: #D2435F;
+.button2::before {
+    visibility: hidden;
+    pointer-events: none;
+    content: '';
+    transition:  .4s ease-out 0s;
     display: block;
     position: absolute;
-    border-radius: 50%;
-    top: 0px;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    width: 900px;
-    height: 900px;
-    opacity: 1;
-    transition: 1s;
+    width: 100%;
+    height: 100%;
+    background-color: #DCDEDF;
+    border-radius: 100%;
+    transform: scale(1);
 }
-.ripple:after {
-    top: 375px;
-    left: 312px;
-    height: 10px;
-    width: 10px;
-    opacity: 0;
-    transition: 0s;
-}  */
 
+.button2:hover {
+    cursor: pointer; 
+}
 
-/* Ripple effect */
-/* .ripple {
+.button2:hover::before {
+    transform: scale(25);
+    z-index: -10;
+    visibility: visible;
+}
+
+/* buttons start  */
+.button3 {
+    transition: 1s linear;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    float: right;
+    position: relative;
     
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
-    background: linear-gradient(180deg, rgba(128,23,39,1) 0%, rgba(227,80,109,1) 100%);
-  }
+}
 
-  .ripple:hover {
-    
-  }
-
- */
-
-
-/* Kinda works  */
- /* .ripple {
-    transition: .4s ease-out;
-    background: radial-gradient(circle, #E3506D 10%, #000 10%) center;
-    background-size: 100%;
-  }
-  .ripple:hover {
-    background: #fff;
-    background: radial-gradient(circle, #E3506D 10%, #000 10%) center;
-    background-size: 1500%;
-  }   */
-
-
-.ripple {
+.button3::before {
+    visibility: hidden;
+    pointer-events: none;
+    content: '';
+    transition:  .4s ease-out 0s;
+    display: block;
     position: absolute;
-    border-radius: 50%;
-    background-size: 100%;
-    color: #E3506D;
+    width: 100%;
+    height: 100%;
+    background-color: #D0CFCB;
+    border-radius: 100%;
+    transform: scale(1);
+}
+
+.button3:hover {
+    cursor: pointer; 
+}
+
+.button3:hover::before {
+    transform: scale(25);
+    z-index: -10;
+    visibility: visible;
+}
+
+/* buttons start  */
+.button4 {
+    transition: 1s linear;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    float: right;
+    position: relative;
+    
+}
+
+.button4::before {
+    visibility: hidden;
+    pointer-events: none;
+    content: '';
+    transition:  .4s ease-out 0s;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #494240;
+    border-radius: 100%;
+    transform: scale(1);
+}
+
+.button4:hover {
+    cursor: pointer; 
+}
+
+.button4:hover::before {
+    transform: scale(25);
+    z-index: -10;
+    visibility: visible;
 }
 
 
-/* @keyframes fancy {
-    0% {
-        width: 100%;
-}
-    100% {
-        width: 200%;
-
-    }
-}  */
 
 .arrow {
     width: 24px;
@@ -230,6 +263,36 @@ body {
 .image {
     animation: 0.2s ease-out 0s 1 hello;
     background-image: url(1@2x.png);
+    background-size: 384px 288px;
+    max-width: 380px;
+    height: 254px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.image2 {
+    animation: 0.2s ease-out 0s 1 hello;
+    background-image: url(2@2x.png);
+    background-size: 384px 288px;
+    max-width: 380px;
+    height: 254px;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.image3 {
+    animation: 0.2s ease-out 0s 1 hello;
+    background-image: url(3@2x.png);
+    background-size: 384px 288px;
+    max-width: 380px;
+    height: 254px;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.image4 {
+    animation: 0.2s ease-out 0s 1 hello;
+    background-image: url(4@2x.png);
     background-size: 384px 288px;
     max-width: 380px;
     height: 254px;
