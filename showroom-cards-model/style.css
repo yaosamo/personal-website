@@ -47,7 +47,7 @@ body {
     flex-wrap: wrap-reverse;
     margin: 0 auto;
     padding-top: 40px;
-    max-width: 1500px;
+    max-width: 90%;
 }
 
 .card {
@@ -55,7 +55,7 @@ body {
     position: relative;  
     overflow: hidden;
     animation: .3s 0s ease-out 1 hello;
-    width: 360px;
+    min-width: 310px;
     background-color: #fff;
     border-radius: 10px;
     transition: 0.2s ease-out;
