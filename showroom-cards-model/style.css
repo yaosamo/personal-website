@@ -43,11 +43,9 @@ body {
 }
 
 #grid {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    margin: 0 auto;
+    display: grid;
     padding-top: 40px;
-    max-width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -59,7 +57,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     transition: 0.2s ease-out;
-    margin: 0 auto 20px;
+    margin: 10px;
 }
 
 .title_a {
