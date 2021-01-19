@@ -1,0 +1,40 @@
+﻿
+#Doc1 {
+    animation: dropdoc 1.5s infinite ease-in-out;
+}
+
+@keyframes dropdoc {
+    
+    0% {
+        opacity:0;
+        transform: translateY(0px);
+    }
+    20% {
+        opacity: 1;
+    }
+    79% {
+        transform: translateY(62px);
+    }
+    80%, 100% {
+        transform: translateY(62px);
+    }
+}
+
+#docs-move {
+    animation: stack 1.5s infinite ease-in-out;
+}
+
+
+@keyframes stack {
+    48% {
+        transform: translateY(0px);
+    }
+
+    79% {
+        transform: translateY(8px);
+    }
+    80%, 100% {
+        transform: translateY(8px);
+    }
+}
+  

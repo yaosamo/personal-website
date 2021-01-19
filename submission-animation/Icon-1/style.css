@@ -1,0 +1,70 @@
+﻿
+#Doc0 {
+    animation: doc-zero 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-zero {
+
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    30% {
+        opacity: 0;
+    }
+   60% {
+        opacity: 1;
+    }
+    
+   100% {
+        transform: translate(3.2px, -7px) scale(0.921);
+    }
+}
+
+#Doc1 {
+    animation: doc-one 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-one {
+
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translate(5.7px, -5.9px) scale(0.865);
+    }
+}
+#Doc2 {
+    animation: doc-two 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-two {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translate(7.5px, -4.8px) scale(0.82);
+    }
+}
+#Doc3 {
+    animation: doc-three 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-three {
+
+    0% {
+        
+        transform: translateY(0px);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(7.5px, -4.8px) scale(0.82);
+    }
+}
+
+ 
