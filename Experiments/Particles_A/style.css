@@ -37,3 +37,8 @@ html, body, canvas {
 }
 
 
+@font-face {
+	font-family: 'fraunces_72pt-regular';
+	src: url('fonts/fraunces_72pt-regular.ttf') format('truetype');
+}
+
