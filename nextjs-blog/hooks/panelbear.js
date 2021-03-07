@@ -20,6 +20,3 @@ export const usePanelbear = (site, config = {}) => {
     };
   }, []);
 };
-
-content_copy
-Copy
