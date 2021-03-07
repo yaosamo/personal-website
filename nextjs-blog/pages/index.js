@@ -1,8 +1,15 @@
 import Layout from '../components/layout'
+import Head from 'next/head'
 
 export default function Podcast() {
   return ( //layout - parent with all global styles but child has content indes/about.  
     <Layout>
+      
+      <Head>
+        <title>And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov.</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <div className="header">
         <div className="logo">
             <img src="../images/logo.svg" alt="And designer podcast" />
