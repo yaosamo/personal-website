@@ -193,6 +193,7 @@ export default function Podcast() {
         }
 
         a {
+          color: inherit;
           text-decoration: none;
         }
 
