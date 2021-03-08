@@ -1,2 +1,2 @@
-# Hey, 
-My personal website
+# Hey, there!
+It's my personal website yaosamo.com
