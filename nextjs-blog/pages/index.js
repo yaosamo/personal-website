@@ -2,7 +2,7 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 
 export default function Podcast() {
-  return ( //layout - parent with all global styles but child has content indes/about.  
+  return ( //layout - parent with all global styles but child has content indes/about.  test
     <Layout>
       
       <Head>
@@ -19,7 +19,7 @@ export default function Podcast() {
       </div>
 
       <div className="intro">
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="175" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/intro/id1555995946?i=1000511073575&theme=light"></iframe>
+       <iframe media="(prefers-color-scheme: light)" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="175" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/intro/id1555995946?i=1000511073575&theme=dark"></iframe>
       </div>
 
       <div className="listen">
@@ -51,7 +51,7 @@ export default function Podcast() {
 
             <div className="row">
               <div>
-                <img src="../images/Spotify@2x.jpg" alt="Spotify" className="source-logo"/>
+                <img src="../images/Spotify@2x.svg" alt="Spotify" className="source-logo"/>
               </div>
               
               <div>
@@ -68,7 +68,7 @@ export default function Podcast() {
              
             <div className="row">
               <div>
-                <img src="../images/GooglePodcasts@2x.jpg" alt="Google Podcasts" className="source-logo"/>
+                <img src="../images/GooglePodcasts@2x.svg" alt="Google Podcasts" className="source-logo"/>
               </div>
               
               <div>
@@ -85,7 +85,7 @@ export default function Podcast() {
 
             <div className="row">
               <div>
-                <img src="../images/YouTube@2x.jpg" alt="YouTube" className="source-logo"/>
+                <img src="../images/YouTube@2x.svg" alt="YouTube" className="source-logo"/>
               </div>
               
               <div>
@@ -102,7 +102,7 @@ export default function Podcast() {
             <div className="row">
               
               <div>
-                <img src="../images/SoundCloud@2x.jpg" alt="SoundCloud" className="source-logo"/>
+                <img src="../images/SoundCloud@2x.svg" alt="SoundCloud" className="source-logo"/>
               </div>
               
               <div>
@@ -161,11 +161,6 @@ export default function Podcast() {
           padding: 8px;
         }
 
-        .column:hover {
-          cursor: pointer;
-          background: #F9F9F9
-        }
-
         .wrapper h1 {
           padding: 0px;
         }
@@ -193,6 +188,7 @@ export default function Podcast() {
         }
 
         a {
+          color: inherit;
           text-decoration: none;
         }
 

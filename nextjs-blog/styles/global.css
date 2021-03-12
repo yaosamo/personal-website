@@ -15,3 +15,26 @@ h1 {
 p {
     font-size: 1em;
 }
+@media (prefers-color-scheme: dark) {
+    /* All text and bg */
+    body {
+        background-color: #151618;
+        color: #F6F6F6;
+    }
+    .column:hover {
+        cursor: pointer;
+        background: #232426;
+      }
+  }
+
+  @media (prefers-color-scheme: light) {
+    /* All text and bg */
+    body {
+        color: #151618;
+    }
+    /* Listen on hover */
+    .column:hover {
+        cursor: pointer;
+        background: #F9F9F9;
+      }
+  }
