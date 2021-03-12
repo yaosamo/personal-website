@@ -6,8 +6,13 @@ export default function Podcast() {
     <Layout>
       
       <Head>
-        <title>And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov.</title>
+        <title>Podcast "And Designer"</title>
+        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov."/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:url" content="https://yaosamo.com" />
+        <meta property="og:title" content="Podcast 'And Designer'" />
+        <meta property="og:description" content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov." />
+        <meta property="og:image" content="../hi.jpg" />
       </Head>
 
       <div className="header">
