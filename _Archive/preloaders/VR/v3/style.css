@@ -1,0 +1,131 @@
+﻿.btn {
+    width: 360px;
+    height: 100px;
+
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 960px;
+
+}
+
+svg {
+    margin: auto;
+}
+
+#car {
+    opacity: 0;
+    transform-origin: 42%;
+    animation: car 4s infinite cubic-bezier(.2, .3, .8, .2);
+}
+
+@keyframes car {
+    0%,20% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    40%,80% {
+        opacity: 1;
+    }
+
+    90%,100% {transform: scale(1);
+        transform: translate(0px,0px);
+    }
+}
+
+#a {
+    opacity: 0;
+    animation: a 4s infinite .1s ease-out;
+}
+
+@keyframes a {
+    0%,20% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+    40%,80% {
+        opacity: 1;
+    }
+
+    90%,100% {
+        transform: translate(-2px,0px)
+    }
+}
+
+#b {
+    opacity: 0;
+    animation: a 4s infinite .4s ease-out;
+}
+
+@keyframes b {
+    0%,20% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+    40%,80% {
+        opacity: 1;
+    }
+    90%,100% {
+        transform: translate(-2px,0px)
+    }
+}
+
+#c {opacity: 0;
+    animation: c 4s infinite .7s ease-out;
+}
+
+@keyframes c {
+    0%,20% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+    40%,80% {
+        opacity: 1;
+    }
+    90%,100% {
+        opacity: 0;
+        transform: translate(0px,-2px)
+    }
+}
+
+#d {
+    opacity: 0;
+    animation: d 4s infinite 1s ease-out;
+}
+
+@keyframes d {
+    0%,20% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+    40%,80% {
+        opacity: 1;
+    }
+    90%,100% {
+        opacity: 0;
+        transform: translate(2px,-2px)
+    }
+}
+
+#e {
+    opacity: 0;
+    animation: e 4s infinite 1.3s ease-out;
+}
+
+@keyframes e {
+    0%,20% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+    40%,70% {
+        opacity: 1;
+    }
+    90%,100% {
+        opacity: 0;
+        transform: translate(2px,0px)
+    }
+}

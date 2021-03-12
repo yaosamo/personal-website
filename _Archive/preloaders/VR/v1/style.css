@@ -1,0 +1,141 @@
+﻿.icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 960px;
+
+}
+
+svg {
+    margin: auto;
+}
+
+#car {
+    opacity: 0;
+    transform-origin: 42%;
+    animation: car 3s infinite ease-in-out;
+}
+
+@keyframes car {
+    0%,20% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50%,70% {
+        opacity: 1;
+        transform: scale(1);}
+
+    90%,100% {
+        opacity: 0;
+    }
+}
+
+
+#a {
+    opacity: 0;
+    animation: a 3s infinite ease-out;
+}
+
+@keyframes a {
+    0%,45% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+
+    50%,80% {opacity: 1;
+        transform: translate(-10px,0px)
+    }
+
+    84%,100% {
+        opacity: 0;
+        transform: translate(-10px,0px)
+    }
+}
+
+
+#b {opacity: 0;
+    animation: b 3s infinite ease-out;
+}
+
+@keyframes b {
+    0%,45% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+
+    50%,80% {opacity: 1;
+        transform: translate(-10px,-10px)}
+
+    88%,100% {
+        opacity: 0;
+        transform: translate(-10px,-10px)
+    }
+}
+
+#c {
+    opacity: 0;
+    animation: c 3s infinite ease-out;
+}
+
+@keyframes c {
+    0%,45% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+
+    50%,80% {
+        opacity: 1;
+        transform: translate(0px,-10px)}
+
+    92%,100% {
+        opacity: 0;
+        transform: translate(0px,-10px)
+    }
+}
+
+#d {
+    opacity: 0;
+    animation: d 3s infinite ease-out;
+}
+
+@keyframes d {
+    0%,45% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+
+    50%,80% {opacity: 1;
+        transform: translate(10px,-10px)
+    }
+
+    94%,100% {
+        opacity: 0;
+        transform: translate(10px,-10px)
+    }
+}
+
+
+#e {
+    opacity: 0;
+    animation: e 3s infinite ease-out;
+}
+
+@keyframes e {
+    0%,45% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+
+    50%,80% {
+        opacity: 1;
+        transform: translate(10px,0px)
+    }
+
+    98%,100% {
+        opacity: 0;
+        transform: translate(10px,0px)
+    }
+}
+
+
