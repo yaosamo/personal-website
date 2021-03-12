@@ -7,11 +7,16 @@ export default function Layout({ children }) {
     
     <Head>
         <title>Podcast "And Designer"</title>
-        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov." />
-        <meta property="og:url" content="https://yaosamo.com" />
-        <meta property="og:title" content="Podcast 'And Designer'" />
+        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@yaosamo"/>
+        <meta name="twitter:creator" content="@yaosamo"/>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:url" content="https://yaosamo.com"/>
+        <meta property="og:title" content="Podcast 'And Designer'"/>
         <meta property="og:description" content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov." />
-        <meta property="og:image" content="https://www.apple.com/v/iphone-12/f/images/specs/dimensions_iphone12__da0hivvaydw2_large_2x.jpg" />
+        <meta property="og:image" content="https://www.apple.com/v/iphone-12/f/images/specs/dimensions_iphone12__da0hivvaydw2_large_2x.jpg"/>
+        <meta property="og:site_name" content="And designer"></meta>
       </Head>  
     
     </div>
