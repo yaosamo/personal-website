@@ -1,0 +1,120 @@
+@keyframes hello {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+}
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes hello-colors {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+}
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:400;
+    color: #222;
+    background: #F6F8F9;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
+    padding-top: 40px;
+    max-width: 880px;
+}
+
+.card {
+    animation: .3s 0s ease-out 1 hello;
+    width: 420px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.2s ease-out;
+    margin: 0 auto 20px;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.info {
+    animation: .5s ease-out 0s 1 hello;
+    background-image: url(info.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    float: right;
+    margin: 20px 20px 0 0;
+}
+
+.header {
+    animation: .5s ease-out 0s 1 hello;
+    margin: 20px 0 0 20px;
+}
+
+.footer {
+    animation: .s ease-out 0s 1 hello;
+    margin: 20px;
+}
+
+.bold-title {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.colors {
+    display: flex;
+    float: right;
+   
+}
+
+.exterior {
+    animation: 1s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 hello-colors;
+    background-color: #C43446;
+    width: 22px;
+    height: 22px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.interior {
+    animation: 1s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 hello-colors;
+    background-color: #000000;
+    width: 22px;
+    height: 22px;
+    border-radius: 12px;
+    
+}
+
+.image {
+    animation: 1s ease-out 0s 1 hello;
+    background-image: url(cla@2x.png);
+    background-size: 380px 254px;
+    max-width: 380px;
+    height: 254px;
+    margin: 20px;
+}

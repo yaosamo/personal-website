@@ -1,0 +1,44 @@
+﻿
+#Envelope {
+    
+    animation: fly 2s infinite ease-in-out;
+}
+
+@keyframes fly {
+
+    0% {
+        
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translate(-4px,-15px) rotate(-6deg);
+    }
+
+
+    100% {
+        transform: translateY(0px);
+        
+    }
+}
+
+#Shadow {
+    transform-origin: center;
+    animation: copy 2s infinite ease-in-out;
+}
+
+
+@keyframes copy {
+    0% {
+        transform: translateX(-3px) scaleX(0.8);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateX(4px) scaleX(1.05);
+    }
+    100% {
+        transform: translateX(-3px) scaleX(0.8);
+    }
+   
+}

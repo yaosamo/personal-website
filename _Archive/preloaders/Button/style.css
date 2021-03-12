@@ -1,0 +1,45 @@
+﻿body {background: black}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 960px;
+
+}
+
+svg {
+    margin: auto;
+}
+
+.A {
+    transform-origin: center;
+    animation: right 1.5s infinite ease-in-out;
+}
+
+@keyframes right {
+    0%,100% {
+        -webkit-transform: scale(1) translateX(0);
+    }
+
+    50% {
+        -webkit-transform: scale(0.8) translateX(-16px);
+    
+    }
+}
+
+.B {
+    transform-origin: center;
+    animation: left 1.5s infinite ease-in-out;
+}
+
+@keyframes left {
+    0%,100% {transform: scale(1) translateX(0px);
+    }
+
+    50% {
+
+        transform: scale(0.8) translateX(16px);
+    }
+}
+
