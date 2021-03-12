@@ -1,20 +1,11 @@
+
 import Layout from '../components/layout'
-import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Podcast() {
-  return ( //layout - parent with all global styles but child has content indes/about.  test
+  return ( //layout - parent with all global styles but child has content indes/about.
     <Layout>
-      
-      <Head>
-        <title>Podcast "And Designer"</title>
-        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov."/>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:url" content="https://yaosamo.com" />
-        <meta property="og:title" content="Podcast 'And Designer'" />
-        <meta property="og:description" content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov." />
-        <meta property="og:image" content="../hi.jpg" />
-      </Head>
-
+  
       <div className="header">
         <div className="logo">
             <img src="../images/logo.svg" alt="And designer podcast" />
@@ -120,7 +111,6 @@ export default function Podcast() {
 
       </div>
      
-
       <style jsx>{`
         .logo {
           display: flex;
@@ -218,6 +208,7 @@ export default function Podcast() {
 
 
       `}</style> 
+     
     </Layout>
     )
 }
