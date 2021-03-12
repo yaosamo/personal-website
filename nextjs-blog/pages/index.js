@@ -2,7 +2,7 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 
 export default function Podcast() {
-  return ( //layout - parent with all global styles but child has content indes/about.  
+  return ( //layout - parent with all global styles but child has content indes/about.  test
     <Layout>
       
       <Head>
