@@ -11,7 +11,7 @@ export default function Podcast() {
             <img src="../images/logo.svg" alt="And designer podcast" />
         </div>
         <h1 className="title">And designer</h1>
-        <p className="subtitle">It’s a podcast where we expose<br></br>design to other areas</p>
+        <p className="subtitle">A podcast where we explore different aspects of design, technology and business through the lenses of a product designer. Hosted by <a href="https://twitter.com/yaosamo" target="_blank">Yaroslav Samoylov.</a></p>
       </div>
 
       <div className="intro">
@@ -74,7 +74,7 @@ export default function Podcast() {
             </div>
           </div>
           </a>
-
+           
           {/* SoundCloud */}
           <a href="https://soundcloud.com/and-designer" target="_blank">
           <div className="column">
@@ -92,6 +92,24 @@ export default function Podcast() {
           </div>
           </a>
 
+
+          {/* YouTube */}
+          <a href="https://www.youtube.com/channel/UChbFqLnIY9kh_nLHGrV0A7Q/videos" target="_blank">
+           <div className="column">
+            <div className="row">
+              <div>
+                <img src="../images/YouTube@2x.svg" alt="YouTube" className="source-logo"/>
+              </div>
+              
+              <div>
+                <p className="source-name">YouTube</p>
+              </div>
+            </div>
+
+          </div>
+          </a>
+
+
       </div>
      
       <style jsx>{`
@@ -108,6 +126,15 @@ export default function Podcast() {
         .subtitle {
           text-align: center;
           margin-block-start: 0.5em;
+          max-width: 20rem; 
+        }
+
+        .subtitle a {
+          color: #7B7D83
+        }
+
+        .subtitle a:hover {
+          color: inherit;
         }
 
         h1 {
@@ -121,7 +148,7 @@ export default function Podcast() {
         }
 
         .intro {
-          margin-block-start: 1.5em;
+          margin-block-start: 2em;
           margin-block-end: 2em;
         }
 
