@@ -92,24 +92,6 @@ export default function Podcast() {
           </div>
           </a>
 
-
-          {/* YouTube */}
-          <a href="https://www.youtube.com/channel/UChbFqLnIY9kh_nLHGrV0A7Q/videos" target="_blank">
-           <div className="column">
-            <div className="row">
-              <div>
-                <img src="../images/YouTube@2x.svg" alt="YouTube" className="source-logo"/>
-              </div>
-              
-              <div>
-                <p className="source-name">YouTube</p>
-              </div>
-            </div>
-
-          </div>
-          </a>
-
-
       </div>
      
       <style jsx>{`
