@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Head from 'next/Head'
+import Head from 'next/head'
 import Layout from '/components/layout'
 
 
