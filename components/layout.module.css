@@ -4,10 +4,10 @@
     padding-block-start: 4rem;
     padding-block-end: 4rem;
     margin: 0 auto;
-    border: 1px dotted purple;
+    /* border: 1px dotted purple; */
   }
 
 .container {
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
   margin: 1rem;
 }

@@ -41,7 +41,7 @@ export default function Podcast() {
         <div className="logo">
             <img src="../images/podcast/logo.svg" alt="And designer podcast" />
         </div>
-        <h1 className="title">And designer</h1>
+        <h1 className="title">And Designer</h1>
         <p className="subtitle">A podcast where we explore different aspects of design, technology and business through the lenses of a product designer. Hosted by <a href="https://twitter.com/yaosamo" target="_blank">Yaroslav Samoylov.</a></p>
       </div>
 

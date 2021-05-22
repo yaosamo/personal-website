@@ -10,27 +10,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="title">
+        <h1>
         Hayo! I’m Yaroslav Samoylov
         </h1>
 
         <p className="description">
-        A curious and multidisciplinary designer from Russia based in Hillsboro, Oregon 🌲. Currently @gubagoo, where we're building modern service to buy car online.
+        A curious and multidisciplinary designer from Russia based in Hillsboro, Oregon 🌲. Currently <a href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
         </p>
 
         <div className="grid">
-
-          <a className="card"><Link href="/things/podcast/">
-            <h3>Podcast "And Designer" &rarr;</h3></Link>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <h2>Things I create</h2>
+          
+          <div className="card"><Link href="/things/podcast/">
+            <h3>Podcast "And Designer"</h3></Link>
+            <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
+          </div>
         </div>
-      </main>
 
       <footer>
         <a>
-          Cool people and friends (A to Z){' '}
+        Some great people (A → Z):{' '} Denis Sharypin, Luc Mikelsons, Melkeydev, Soulprovider. 
         </a>
       </footer>
 
@@ -44,22 +43,13 @@ export default function Home() {
           align-items: left;
         }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: left;
-          align-items: left;
-        }
-
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: left;
           align-items: left;
+          margin-block-start: 3rem;
         }
 
         footer img {
@@ -71,29 +61,7 @@ export default function Home() {
           justify-content: left;
           align-items: left;
         }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
+       
         .title,
         .description {
           text-align: left;
@@ -104,64 +72,54 @@ export default function Home() {
           font-size: 1.5rem;
         }
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
         .grid {
           display: flex;
           align-items: left;
           justify-content: left ;
           flex-wrap: wrap;
-
-          max-width: 800px;
           margin-top: 3rem;
         }
 
+        h1 {
+          margin-block-end: 1rem;
+          line-height: 150%;
+        }
+
+        .grid h2 {
+          margin-block-end: 1rem;
+          line-height: 150%;
+          font-size: 2rem;
+        }
+
         .card {
-          flex-basis: 45%;
+          width: 100%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
+          border-radius: 1.5rem;
+          background: #FBD757;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          cursor: pointer;
         }
 
         .card h3 {
           margin: 0 0 1rem 0;
-          font-size: 1.5rem;
+          margin-block-end: 0.5rem;
+          font-size: 1rem;
+          font-weight: 600;
         }
 
         .card p {
           margin: 0;
-          font-size: 1.25rem;
           line-height: 1.5;
         }
 
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
       `}</style>
 
     </Layout>
