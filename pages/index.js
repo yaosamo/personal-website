@@ -11,65 +11,42 @@ export default function Home() {
       </Head>
 
         <h1>
-        Hayo! I’m Yaroslav Samoylov
+        Hayo!<br></br>I’m Yaroslav<br></br>Samoylov
         </h1>
 
-        <p className="description">
-        A curious and multidisciplinary designer from Russia based in Hillsboro, Oregon 🌲. Currently <a href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
-        </p>
+        <p className="description">A curious multidisciplinary designer from Russia based in Hillsboro, Oregon 🌲.</p>
+        <p className="description">Currently <a href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.</p>
+        
 
         <div className="grid">
           <h2>Things I create</h2>
-          
-          <div className="card"><Link href="/things/podcast/">
-            <h3>Podcast "And Designer"</h3></Link>
-            <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
-          </div>
+          <Link href="/things/podcast/">
+          <div className="card">
+
+              <div className="content"><h3>Podcast "And Designer"</h3>
+              <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
+              </div>
+              <img src="../images/home/Arrow-right.svg" alt="Podcast 'And designer'" className="openpage"/></div>
+        
+            
+            </Link>
         </div>
 
       <footer>
-        <a>
-        Some great people (A → Z):{' '} Denis Sharypin, Luc Mikelsons, Melkeydev, Soulprovider. 
-        </a>
+        <h3>
+        Some great people & friends (A → Z):
+        </h3>
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: left;
-          align-items: left;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          display: flex;
-          justify-content: left;
-          align-items: left;
-          margin-block-start: 3rem;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: left;
-          align-items: left;
-        }
-       
         .title,
         .description {
           text-align: left;
         }
 
         .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+          line-height: 160%;
+          font-size: 1.25rem;
         }
 
         .grid {
@@ -77,26 +54,25 @@ export default function Home() {
           align-items: left;
           justify-content: left ;
           flex-wrap: wrap;
-          margin-top: 3rem;
+          margin-top: 5.5rem;
         }
 
         h1 {
-          margin-block-end: 1rem;
-          line-height: 150%;
+          margin-block-end: 1.5rem;
         }
 
         .grid h2 {
-          margin-block-end: 1rem;
-          line-height: 150%;
-          font-size: 2rem;
+          margin-block-end: 1.5rem;
         }
 
         .card {
+          min-height: 10rem;
           width: 100%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 1rem;
           border-radius: 1.5rem;
           background: #FBD757;
           transition: color 0.15s ease, border-color 0.15s ease;
@@ -114,10 +90,18 @@ export default function Home() {
           font-size: 1rem;
           font-weight: 600;
         }
-
+        .content {padding: 0.5rem;}
+        .openpage {
+          background: #AEA9CA;
+          border-radius: 3rem;
+        }
         .card p {
           margin: 0;
           line-height: 1.5;
+        }
+
+        footer {
+          margin-block-start: 5.5rem;
         }
 
       `}</style>
