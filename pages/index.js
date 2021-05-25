@@ -23,8 +23,7 @@ export default function Home() {
           A curious multi-disciplinary product designer from Russia based in Hillsboro, Oregon 🌲.
           <br></br>Currently Lead Product Designer & Head of Design <a className="link" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
         </p>
-        <div className="button">
-        <a className="link" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a></div>
+        <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
         
         <div className="grid">
           <h2>Things I create</h2>
@@ -222,6 +221,9 @@ export default function Home() {
       }
 
       .button {
+        font-weight: 600;
+        color: #167B69;
+        text-decoration: none; 
         max-width: 26rem;
         margin-block-start: 2rem;
         border: 1px solid #D3E4E1;
