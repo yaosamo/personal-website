@@ -20,8 +20,8 @@ export default function Home() {
         Hayo! I’m Yaroslav Samoylov
         </h1>
         <p className="description">
-          A curious multi-disciplinary product designer from Russia based in Hillsboro, Oregon 🌲.
-          <br></br>Currently Lead Product Designer & Head of Design <a className="link" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
+          A curious multi-disciplinary product designer from Russia based in Hillsboro, Oregon 🌲.</p>
+          <p className="description">Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
         </p>
         <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
         
@@ -29,15 +29,28 @@ export default function Home() {
           <h2>Things I create</h2>
           <Link href="/things/podcast/">
           <div className="card">
-
-              <div className="content"><h3>Podcast "And Designer"</h3>
+              <div className="content">
+                <h4>Podcast "And Designer"</h4>
                 <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
               </div>
-              <div className="arrow-shape-podcast">
-                <img src="../images/home/Arrow-right.svg" className="arrow-white"/>
+              <div className="arrow-shape">
+                <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
               </div>
             </div>
             </Link>
+
+            <a href="https://standart.io/" alt="Standartio Icons" target="_blank">
+            <div className="card">
+              <div className="content">
+                <h4>Standartio</h4>
+                <p>Meticulously-made icons. Free and open source.</p>
+              </div>
+              <div className="arrow-shape">
+                <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              </div>
+            </div>     
+            </a>
+            
         </div>
 
         <div className="people">
@@ -101,21 +114,16 @@ export default function Home() {
             </div>
             <div className="arrow-shape">
               <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
-            </div>
+            </div >
           </div>
           </a>
         </div>
     
 
       <style jsx>{`
-      .arrow-shape-podcast {
-        background: #AEA9CA;
-        border-radius: 3rem;
-        display: inherit;
-      }
-
       .arrow-shape {
-        background: #EFEFEF;
+        transition: all .1s;
+        background: #ffffff;
         border-radius: 3rem;
         display: inherit;
         }
@@ -145,8 +153,15 @@ export default function Home() {
         border-radius: 0.5rem;
         padding: 0.5rem 0.5rem 0.5rem 1rem;
         margin-block-end: 1rem;
+        transition: all .1s;
       }
       
+      .person:hover {
+        background: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+
       .person p {
         margin-block-start: 0em;
         margin-block-end: 0em;
@@ -154,7 +169,8 @@ export default function Home() {
 
       .people a { 
         color: inherit;
-        text-decoration: none; }
+        text-decoration: none;
+      }
 
       .link-preview {
         opacity: .5;
@@ -166,31 +182,20 @@ export default function Home() {
       }
 
       .grid {
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        flex-wrap: wrap;
         margin-top: 5.5rem;
-      }
-
-      h1 {
-        margin-block-end: 1.5rem;
-      }
-
-      h2 {
-      margin-block-end: 1.5rem;
       }
 
       .card {
         min-height: 10rem;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
         padding: 1rem;
-        border-radius: 1.5rem;
-        background: #FBD757;
+        border-radius: 1rem;
+        background: #fafafa;
+        transition: all .1s;
+        margin-block-end: 1rem;
       }
 
       .card:hover,
@@ -199,14 +204,24 @@ export default function Home() {
         cursor: pointer;
       }
 
-      .card h3 {
-        margin: 0 0 1rem 0;
-        margin-block-end: 0.5rem;
-        font-size: 1rem;
-        font-weight: 600;
+      .card:hover {
+        transform: translateY(-1px);
+        background: #ffffff;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
       }
+
+      .grid a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       .content {
         padding: 0.5rem;
+        align-self: stretch;
+      }
+
+      .content p {
+        opacity: .8;
       }
 
       .card p {
@@ -216,15 +231,28 @@ export default function Home() {
 
       .link {
         font-weight: 600;
-        color: #167B69;
+        color: #097C68;
         text-decoration: none; 
+        margin-left: -.15rem;
+        margin-right: -.15rem;
+        padding-left: .15rem;
+        padding-right: .15rem;
+      }
+
+      .link:hover {
+        text-decoration: none;
+        background-color: #e6f8f5;
+        border-radius: .125rem;
+        margin-left: -.15rem;
+        margin-right: -.15rem;
+        padding-left: .15rem;
+        padding-right: .15rem;
       }
 
       .button {
         font-weight: 600;
-        color: #167B69;
+        color: #097C68;
         text-decoration: none; 
-        max-width: 26rem;
         margin-block-start: 2rem;
         border: 1px solid #D3E4E1;
         box-sizing: border-box;
@@ -235,6 +263,16 @@ export default function Home() {
         align-items: center;
         padding: 1rem;
         cursor: pointer;
+        transition: all .1s;
+      }
+
+      .button:active {
+        transform: scale(0.98); 
+      }
+
+      .button:hover {
+        cursor: pointer;
+        border: 1px solid #097C68;
       }
 
       `}</style>
