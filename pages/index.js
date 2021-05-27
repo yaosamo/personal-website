@@ -34,7 +34,7 @@ export default function Home() {
                 <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
               </div>
               <div className="arrow-shape">
-                <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+                <img src="../images/home/Arrow-right.svg" className="arrow"/>
               </div>
             </div>
             </Link>
@@ -46,7 +46,7 @@ export default function Home() {
                 <p>Meticulously-made icons. Free and open source.</p>
               </div>
               <div className="arrow-shape">
-                <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+                <img src="../images/home/Arrow-right.svg" className="arrow"/>
               </div>
             </div>     
             </a>
@@ -65,7 +65,7 @@ export default function Home() {
               <p className="link-preview">brianlovin.com</p>
             </div>
             <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div>
           </div>
           </a>
@@ -77,7 +77,7 @@ export default function Home() {
               <p className="link-preview">sharypin.cool</p>
             </div>
             <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div>
           </div>
           </a>
@@ -89,7 +89,7 @@ export default function Home() {
               <p className="link-preview">mikelsons.ca</p>
             </div>
             <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div>
           </div>
           </a>
@@ -101,7 +101,7 @@ export default function Home() {
               <p className="link-preview">rsms.me</p>
             </div>
             <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div>
           </div>
           </a>
@@ -113,7 +113,7 @@ export default function Home() {
               <p className="link-preview">soulprovidr.fm</p>
             </div>
             <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow-dark"/>
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div >
           </div>
           </a>
@@ -121,23 +121,8 @@ export default function Home() {
     
 
       <style jsx>{`
-      .arrow-shape {
-        transition: all .1s;
-        background: #ffffff;
-        border-radius: 3rem;
-        display: inherit;
-        }
-
-      .arrow-dark {
-        width: 2.5rem;
-        height: 2.5rem;
-        filter: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg) brightness(99%) contrast(89%);
-      }
-
-      .arrow-white {
-        width: 2.5rem;
-        height: 2.5rem;
-        filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
+      .arrow {
+        filter: var(--icon);
       }
       
       .people {
@@ -145,7 +130,7 @@ export default function Home() {
       }
 
       .person {
-        background: #FAFAFA;
+        background: var(--element-background);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -157,7 +142,7 @@ export default function Home() {
       }
       
       .person:hover {
-        background: #fff;
+        background: var(--element-hover);
         transform: translateY(-1px);
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
       }
@@ -193,20 +178,15 @@ export default function Home() {
         align-items: flex-end;
         padding: 1rem;
         border-radius: 1rem;
-        background: #fafafa;
+        background: var(--element-background);
         transition: all .1s;
         margin-block-end: 1rem;
       }
 
-      .card:hover,
-      .card:focus,
-      .card:active {
-        cursor: pointer;
-      }
-
       .card:hover {
+        cursor: pointer;
         transform: translateY(-1px);
-        background: #ffffff;
+        background: var(--element-hover);
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
       }
 
@@ -221,7 +201,7 @@ export default function Home() {
       }
 
       .content p {
-        opacity: .8;
+        opacity: var(--text-opacity);
       }
 
       .card p {
@@ -230,18 +210,14 @@ export default function Home() {
       }
 
       .link {
-        font-weight: 600;
-        color: #097C68;
+        font-weight: 500;
+        color: var(--active);
         text-decoration: none; 
-        margin-left: -.15rem;
-        margin-right: -.15rem;
-        padding-left: .15rem;
-        padding-right: .15rem;
       }
 
       .link:hover {
         text-decoration: none;
-        background-color: #e6f8f5;
+        background-color: var(--green-10);
         border-radius: .125rem;
         margin-left: -.15rem;
         margin-right: -.15rem;
@@ -250,11 +226,12 @@ export default function Home() {
       }
 
       .button {
-        font-weight: 600;
-        color: #097C68;
+        font-weight: 500;
+        color: var(--active);
         text-decoration: none; 
         margin-block-start: 2rem;
-        border: 1px solid #D3E4E1;
+        border: 1px solid;
+        border-color: var(--green-20);
         box-sizing: border-box;
         border-radius: 0.5rem;
         display: flex;
@@ -266,13 +243,15 @@ export default function Home() {
         transition: all .1s;
       }
 
-      .button:active {
+      .button:active,
+      .card:active,
+      .person:active {
         transform: scale(0.98); 
       }
 
       .button:hover {
         cursor: pointer;
-        border: 1px solid #097C68;
+        border: 1px solid var(--active);
       }
 
       `}</style>

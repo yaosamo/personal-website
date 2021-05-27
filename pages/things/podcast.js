@@ -36,7 +36,10 @@ export default function Podcast() {
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#fafafa" />
       </Head>  
-      <Link href="/"><a>Back</a></Link>
+      <Link href="/">
+        <div className="arrow-shape">
+              <img src="../images/home/Arrow-right.svg" className="arrow"/>
+            </div></Link>
       <div className="header">
         <div className="logo">
             <img src="../images/podcast/logo.svg" alt="And designer podcast" />
@@ -51,8 +54,8 @@ export default function Podcast() {
 
       <div className="listen">
         {/* Title */}
-        <div className="h1-left">
-          <h1 className="">Listen on</h1>
+        <div>
+          <h2>Listen on</h2>
         </div>
 
           {/* Apple Podcasts */}
@@ -126,6 +129,27 @@ export default function Podcast() {
       
      
       <style jsx>{`
+        .arrow-shape {
+          background: var(--element-background);
+          width: 2.5rem;
+          transform: rotate(180deg);
+          flex-direction: row-reverse;
+        }
+
+        .arrow-shape:hover {
+          cursor: pointer;
+          background: var(--element-hover);
+        }
+
+        .arrow-shape:active {
+          transform: scale(-0.9); 
+        }
+
+        .arrow {
+          filter: var(--icon);
+          padding-right: 1px;
+        }
+        
         .logo {
           display: flex;
           justify-content: center;
@@ -144,11 +168,19 @@ export default function Podcast() {
         }
 
         .subtitle a {
-          color: #7B7D83
+          font-weight: 500;
+          color: var(--active);
+          text-decoration: none; 
         }
 
         .subtitle a:hover {
-          color: inherit;
+          text-decoration: none;
+          background-color: var(--green-10);
+          border-radius: .125rem;
+          margin-left: -.15rem;
+          margin-right: -.15rem;
+          padding-left: .15rem;
+          padding-right: .15rem;
         }
 
         h1 {
@@ -180,6 +212,11 @@ export default function Podcast() {
           padding: 8px;
         }
 
+        .column:hover {
+          cursor: pointer;
+          background-color: var(--element-hover);
+        }
+
         .wrapper h1 {
           padding: 0px;
         }
@@ -196,8 +233,8 @@ export default function Podcast() {
         
         .source-logo {
           border-radius: 1rem;
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3rem;
+          height: 3rem;
         }
 
         .source-name {
@@ -215,14 +252,11 @@ export default function Podcast() {
           color: inherit;
         }
 
-
-
         .h1-left {
           display: flex;
           flex-direction: column;
           padding: 0.5rem;
           text-align: left;
-
           margin-block-start: 0em;
           margin-block-end: 0em;
         }  
