@@ -1,0 +1,114 @@
+html,
+body {
+  
+    color: var(--dark);
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-block-end: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 140%;
+    margin-block-end: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 150%;
+    margin: 0 0 1rem 0;
+    margin-block-end: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+/* Icons */
+
+.arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+.arrow-shape {
+    transition: all .1s;
+    background: var(--gray-20);
+    border-radius: 3rem;
+    display: flex;
+    }
+
+
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+    /* All text and bg */
+:root {
+    --active: #00ffd1;
+    --dark: #09090F;
+    --white: #e7e7e9;
+    --element-background: #111116;
+    --element-hover: #14141A;
+    --gray-10: #15151a;
+    --gray-20: #1E1E24;
+    --green-10: #171a19;
+    --green-20: #262B2A;
+
+    --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
+
+    --text-opacity: .7;
+
+}
+
+    body {
+        background-color: var(--dark);
+        color: var(--white);
+    }
+
+
+    ::selection {
+        color: rgb(255, 103, 129);
+        background: var(--gray-10);
+    }
+
+}
+
+  /* Light theme */
+  @media (prefers-color-scheme: light) {
+
+    :root {
+        --active: #097C68;
+        --dark: #232426;
+        --white: #ffffff;
+        --element-background: #FAFAFA;
+        --element-hover: #ffffff;
+        --gray-10: #FAFAFA;
+        --gray-20: #F6f6f6;
+        --green-10: #F0F6F5;
+        --green-20: #E1E8E7;
+
+        --icon: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg) brightness(99%) contrast(89%);
+   
+        --text-opacity: .8;
+    }
+
+
+    ::selection {
+        color: red;
+        background: var(--gray-10);
+  }
+}
