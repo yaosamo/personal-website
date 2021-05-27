@@ -130,7 +130,7 @@ export default function Podcast() {
      
       <style jsx>{`
         .arrow-shape {
-          background: var(--element-background);
+          background: var(--gray-10);
           width: 2.5rem;
           transform: rotate(180deg);
           flex-direction: row-reverse;
@@ -138,7 +138,7 @@ export default function Podcast() {
 
         .arrow-shape:hover {
           cursor: pointer;
-          background: var(--element-hover);
+          background: var(--gray-20);
         }
 
         .arrow-shape:active {
@@ -206,15 +206,20 @@ export default function Podcast() {
         }
 
         .column {
+          background-color: var(--element-background);
           border-radius: 1rem;
           display: flex;
           flex-direction: column;
           padding: 8px;
+          margin-block-end: 1rem;
+          transition: all .1s;
         }
 
         .column:hover {
           cursor: pointer;
-          background-color: var(--element-hover);
+          transform: translateY(-1px);
+          background: var(--element-hover);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
         }
 
         .wrapper h1 {
