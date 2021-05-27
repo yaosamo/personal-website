@@ -89,7 +89,7 @@ p {
   @media (prefers-color-scheme: light) {
 
     :root {
-        --green: #097C68;
+        --active: #097C68;
         --dark: #232426;
         --white: #ffffff;
         --element-background: #FAFAFA;
