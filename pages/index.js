@@ -15,16 +15,27 @@ export default function Home() {
         <title>Yaroslav Samoylov — A curious product designer.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-        <h1>
-        Hayo! I’m Yaroslav Samoylov
-        </h1>
-        <p className="description">
-          A curious multi-disciplinary product designer from Russia based in Hillsboro, Oregon 🌲.</p>
-          <p className="description">Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online.
+      <div className="header">
+        <p>
+        Hello! I’m Yaric Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
         </p>
         <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
-        
+        </div>
+
+        <div className="work">
+          <div className="__header">
+              <div className="__title">
+                <p>2020</p>
+                <h2>Gubagoo</h2>
+              </div>
+              <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
+          </div>
+          <div className="__pictures">
+            <img src="../images/work/Mob-Checkout@2x.png" className="mobile-image"/>
+            <img src="../images/work/Desk-Checkout@2x.png" className="mobile-image"/>
+          </div>
+        </div>
+
         <div className="grid">
           <h2>Things I create</h2>
           <Link href="/things/podcast/">
@@ -121,6 +132,50 @@ export default function Home() {
     
 
       <style jsx>{`
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .work {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        background: rgba(170, 196, 200, 0.1); //library
+        backdrop-filter: saturate(180%) blur(3rem);
+        border-radius: 1rem;
+      }
+
+      .work .__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .work .__header .__title {
+        width: 16rem;
+      }
+
+      .work .__header p {
+        max-width: 48rem;
+      }
+
+      .work .__pictures {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .header p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 160%;
+        width: 38rem; }
+
       .arrow {
         filter: var(--icon);
       }
@@ -167,7 +222,12 @@ export default function Home() {
       }
 
       .grid {
-        margin-top: 5.5rem;
+        margin-top: 10rem;
+      }
+
+      .grid a {
+        color: inherit;
+        text-decoration: none;
       }
 
       .card {
@@ -188,11 +248,6 @@ export default function Home() {
         transform: translateY(-1px);
         background: var(--element-hover);
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .grid a {
-        color: inherit;
-        text-decoration: none;
       }
 
       .content {
@@ -241,6 +296,8 @@ export default function Home() {
         padding: 1rem;
         cursor: pointer;
         transition: all .1s;
+        width: 20rem;
+        height: 4rem;
       }
 
       .button:active,

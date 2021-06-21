@@ -1,8 +1,8 @@
 .layout {
   animation: hello ease-out .3s;
     width: 100%;
-    max-width: 30rem;
-    padding-block-start: 4rem;
+    max-width: 78rem;
+    padding-block-start: 10rem;
     padding-block-end: 4rem;
     margin: 0 auto;
     /* border: 1px dotted purple; */
@@ -18,5 +18,5 @@
 
 .container {
   /* border: 1px dashed red; */
-  margin: 1rem;
+  margin: 0 1.5rem;
 }
