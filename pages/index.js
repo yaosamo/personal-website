@@ -25,16 +25,17 @@ export default function Home() {
         <div className="work">
           <div className="__header">
               <div className="__title">
-                <p>2020</p>
-                <h2>Gubagoo</h2>
+                <p>2020 — Current</p>
+                <h2>Gubagoo Virtual Retailing</h2>
               </div>
               <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
           </div>
           <div className="__pictures">
             <img src="../images/work/Mob-Checkout@2x.png" className="mobile-image"/>
-            <img src="../images/work/Desk-Checkout@2x.png" className="mobile-image"/>
+            <img src="../images/work/Desk-Checkout@2x.png" className="desktop-image"/>
           </div>
         </div>
+        <div className="beautiful"></div>
 
         <div className="grid">
           <h2>Things I create</h2>
@@ -138,8 +139,33 @@ export default function Home() {
         justify-content: space-between;
         flex-wrap: wrap;
       }
-      
+
+      .beautiful {
+        transform-origin: center 120px;
+        animation: yo 5s ease-in-out infinite alternate-reverse;
+        background-color: red;
+        width: 400px;
+        height: 400px;
+        border-radius: 40rem;
+        z-index: -1;
+        position: absolute;
+        top: 900px;
+        left: 350px;
+      }
+
+      @keyframes yo {
+        0% {
+          background-color: red;
+          transform: scale-y(1) rotate(0deg) translateY(0px);
+        }
+        100% {
+          background-color: orange;
+          transform: scaleX(2) rotate(360deg) translateY(-100px);
+        }
+      }
+
       .work {
+        z-index: 1;
         margin-top: 10rem;
         display: flex;
         flex-direction: column;
@@ -149,11 +175,22 @@ export default function Home() {
         border-radius: 1rem;
       }
 
+      .mobile-image {
+        width: 212px;
+        height: 460px;
+      }
+
+      .desktop-image {
+        width: 773px;
+        height: 460px;
+      }
+
       .work .__header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-block-end: 2.5rem;
       }
 
       .work .__header .__title {
@@ -167,7 +204,10 @@ export default function Home() {
       .work .__pictures {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
       }
+
+      // .work img {margin-right: 2.5rem;}
 
       .header p {
         font-style: normal;
