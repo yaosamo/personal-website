@@ -22,6 +22,7 @@ export default function Home() {
         <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
         </div>
 
+        <div className="mask">
         <div className="work">
           <div className="__header">
               <div className="__title">
@@ -36,6 +37,7 @@ export default function Home() {
           </div>
         </div>
         <div className="beautiful"></div>
+        </div>
 
         <div className="grid">
           <h2>Things I create</h2>
@@ -141,6 +143,7 @@ export default function Home() {
       }
 
       .beautiful {
+        position: absolute;
         transform-origin: center 120px;
         animation: yo 5s ease-in-out infinite alternate-reverse;
         background-color: red;
@@ -148,9 +151,7 @@ export default function Home() {
         height: 400px;
         border-radius: 40rem;
         z-index: -1;
-        position: absolute;
-        top: 900px;
-        left: 350px;
+        
       }
 
       @keyframes yo {
@@ -160,13 +161,21 @@ export default function Home() {
         }
         100% {
           background-color: orange;
-          transform: scaleX(2) rotate(360deg) translateY(-100px);
+          transform: scaleY(4) rotate(360deg) translateY(-100px);
         }
       }
 
+      .mask {
+        transform: translateZ(0);
+        border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
       .work {
-        z-index: 1;
         margin-top: 10rem;
+        position: relative;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         padding: 4rem;
