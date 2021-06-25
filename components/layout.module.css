@@ -2,7 +2,7 @@
   animation: hello ease-out .3s;
     width: 100%;
     max-width: 78rem;
-    padding-block-start: 10rem;
+    padding-block-start: 2rem;
     padding-block-end: 4rem;
     margin: 0 auto;
     /* border: 1px dotted purple; */

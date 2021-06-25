@@ -32,8 +32,18 @@ export default function Home() {
               <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
           </div>
           <div className="__pictures">
-            <img src="../images/work/Mob-Checkout@2x.png" className="mobile-image"/>
-            <img src="../images/work/Desk-Checkout@2x.png" className="desktop-image"/>
+          <picture>
+            <source srcset="../images/work/Mob-Checkout@2x.png 3.2x" />
+            <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
+            </picture>
+
+            <picture>
+            <source srcset="../images/work/Desk-Checkout@2x.png 3.2x" />
+            <img src="../images/work/Desk-Checkout@2x.png" alt="logo" /> 
+
+            {/* <img src="../images/work/Mob-Checkout@2x.png" className="mobile-image"/>
+            <img src="../images/work/Desk-Checkout@2x.png" className="desktop-image"/> */}
+          </picture>
           </div>
         </div>
         <div className="beautiful"></div>
@@ -42,14 +52,16 @@ export default function Home() {
         <div className="grid">
           <h2>Things I create</h2>
           <Link href="/things/podcast/">
-          <div className="card">
-              <div className="content">
+          <div className="thing">
+              <div className="__title">
                 <h4>Podcast "And Designer"</h4>
+                <div className="arrow-shape">
+                    <img src="../images/home/Arrow-right.svg" className="arrow"/>
+                    </div>
+                </div>
                 <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
-              </div>
-              <div className="arrow-shape">
-                <img src="../images/home/Arrow-right.svg" className="arrow"/>
-              </div>
+              
+            
             </div>
             </Link>
 
@@ -136,10 +148,12 @@ export default function Home() {
 
       <style jsx>{`
       .header {
+        padding-block-start: 8rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-block-end: 10rem;
       }
 
       .beautiful {
@@ -166,14 +180,13 @@ export default function Home() {
       }
 
       .mask {
-        transform: translateZ(0);
+        transform: translateZ(0); //safari only fix
         border-radius: 1rem;
         position: relative;
         overflow: hidden;
       }
 
       .work {
-        margin-top: 10rem;
         position: relative;
         z-index: 1;
         display: flex;
@@ -184,14 +197,9 @@ export default function Home() {
         border-radius: 1rem;
       }
 
-      .mobile-image {
-        width: 212px;
-        height: 460px;
-      }
-
-      .desktop-image {
-        width: 773px;
-        height: 460px;
+      .work p {
+        margin-block-start: 0;
+        margin-block-end: 0;
       }
 
       .work .__header {
@@ -199,7 +207,7 @@ export default function Home() {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-block-end: 2.5rem;
+        margin-block-end: 5rem;
       }
 
       .work .__header .__title {
@@ -213,17 +221,16 @@ export default function Home() {
       .work .__pictures {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
-
-      // .work img {margin-right: 2.5rem;}
 
       .header p {
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 160%;
-        width: 38rem; }
+        width: 38rem;
+      }
 
       .arrow {
         filter: var(--icon);
@@ -279,18 +286,31 @@ export default function Home() {
         text-decoration: none;
       }
 
-      .card {
-        min-height: 10rem;
+      .thing {
+        max-width: 30rem;
+      }
+
+      .thing .__title {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 1rem;
-        border-radius: 1rem;
-        background: var(--element-background);
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
         transition: all .1s;
         margin-block-end: 1rem;
+        
       }
+
+      .thing .arrow {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      h4 {
+        margin-right: 1rem;
+        margin-block-after: 0rem;
+        margin-block-end: 0rem;
+      }
+      
 
       .card:hover {
         cursor: pointer;
