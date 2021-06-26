@@ -20,3 +20,9 @@
   /* border: 1px dashed red; */
   margin: 0 1.5rem;
 }
+
+@media (min-width:320px)  { 
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+  .container {
+    margin: 0rem;
+  }}

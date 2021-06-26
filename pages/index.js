@@ -49,7 +49,7 @@ export default function Home() {
         <div className="beautiful"></div>
         </div>
 
-        <div className="grid">
+        <div className="things">
           <h2>Things I create
             
           </h2>
@@ -244,7 +244,7 @@ export default function Home() {
         align-items: flex-start;
         align-items: center;
         border-radius: 0.5rem;
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         margin-block-end: 1rem;
         transition: all .1s;
         margin-right: 1rem;
@@ -276,15 +276,15 @@ export default function Home() {
         font-size: 1.25rem;
       }
 
-      .grid {
+      .things {
         margin-top: 10rem;
       }
 
-      .grid h2 {
+      .things h2 {
         margin-block-end: 4rem;
       }
 
-      .grid a {
+      .things a {
         color: inherit;
         text-decoration: none;
       }
@@ -375,6 +375,16 @@ export default function Home() {
         cursor: pointer;
         border: 1px solid var(--active);
       }
+
+
+      @media (min-width:320px)  { 
+      // smartphones, portrait iPhone, portrait 480x320 phones (Android)
+        .header, .things, .people {
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+        }
+      }
+
 
       `}</style>
 
