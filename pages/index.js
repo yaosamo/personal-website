@@ -50,99 +50,82 @@ export default function Home() {
         </div>
 
         <div className="grid">
-          <h2>Things I create</h2>
-          <Link href="/things/podcast/">
+          <h2>Things I create
+            
+          </h2>
+          <a href="/things/podcast/" alt="Podcast 'And Designer'"><Link href="/things/podcast/">
           <div className="thing">
               <div className="__title">
                 <h4>Podcast "And Designer"</h4>
-                <div className="arrow-shape">
+                    <div className="arrow-shape">
                     <img src="../images/home/Arrow-right.svg" className="arrow"/>
                     </div>
                 </div>
                 <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
-              
             
             </div>
             </Link>
+            </a>
 
             <a href="https://standart.io/" alt="Standartio Icons" target="_blank">
-            <div className="card">
-              <div className="content">
+            <div className="thing">
+              <div className="__title">
                 <h4>Standartio</h4>
+                    <div className="arrow-shape">
+                    <img src="../images/home/Arrow-right.svg" className="arrow"/>
+                    </div>
+              </div>  
                 <p>Meticulously-made icons. Free and open source.</p>
-              </div>
-              <div className="arrow-shape">
-                <img src="../images/home/Arrow-right.svg" className="arrow"/>
-              </div>
             </div>     
             </a>
             
         </div>
 
         <div className="people">
-          <h3>
+          
+          <h4>
           Some great people & friends (A → Z):
-          </h3>
+          </h4>
+          
+          <div className="__links">
+
           {/* Brian Lovin */}
-          <a href="http://brianlovin.com" target="_blank">
+          <a href="http://brianlovin.com" alt="Brian Lovin" target="_blank">
           <div className="person">
-            <div>
               <p>Brian Lovin</p>
-              <p className="link-preview">brianlovin.com</p>
-            </div>
-            <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div>
           </div>
           </a>
+          
            {/* Denis Sharypin */}
-           <a href="http://sharypin.cool" target="_blank">
+           <a href="http://sharypin.cool" alt="Denis Sharypin" target="_blank">
           <div className="person">
-            <div>
               <p>Denis Sharypin</p>
-              <p className="link-preview">sharypin.cool</p>
-            </div>
-            <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div>
           </div>
           </a>
+
                {/* Luc Mikelsons */}
-               <a href="http://mikelsons.ca" target="_blank">
+               <a href="http://mikelsons.ca" alt="Luc Mikelsons" target="_blank">
           <div className="person">
-            <div>
               <p>Luc Mikelsons</p>
-              <p className="link-preview">mikelsons.ca</p>
-            </div>
-            <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div>
           </div>
           </a>
+
                {/* Rasmus Anderssonn */}
-               <a href="http://rsms.me" target="_blank">
+               <a href="http://rsms.me" alt="Rasmus Andersson" target="_blank">
           <div className="person">
-            <div>
               <p>Rasmus Andersson</p>
-              <p className="link-preview">rsms.me</p>
-            </div>
-            <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div>
           </div>
           </a>
+
                {/* Shola Anozie */}
-               <a href="http://soulprovidr.fm" target="_blank">
+               <a href="http://soulprovidr.fm" alt="Shola Anozie" target="_blank">
           <div className="person">
-            <div>
               <p>Shola Anozie</p>
-              <p className="link-preview">soulprovidr.fm</p>
-            </div>
-            <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div >
           </div>
           </a>
+              
+          </div>
+
         </div>
     
 
@@ -237,19 +220,34 @@ export default function Home() {
       }
       
       .people {
-        margin-block-start: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-block-start: 10rem;
+      }
+
+      .people h4 {
+        margin-block-end: 1.5rem;
+      }
+
+      .people .__links {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
       }
 
       .person {
         background: var(--element-background);
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-items: flex-start;
         align-items: center;
         border-radius: 0.5rem;
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        padding: 0.5rem;
         margin-block-end: 1rem;
         transition: all .1s;
+        margin-right: 1rem;
       }
       
       .person:hover {
@@ -261,6 +259,7 @@ export default function Home() {
       .person p {
         margin-block-start: 0em;
         margin-block-end: 0em;
+        border-bottom: 0.5px solid;
       }
 
       .people a { 
@@ -281,6 +280,10 @@ export default function Home() {
         margin-top: 10rem;
       }
 
+      .grid h2 {
+        margin-block-end: 4rem;
+      }
+
       .grid a {
         color: inherit;
         text-decoration: none;
@@ -288,6 +291,12 @@ export default function Home() {
 
       .thing {
         max-width: 30rem;
+        margin-block-end: 4rem;
+      }
+
+      .thing p {
+        margin-block-start: 0rem;
+        margin-block-end: 0rem;
       }
 
       .thing .__title {
@@ -301,8 +310,8 @@ export default function Home() {
       }
 
       .thing .arrow {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
 
       h4 {
@@ -311,14 +320,6 @@ export default function Home() {
         margin-block-end: 0rem;
       }
       
-
-      .card:hover {
-        cursor: pointer;
-        transform: translateY(-1px);
-        background: var(--element-hover);
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-      }
-
       .content {
         padding: 0.5rem;
         align-self: stretch;
@@ -326,11 +327,6 @@ export default function Home() {
 
       .content p {
         opacity: var(--text-opacity);
-      }
-
-      .card p {
-        margin: 0;
-        line-height: 1.5;
       }
 
       .link {
