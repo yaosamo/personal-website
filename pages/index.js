@@ -14,10 +14,11 @@ export default function Home() {
       <Head>
         <title>Yaroslav Samoylov — A curious product designer.</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
       <div className="header">
         <p>
-        Hello! I’m Yaric Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+        Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
         </p>
         <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
         </div>
@@ -180,6 +181,10 @@ export default function Home() {
         border-radius: 1rem;
       }
 
+      .work h2 {
+        margin-block-start: 0.5rem;
+      }
+
       .work p {
         margin-block-start: 0;
         margin-block-end: 0;
@@ -197,6 +202,13 @@ export default function Home() {
         width: 16rem;
       }
 
+      @media (max-width:414px)  { 
+        .work .__header .__title {
+          width: 100%;
+        }
+      }
+      
+
       .work .__header p {
         max-width: 48rem;
       }
@@ -212,7 +224,7 @@ export default function Home() {
         font-weight: normal;
         font-size: 24px;
         line-height: 160%;
-        width: 38rem;
+        width: 40rem;
       }
 
       .arrow {
@@ -377,11 +389,19 @@ export default function Home() {
       }
 
 
-      @media (min-width:320px)  { 
+      @media (max-width:414px)  { 
       // smartphones, portrait iPhone, portrait 480x320 phones (Android)
         .header, .things, .people {
           margin-left: 1.5rem;
           margin-right: 1.5rem;
+        }
+        
+        .work {
+          padding: 1.5rem;
+        }
+
+        .button {
+          width: 100%;
         }
       }
 
