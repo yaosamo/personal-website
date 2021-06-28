@@ -232,6 +232,12 @@ export default function Home() {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        overflow-y: hidden;
+        overflow-x: scroll;
+      }
+
+      .work picture {
+        margin-right: 4rem;
       }
 
       .header p {
