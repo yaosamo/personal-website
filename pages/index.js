@@ -104,14 +104,29 @@ export default function Home() {
           </div>
           </a>
 
-               {/* Luc Mikelsons */}
+          {/* Louis Berger */}
+          <a href="https://louisberger.de" alt="Louis Berger" target="_blank">
+          <div className="person">
+              <p>Louis Berger</p>
+          </div>
+          </a>
+
+          {/* Luc Mikelsons */}
                <a href="http://mikelsons.ca" alt="Luc Mikelsons" target="_blank">
           <div className="person">
               <p>Luc Mikelsons</p>
           </div>
           </a>
 
-               {/* Rasmus Anderssonn */}
+
+          {/* Nila Arumugam */}
+               <a href="http://mikelsons.ca" alt="Luc Mikelsons" target="_blank">
+          <div className="person">
+              <p>Nila Arumugam</p>
+          </div>
+          </a>
+
+          {/* Rasmus Anderssonn */}
                <a href="http://rsms.me" alt="Rasmus Andersson" target="_blank">
           <div className="person">
               <p>Rasmus Andersson</p>
@@ -262,16 +277,14 @@ export default function Home() {
         margin-right: 1rem;
       }
       
-      .person:hover {
-        background: var(--element-hover);
-        transform: translateY(-1px);
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      .person:hover p {
+        border-bottom: 0.5px solid rgba(35, 36, 38, 1);
       }
 
       .person p {
         margin-block-start: 0em;
         margin-block-end: 0em;
-        border-bottom: 0.5px solid;
+        border-bottom: 0.5px solid rgba(35, 36, 38, .2);
       }
 
       .people a { 
@@ -304,6 +317,11 @@ export default function Home() {
       .thing {
         max-width: 30rem;
         margin-block-end: 4rem;
+        transition: all .1s;
+      }
+
+      .thing:hover .arrow-shape {
+        transform: translateX(4px);
       }
 
       .thing p {
@@ -316,7 +334,6 @@ export default function Home() {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        transition: all .1s;
         margin-block-end: 1rem;
         
       }
@@ -397,7 +414,7 @@ export default function Home() {
         }
         
         .work {
-          padding: 1.5rem;
+          padding: 4rem 1.5rem 4rem 1.5rem;
         }
 
         .button {
