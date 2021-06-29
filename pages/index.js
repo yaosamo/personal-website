@@ -25,13 +25,17 @@ export default function Home() {
 
         <div className="mask">
         <div className="work">
-          <div className="__header">
+
+        <div className="__header">
               <div className="__title">
                 <p>2020 — Current</p>
                 <h2>Gubagoo Virtual Retailing</h2>
               </div>
               <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
           </div>
+         
+          <div className="__pics-full">
+
           <div className="__pictures">
           <picture>
             <source srcset="../images/work/Mob-Checkout@2x.png 3.2x" />
@@ -46,6 +50,9 @@ export default function Home() {
             <img src="../images/work/Desk-Checkout@2x.png" className="desktop-image"/> */}
           </picture>
           </div>
+          
+          </div>
+
         </div>
         <div className="beautiful"></div>
         </div>
@@ -223,17 +230,21 @@ export default function Home() {
         }
       }
       
-
       .work .__header p {
         max-width: 48rem;
       }
 
       .work .__pictures {
+        border: 1px solid blue;
+        position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        overflow-y: hidden;
-        overflow-x: scroll;
+        justify-content: space-between;
+      }
+
+      .__pics-full {
+        border: 1px solid red;
+        position: relative;
       }
 
       .work picture {
