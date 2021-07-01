@@ -3,11 +3,6 @@ import Link from 'next/link'
 import Layout from '/components/layout'
 
 
-{/* <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-<path d="M21.667 12.5L28.3337 20L21.667 27.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.3333 20H12.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>  */}
-
 export default function Home() {
   return (
     <Layout>
@@ -23,39 +18,57 @@ export default function Home() {
         <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
         </div>
 
-        <div className="mask">
-        <div className="work">
 
-        <div className="__header">
-              <div className="__title">
-                <p>2020 — Current</p>
-                <h2>Gubagoo Virtual Retailing</h2>
+
+        {/* Work */}
+        <div className="full">
+          <div className="bg-container">
+            <div className="bg-mask">
+              <div className="bg"></div>
+              <div className="beautiful-elipsis"></div>
+              <div className="beautiful-circle"></div>
+            </div>
+          </div>
+          <div className="work">
+            <div className="__header">
+                <div className="__title">
+                  <p>2020 — Current</p>
+                  <h2>Gubagoo Virtual Retailing</h2>
+                </div>
+                <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
+            </div>
+            <div className="pics">
+              <div className="pics-container">
+                <div className="item">
+                  <picture>
+                  <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
+                  <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
+                  </picture>
+                </div>
+                <div className="item">
+                  <picture>
+                  <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
+                  <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
+                  </picture>
+                </div>
+                <div className="item">
+                  <picture>
+                  <source srcset="../images/work/Desk-Checkout@2x.png 3.5x" />
+                  <img src="../images/work/Desk-Checkout@2x.png" alt="logo" /> 
+                  </picture>
+                </div>
               </div>
-              <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
+            </div>
+
           </div>
-         
-          <div className="__pics-full">
-
-          <div className="__pictures">
-          <picture>
-            <source srcset="../images/work/Mob-Checkout@2x.png 3.2x" />
-            <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
-            </picture>
-
-            <picture>
-            <source srcset="../images/work/Desk-Checkout@2x.png 3.2x" />
-            <img src="../images/work/Desk-Checkout@2x.png" alt="logo" /> 
-
-            {/* <img src="../images/work/Mob-Checkout@2x.png" className="mobile-image"/>
-            <img src="../images/work/Desk-Checkout@2x.png" className="desktop-image"/> */}
-          </picture>
-          </div>
-          
-          </div>
-
         </div>
-        <div className="beautiful"></div>
-        </div>
+
+      
+
+
+
+
+        {/* Things */}
 
         <div className="things">
           <h2>Things I create
@@ -89,6 +102,9 @@ export default function Home() {
             
         </div>
 
+
+
+        {/* People */}
         <div className="people">
           
           <h4>
@@ -153,7 +169,47 @@ export default function Home() {
     
 
       <style jsx>{`
+      .pics {
+        overflow: scroll;
+      }
+
+      .bg-mask {
+        position: relative;
+        overflow: hidden;
+        transform: translateZ(0);
+        border-radius: 1rem;
+      }
+
+      .bg {
+        background: rgba(170, 196, 200, 0.1); //library
+        backdrop-filter: saturate(180%) blur(3rem);
+        height: 52rem;
+        z-index: 1;
+    }
+
+      .bg-container {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 calc((100% - 1200px) / 2);
+        overflow: hidden;
+    }
+    
+      .pics-container {
+          z-index: 1;
+          display: grid;
+          gap: 4rem;
+          padding-left: calc((100% - 1072px) / 2);
+          padding-right: calc((100% - 1072px) / 2);
+          grid-auto-flow: column;
+          width: fit-content;
+          overflow: visible;
+      }
+
       .header {
+        padding-left: calc((100% - 1200px) / 2);
+        padding-right: calc((100% - 1200px) / 2);
         padding-block-start: 8rem;
         display: flex;
         flex-direction: row;
@@ -162,19 +218,31 @@ export default function Home() {
         margin-block-end: 10rem;
       }
 
-      .beautiful {
+
+      .beautiful-elipsis {
         position: absolute;
         transform-origin: center 120px;
-        animation: yo 5s ease-in-out infinite alternate-reverse;
+        animation: elipsis 5s ease-in-out infinite alternate-reverse;
         background-color: red;
         width: 400px;
         height: 400px;
         border-radius: 40rem;
         z-index: -1;
-        
       }
 
-      @keyframes yo {
+      .beautiful-circle {
+        position: absolute;
+        transform-origin: center;
+        animation: circle 20s ease-in-out infinite alternate-reverse;
+        background-color: red;
+        width: 400px;
+        height: 400px;
+        border-radius: 40rem;
+        z-index: -1;
+      }
+
+
+      @keyframes elipsis {
         0% {
           background-color: red;
           transform: scale-y(1) rotate(0deg) translateY(0px);
@@ -185,11 +253,16 @@ export default function Home() {
         }
       }
 
-      .mask {
-        transform: translateZ(0); //safari only fix
-        border-radius: 1rem;
-        position: relative;
-        overflow: hidden;
+
+      @keyframes circle {
+        0% {
+          background-color: purple;
+          transform: scale-y(1) translateY(300px) translateX(300px)  ;
+        }
+        100% {
+          background-color: blue;
+          transform: scaleY(2) translateY(-800px) translateX(1000px);
+        }
       }
 
       .work {
@@ -197,10 +270,6 @@ export default function Home() {
         z-index: 1;
         display: flex;
         flex-direction: column;
-        padding: 4rem;
-        background: rgba(170, 196, 200, 0.1); //library
-        backdrop-filter: saturate(180%) blur(3rem);
-        border-radius: 1rem;
       }
 
       .work h2 {
@@ -218,6 +287,9 @@ export default function Home() {
         justify-content: space-between;
         flex-wrap: wrap;
         margin-block-end: 5rem;
+        padding-left: calc((100% - 1072px) / 2);
+        padding-right: calc((100% - 1072px) / 2);
+        padding-top: 4rem;
       }
 
       .work .__header .__title {
@@ -226,29 +298,12 @@ export default function Home() {
 
       @media (max-width:414px)  { 
         .work .__header .__title {
-          width: 100%;
+          width: 100%; // to make header one line
         }
       }
       
       .work .__header p {
         max-width: 48rem;
-      }
-
-      .work .__pictures {
-        border: 1px solid blue;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .__pics-full {
-        border: 1px solid red;
-        position: relative;
-      }
-
-      .work picture {
-        margin-right: 4rem;
       }
 
       .header p {
@@ -267,7 +322,7 @@ export default function Home() {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-block-start: 10rem;
+        padding: 10rem calc((100% - 75rem) / 2) 0;
       }
 
       .people h4 {
@@ -319,7 +374,7 @@ export default function Home() {
       }
 
       .things {
-        margin-top: 10rem;
+        padding: 10rem calc((100% - 75rem) / 2) 0;
       }
 
       .things h2 {
