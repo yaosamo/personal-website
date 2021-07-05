@@ -11,17 +11,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
-      <div className="header">
-        <p>
-        Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
-        </p>
-        <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
-        </div>
+
+      <div className="content">
+        <div className="header">
+          <p>
+          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+          </p>
+          <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
+          </div>
+          </div>
 
 
 
         {/* Work */}
-        <div className="full">
+       
           <div className="bg-container">
             <div className="bg-mask">
               <div className="bg"></div>
@@ -29,7 +32,9 @@ export default function Home() {
               <div className="beautiful-circle"></div>
             </div>
           </div>
+          {/* Text */}
           <div className="work">
+            <div className="__wraper">
             <div className="__header">
                 <div className="__title">
                   <p>2020 — Current</p>
@@ -37,31 +42,33 @@ export default function Home() {
                 </div>
                 <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
             </div>
+            </div>
+          {/* Pics */}
             <div className="pics">
               <div className="pics-container">
-                <div className="item">
+                
                   <picture>
                   <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
                   <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
                   </picture>
-                </div>
-                <div className="item">
+               
+                
                   <picture>
                   <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
                   <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
                   </picture>
-                </div>
-                <div className="item">
+               
+                
                   <picture>
                   <source srcset="../images/work/Desk-Checkout@2x.png 3.5x" />
                   <img src="../images/work/Desk-Checkout@2x.png" alt="logo" /> 
                   </picture>
-                </div>
+                
               </div>
             </div>
 
           </div>
-        </div>
+        
 
       
 
@@ -69,7 +76,7 @@ export default function Home() {
 
 
         {/* Things */}
-
+        <div className="content">
         <div className="things">
           <h2>Things I create
             
@@ -101,10 +108,12 @@ export default function Home() {
             </a>
             
         </div>
+        </div>
 
 
 
         {/* People */}
+        <div className="content">
         <div className="people">
           
           <h4>
@@ -162,13 +171,22 @@ export default function Home() {
               <p>Shola Anozie</p>
           </div>
           </a>
-              
           </div>
 
+        </div>
         </div>
     
 
       <style jsx>{`
+      .content {
+        max-width: 78rem;
+        margin: 0 auto;
+      }
+
+      .__wraper {
+        margin: 4rem 1.5rem;
+      }
+
       .pics {
         overflow: scroll;
       }
@@ -189,7 +207,7 @@ export default function Home() {
       .bg {
         background: rgba(170, 196, 200, 0.1); //library
         backdrop-filter: saturate(180%) blur(3rem);
-        height: 52rem;
+        height: 51rem;
         z-index: 1;
     }
 
@@ -206,22 +224,24 @@ export default function Home() {
           z-index: 1;
           display: grid;
           gap: 4rem;
-          padding-left: calc((100% - 1072px) / 2);
-          padding-right: calc((100% - 1072px) / 2);
+          padding-left: calc((100% - 1120px) / 2);
+          padding-right: calc((100% - 1120px) / 2);
           grid-auto-flow: column;
           width: fit-content;
           overflow: visible;
       }
 
+      .pics-container picture:first-child {
+        padding-left: 1.5rem;
+      }
+
       .header {
-        padding-left: calc((100% - 1200px) / 2);
-        padding-right: calc((100% - 1200px) / 2);
         padding-block-start: 8rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-block-end: 10rem;
+        margin: 0 1.5rem 10rem;
       }
 
 
@@ -292,10 +312,9 @@ export default function Home() {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-block-end: 5rem;
-        padding-left: calc((100% - 1072px) / 2);
-        padding-right: calc((100% - 1072px) / 2);
-        padding-top: 4rem;
+        margin: 0 auto;
+        max-width: 67rem;
+        width: 100%;
       }
 
       .work .__header .__title {
@@ -328,7 +347,8 @@ export default function Home() {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 10rem calc((100% - 75rem) / 2) 0;
+        padding-top: 10rem;
+        margin: 0 1.5rem;
       }
 
       .people h4 {
@@ -380,7 +400,8 @@ export default function Home() {
       }
 
       .things {
-        padding: 10rem calc((100% - 75rem) / 2) 0;
+        padding-top: 10rem;
+        margin: 0 1.5rem;
       }
 
       .things h2 {
@@ -425,15 +446,6 @@ export default function Home() {
         margin-right: 1rem;
         margin-block-after: 0rem;
         margin-block-end: 0rem;
-      }
-      
-      .content {
-        padding: 0.5rem;
-        align-self: stretch;
-      }
-
-      .content p {
-        opacity: var(--text-opacity);
       }
 
       .link {
@@ -483,6 +495,13 @@ export default function Home() {
         border: 1px solid var(--active);
       }
 
+      @media (max-width:1024px)  { 
+        // ipad
+          .bg {
+            height: 59rem;
+          }
+
+        }
 
       @media (max-width:414px)  { 
       // smartphones, portrait iPhone, portrait 480x320 phones (Android)
@@ -491,14 +510,17 @@ export default function Home() {
           margin-right: 1.5rem;
         }
         
-        .work {
-          padding: 4rem 1.5rem 4rem 1.5rem;
-        }
-
         .button {
           width: 100%;
         }
+
+        .bg {
+          height: 67rem;
+        }
+
       }
+
+      
 
 
       `}</style>
