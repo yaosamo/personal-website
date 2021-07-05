@@ -172,6 +172,13 @@ export default function Home() {
           </div>
           </a>
 
+          {/* Noah Stokes */}
+          <a href="http://noahstokes.com" alt="Noah Stokes" target="_blank">
+          <div className="person">
+              <p>Noah Stokes</p>
+          </div>
+          </a>
+
           {/* Rasmus Anderssonn */}
                <a href="http://rsms.me" alt="Rasmus Andersson" target="_blank">
           <div className="person">
