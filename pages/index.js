@@ -46,24 +46,61 @@ export default function Home() {
           {/* Pics */}
             <div className="pics">
               <div className="pics-container">
+                 
+                  <picture>
+                  <source srcset="../images/work/Loader_Mob.png 4.3x" />
+                  <img src="../images/work/Loader_Mob.png" alt="Loader" /> 
+                  </picture>
+
+                  <picture>
+                  <source srcset="../images/work/Mob_Payments.jpeg 4.3x" />
+                  <img src="../images/work/Mob_Payments.jpeg" alt="Payments" /> 
+                  </picture>
+
+
+                  <picture>
+                  <source srcset="../images/work/Mob_F&I.png 4.3x" />
+                  <img src="../images/work/Mob_F&I.png" alt="F&I" /> 
+                  </picture>
+                  
                 
                   <picture>
-                  <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
-                  <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
+                  <source srcset="../images/work/Mob_Rebates.png 4.3x" />
+                  <img src="../images/work/Mob_Rebates.png" alt="Rebates" /> 
+                  </picture>
+
+                  <picture>
+                  <source srcset="../images/work/Mob_Menu.PNG 4.3x" />
+                  <img src="../images/work/Mob_Menu.PNG" alt="Rebates" /> 
+                  </picture>
+
+
+                  <picture>
+                  <source srcset="../images/work/Mob_Credit.png 4.3x" />
+                  <img src="../images/work/Mob_Credit.png" alt="Rebates" /> 
                   </picture>
                
                 
                   <picture>
-                  <source srcset="../images/work/Mob-Checkout@2x.png 3.5x" />
-                  <img src="../images/work/Mob-Checkout@2x.png" alt="logo" /> 
+                  <source srcset="../images/work/Des_Loader.png 3x" />
+                  <img src="../images/work/Des_Loader.png" alt="logo" /> 
                   </picture>
-               
-                
+
+
                   <picture>
-                  <source srcset="../images/work/Desk-Checkout@2x.png 3.5x" />
-                  <img src="../images/work/Desk-Checkout@2x.png" alt="logo" /> 
+                  <source srcset="../images/work/Des_Payments.png 3x" />
+                  <img src="../images/work/Des_Payments.png" alt="logo" /> 
                   </picture>
-                
+
+
+                  <picture>
+                  <source srcset="../images/work/Des_Review.png 3x" />
+                  <img src="../images/work/Des_Review.png" alt="logo" /> 
+                  </picture>
+
+                  
+                  
+                  
               </div>
             </div>
 
@@ -228,7 +265,7 @@ export default function Home() {
       .bg {
         background: rgba(170, 196, 200, 0.1); //library
         backdrop-filter: saturate(180%) blur(3rem);
-        height: 51rem;
+        height: 63rem;
         z-index: 1;
     }
 
@@ -258,6 +295,14 @@ export default function Home() {
 
       .pics-container picture:last-child {
         padding-right: 1.5rem;
+      }
+
+      .pics-container img {
+        border-radius: 1rem;
+      }
+
+      .pics-container picture {
+        margin: auto;
       }
 
       .header {
@@ -523,7 +568,7 @@ export default function Home() {
       @media (max-width:1024px)  { 
         // ipad
           .bg {
-            height: 59rem;
+            height: 71rem;
           }
 
         }
@@ -540,7 +585,7 @@ export default function Home() {
         }
 
         .bg {
-          height: 67rem;
+          height: 79rem;
         }
 
       }
