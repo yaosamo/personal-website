@@ -122,6 +122,14 @@ export default function Home() {
           
           <div className="__links">
 
+           {/* Anton Repponen */}
+           <a href="https://repponen.com" alt="Anton Repponen" target="_blank">
+          <div className="person">
+              <p>Anton Repponen</p>
+          </div>
+          </a>
+          
+
           {/* Brian Lovin */}
           <a href="http://brianlovin.com" alt="Brian Lovin" target="_blank">
           <div className="person">
@@ -150,9 +158,15 @@ export default function Home() {
           </div>
           </a>
 
+          {/* Nick Pryde */}
+          <a href="https://www.nickp.design" alt="Nick Pryde" target="_blank">
+          <div className="person">
+              <p>Nick Pryde</p>
+          </div>
+          </a>
 
           {/* Nila Arumugam */}
-               <a href="http://mikelsons.ca" alt="Luc Mikelsons" target="_blank">
+               <a href="http://nila.myportfolio.com" alt="Nila Arumugam" target="_blank">
           <div className="person">
               <p>Nila Arumugam</p>
           </div>
@@ -233,6 +247,10 @@ export default function Home() {
 
       .pics-container picture:first-child {
         padding-left: 1.5rem;
+      }
+
+      .pics-container picture:last-child {
+        padding-right: 1.5rem;
       }
 
       .header {
