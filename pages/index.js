@@ -40,7 +40,7 @@ export default function Home() {
                   <p>2020 — Current</p>
                   <h2>Gubagoo Virtual Retailing</h2>
                 </div>
-                <p className="description">I was in charge of design “virtual retailing” service for dealerships, we build several components such as real-time payments from lenders, online lender approval, online trade-in with conditions, checkout payments for due at signing or full purchase. Here’s a live version from one of the dealers (for PII use “Gubagoo” if you don’t want to get called)</p>
+                <p className="description">I was in charge of design “Virtual Retailing” service for dealerships, we build several industry breaking components such as real-time payments from lenders and approval under 90 seconds, trade-in with conditions evaluated to the pennies, checkout payments with Stripe integration. You can see live product on one of our customer's website <a className="link" href="https://www.nalleybmw.com/new-inventory/index.htm" alt="Nalley BMW" target="_blank">Nalley BMW</a></p>
             </div>
             </div>
           {/* Pics */}
@@ -48,57 +48,54 @@ export default function Home() {
               <div className="pics-container">
                  
                   <picture>
-                  <source srcset="../images/work/Loader_Mob.png 4.3x" />
-                  <img src="../images/work/Loader_Mob.png" alt="Loader" /> 
+                  <source srcset="../images/work/vr/Loader_mob.webp 4.3x" />
+                  <img src="../images/work/Loader_mob.webp" alt="Loader" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/Mob_Payments.jpeg 4.3x" />
-                  <img src="../images/work/Mob_Payments.jpeg" alt="Payments" /> 
+                  <source srcset="../images/work/vr/Menu.webp 4.3x" />
+                  <img src="../images/work/vr/Menu.webp" alt="Menu" /> 
                   </picture>
-
 
                   <picture>
-                  <source srcset="../images/work/Mob_F&I.png 4.3x" />
-                  <img src="../images/work/Mob_F&I.png" alt="F&I" /> 
+                  <source srcset="../images/work/vr/Payments_mob.webp 4.3x" />
+                  <img src="../images/work/vr/Payments_mob.webp" alt="Payments" /> 
                   </picture>
-                  
+
+                  <picture>
+                  <source srcset="../images/work/vr/Rebates_mob.webp 4.3x" />
+                  <img src="../images/work/vr/Rebates_mob.webp" alt="Rebates" /> 
+                  </picture>
                 
                   <picture>
-                  <source srcset="../images/work/Mob_Rebates.png 4.3x" />
-                  <img src="../images/work/Mob_Rebates.png" alt="Rebates" /> 
+                  <source srcset="../images/work/vr/FI_mob.webp 4.3x" />
+                  <img src="../images/work/vr/FI_mob.webp" alt="Rebates" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/Mob_Menu.PNG 4.3x" />
-                  <img src="../images/work/Mob_Menu.PNG" alt="Rebates" /> 
+                  <source srcset="../images/work/vr/Review_mob.webp 4.3x" />
+                  <img src="../images/work/vr/Review_mob.webp" alt="Review" /> 
                   </picture>
-
-
-                  <picture>
-                  <source srcset="../images/work/Mob_Credit.png 4.3x" />
-                  <img src="../images/work/Mob_Credit.png" alt="Rebates" /> 
-                  </picture>
-               
                 
                   <picture>
-                  <source srcset="../images/work/Des_Loader.png 3x" />
-                  <img src="../images/work/Des_Loader.png" alt="logo" /> 
+                  <source srcset="../images/work/vr/Checkout_mob.webp 4.3x" />
+                  <img src="../images/work/vr/Checkout_mob.webp" alt="Checkout" /> 
                   </picture>
-
 
                   <picture>
-                  <source srcset="../images/work/Des_Payments.png 3x" />
-                  <img src="../images/work/Des_Payments.png" alt="logo" /> 
+                  <source srcset="../images/work/vr/Loader_desk.webp 3x" />
+                  <img src="../images/work/vr/Loader_desk.webp" alt="Loader" /> 
                   </picture>
-
 
                   <picture>
-                  <source srcset="../images/work/Des_Review.png 3x" />
-                  <img src="../images/work/Des_Review.png" alt="logo" /> 
+                  <source srcset="../images/work/vr/FI_desk.webp 3x" />
+                  <img src="../images/work/vr/FI_desk.webp" alt="F&I" /> 
                   </picture>
 
-                  
+                  <picture>
+                  <source srcset="../images/work/vr/Review_desk.webp 3x" />
+                  <img src="../images/work/vr/Review_desk.webp" alt="F&I" /> 
+                  </picture>
                   
                   
               </div>
@@ -585,13 +582,10 @@ export default function Home() {
         }
 
         .bg {
-          height: 79rem;
+          height: 80rem;
         }
 
       }
-
-      
-
 
       `}</style>
 
