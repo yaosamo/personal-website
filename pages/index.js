@@ -48,53 +48,53 @@ export default function Home() {
               <div className="pics-container">
                  
                   <picture>
-                  <source srcset="../images/work/vr/Loader_mob.webp 4.3x" />
-                  <img src="../images/work/Loader_mob.webp" alt="Loader" /> 
+                  <source srcset="../images/work/VR/Loader_mob.webp 4.3x" />
+                  <img src="../images/work/VR/Loader_mob.webp" alt="Loader" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Menu.webp 4.3x" />
-                  <img src="../images/work/vr/Menu.webp" alt="Menu" /> 
+                  <source srcset="../images/work/VR/Menu.webp 4.3x" />
+                  <img src="../images/work/VR/Menu.webp" alt="Menu" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Payments_mob.webp 4.3x" />
-                  <img src="../images/work/vr/Payments_mob.webp" alt="Payments" /> 
+                  <source srcset="../images/work/VR/Payments_mob.webp 4.3x" />
+                  <img src="../images/work/VR/Payments_mob.webp" alt="Payments" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Rebates_mob.webp 4.3x" />
-                  <img src="../images/work/vr/Rebates_mob.webp" alt="Rebates" /> 
+                  <source srcset="../images/work/VR/Rebates_mob.webp 4.3x" />
+                  <img src="../images/work/VR/Rebates_mob.webp" alt="Rebates" /> 
                   </picture>
                 
                   <picture>
-                  <source srcset="../images/work/vr/FI_mob.webp 4.3x" />
-                  <img src="../images/work/vr/FI_mob.webp" alt="Rebates" /> 
+                  <source srcset="../images/work/VR/FI_mob.webp 4.3x" />
+                  <img src="../images/work/VR/FI_mob.webp" alt="Rebates" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Review_mob.webp 4.3x" />
-                  <img src="../images/work/vr/Review_mob.webp" alt="Review" /> 
+                  <source srcset="../images/work/VR/Review_mob.webp 4.3x" />
+                  <img src="../images/work/VR/Review_mob.webp" alt="Review" /> 
                   </picture>
                 
                   <picture>
-                  <source srcset="../images/work/vr/Checkout_mob.webp 4.3x" />
-                  <img src="../images/work/vr/Checkout_mob.webp" alt="Checkout" /> 
+                  <source srcset="../images/work/VR/Checkout_mob.webp 4.3x" />
+                  <img src="../images/work/VR/Checkout_mob.webp" alt="Checkout" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Loader_desk.webp 3x" />
-                  <img src="../images/work/vr/Loader_desk.webp" alt="Loader" /> 
+                  <source srcset="../images/work/VR/Loader_desk.webp 3x" />
+                  <img src="../images/work/VR/Loader_desk.webp" alt="Loader" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/FI_desk.webp 3x" />
-                  <img src="../images/work/vr/FI_desk.webp" alt="F&I" /> 
+                  <source srcset="../images/work/VR/FI_desk.webp 3x" />
+                  <img src="../images/work/VR/FI_desk.webp" alt="F&I" /> 
                   </picture>
 
                   <picture>
-                  <source srcset="../images/work/vr/Review_desk.webp 3x" />
-                  <img src="../images/work/vr/Review_desk.webp" alt="F&I" /> 
+                  <source srcset="../images/work/VR/Review_desk.webp 3x" />
+                  <img src="../images/work/VR/Review_desk.webp" alt="F&I" /> 
                   </picture>
                   
                   
@@ -586,7 +586,7 @@ export default function Home() {
         }
 
       }
-      
+
       `}</style>
 
     </Layout>
