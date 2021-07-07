@@ -6,7 +6,7 @@ body {
     line-height: 1.5em;
     margin: 0;
     padding: 0;
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: 'Inter', sans-serif, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
 h1 {
@@ -53,12 +53,14 @@ p {
     }
 
 
+
+
 /* Dark theme */
 
 @media (prefers-color-scheme: dark) {
     /* All text and bg */
 :root {
-    --active: #00ffd1;
+    --active: #0ce877;
     --dark: #09090F;
     --white: #e7e7e9;
     --element-background: #111116;
@@ -68,9 +70,12 @@ p {
     --green-10: #171a19;
     --green-20: #262B2A;
 
+    --blur-bg: rgba(40, 50, 50, 0.1);
+    
     --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
 
     --text-opacity: .7;
+
 
 }
 
@@ -80,10 +85,10 @@ p {
     }
 
 
-    ::selection {
+    /* ::selection {
         color: rgb(255, 103, 129);
         background: var(--gray-10);
-    }
+    } */
 
 }
 
@@ -101,14 +106,16 @@ p {
         --green-10: #F0F6F5;
         --green-20: #E1E8E7;
 
+        --blur-bg: rgba(170, 196, 200, 0.1);
+
         --icon: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg) brightness(99%) contrast(89%);
    
         --text-opacity: .8;
     }
 
 
-    ::selection {
+    /* ::selection {
         color: red;
         background: var(--gray-10);
-  }
+  } */
 }

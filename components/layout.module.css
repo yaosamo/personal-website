@@ -1,11 +1,10 @@
 .layout {
   animation: hello ease-out .3s;
     width: 100%;
-    max-width: 30rem;
-    padding-block-start: 4rem;
+    /* max-width: 78rem; */
+    padding-block-start: 2rem;
     padding-block-end: 4rem;
     margin: 0 auto;
-    /* border: 1px dotted purple; */
   }
   @keyframes hello {
     0% {opacity: 0;
@@ -18,5 +17,12 @@
 
 .container {
   /* border: 1px dashed red; */
-  margin: 1rem;
 }
+
+@media (max-width:414px)  { 
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+  .container {
+    margin: 0rem;
+  }
+}
+  
