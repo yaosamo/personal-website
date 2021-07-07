@@ -40,7 +40,7 @@ export default function Home() {
                   <p>2020 — Current</p>
                   <h2>Gubagoo Virtual Retailing</h2>
                 </div>
-                <p className="description">I was in charge of design “Virtual Retailing” service for dealerships, we build several industry breaking components such as real-time payments from lenders and approval under 90 seconds, trade-in with conditions evaluated to the pennies, checkout payments with Stripe integration. You can see live product on one of our customer's website <a className="link" href="https://www.nalleybmw.com/new-inventory/index.htm" alt="Nalley BMW" target="_blank">Nalley BMW</a></p>
+                <p className="description">I was in charge of design “Virtual Retailing” service for dealerships, we build several industry breaking features such as real-time payments from lenders and approval under 90 seconds, trade-in with conditions evaluated to the pennies, checkout payments with Stripe integration. You can see live product on one of our customer's website <a className="link" href="https://www.nalleybmw.com/new-inventory/index.htm" alt="Nalley BMW" target="_blank">Nalley BMW</a></p>
             </div>
             </div>
           {/* Pics */}
@@ -260,7 +260,7 @@ export default function Home() {
       }
 
       .bg {
-        background: rgba(170, 196, 200, 0.1); //library
+        background: var(--blur-bg);
         backdrop-filter: saturate(180%) blur(3rem);
         height: 63rem;
         z-index: 1;
@@ -337,11 +337,11 @@ export default function Home() {
 
       @keyframes elipsis {
         0% {
-          background-color: red;
+          background-color: #FF6645;
           transform: scale-y(1) rotate(0deg) translateY(0px);
         }
         100% {
-          background-color: orange;
+          background-color: #FF6645;
           transform: scaleY(4) rotate(360deg) translateY(-100px);
         }
       }
@@ -349,11 +349,11 @@ export default function Home() {
 
       @keyframes circle {
         0% {
-          background-color: purple;
+          background-color: #FF6645;
           transform: scale-y(1) translateY(300px) translateX(300px)  ;
         }
         100% {
-          background-color: blue;
+          background-color: #5F45FF;
           transform: scaleY(2) translateY(-800px) translateX(1000px);
         }
       }
@@ -430,26 +430,31 @@ export default function Home() {
       }
 
       .person {
-        background: var(--element-background);
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         align-items: center;
-        border-radius: 0.5rem;
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         margin-block-end: 1rem;
         transition: all .1s;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
       }
       
       .person:hover p {
-        border-bottom: 0.5px solid rgba(35, 36, 38, 1);
+        border-bottom: 0.5px solid var(--active);
+        color: var(--active);
       }
 
       .person p {
         margin-block-start: 0em;
         margin-block-end: 0em;
-        border-bottom: 0.5px solid rgba(35, 36, 38, .2);
+        border-bottom: 0.5px solid var(--white);
+        border-opacity: 0.2;
+      }
+
+      @media (prefers-color-scheme: light) {
+        .person p { // Dark underline
+          border-bottom: 0.5px solid var(--dark);
+        }
       }
 
       .people a { 
@@ -467,6 +472,7 @@ export default function Home() {
       }
 
       .things {
+        max-width: 30rem;
         padding-top: 10rem;
         margin: 0 1.5rem;
       }
@@ -481,14 +487,28 @@ export default function Home() {
       }
 
       .thing {
-        max-width: 30rem;
         margin-block-end: 4rem;
         transition: all .1s;
       }
 
       .thing:hover .arrow-shape {
         transform: translateX(4px);
+        background: var(--active);
+      } 
+
+      // Reverse hover for icon filter
+      @media (prefers-color-scheme: dark) {
+        .thing:hover .arrow { // Icon dark
+          filter: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg) brightness(99%) contrast(89%);
+        }
       }
+      
+      @media (prefers-color-scheme: light) {
+        .thing:hover .arrow { // Icon bright
+          filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
+        }
+      }
+
 
       .thing p {
         margin-block-start: 0rem;
@@ -518,12 +538,12 @@ export default function Home() {
       .link {
         font-weight: 500;
         color: var(--active);
-        text-decoration: none; 
+        text-decoration: none;
       }
 
       .link:hover {
         text-decoration: none;
-        background-color: var(--green-10);
+        border-bottom: 0.5px solid var(--active);
         border-radius: .125rem;
         margin-left: -.15rem;
         margin-right: -.15rem;
