@@ -305,7 +305,6 @@ export default function Home() {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 1.5rem 10rem;
       }
 
 
@@ -412,8 +411,7 @@ export default function Home() {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 10rem;
-        margin: 0 1.5rem;
+        max-width: 50rem;
       }
 
       .people h4 {
@@ -472,7 +470,6 @@ export default function Home() {
       .things {
         max-width: 30rem;
         padding-top: 10rem;
-        margin: 0 1.5rem;
       }
 
       .things h2 {
@@ -573,11 +570,6 @@ export default function Home() {
         }
 
       @media (max-width:414px)  { 
-      // smartphones, portrait iPhone, portrait 480x320 phones (Android)
-        .header, .things, .people {
-          margin-left: 1.5rem;
-          margin-right: 1.5rem;
-        }
         
         .button {
           width: 100%;

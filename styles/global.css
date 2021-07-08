@@ -53,8 +53,9 @@ p {
     }
 
 .content {
-    max-width: 78rem;
+    max-width: 75rem;
     margin: 0 auto;
+    padding: 0 1.5rem 10rem;
     }
 
 
@@ -65,9 +66,9 @@ p {
     }
 
 .link:hover {
+    color: var(--active);
     text-decoration: none;
     border-bottom: 0.5px solid var(--active);
-    border-radius: .125rem;
     margin-left: -.15rem;
     margin-right: -.15rem;
     padding-left: .15rem;
