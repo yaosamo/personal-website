@@ -233,10 +233,7 @@ export default function Home() {
     
 
       <style jsx>{`
-      .content {
-        max-width: 78rem;
-        margin: 0 auto;
-      }
+   
 
       .__wraper {
         margin: 4rem 1.5rem;
@@ -314,8 +311,8 @@ export default function Home() {
 
       .beautiful-elipsis {
         position: absolute;
-        transform-origin: center 120px;
-        animation: elipsis 5s ease-in-out infinite alternate-reverse;
+        transform-origin: center -200px;
+        animation: elipsis 20s ease-in-out infinite alternate-reverse;
         background-color: red;
         width: 400px;
         height: 400px;
@@ -326,8 +323,8 @@ export default function Home() {
       .beautiful-circle {
         position: absolute;
         transform-origin: center;
-        animation: circle 20s ease-in-out infinite alternate-reverse;
-        background-color: red;
+        animation: circle 20s ease-in-out infinite alternate;
+        background-color: #FF6645;
         width: 400px;
         height: 400px;
         border-radius: 40rem;
@@ -338,23 +335,24 @@ export default function Home() {
       @keyframes elipsis {
         0% {
           background-color: #FF6645;
-          transform: scale-y(1) rotate(0deg) translateY(0px);
+          transform: scale-y(1) translateY(0px);
         }
         100% {
           background-color: #FF6645;
-          transform: scaleY(4) rotate(360deg) translateY(-100px);
+          transform: scaleY(4) rotate(360deg) translateY(-900px);
         }
       }
 
 
       @keyframes circle {
         0% {
-          background-color: #FF6645;
-          transform: scale-y(1) translateY(300px) translateX(300px)  ;
+          transform: scale-y(1);
         }
+
+        30% {background-color: #FF6645;}
         100% {
           background-color: #5F45FF;
-          transform: scaleY(2) translateY(-800px) translateX(1000px);
+          transform: scaleY(2) translateY(-1000px) translateX(1200px);
         }
       }
 
@@ -533,22 +531,6 @@ export default function Home() {
         margin-right: 1rem;
         margin-block-after: 0rem;
         margin-block-end: 0rem;
-      }
-
-      .link {
-        font-weight: 500;
-        color: var(--active);
-        text-decoration: none;
-      }
-
-      .link:hover {
-        text-decoration: none;
-        border-bottom: 0.5px solid var(--active);
-        border-radius: .125rem;
-        margin-left: -.15rem;
-        margin-right: -.15rem;
-        padding-left: .15rem;
-        padding-right: .15rem;
       }
 
       .button {
