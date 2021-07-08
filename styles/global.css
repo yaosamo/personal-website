@@ -52,7 +52,27 @@ p {
     display: flex;
     }
 
+.content {
+    max-width: 78rem;
+    margin: 0 auto;
+    }
 
+
+.link {
+    font-weight: 500;
+    color: var(--active);
+    text-decoration: none;
+    }
+
+.link:hover {
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--active);
+    border-radius: .125rem;
+    margin-left: -.15rem;
+    margin-right: -.15rem;
+    padding-left: .15rem;
+    padding-right: .15rem;
+    }
 
 
 /* Dark theme */

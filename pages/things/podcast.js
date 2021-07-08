@@ -36,6 +36,7 @@ export default function Podcast() {
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#fafafa" />
       </Head>  
+      <div className="content">
       <Link href="/">
         <div className="arrow-shape">
               <img src="../images/home/Arrow-right.svg" className="arrow"/>
@@ -45,12 +46,11 @@ export default function Podcast() {
             <img src="../images/podcast/logo.svg" alt="And designer podcast" />
         </div>
         <h1 className="title">And Designer</h1>
-        <p className="subtitle">A podcast where we explore different aspects of design, technology and business through the lenses of a product designer. Hosted by <a href="https://twitter.com/yaosamo" target="_blank">Yaroslav Samoylov.</a></p>
+        <p className="subtitle">A podcast where we explore different aspects of design, technology and business through the lenses of a product designer. Hosted by <a href="https://twitter.com/yaosamo" className="link"  target="_blank">Yaroslav Samoylov.</a></p>
       </div>
-
-      <div className="intro">
-       <iframe media="(prefers-color-scheme: light)" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="175" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/intro/id1555995946?i=1000511073575&theme=dark"></iframe>
       </div>
+   
+      
 
       <div className="listen">
         {/* Title */}
@@ -129,6 +129,15 @@ export default function Podcast() {
       
      
       <style jsx>{`
+      .listen {
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+
+      .header {
+        margin-block-end: 4rem;
+      }
+
         .arrow-shape {
           background: var(--gray-10);
           width: 2.5rem;
