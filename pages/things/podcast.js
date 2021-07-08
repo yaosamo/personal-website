@@ -51,7 +51,7 @@ export default function Podcast() {
       </div>
    
       
-
+      <div className="content">
       <div className="listen">
         {/* Title */}
         <div>
@@ -125,6 +125,8 @@ export default function Podcast() {
             </div>
           </div>
           </a>
+
+          </div>
       </div>
       
      
@@ -134,8 +136,8 @@ export default function Podcast() {
         margin: 0 auto;
       }
 
-      .header {
-        margin-block-end: 4rem;
+      .content {
+        padding-bottom: 5rem;
       }
 
         .arrow-shape {
@@ -176,21 +178,6 @@ export default function Podcast() {
           max-width: 20rem; 
         }
 
-        .subtitle a {
-          font-weight: 500;
-          color: var(--active);
-          text-decoration: none; 
-        }
-
-        .subtitle a:hover {
-          text-decoration: none;
-          background-color: var(--green-10);
-          border-radius: .125rem;
-          margin-left: -.15rem;
-          margin-right: -.15rem;
-          padding-left: .15rem;
-          padding-right: .15rem;
-        }
 
         h1 {
           margin-block-start: 1em;
@@ -202,17 +189,6 @@ export default function Podcast() {
           margin-block-end: 0em;
         }
 
-        .intro {
-          margin-block-start: 2em;
-          margin-block-end: 2em;
-        }
-
-        .intro, iframe {
-          width: 100%;
-          max-width: 45rem;
-          overflow: hidden;
-          background: transparent;
-        }
 
         .column {
           background-color: var(--element-background);
@@ -257,12 +233,12 @@ export default function Podcast() {
           min-width: 14em;
         }
 
-        a {
+        .listen a {
           color: inherit;
           text-decoration: none;
         }
 
-        a:visited {
+        .listen a:visited {
           color: inherit;
         }
 
