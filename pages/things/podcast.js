@@ -36,11 +36,12 @@ export default function Podcast() {
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#fafafa" />
       </Head>  
-      <div className="content">
+      
       <Link href="/">
         <div className="arrow-shape">
               <img src="../images/home/Arrow-right.svg" className="arrow"/>
             </div></Link>
+            <div className="content">
       <div className="header">
         <div className="logo">
             <img src="../images/podcast/logo.svg" alt="And designer podcast" />
@@ -145,6 +146,7 @@ export default function Podcast() {
           width: 2.5rem;
           transform: rotate(180deg);
           flex-direction: row-reverse;
+          margin-left: 1.5rem;
         }
 
         .arrow-shape:hover {

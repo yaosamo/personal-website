@@ -22,18 +22,16 @@ export default function Home() {
           </div>
 
 
-
-        {/* Work */}
-       
-          <div className="bg-container">
+        {/* Work background */}
+        <div className="bg-container">
             <div className="bg-mask">
               <div className="bg"></div>
               <div className="beautiful-elipsis"></div>
               <div className="beautiful-circle"></div>
             </div>
           </div>
-          {/* Text */}
-          <div className="work">
+        {/* Work description */}
+        <div className="work">
             <div className="__wraper">
             <div className="__header">
                 <div className="__title">
@@ -104,11 +102,6 @@ export default function Home() {
           </div>
         
 
-      
-
-
-
-
         {/* Things */}
         <div className="content">
         <div className="things">
@@ -143,7 +136,6 @@ export default function Home() {
             
         </div>
         </div>
-
 
 
         {/* People */}
@@ -232,8 +224,14 @@ export default function Home() {
         </div>
     
 
+         {/* Footer */}
+         <div className="content">
+           <p className="footer">Design and code by me using NextJS. © 2021.</p>
+         </div>
       <style jsx>{`
-   
+      .footer {
+        opacity: .5;
+      }
 
       .__wraper {
         margin: 4rem 1.5rem;

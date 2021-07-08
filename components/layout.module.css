@@ -2,7 +2,7 @@
   animation: hello ease-out .3s;
     width: 100%;
     /* max-width: 78rem; */
-    padding-block-start: 2rem;
+    padding-block-start: 1.5rem;
     padding-block-end: 4rem;
     margin: 0 auto;
   }
