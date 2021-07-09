@@ -225,11 +225,15 @@ export default function Home() {
     
 
          {/* Footer */}
-         <div className="content">
-           <p className="footer">Design and code by me using NextJS. © 2021.</p>
+         <div className="footer">
+           <p>Design and code by me using NextJS. © 2021.</p>
          </div>
       <style jsx>{`
+      
       .footer {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 0 1.5rem 4rem;
         opacity: .5;
       }
 
@@ -320,7 +324,7 @@ export default function Home() {
       .beautiful-circle {
         position: absolute;
         transform-origin: center;
-        animation: circle 20s ease-in-out infinite alternate;
+        animation: circle 30s ease-in-out infinite alternate;
         background-color: #FF6645;
         width: 400px;
         height: 400px;
@@ -331,11 +335,11 @@ export default function Home() {
 
       @keyframes elipsis {
         0% {
-          background-color: #FF6645;
+          background-color: #FB461E;
           transform: scale-y(1) translateY(0px);
         }
         100% {
-          background-color: #FF6645;
+          background-color: #FB461E;
           transform: scaleY(4) rotate(360deg) translateY(-900px);
         }
       }
@@ -346,7 +350,8 @@ export default function Home() {
           transform: scale-y(1);
         }
 
-        30% {background-color: #FF6645;}
+        35% {background-color: #FB461E;}
+        40% {background-color: #5F45FF;}
         100% {
           background-color: #5F45FF;
           transform: scaleY(2) translateY(-1000px) translateX(1200px);
