@@ -233,7 +233,7 @@ export default function Home() {
       .footer {
         max-width: 75rem;
         margin: 0 auto;
-        padding: 0 1.5rem 4rem;
+        padding: 0 1.5rem;
         opacity: .5;
       }
 
