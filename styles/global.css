@@ -82,7 +82,7 @@ p {
     /* All text and bg */
 :root {
     --active: #0ce877;
-    --dark: #09090F;
+    --dark: #040407;
     --white: #e7e7e9;
     --element-background: #111116;
     --element-hover: #14141A;
@@ -91,7 +91,7 @@ p {
     --green-10: #171a19;
     --green-20: #262B2A;
 
-    --blur-bg: rgba(40, 50, 50, 0.1);
+    --blur-bg: rgba(255, 255, 255, 0.07);
     
     --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
 

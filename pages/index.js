@@ -15,23 +15,21 @@ export default function Home() {
       <div className="content">
         <div className="header">
           <p>
-          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Currently Lead Product Designer & Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, physical products with user interfaces, science & developer tools, human interaction, productivity, ethics. Currently Lead Product Designer & Interim Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
           </p>
           <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
           </div>
           </div>
 
-
-        {/* Work background */}
-        <div className="bg-container">
-            <div className="bg-mask">
-              <div className="bg"></div>
-              <div className="beautiful-elipsis"></div>
-              <div className="beautiful-circle"></div>
+        {/* VR */}
+        <div className="work_item">
+          <div className="bg-container">
+              <div className="bg-mask">
+                <div className="bg"></div>
+                <div className="beautiful-circle"></div>
+              </div>
             </div>
-          </div>
-        {/* Work description */}
-        <div className="work">
+          <div className="work">
             <div className="__wraper">
             <div className="__header">
                 <div className="__title">
@@ -100,7 +98,51 @@ export default function Home() {
             </div>
 
           </div>
-        
+        </div>
+
+        {/* Showroom */}
+        <div className="work_item">
+          <div className="bg-container">
+              <div className="bg-mask">
+                <div className="bg"></div>
+                <div className="beautiful-elipsis"></div>
+              </div>
+            </div>
+          <div className="work">
+            <div className="__wraper">
+            <div className="__header">
+                <div className="__title">
+                  <p>2020</p>
+                  <h2>Gubagoo Showroom</h2>
+                </div>
+                <p className="description">I was responsible for design of a crucial part of online purchase experience — online showroom. That dealerships would use on their website and in-store with shoppers side-by-side. Design strategy here was to make it a little bit different from what's out there while keeping all requirements in place. And another challenge was to make it scalable to work with dealer speficic tools.</p>
+            </div>
+            </div>
+          {/* Pics */}
+            <div className="pics">
+              <div className="pics-container">
+                 
+                  <picture>
+                  <source srcset="../images/work/showroom/Mobile.webp 4.3x" />
+                  <img src="../images/work/showroom/Mobile.webp" alt="Main screen mobile" /> 
+                  </picture>
+
+                  <picture>
+                  <source srcset="../images/work/showroom/Desktop-models.webp 3x" />
+                  <img src="../images/work/showroom/Desktop-models.webp" alt="Vehicles screen desktop" /> 
+                  </picture>
+
+                  <picture>
+                  <source srcset="../images/work/showroom/Desktop-vin.webp 3x" />
+                  <img src="../images/work/showroom/Desktop-vin.webp" alt="Vehicles screen desktop" /> 
+                  </picture>
+                  
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 
         {/* Things */}
         <div className="content">
@@ -229,6 +271,9 @@ export default function Home() {
            <p>Design and code by me using NextJS. © 2021.</p>
          </div>
       <style jsx>{`
+      .work_item {
+        padding-block-end: 6.5rem;
+      }
       
       .footer {
         max-width: 75rem;
@@ -347,11 +392,10 @@ export default function Home() {
 
       @keyframes circle {
         0% {
+          background-color: #5F45FF;
           transform: scale-y(1);
         }
 
-        35% {background-color: #FB461E;}
-        40% {background-color: #5F45FF;}
         100% {
           background-color: #5F45FF;
           transform: scaleY(2) translateY(-1000px) translateX(1200px);
@@ -491,22 +535,8 @@ export default function Home() {
 
       .thing:hover .arrow-shape {
         transform: translateX(4px);
-        background: var(--active);
+        
       } 
-
-      // Reverse hover for icon filter
-      @media (prefers-color-scheme: dark) {
-        .thing:hover .arrow { // Icon dark
-          filter: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg) brightness(99%) contrast(89%);
-        }
-      }
-      
-      @media (prefers-color-scheme: light) {
-        .thing:hover .arrow { // Icon bright
-          filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
-        }
-      }
-
 
       .thing p {
         margin-block-start: 0rem;
@@ -579,7 +609,7 @@ export default function Home() {
         }
 
         .bg {
-          height: 80rem;
+          height: 84rem;
         }
 
       }
