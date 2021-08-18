@@ -273,6 +273,7 @@ export default function Home() {
       <style jsx>{`
       .work_item {
         padding-block-end: 6.5rem;
+        padding-block-start: 5rem;
       }
       
       .footer {
@@ -596,20 +597,41 @@ export default function Home() {
 
       @media (max-width:1024px)  { 
         // ipad
+
           .bg {
             height: 71rem;
           }
 
         }
 
+      
       @media (max-width:414px)  { 
-        
+        // plus size work bg height.
+
         .button {
           width: 100%;
         }
 
         .bg {
+          height: 82rem;
+        }
+
+      }
+
+      @media (max-width:375px)  { 
+        // standard work bg height
+
+        .bg {
           height: 84rem;
+        }
+
+      }
+
+      @media (max-width:320px)  { 
+        // why am I doing this
+
+        .bg {
+          height: 90rem;
         }
 
       }
