@@ -15,7 +15,7 @@ export default function Home() {
       <div className="content">
         <div className="header">
           <p>
-          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, physical products with user interfaces, science & developer tools, human interaction, productivity, ethics. Currently Lead Product Designer & Interim Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
           </p>
           <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
           </div>
@@ -273,6 +273,7 @@ export default function Home() {
       <style jsx>{`
       .work_item {
         padding-block-end: 6.5rem;
+        padding-block-start: 5rem;
       }
       
       .footer {
@@ -596,20 +597,41 @@ export default function Home() {
 
       @media (max-width:1024px)  { 
         // ipad
+
           .bg {
             height: 71rem;
           }
 
         }
 
+      
       @media (max-width:414px)  { 
-        
+        // plus size work bg height.
+
         .button {
           width: 100%;
         }
 
         .bg {
+          height: 82rem;
+        }
+
+      }
+
+      @media (max-width:375px)  { 
+        // standard work bg height
+
+        .bg {
           height: 84rem;
+        }
+
+      }
+
+      @media (max-width:320px)  { 
+        // why am I doing this
+
+        .bg {
+          height: 90rem;
         }
 
       }
