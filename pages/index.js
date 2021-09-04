@@ -143,7 +143,6 @@ export default function Home() {
           </div>
         </div>
 
-
         {/* Things */}
         <div className="content">
         <div className="things">
@@ -179,7 +178,6 @@ export default function Home() {
         </div>
         </div>
 
-
         {/* People */}
         <div className="content">
         <div className="people">
@@ -189,8 +187,14 @@ export default function Home() {
           </h4>
           
           <div className="__links">
+          {/* Andreas Gysin */}
+          <a href="https://ertdfgcvb.xyz" alt="Andreas Gysin" target="_blank">
+          <div className="person">
+              <p>Andreas Gysin</p>
+          </div>
+          </a>
 
-           {/* Anton Repponen */}
+          {/* Anton Repponen */}
            <a href="https://repponen.com" alt="Anton Repponen" target="_blank">
           <div className="person">
               <p>Anton Repponen</p>
@@ -205,10 +209,17 @@ export default function Home() {
           </div>
           </a>
           
-           {/* Denis Sharypin */}
+          {/* Denis Sharypin */}
            <a href="http://sharypin.cool" alt="Denis Sharypin" target="_blank">
           <div className="person">
               <p>Denis Sharypin</p>
+          </div>
+          </a>
+
+           {/* Ilya Kolganov */}
+           <a href="https://ilyakolganov.com/" alt="Ilya Kolganov" target="_blank">
+          <div className="person">
+              <p>Ilya Kolganov</p>
           </div>
           </a>
 
@@ -264,6 +275,43 @@ export default function Home() {
 
         </div>
         </div>
+    
+        {/* Studios */}
+        <div className="content">
+        <div className="people">
+          
+          <h4>
+          Cool studios (A → Z):
+          </h4>
+          
+          <div className="__links">
+            
+          {/* Collins */}
+          <a href="https://www.wearecollins.com" alt="Collins" target="_blank">
+          <div className="person">
+              <p>Collins</p>
+          </div>
+          </a>
+
+          {/* Play */}
+          <a href="https://www.play.studio" alt="Play" target="_blank">
+          <div className="person">
+              <p>Play</p>
+          </div>
+          </a>
+
+          {/* Red Antler */}
+          <a href="https://redantler.com" alt="Red Antler" target="_blank">
+          <div className="person">
+              <p>Red Antler</p>
+          </div>
+          </a>
+          
+          </div>
+          
+        </div>
+        </div>
+   
     
 
          {/* Footer */}
