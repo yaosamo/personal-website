@@ -35,6 +35,7 @@ export default function Podcast() {
         <meta name="msapplication-TileColor" content="#fafafa"/>
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#fafafa" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>  
       
       <Link href="/">

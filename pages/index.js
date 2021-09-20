@@ -312,8 +312,6 @@ export default function Home() {
         </div>
         </div>
    
-    
-
          {/* Footer */}
          <div className="footer">
            <p>Design and code by me using NextJS. © 2021.</p>
