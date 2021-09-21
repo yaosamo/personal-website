@@ -24,10 +24,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
     "/things/gameboy": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/things/gameboy.js"
+    ],
+    "/things/images": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/things/images.js"
     ]
   },
   "ampFirstPages": []

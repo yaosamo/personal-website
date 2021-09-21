@@ -1,7 +1,6 @@
 # Folder view configuration files
 .DS_Store
 Desktop.ini
-.next
 
 # Thumbnail cache files
 ._*
@@ -23,3 +22,4 @@ node_modules
 .sass-cache
 
 .next/cache
+.next
