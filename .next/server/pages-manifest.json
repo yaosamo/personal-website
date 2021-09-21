@@ -1,7 +1,9 @@
 {
   "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/things/gameboy": "pages/things/gameboy.html",
+  "/things/podcast": "pages/things/podcast.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/things/gameboy": "pages/things/gameboy.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
