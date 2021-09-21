@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../../components/layout'
+import Image from 'next/image'
 
 var images =[];
  
@@ -12,7 +13,7 @@ export default function GamesScreenshots() {
           return r.keys().map(r);
       }
           const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
-
+          console.log(images);
   return ( 
     <Layout>
   <Head>
@@ -64,7 +65,12 @@ export default function GamesScreenshots() {
         <div className="__screenshots">
           <div className="__item">
         
-          {images.map((image, index) =>    <img key={index} src={image}></img>)}
+          {images.map((image) =>    
+          
+          <Image
+          src={image}
+          />
+          )}
        
           </div>
         </div>
