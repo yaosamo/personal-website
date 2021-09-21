@@ -1,4 +1,4 @@
-import '/styles/global.css'
+import styles from '../styles/global.css'
 import { usePanelbear } from "../hooks/panelbear";
 
 export default function App({ Component, pageProps }) {
