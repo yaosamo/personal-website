@@ -77,7 +77,7 @@ export default function GamesScreenshots() {
 
       .content {
         max-width: 40rem;
-        padding-bottom: 5rem;
+        padding-bottom: 3.5rem;
       }
 
         .arrow-shape {
