@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '/components/layout'
-import image from 'next/image'
-import React, { useState } from 'react'
 
 var images =[];
  
@@ -14,7 +12,7 @@ export default function GamesScreenshots() {
           return r.keys().map(r);
       }
           const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
-    
+
   return ( 
     <Layout>
   <Head>

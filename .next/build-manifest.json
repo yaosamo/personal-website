@@ -1,38 +1,50 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-7b08e4c67f4f1b892f4b.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/DWwxF6HaT5LNq4uFsRPbX/_buildManifest.js",
+    "static/DWwxF6HaT5LNq4uFsRPbX/_ssgManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/webpack-189c53927ffd3caf09c3.js",
+      "static/chunks/framework-de73488c31df1d5adc24.js",
+      "static/chunks/main-dd3b78443e106f85d875.js",
+      "static/chunks/184-6805e01e1e1abfd7d80f.js",
+      "static/css/1463758f540b3c52149b.css",
+      "static/chunks/pages/index-cf9e16f83589dca13b04.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-189c53927ffd3caf09c3.js",
+      "static/chunks/framework-de73488c31df1d5adc24.js",
+      "static/chunks/main-dd3b78443e106f85d875.js",
+      "static/css/c9821c4f0df0be385bc8.css",
+      "static/chunks/pages/_app-7cd6f1dd8f09842b5b55.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-189c53927ffd3caf09c3.js",
+      "static/chunks/framework-de73488c31df1d5adc24.js",
+      "static/chunks/main-dd3b78443e106f85d875.js",
+      "static/chunks/pages/_error-7cc035aca8c55a087310.js"
     ],
     "/things/gameboy": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/things/gameboy.js"
+      "static/chunks/webpack-189c53927ffd3caf09c3.js",
+      "static/chunks/framework-de73488c31df1d5adc24.js",
+      "static/chunks/main-dd3b78443e106f85d875.js",
+      "static/chunks/184-6805e01e1e1abfd7d80f.js",
+      "static/css/1463758f540b3c52149b.css",
+      "static/chunks/pages/things/gameboy-f7a950d57db177202ad0.js"
+    ],
+    "/things/podcast": [
+      "static/chunks/webpack-189c53927ffd3caf09c3.js",
+      "static/chunks/framework-de73488c31df1d5adc24.js",
+      "static/chunks/main-dd3b78443e106f85d875.js",
+      "static/chunks/184-6805e01e1e1abfd7d80f.js",
+      "static/css/1463758f540b3c52149b.css",
+      "static/chunks/pages/things/podcast-fa02cc498860ed99337a.js"
     ]
   },
   "ampFirstPages": []
