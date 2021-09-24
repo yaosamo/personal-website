@@ -206,6 +206,7 @@ export default function Home() {
           <a href="https://ertdfgcvb.xyz" alt="Andreas Gysin" target="_blank">
           <div className="person">
               <p>Andreas Gysin</p>
+              <a className="__new">New</a>
           </div>
           </a>
 
@@ -230,6 +231,15 @@ export default function Home() {
               <p>Denis Sharypin</p>
           </div>
           </a>
+
+          {/* Gadzhi Kharkharov */}
+          <a href="https://kkga.me/" alt="Gadzhi Kharkharov" target="_blank">
+          <div className="person">
+              <p>Gadzhi Kharkharov</p>
+              <a className="__new">New</a>
+          </div>
+          </a>
+          
 
            {/* Ilya Kolganov */}
            <a href="https://ilyakolganov.com/" alt="Ilya Kolganov" target="_blank">
@@ -332,6 +342,13 @@ export default function Home() {
            <p>Design and code by me using NextJS. © 2021.</p>
          </div>
       <style jsx>{`
+      .person .__new {
+        color: red;
+        font-size: 80%;
+        margin-left: 0.5rem;
+        
+      }
+      
       .work_item {
         padding-block-end: 6.5rem;
         padding-block-start: 5rem;
@@ -592,12 +609,17 @@ export default function Home() {
 
       .thing {
         margin-block-end: 4rem;
-        transition: all .1s;
+        
+      }
+
+      .arrow-shape {
+        transition: all .3s;
+        opacity: 0;
       }
 
       .thing:hover .arrow-shape {
+        opacity: 1;
         transform: translateX(4px);
-        
       } 
 
       .thing p {
@@ -610,7 +632,7 @@ export default function Home() {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-block-end: 1rem;
+        margin-block-end: 0.5rem;
         
       }
 

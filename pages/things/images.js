@@ -7,7 +7,8 @@ function Blog({ posts }) {
     <ul>
       {posts.map((post) => (
         <li>
-          <h3>{post.filePath}</h3>
+          <h3>{post.filename}</h3>
+          <p>{post.filePath}</p>
           <img src={post.filePath}/>
         </li>
       ))}
@@ -23,16 +24,14 @@ export async function getStaticProps() {
   const filenames = await fs.readdir(postsDirectory)
 
   const posts = filenames.map(async (filename) => {
-    const filePath = path.join(postsDirectory, filename)
-    const fileContents = await fs.readFile(filePath, 'utf-8')
+    const filePath = path.join('../../images/games/gameboy', filename)
+   
 
     // Generally you would parse/transform the contents
     // For example you can transform markdown to HTML here
 
     return {
-      filePath,
-      filename,
-      content: fileContents,
+      filePath
     }
   })
   // By returning { props: { posts } }, the Blog component

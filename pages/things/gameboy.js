@@ -17,10 +17,6 @@ export default function GamesScreenshots() {
           const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
          
  
-
-
-
-
   return ( 
     <Layout>
   <Head>
