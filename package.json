@@ -8,14 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.0.0-beta.11",
+    "@cloudinary/url-gen": "^1.0.0-beta.5",
     "@panelbear/panelbear-js": "^1.2.0",
+    "cloudinary": "^1.27.0",
+    "cloudinary-core": "^2.11.4",
     "fs": "0.0.1-security",
     "next": "^11.1.2",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.1",
     "next-optimized-images": "^2.6.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack": "^5.54.0"
   },
   "devDependencies": {}
 }
