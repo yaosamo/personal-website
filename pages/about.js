@@ -44,23 +44,13 @@ export default function Podcast() {
             </div></Link>
             <div className="content">
                 <div className="item-1">
-                  <p className="timestamp">October 3, 2021 at 9:43 PM</p>
+                  <div className="timestamp"><p>October 3, 2021 at 9:43 PM</p><div className="cursor"/></div>
                   <p className="subtitle">Hi, I’m a curious designer working on tools for dealerships at Gubagoo. Previously Zvooq, Genue.
           Born and raised in Togliatti, Russia. Living in a beautiful Hillsboro, Oregon. I’m an O1 visa holder and currently working on the greencard. Married to my beautiful wife and we have almost 3 years old dragon-blood son.
           I love how through design you can change industries. I’m always been inspired by the tech to create someting new. I’m excited to see what is interfaces of the future will look likeOn my spare time I enjoy adjacent areas to design such as 3D, coding, art and game development.
           I play ultimate freesbi every weekend. Also I watch english premier league and cheer for the Arsenal.
           Random, but I recently discovered that my parents gave me a name that is well designed. </p>
                 <div><img src="../images/about/name.svg"/></div>
-                <h2>I like to design things for my close friends</h2>
-                <h2>Links</h2>
-                <ul>
-                  <li>Twitter @yaosamo</li>
-                  <li>GitHub @yaosamo</li>
-                  <li>Instagram @yaosamo</li>
-                  <li>Spotify @yaosamo</li>
-                  <li>Email hi@yaosamo.com</li>
-                </ul>
-                <p>Thank you very much for visiting! Also I do not use tracking of anykind on this website. Enjoy and be safe!</p>
                 </div> 
 
               <div className="item-2">
@@ -105,6 +95,19 @@ export default function Podcast() {
                 </ul>
                 
                 </div>
+
+                <h2>I like to design things for my close friends</h2>
+                <h2>Links</h2>
+                <ul>
+                  <li>Twitter @yaosamo</li>
+                  <li>GitHub @yaosamo</li>
+                  <li>Instagram @yaosamo</li>
+                  <li>Spotify @yaosamo</li>
+                  <li>Email hi@yaosamo.com</li>
+                </ul>
+                <p>Thank you very much for visiting! Also I do not use tracking of anykind on this website. Enjoy and be safe!</p>
+                
+
               </div>
             
       
@@ -117,6 +120,7 @@ export default function Podcast() {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           grid-gap: 5rem;
+          margin-block-start: 2rem;
         }  
 
         .content ul {list-style-type: none; padding-inline: 0;}
@@ -129,12 +133,28 @@ export default function Podcast() {
           .item-1 {grid-column: 1 / 1;}
         }
 
-        .me {width:100%}
-        
-        .column {
-          width: 24rem;
-          border: 1px dashed red;}
+        .me {
+          width:100%
+        }
 
+        .cursor {
+          width: 2px;
+          height: 1.5rem;
+          background-color: var(--active);
+          margin: 0px 8px;
+          animation: cursor 0.5s infinite alternate;
+        }
+
+        .timestamp {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        @keyframes cursor {
+          0%,50% {opacity: 100%;}
+          51%, 100% {opacity: 0%;} 
+        }
 
         .arrow-shape {
           background: var(--gray-10);
