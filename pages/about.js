@@ -69,12 +69,12 @@ export default function Podcast() {
                     <path className="A_3" d="M35.5657 22.8785H38.4546L31.2322 0.46582H28.3122L21.0898 22.8785H23.8701L25.8271 16.4482H33.6242L35.5657 22.8785ZM29.6946 3.7586H29.7722L32.9097 14.1029H26.5416L29.6946 3.7586Z" fill="#3E6254"/>
                     <path className="S_2" d="M1.16406 48.9143C1.39704 52.8905 4.42578 55.3446 9.05432 55.3446C13.745 55.3446 16.7737 52.7818 16.7737 48.759C16.7737 45.3886 14.9409 43.4937 10.592 42.422L8.63495 41.9249C5.71494 41.1949 4.47238 40.0766 4.47238 38.1351C4.47238 35.8519 6.19643 34.4851 9.06985 34.4851C11.7103 34.4851 13.4188 35.8519 13.6984 38.1662H16.3699C16.1835 34.4385 13.279 32 9.05432 32C4.5811 32 1.70768 34.4696 1.70768 38.2905C1.70768 41.5366 3.58705 43.5092 7.74963 44.5654L9.6756 45.0469C12.7043 45.7924 14.009 46.9573 14.009 48.8988C14.009 51.3063 12.052 52.8595 9.06985 52.8595C6.0877 52.8595 4.11514 51.3684 3.83557 48.9143H1.16406Z" fill="#3E6254"/>
                     </svg> */}
-                    <video autoPlay className="namevideo" playsinline="" loop="true" src="../images/about/name.mov"></video>
+                    <video autoPlay className="namevideo" muted playsinline="" loop="true" src="../images/about/name.mp4"></video>
                   </div>
                 </div> 
 
-              <div className="item">
-              <div className="me"></div>
+              <div className="item-2">
+              <video autoPlay className="me" muted playsinline="" loop="true" src="../images/about/me.mp4"></video>
               <p className="block-end">This is me working on this page, while listening <a className="link" href="https://open.spotify.com/playlist/37i9dQZF1DXaWgNWdGsjlE?si=555a4c2f75974958" target="_blank" alt="Sludge Playlist on Spotify">Sludge</a> playlist and watching Silicon Valley on the background</p>
               <h2 className="setup">My setup</h2>
               <ul>
@@ -115,7 +115,7 @@ export default function Podcast() {
                 </ul>
                 
                 </div>
-                <div className="item">
+                <div className="item-3">
                 <h2>Things I designed for my friends</h2>
                 <div className="gallery">
                   <img src="../images/about/designforfriends/2.png"/>
@@ -143,21 +143,17 @@ export default function Podcast() {
 
               </div>
             
-      
-   
-    
      
       <style jsx>{`
-        .svg {opacity: .2;
-        animation: svg 5s infinite}
+        // .svg {opacity: .2;
+        // animation: svg 5s infinite}
         
-        @keyframes svg {
-          0%,100% {opacity: .2}
-          50% {opacity: 1}
-        }
+        // @keyframes svg {
+        //   0%,100% {opacity: .2}
+        //   50% {opacity: 1}
+        // }
 
-        .namevideo {height: 6rem;}
-
+        .namevideo {height: 100%;}
 
         .content {
           display: grid;
@@ -171,18 +167,20 @@ export default function Podcast() {
           padding-inline: 0;
         }
 
-        .item {grid-column: 1 / 6;}
-        // .item-2 {width: 24rem}
+        .item, .item-3 {grid-column: 1 / 5;}
+        .item-2 {grid-column: 5 / 7;}
+        .item-3 {margin-top: -274px;}
 
         @media (max-width: 414px) {
-          .content {grid-template-columns: 1fr;}
+          
           .content {grid-column: 1;}
+          .item {grid-column: 1 / 8}
+          .item-2, .item-3 {grid-column: 1 / 8}
+          .item-3 {margin-top: 0;}
         }
 
         .me {
-          background: url(../images/about/me.webp) center no-repeat; 
           width: 100%;
-          height: 320px;
           border-radius: 0.25rem;
           margin-block-end: 1.5rem;
         }
@@ -210,7 +208,7 @@ export default function Podcast() {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          overflow-y: scroll;
+          overflow-y: auto;
         }
 
         .gallery img {
@@ -235,12 +233,9 @@ export default function Podcast() {
         }
 
         .name {
-          width: 100%;
+          width: 30%;
           height: 6rem;
           background-color: #EBF3F0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           border-radius: 0.25rem;
         }
 
