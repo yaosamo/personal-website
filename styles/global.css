@@ -63,6 +63,7 @@ p {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid;
+    transition: all .1s;
     }
 
 .link:hover {
@@ -74,6 +75,10 @@ p {
     padding-left: .15rem;
     padding-right: .15rem; */
     }
+
+.link:active {
+    /* opacity: .4; */
+}
 
 
 /* Dark theme */
@@ -90,13 +95,13 @@ p {
     --gray-20: #1E1E24;
     --green-10: #171a19;
     --green-20: #262B2A;
+    --secondary-text: #838487;
 
     --blur-bg: rgba(255, 255, 255, 0.07);
     
     --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
 
     --text-opacity: .7;
-
 
 }
 
@@ -126,6 +131,7 @@ p {
         --gray-20: #F6f6f6;
         --green-10: #F0F6F5;
         --green-20: #E1E8E7;
+        --secondary-text: #53565A;
 
         --blur-bg: rgba(170, 196, 200, 0.1);
 

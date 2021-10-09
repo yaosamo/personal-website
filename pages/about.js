@@ -167,14 +167,22 @@ export default function Podcast() {
           padding-inline: 0;
         }
 
+        .item li {}
         .item, .item-3 {grid-column: 1 / 5;}
-        .item-2 {grid-column: 5 / 7;}
-        .item-3 {margin-top: -274px;}
+        .item-2 {
+          grid-column: 5 / 8;
+          padding: 3.5rem;
+          background: var(--blur-bg);
+          border-radius: 0.5rem;  
+        }
+        .item-2 ul {color: var(--secondary-text);}
+
+        .item-3 {margin-top: -344px;}
 
         @media (max-width: 414px) {
-          
           .content {grid-column: 1;}
           .item {grid-column: 1 / 8}
+          .item-2 {padding: 0; background: none;}
           .item-2, .item-3 {grid-column: 1 / 8}
           .item-3 {margin-top: 0;}
         }
@@ -217,6 +225,7 @@ export default function Podcast() {
 
         .block-end {
           margin-block-end: 3.5rem;
+          color: var(--secondary-text);
         }
 
         .h4 {
@@ -281,7 +290,6 @@ export default function Podcast() {
           margin-block-start: 0em;
           margin-block-end: 0em;
         }
-
 
       `}</style> 
      

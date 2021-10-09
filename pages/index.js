@@ -16,7 +16,7 @@ export default function Home() {
       <div className="content">
         <div className="header">
           <p>
-          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design at <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">Gubagoo</a>, where we're building modern service to buy car online. 
           </p>
           <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
           </div>
@@ -620,7 +620,7 @@ export default function Home() {
 
       .thing:hover .arrow-shape {
         opacity: 1;
-        transform: translateX(4px);
+        transform: translateX(8px);
       } 
 
       .thing p {
@@ -643,7 +643,7 @@ export default function Home() {
       }
 
       h4 {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         margin-block-after: 0rem;
         margin-block-end: 0rem;
       }
