@@ -18,9 +18,12 @@ export default function Home() {
           <p>
           Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design at <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">Gubagoo</a>, where we're building modern service to buy car online. 
           </p>
-          <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
+          <div className="buttons">
+            <Link href="/about/"><a className="primary-button">About me</a></Link>
+            <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
           </div>
-          </div>
+        </div>
+      </div>
 
         {/* VR */}
         <div className="work_item">
@@ -648,8 +651,27 @@ export default function Home() {
         margin-block-end: 0rem;
       }
 
+      .primary-button {
+        font-weight: 600;
+        color: var(--active);
+        background: var(--green-10);
+        text-decoration: none; 
+        margin-block-start: 2rem;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all .1s;
+        width: 20rem;
+        height: 4rem;
+      }
+
       .button {
-        font-weight: 500;
+        font-weight: 600;
         color: var(--active);
         text-decoration: none; 
         margin-block-start: 2rem;
@@ -669,6 +691,7 @@ export default function Home() {
       }
 
       .button:active,
+      .primary-button:active,
       .card:active,
       .person:active {
         transform: scale(0.98); 

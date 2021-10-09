@@ -177,6 +177,14 @@ export default function Podcast() {
         }
         .item-2 ul {color: var(--secondary-text);}
 
+        // header on sidebar more contrast
+        @media (prefers-color-scheme: dark) {
+          .item-2 .h4 {color: var(--white);}
+        }
+        @media (prefers-color-scheme: light) {
+          .item-2 .h4 {color: var(--dark);}
+        }
+        
         .item-3 {margin-top: -344px;}
 
         @media (max-width: 414px) {
