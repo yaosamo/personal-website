@@ -5,19 +5,22 @@ import Image from 'next/image'
 
 
 
-var images =[];
+// Original solution
+// var images =[];
  
 
-export default function GamesScreenshots() {
-  
-  //call images
-  function importAll(r) {
-          return r.keys().map(r);
-      }
-          const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
-         
- 
+  export default function GamesScreenshots() {
+
+
+//   //call images
+//   function importAll(r) {
+//           return r.keys().map(r);
+//       }
+//           const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
   return ( 
+
+
+
     <Layout>
   <Head>
         <title>Gameboy games screenshots</title>
@@ -67,14 +70,19 @@ export default function GamesScreenshots() {
       <div className="content">
         <div className="__screenshots">
           <div className="__item">
-        
 
-          {images.map((image) =>    
           
+        
+          {/* Original render */}
+          {/* {images.map((image) =>    
           <Image
           src={image}
           />
-          )}
+          )} */}
+
+
+
+
        
           </div>
         </div>

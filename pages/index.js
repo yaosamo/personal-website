@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 
 
+
 export default function Home() {
   return (
     <Layout>
@@ -15,11 +16,14 @@ export default function Home() {
       <div className="content">
         <div className="header">
           <p>
-          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">@gubagoo</a>, where we're building modern service to buy car online. 
+          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design at <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">Gubagoo</a>, where we're building modern service to buy car online. 
           </p>
-          <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
+          <div className="buttons">
+            <Link href="/about/"><a className="primary-button">About me</a></Link>
+            <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
           </div>
-          </div>
+        </div>
+      </div>
 
         {/* VR */}
         <div className="work_item">
@@ -619,7 +623,7 @@ export default function Home() {
 
       .thing:hover .arrow-shape {
         opacity: 1;
-        transform: translateX(4px);
+        transform: translateX(8px);
       } 
 
       .thing p {
@@ -642,18 +646,46 @@ export default function Home() {
       }
 
       h4 {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         margin-block-after: 0rem;
         margin-block-end: 0rem;
       }
 
-      .button {
-        font-weight: 500;
-        color: var(--active);
-        text-decoration: none; 
+      .buttons {
         margin-block-start: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .primary-button {
+        font-weight: 600;
+        color: var(--button-text);
+        background: var(--primary-button);
+        text-decoration: none; 
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all .1s;
+        width: 20rem;
+        height: 4rem;
+      }
+
+      .primary-button:hover{
+        background: var(--primary-button-hover);
+      }
+
+      .button {
+        margin: 24px 0px;
+        font-weight: 600;
+        color: var(--button-text);
+        text-decoration: none; 
         border: 1px solid;
-        border-color: var(--green-20);
+        border-color: var(--secondary-button);
         box-sizing: border-box;
         border-radius: 0.5rem;
         display: flex;
@@ -668,6 +700,7 @@ export default function Home() {
       }
 
       .button:active,
+      .primary-button:active,
       .card:active,
       .person:active {
         transform: scale(0.98); 
@@ -675,7 +708,7 @@ export default function Home() {
 
       .button:hover {
         cursor: pointer;
-        border: 1px solid var(--active);
+        border: 1px solid var(--secondary-button-hover);
       }
 
       @media (max-width:1024px)  { 
