@@ -651,12 +651,17 @@ export default function Home() {
         margin-block-end: 0rem;
       }
 
+      .buttons {
+        margin-block-start: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+
       .primary-button {
         font-weight: 600;
-        color: var(--active);
-        background: var(--green-10);
+        color: var(--button-text);
+        background: var(--primary-button);
         text-decoration: none; 
-        margin-block-start: 2rem;
         box-sizing: border-box;
         border-radius: 0.5rem;
         display: flex;
@@ -670,13 +675,17 @@ export default function Home() {
         height: 4rem;
       }
 
+      .primary-button:hover{
+        background: var(--primary-button-hover);
+      }
+
       .button {
+        margin: 24px 0px;
         font-weight: 600;
-        color: var(--active);
+        color: var(--button-text);
         text-decoration: none; 
-        margin-block-start: 2rem;
         border: 1px solid;
-        border-color: var(--green-20);
+        border-color: var(--secondary-button);
         box-sizing: border-box;
         border-radius: 0.5rem;
         display: flex;
@@ -699,7 +708,7 @@ export default function Home() {
 
       .button:hover {
         cursor: pointer;
-        border: 1px solid var(--active);
+        border: 1px solid var(--secondary-button-hover);
       }
 
       @media (max-width:1024px)  { 

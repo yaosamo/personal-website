@@ -98,6 +98,14 @@ p {
     --green-20: #262B2A;
     --secondary-text: #838487;
 
+    --primary-button: rgba(71, 71, 74, 0.1);
+    --primary-button-hover: rgba(71, 71, 74, 0.2);
+    --secondary-button: #15151A;
+    --secondary-button-hover: #353540;
+    --button-text: #e7e7e9;
+
+    --sidebar-background: #111115;
+
     --blur-bg: rgba(255, 255, 255, 0.07);
     
     --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg) brightness(113%) contrast(100%);
@@ -133,6 +141,14 @@ p {
         --green-10: #F0F6F5;
         --green-20: #E1E8E7;
         --secondary-text: #53565A;
+
+        --primary-button: #F7F9F9;
+        --primary-button-hover: #EEF2F2;
+        --secondary-button: #EFF1F1;
+        --secondary-button-hover: #D7DDDD;
+        --button-text: #232426;
+
+        --sidebar-background: #F8F9FA;
 
         --blur-bg: rgba(170, 196, 200, 0.1);
 
