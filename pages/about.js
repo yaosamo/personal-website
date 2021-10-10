@@ -34,7 +34,8 @@ export default function Podcast() {
         <link rel="manifest" href="/static/meta/manifest.json" />
         <meta name="msapplication-TileColor" content="#fafafa"/>
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#fafafa" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
+        <meta name="theme-color" content="#040407" media="(prefers-color-scheme: dark)"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></link>
       </Head>  
       
@@ -148,7 +149,7 @@ export default function Podcast() {
           margin: auto;
         }
 
-        .A_1, .Y_1, .R, .S_1, .A_2, .O_2, .L_2, .V_2  {animation: yr 10s infinite;} 
+        .A_1, .Y_1, .R, .S_1, .A_2, .O_2, .L_2, .V_2  {animation: yr 4s infinite;} 
         
         @keyframes yr {
           0%,20%,80%,100% { opacity: .2
@@ -156,7 +157,7 @@ export default function Podcast() {
           30%,70% {opacity: 1}
         }
 
-        .A_3, .S_2, .M, .O_1, .Y_2, .L_1, .O_3, .V_1   {animation: sm 10s infinite;} 
+        .A_3, .S_2, .M, .O_1, .Y_2, .L_1, .O_3, .V_1   {animation: sm 4s infinite;} 
         
         @keyframes sm {
           0%,20%,80%,100% { opacity: 1
