@@ -51,7 +51,7 @@ export default function Podcast() {
                     </p><p className="subtitle">I love how through design you can change people’s preconceived notion about well-established process and open new possibilities. I’m always have been inspired by tech industry to explore and create. On my spare time I enjoy adjacent areas to design such as 3D, coding, art and game development.
                     </p><p className="subtitle">Also I play ultimate frisbee and cheer for the <a className="link" href="https://duckduckgo.com/?q=arsenal+fc&va=b&t=hc&ia=web" target="_blank">Arsenal FC</a>.
                     </p><p className="subtitle">Random, but I recently discovered that my parents gave me a name that is well designed.</p>
-                  <div className="name">
+                  <div className="name-svg">
                     <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="165" height="56" viewBox="0 0 165 56" >
                     <path className="A_1" d="M140.247 22.8785H143.136L135.914 0.46582H132.994L125.771 22.8785H128.552L130.509 16.4482H138.306L140.247 22.8785ZM134.376 3.7586H134.454L137.591 14.1029H131.223L134.376 3.7586Z" />
                     <path className="S_1" d="M84.9082 16.9143C85.1412 20.8905 88.1699 23.3446 92.7985 23.3446C97.4891 23.3446 100.518 20.7818 100.518 16.759C100.518 13.3886 98.6851 11.4937 94.3361 10.422L92.3791 9.92494C89.4591 9.19494 88.2165 8.07664 88.2165 6.13514C88.2165 3.85194 89.9406 2.48512 92.814 2.48512C95.4544 2.48512 97.1629 3.85193 97.4425 6.1662H100.114C99.9276 2.43852 97.0232 0 92.7985 0C88.3252 0 85.4518 2.46959 85.4518 6.29046C85.4518 9.53664 87.3312 11.5092 91.4938 12.5654L93.4197 13.0469C96.4485 13.7924 97.7532 14.9573 97.7532 16.8988C97.7532 19.3063 95.7961 20.8595 92.814 20.8595C89.8318 20.8595 87.8593 19.3684 87.5797 16.9143H84.9082Z"/>
@@ -167,8 +167,8 @@ export default function Podcast() {
 
         .content {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          grid-gap: 3.5rem;
+          grid-template-columns: repeat(6,1fr);
+          grid-gap: 3rem;
           margin-block-start: 2rem; 
         }  
 
@@ -177,7 +177,6 @@ export default function Podcast() {
           padding-inline: 0;
         }
 
-        .item li {}
         .item, .item-3 {grid-column: 1 / 5;}
         .item-2 {
           grid-column: 5 / 8;
@@ -197,14 +196,14 @@ export default function Podcast() {
           .svg {fill: var(--dark)}
         }
         
-        .item-3 {margin-top: -479px;}
+        .item-3 {margin-top: -446px;}
 
         @media (max-width: 414px) {
-          .content {grid-column: 1;}
           .item {grid-column: 1 / 8}
           .item-2 {padding: 0; background: none;}
           .item-2, .item-3 {grid-column: 1 / 8}
           .item-3 {margin-top: 0;}
+          .name-svg {width: 100% !important}
         }
 
         .cursor {
@@ -265,12 +264,12 @@ export default function Podcast() {
           font-size: 1.5rem;
         }
 
-        .name {
+        .name-svg {
+          display: flex;
           width: 20rem;
           height: 7rem;
           background-color: var(--sidebar-background);
           border-radius: 0.25rem;
-          display: flex;
         }
 
         .arrow-shape {
