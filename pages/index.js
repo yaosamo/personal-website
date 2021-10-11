@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Yaroslav Samoylov — A curious product designer.</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Curiocity and design</title>
+        <link rel="icon" href="favicon.svg" />
+        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
 
@@ -210,7 +211,6 @@ export default function Home() {
           <a href="https://ertdfgcvb.xyz" alt="Andreas Gysin" target="_blank">
           <div className="person">
               <p>Andreas Gysin</p>
-              <a className="__new">New</a>
           </div>
           </a>
 
@@ -240,7 +240,6 @@ export default function Home() {
           <a href="https://kkga.me/" alt="Gadzhi Kharkharov" target="_blank">
           <div className="person">
               <p>Gadzhi Kharkharov</p>
-              <a className="__new">New</a>
           </div>
           </a>
           
@@ -293,6 +292,15 @@ export default function Home() {
               <p>Rasmus Andersson</p>
           </div>
           </a>
+
+           {/* Sean Sevestre */}
+           <a href="https://www.seansevestre.com" alt="Sean Sevestre" target="_blank">
+          <div className="person">
+              <p>Sean Sevestre</p>
+              <a className="__new">New</a>
+          </div>
+          </a>
+          
 
                {/* Shola Anozie */}
                <a href="http://soulprovidr.fm" alt="Shola Anozie" target="_blank">
@@ -350,7 +358,16 @@ export default function Home() {
         color: red;
         font-size: 80%;
         margin-left: 0.5rem;
-        
+        animation: spin 1s infinite;
+      }
+
+      @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
       }
       
       .work_item {

@@ -7,31 +7,7 @@ export default function Podcast() {
   return ( 
     <Layout>
   <Head>
-        <title>About</title>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yaosamo" />
-        <meta name="twitter:creator" content="@yaosamo" />
-        <meta property="og:url" content="https://yaosamo.com" />
-        <meta property="og:title" content="Yaroslav Samoylov" />
-        <meta property="og:description" content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov." />
-        <meta property="og:image" content="https://yaosamo.com/static/meta/hi.jpg" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="And designer"/>
-        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov." />
-        <link rel="apple-touch-icon" sizes="57x57" href="/static/meta/apple-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/static/meta/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/static/meta/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/static/meta/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/static/meta/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/static/meta/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/static/meta/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/static/meta/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/meta/apple-icon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="192x192"  href="/static/meta/android-icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/static/metafavicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/static/meta/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
-        <link rel="manifest" href="/static/meta/manifest.json" />
+        <title>Hi, it's Yaric</title>
         <meta name="msapplication-TileColor" content="#fafafa"/>
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
@@ -46,10 +22,10 @@ export default function Podcast() {
             <div className="content">
                 <div className="item">
                   <div className="timestamp"><p>October 3, 2021 at 9:43 PM</p><div className="cursor"/></div>
-                    <p className="subtitle">Hi, I’m Yaroslav Samoylov a Lead Product Designer working on tools for dealerships at <a className="link" href="https://gubagoo.com/" target="_blank" alt="Gubagoo">Gubagoo</a>. Previously <a className="link" href="http://zvuk.com" target="_blank" alt="Zvooq/Zvuk">Zvooq</a>, <a className="link" href="http://loo.ch" target="_blank" alt="Looch">Looch</a> (Former Genue). With Gubagoo I collaborated with teams at Facebook, Apple Business Chat, Google Business and many more. Our clients include BMW, Toyota, Mercedes, Volvo, Porsche and pretty much every big automotive manufacture.
-                    </p><p className="subtitle">Born and raised in <a className="link" href="https://earth.google.com/web/search/Togliatti,+Russia/@53.5218785,49.4863315,94.73430165a,44273.45089792d,35y,0h,0t,0r/data=CnsaURJLCiQweDQxNjg3OGU4MDBjY2NlMTU6MHhmNTU2OTI3YjEwZDA5NmEZZRniWBfBSkAh6kVIOIi1SEAqEVRvZ2xpYXR0aSwgUnVzc2lhGAIgASImCiQJrabEskZFOkARrabEskZFOsAZbxKR1dymR0AhEIPO37PqTsA" target="_blank" alt="Togliatti on Google Earth">Togliatti, Russia</a>. Living in lovely Hillsboro, <a className="link" href="https://www.instagram.com/p/CTYrHeGL70g/" target="_blank" alt="Oregon, Instagram photo">Oregon</a>. I’m an O1 visa holder and currently working on the greencard. Married to a beautiful woman and we have almost 3 years old dragon-blood son.
-                    </p><p className="subtitle">I love how through design you can change people’s preconceived notion about well-established process and open new possibilities. I’m always have been inspired by tech industry to explore and create. On my spare time I enjoy adjacent areas to design such as 3D, coding, art and game development.
-                    </p><p className="subtitle">Also I play ultimate frisbee and cheer for the <a className="link" href="https://duckduckgo.com/?q=arsenal+fc&va=b&t=hc&ia=web" target="_blank">Arsenal FC</a>.
+                    <p className="subtitle">Hi, I’m Yaroslav Samoylov, a Lead Product Designer working on tools for dealerships at <a className="link" href="https://gubagoo.com/" target="_blank" alt="Gubagoo">Gubagoo</a>. With Gubagoo I collaborated with teams at Facebook, Apple Business Chat, Google Business and many more. Our clients include BMW, Toyota, Mercedes, Volvo, Porsche and pretty much every big automotive manufacturer.
+                    </p><p className="subtitle">Born and raised in <a className="link" href="https://earth.google.com/web/search/Togliatti,+Russia/@53.5218785,49.4863315,94.73430165a,44273.45089792d,35y,0h,0t,0r/data=CnsaURJLCiQweDQxNjg3OGU4MDBjY2NlMTU6MHhmNTU2OTI3YjEwZDA5NmEZZRniWBfBSkAh6kVIOIi1SEAqEVRvZ2xpYXR0aSwgUnVzc2lhGAIgASImCiQJrabEskZFOkARrabEskZFOsAZbxKR1dymR0AhEIPO37PqTsA" target="_blank" alt="Togliatti on Google Earth">Togliatti, Russia</a>. Living in lovely Hillsboro, <a className="link" href="https://www.instagram.com/p/CTYrHeGL70g/" target="_blank" alt="Oregon, Instagram photo">Oregon</a>. I’m an O1 visa holder and currently working on the green card. Married to a beautiful woman and we have almost 3 years old dragon-blood son.
+                    </p><p className="subtitle">I love how through design you can change people’s preconceived notion about well-established processes and open new possibilities. I’ve always been inspired by the tech industry to explore and create. In my spare time I enjoy adjacent areas to design such as 3D, coding, art and game development.
+                    </p><p className="subtitle">Also I play ultimate frisbee and support <a className="link" href="https://duckduckgo.com/?q=arsenal+fc&va=b&t=hc&ia=web" target="_blank">Arsenal FC</a>.
                     </p><p className="subtitle">Random, but I recently discovered that my parents gave me a name that is well designed.</p>
                   <div className="name-svg">
                     <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="165" height="56" viewBox="0 0 165 56" >
@@ -103,7 +79,7 @@ export default function Podcast() {
                 <li>iPhone XS Max 512gb</li>
                 <li>Redmi note 7</li>
                 <li>Wacom Intuos BT</li>
-                <li><a className="link" href="https://www.amazon.com/ZINGYOU-Microphone-BM-800-Double-layer-Broadcasting/dp/B0756V2B6R/ref=asc_df_B0756V2B6R/?tag=hyprod-20&linkCode=df0&hvadid=312155612850&hvpos=&hvnetw=g&hvrand=7241119365179716924&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032905&hvtargid=pla-563974502298&psc=1" target="_blank" alt="Microphone: Amazon Link">No name Microphone</a></li>
+                <li><a className="link" href="https://www.amazon.com/ZINGYOU-Microphone-BM-800-Double-layer-Broadcasting/dp/B0756V2B6R/ref=asc_df_B0756V2B6R/?tag=hyprod-20&linkCode=df0&hvadid=312155612850&hvpos=&hvnetw=g&hvrand=7241119365179716924&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032905&hvtargid=pla-563974502298&psc=1" target="_blank" alt="Microphone: Amazon Link">Microphone</a></li>
                 </ul>
 
                 <ul>
@@ -215,13 +191,15 @@ export default function Podcast() {
         }
 
         .myvideo {
-          overflow: overlay;
+          overflow: hidden;
           width: 100%;
           height: 294px;
           display: flex;
           justify-content: center;
           border-radius: 0.25rem;
           margin-block-end: 1.5rem;
+          background: #17171C;
+          transform: translateZ(0);
         }
 
         .timestamp {
