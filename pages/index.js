@@ -8,9 +8,20 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Curiocity and design</title>
+        <title>YS</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yaosamo" />
+        <meta name="twitter:creator" content="@yaosamo" />
+        <meta property="og:url" content="https://yaosamo.com" />
+        <meta property="og:title" content="Yaroslav Samoylov" />
+        <meta property="og:description" content="Curious designer based in Oregon" />
+        <meta property="og:image" content="https://yaosamo.com/intro.jpg" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Yaroslav Samoylov"/>
+        <meta name="description" content="Curious designer based in Oregon" />
+        
         <link rel="icon" href="favicon.svg" />
-        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
+        <link rel="mask-icon" href="favicon.svg" color="#000000;"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
       </Head>
 

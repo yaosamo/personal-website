@@ -32,7 +32,6 @@ export default function Podcast() {
         <link rel="icon" type="image/png" sizes="96x96" href="/static/meta/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
         <link rel="manifest" href="/static/meta/manifest.json" />
-        <meta name="msapplication-TileColor" content="#fafafa"/>
         <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
         <meta name="theme-color" content="#fafafa" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
