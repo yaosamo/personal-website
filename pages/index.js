@@ -15,7 +15,7 @@ export default function Home() {
         <meta property="og:url" content="https://yaosamo.com" />
         <meta property="og:title" content="Yaroslav Samoylov" />
         <meta property="og:description" content="Curious designer based in Oregon" />
-        <meta property="og:image" content="/intro.jpg" />
+        <meta property="og:image" content="https://yaosamo.com/intro.jpg" />
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Yaroslav Samoylov"/>
         <meta name="description" content="Curious designer based in Oregon" />
