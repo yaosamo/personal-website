@@ -547,6 +547,7 @@ export default function Home() {
         .work .__header .__title {
           width: 100%; // to make header one line
         }
+        .buttons {width: 100%}
       }
       
       .work .__header p {
@@ -683,6 +684,7 @@ export default function Home() {
         margin-block-start: 2rem;
         display: flex;
         flex-direction: column;
+        min-width: 20rem;
       }
 
       .primary-button {
@@ -699,7 +701,6 @@ export default function Home() {
         padding: 1rem;
         cursor: pointer;
         transition: all .1s;
-        width: 20rem;
         height: 4rem;
       }
 
@@ -723,7 +724,6 @@ export default function Home() {
         padding: 1rem;
         cursor: pointer;
         transition: all .1s;
-        width: 20rem;
         height: 4rem;
       }
 
