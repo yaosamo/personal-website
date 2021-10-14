@@ -12,11 +12,11 @@ import Image from 'next/image'
   export default function GamesScreenshots() {
 
 
-//   //call images
-//   function importAll(r) {
-//           return r.keys().map(r);
-//       }
-//           const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
+  //call images
+  function importAll(r) {
+          return r.keys().map(r);
+      }
+          const images = importAll(require.context('../../public/images/games/gameboy/', false, /\.(png|jpe?g|svg)$/));
   return ( 
 
 
@@ -74,11 +74,11 @@ import Image from 'next/image'
           
         
           {/* Original render */}
-          {/* {images.map((image) =>    
+          {images.map((image) =>    
           <Image
           src={image}
           />
-          )} */}
+          )}
 
 
 
