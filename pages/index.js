@@ -41,8 +41,9 @@ export default function Home() {
         <div className="work_item">
           <div className="bg-container">
               <div className="bg-mask">
+              <div className="beautiful-circle-1"></div>
+              <div className="beautiful-circle-2"></div>
                 <div className="bg"></div>
-                <div className="beautiful-circle"></div>
               </div>
             </div>
           <div className="work">
@@ -120,8 +121,9 @@ export default function Home() {
         <div className="work_item">
           <div className="bg-container">
               <div className="bg-mask">
+                <div className="beautiful-elipsis-1"></div>
+                <div className="beautiful-elipsis-2"></div>
                 <div className="bg"></div>
-                <div className="beautiful-elipsis"></div>
               </div>
             </div>
           <div className="work">
@@ -466,50 +468,93 @@ export default function Home() {
       }
 
 
-      .beautiful-elipsis {
-        position: absolute;
-        transform-origin: center -200px;
-        animation: elipsis 20s ease-in-out infinite alternate-reverse;
-        background-color: red;
-        width: 400px;
-        height: 400px;
-        border-radius: 40rem;
-        z-index: -1;
-      }
-
-      .beautiful-circle {
+      .beautiful-elipsis-1 {
         position: absolute;
         transform-origin: center;
-        animation: circle 30s ease-in-out infinite alternate;
-        background-color: #FF6645;
-        width: 400px;
-        height: 400px;
+        animation: elipsis-1 8s ease-in-out infinite alternate-reverse;
+        background-color: red;
+        width: 500px;
+        height: 600px;
         border-radius: 40rem;
+        transform: translateY(300px) translateX(300px);
         z-index: -1;
       }
 
-
-      @keyframes elipsis {
+      @keyframes elipsis-1 {
         0% {
           background-color: #FB461E;
-          transform: scale-y(1) translateY(0px);
         }
         100% {
           background-color: #FB461E;
-          transform: scaleY(4) rotate(360deg) translateY(-900px);
+          transform: translateY(0px) translateX(450px) rotate(180deg);
         }
       }
 
+      .beautiful-elipsis-2 {
+        position: absolute;
+        transform-origin: center;
+        animation: elipsis-2 5s ease-in-out infinite alternate-reverse;
+        background-color: red;
+        width: 700px;
+        height: 600px;
+        border-radius: 40rem;
+        transform: translateY(300px) translateX(300px);
+        z-index: -1;
+      }
 
-      @keyframes circle {
+      @keyframes elipsis-2 {
+        0% {
+          background-color: #FB461E;
+        }
+        100% {
+          background-color: #FB461E;
+          transform: translateY(750px) translateX(-50px) rotate(180deg);
+        }
+      }
+
+      .beautiful-circle-1 {
+        position: absolute;
+        transform-origin: center;
+        animation: circle-1 8s ease-in-out infinite alternate;
+        background-color: #FF6645;
+        width: 500px;
+        height: 600px;
+        border-radius: 40rem;
+        transform: translateY(300px) translateX(300px);
+        z-index: -1;
+      }
+
+      @keyframes circle-1 {
         0% {
           background-color: #5F45FF;
-          transform: scale-y(1);
         }
 
         100% {
           background-color: #5F45FF;
-          transform: scaleY(2) translateY(-1000px) translateX(1200px);
+          transform: translateY(0px) translateX(-100px) rotate(180deg);
+        }
+      }
+
+      .beautiful-circle-2 {
+        position: absolute;
+        transform-origin: center;
+        animation: circle-2 10s ease-in-out infinite alternate;
+        background-color: #FF6645;
+        width: 500px;
+        height: 600px;
+        border-radius: 40rem;
+        transform: translateY(500px) translateX(200px) rotate(180deg);
+        z-index: -1;
+      }
+
+      @keyframes circle-2 {
+        0% {
+          background-color: #5F45FF;
+        }
+
+        100% {
+          background-color: #5F45FF;
+          transform: translateY(300px) translateX(300px) rotate(180deg);
         }
       }
 
