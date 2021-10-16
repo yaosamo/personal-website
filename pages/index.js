@@ -364,7 +364,7 @@ export default function Home() {
    
          {/* Footer */}
          <div className="footer">
-           <p>Design and code by me using NextJS. © 2021.</p>
+           <p>Design and code by me using NextJS. This website is fully private, no trackers being used. © 2021.</p>
          </div>
       <style jsx>{`
       .person .__new {
@@ -392,7 +392,7 @@ export default function Home() {
         max-width: 75rem;
         margin: 0 auto;
         padding: 0 1.5rem;
-        opacity: .5;
+        color: var(--gray-40);
       }
 
       .__wraper {
@@ -703,6 +703,7 @@ export default function Home() {
       .thing p {
         margin-block-start: 0rem;
         margin-block-end: 0rem;
+        color: var(--gray-40);
       }
 
       .thing .__title {

@@ -6,6 +6,7 @@
     padding-block-end: 4rem;
     margin: 0 auto;
   }
+  
   @keyframes hello {
     0% {opacity: 0;
         transform: translateY(4px);

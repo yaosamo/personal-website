@@ -94,6 +94,7 @@ p {
     --element-hover: #14141A;
     --gray-10: #15151a;
     --gray-20: #1E1E24;
+    --gray-40: #9797A0;
     --green-10: #171a19;
     --green-20: #262B2A;
     --secondary-text: #838487;
@@ -138,6 +139,7 @@ p {
         --element-hover: #ffffff;
         --gray-10: #FAFAFA;
         --gray-20: #F6f6f6;
+        --gray-40: #4A4A54;
         --green-10: #F0F6F5;
         --green-20: #E1E8E7;
         --secondary-text: #53565A;
