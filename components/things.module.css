@@ -17,7 +17,22 @@
     
   }
 
-  .thing:hover .arrow-shape {
+  .arrow {
+    filter: var(--icon);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+.arrow_shape {
+    transition: all .1s;
+    background: var(--gray-20);
+    border-radius: 3rem;
+    display: flex;
+    transition: all .3s;
+    opacity: 0;
+    }
+
+  .thing:hover .arrow_shape {
     opacity: 1;
     transform: translateX(8px);
   } 
@@ -37,7 +52,7 @@
     
   }
 
-  .thing .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
+  .things h4 {
+    margin-right: 0.5rem;
+    margin-block-end: 0rem;
   }

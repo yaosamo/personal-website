@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
+import Things from '../components/things'
 
 
 export default function Home() {
@@ -161,7 +162,8 @@ export default function Home() {
 
         {/* Things */}
         <div className="content">
-        <div className="things">
+          <Things />
+        {/* <div className="things">
           <h2>Things I create
             
           </h2>
@@ -206,7 +208,7 @@ export default function Home() {
             </div>     
             </a>
             
-        </div>
+        </div> */}
         </div>
 
         {/* People */}
@@ -720,7 +722,6 @@ export default function Home() {
 
       h4 {
         margin-right: 0.5rem;
-        margin-block-after: 0rem;
         margin-block-end: 0rem;
       }
 
