@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 
 
-
 export default function Home() {
   return (
     <Layout>
@@ -19,7 +18,6 @@ export default function Home() {
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Yaroslav Samoylov"/>
         <meta name="description" content="Curious designer based in Oregon" />
-        
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="favicon.svg" color="#000000;"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
