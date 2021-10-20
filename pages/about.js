@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 
 
-export default function Podcast() {
+export default function About() {
   return ( 
     <Layout>
   <Head>
@@ -105,10 +105,11 @@ export default function Podcast() {
                 <div className="item">
                 <h2>Links</h2>
                 <ul>
-                  <li>Twitter <a className="link" href="https://twitter.com/yaosamo" target="_blank" alt="Twitter">@yaosamo</a></li>
+                  <li>Dribbble <a className="link" href="http://dribbble.com/yaosamo" target="_blank" alt="Dribbble">@yaosamo</a></li>
                   <li>GitHub <a className="link" href="https://github.com/yaosamo" target="_blank" alt="GitHub">@yaosamo</a></li>
                   <li>Instagram <a className="link" href="https://instagram.com/yaosamo" target="_blank" alt="Instagram">@yaosamo</a></li>
                   <li>Spotify <a className="link" href="https://open.spotify.com/user/yaosamo" target="_blank" alt="Spotify">@yaosamo</a></li>
+                  <li>Twitter <a className="link" href="https://twitter.com/yaosamo" target="_blank" alt="Twitter">@yaosamo</a></li>
                   <li>Email yaosamo@gmail.com</li>
                 </ul>
                   </div>

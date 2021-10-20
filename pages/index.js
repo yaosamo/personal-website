@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
-
+import Things from '../components/things'
+import styles from '../components/things.module.css'
+import ThingsData from '../components/things-data.js'
 
 
 export default function Home() {
@@ -19,7 +21,6 @@ export default function Home() {
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Yaroslav Samoylov"/>
         <meta name="description" content="Curious designer based in Oregon" />
-        
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="favicon.svg" color="#000000;"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
@@ -163,7 +164,16 @@ export default function Home() {
 
         {/* Things */}
         <div className="content">
-        <div className="things">
+          <div className={styles.things}>
+              <h2>Things I create</h2>
+              {ThingsData.map(function(Thing, i) { 
+                return <Things thing={Thing} key={i} />
+              })}    
+          </div>
+         
+         
+
+        {/* <div className="things">
           <h2>Things I create
             
           </h2>
@@ -208,7 +218,7 @@ export default function Home() {
             </div>     
             </a>
             
-        </div>
+        </div> */}
         </div>
 
         {/* People */}
@@ -722,7 +732,6 @@ export default function Home() {
 
       h4 {
         margin-right: 0.5rem;
-        margin-block-after: 0rem;
         margin-block-end: 0rem;
       }
 
