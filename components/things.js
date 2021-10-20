@@ -1,23 +1,21 @@
-import styles from './things.module.css';
+import styles from './things.module.css'
 import Link from 'next/link'
 
-function Things() {
+
+function Things(props) {
     return (
-        <div className={styles.things}>
-            <h2>Things I create</h2>
-            <a href="/things/gameboy/" alt="Gameboy Screenshots"><Link href="/things/gameboy/">
+            <a href={props.thing.link} alt={props.thing.name}><Link href={props.thing.link}>
             <div className={styles.thing}>
                 <div className={styles.__title}>
-                <h4>Gameboy games screenshots</h4>
+                <h4>{props.thing.name}</h4>
                     <div className={styles.arrow_shape}>
                     <img src="../images/home/Arrow-right.svg" className={styles.arrow}/>
                     </div>
                 </div>
-                <p>Over 1500 screenshots of official releases.</p>
+                <p>{props.thing.description}</p>
             </div>
           </Link>
-          </a>
-        </div>  
+          </a> 
     );
 }
 

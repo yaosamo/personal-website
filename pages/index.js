@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import Things from '../components/things'
+import styles from '../components/things.module.css'
+import ThingsData from '../components/things-data.js'
 
 
 export default function Home() {
@@ -162,7 +164,15 @@ export default function Home() {
 
         {/* Things */}
         <div className="content">
-          <Things />
+          <div className={styles.things}>
+              <h2>Things I create</h2>
+              {ThingsData.map(function(Thing, i) { 
+                return <Things thing={Thing} key={i} />
+              })}    
+          </div>
+         
+         
+
         {/* <div className="things">
           <h2>Things I create
             
