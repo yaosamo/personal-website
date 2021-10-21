@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/layout'
 import Things from '../components/things'
-import styles from '../components/things.module.css'
+import ThingCss from '../components/things.module.css'
+import PeopleCss from '../components/people.module.css'
 import ThingsData from '../components/things-data.js'
+import People from '../components/people'
 
 
 export default function Home() {
@@ -164,176 +166,20 @@ export default function Home() {
 
         {/* Things */}
         <div className="content">
-          <div className={styles.things}>
+          <div className={ThingCss.things}>
               <h2>Things I create</h2>
-              {ThingsData.map(function(Thing, i) { 
-                return <Things thing={Thing} key={i} />
+              {ThingsData.map(function(Data, i) { 
+                return <Things thing={Data} key={i} />
               })}    
           </div>
-         
-         
-
-        {/* <div className="things">
-          <h2>Things I create
-            
-          </h2>
-          <a href="/things/gameboy/" alt="Gameboy Screenshots"><Link href="/things/gameboy/">
-          <div className="thing">
-              <div className="__title">
-                <h4>Gameboy games screenshots</h4>
-                    <div className="arrow-shape">
-                    <img src="../images/home/Arrow-right.svg" className="arrow"/>
-                    </div>
-                </div>
-                <p>Over 1500 screenshots of official releases.</p>
-            
-            </div>
-            </Link>
-            </a>
-
-
-          <a href="/things/podcast/" alt="Podcast 'And Designer'"><Link href="/things/podcast/">
-          <div className="thing">
-              <div className="__title">
-                <h4>Podcast "And Designer"</h4>
-                    <div className="arrow-shape">
-                    <img src="../images/home/Arrow-right.svg" className="arrow"/>
-                    </div>
-                </div>
-                <p>Explore different aspects of design, technology and business through the lenses of a product designer.</p>
-            
-            </div>
-            </Link>
-            </a>
-
-            <a href="https://standart.io/" alt="Standartio Icons" target="_blank">
-            <div className="thing">
-              <div className="__title">
-                <h4>Standartio</h4>
-                    <div className="arrow-shape">
-                    <img src="../images/home/Arrow-right.svg" className="arrow"/>
-                    </div>
-              </div>  
-                <p>Meticulously-made icons. Free and open source.</p>
-            </div>     
-            </a>
-            
-        </div> */}
         </div>
 
         {/* People */}
         <div className="content">
-        <div className="people">
-          
-          <h4>
-          Some great people & friends (A → Z):
-          </h4>
-          
-          <div className="__links">
-          {/* Andreas Gysin */}
-          <a href="https://ertdfgcvb.xyz" alt="Andreas Gysin" target="_blank">
-          <div className="person">
-              <p>Andreas Gysin</p>
+          <h4>Some great people & friends (A → Z):</h4>
+          <div className={PeopleCss.people}>
+              <People/>
           </div>
-          </a>
-
-          {/* Anton Repponen */}
-           <a href="https://repponen.com" alt="Anton Repponen" target="_blank">
-          <div className="person">
-              <p>Anton Repponen</p>
-          </div>
-          </a>
-          
-
-          {/* Brian Lovin */}
-          <a href="http://brianlovin.com" alt="Brian Lovin" target="_blank">
-          <div className="person">
-              <p>Brian Lovin</p>
-          </div>
-          </a>
-          
-          {/* Denis Sharypin */}
-           <a href="http://sharypin.cool" alt="Denis Sharypin" target="_blank">
-          <div className="person">
-              <p>Denis Sharypin</p>
-          </div>
-          </a>
-
-          {/* Gadzhi Kharkharov */}
-          <a href="https://kkga.me/" alt="Gadzhi Kharkharov" target="_blank">
-          <div className="person">
-              <p>Gadzhi Kharkharov</p>
-          </div>
-          </a>
-          
-
-           {/* Ilya Kolganov */}
-           <a href="https://ilyakolganov.com/" alt="Ilya Kolganov" target="_blank">
-          <div className="person">
-              <p>Ilya Kolganov</p>
-          </div>
-          </a>
-
-          {/* Louis Berger */}
-          <a href="https://louisberger.de" alt="Louis Berger" target="_blank">
-          <div className="person">
-              <p>Louis Berger</p>
-          </div>
-          </a>
-
-          {/* Luc Mikelsons */}
-               <a href="http://mikelsons.ca" alt="Luc Mikelsons" target="_blank">
-          <div className="person">
-              <p>Luc Mikelsons</p>
-          </div>
-          </a>
-
-          {/* Nick Pryde */}
-          <a href="https://www.nickp.design" alt="Nick Pryde" target="_blank">
-          <div className="person">
-              <p>Nick Pryde</p>
-          </div>
-          </a>
-
-          {/* Nila Arumugam */}
-               <a href="http://nila.myportfolio.com" alt="Nila Arumugam" target="_blank">
-          <div className="person">
-              <p>Nila Arumugam</p>
-          </div>
-          </a>
-
-          {/* Noah Stokes */}
-          <a href="http://noahstokes.com" alt="Noah Stokes" target="_blank">
-          <div className="person">
-              <p>Noah Stokes</p>
-          </div>
-          </a>
-
-          {/* Rasmus Anderssonn */}
-               <a href="http://rsms.me" alt="Rasmus Andersson" target="_blank">
-          <div className="person">
-              <p>Rasmus Andersson</p>
-          </div>
-          </a>
-
-           {/* Sean Sevestre */}
-           <a href="https://www.seansevestre.com" alt="Sean Sevestre" target="_blank">
-          <div className="person">
-              <p>Sean Sevestre</p>
-              <a className="__new">New</a>
-          </div>
-          </a>
-          
-
-               {/* Shola Anozie */}
-               <a href="http://soulprovidr.fm" alt="Shola Anozie" target="_blank">
-          <div className="person">
-              <p>Shola Anozie</p>
-          </div>
-          </a>
-          </div>
-
-        </div>
         </div>
     
         {/* Studios */}
@@ -376,13 +222,9 @@ export default function Home() {
          <div className="footer">
            <p>Design and code by me using NextJS. This website is fully private, no trackers being used. © 2021.</p>
          </div>
+
       <style jsx>{`
-      .person .__new {
-        color: red;
-        font-size: 80%;
-        margin-left: 0.5rem;
-        animation: spin 1s infinite;
-      }
+      
 
       @keyframes spin {
         from {
@@ -621,56 +463,7 @@ export default function Home() {
         filter: var(--icon);
       }
       
-      .people {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 50rem;
-      }
-
-      .people h4 {
-        margin-block-end: 1.5rem;
-      }
-
-      .people .__links {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .person {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        align-items: center;
-        margin-block-end: 1rem;
-        transition: all .1s;
-        margin-right: 1.5rem;
-      }
       
-      .person:hover p {
-        border-bottom: 0.5px solid var(--active);
-        color: var(--active);
-      }
-
-      .person p {
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        border-bottom: 0.5px solid var(--white);
-        border-opacity: 0.2;
-      }
-
-      @media (prefers-color-scheme: light) {
-        .person p { // Dark underline
-          border-bottom: 0.5px solid var(--dark);
-        }
-      }
-
-      .people a { 
-        color: inherit;
-        text-decoration: none;
-      }
 
       .link-preview {
         opacity: .5;
