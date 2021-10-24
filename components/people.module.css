@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  max-width: 50rem;
+  max-width: 45rem;
   flex-wrap: wrap;
   margin-block-start: 1.5rem;
 }
@@ -20,8 +20,24 @@
   align-items: flex-start;
   align-items: center;
   margin-block-end: 1rem;
-  transition: all .1s;
+  transition: all 0.1s;
   margin-right: 1.5rem;
+}
+
+.person .__new {
+  color: red;
+  font-size: 80%;
+  margin-left: 0.5rem;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .person:hover p {
@@ -36,12 +52,13 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .person p { /* Light mode */
+  .person p {
+    /* Light mode */
     border-bottom: 0.5px solid var(--dark);
   }
 }
 
-.people a { 
+.people a {
   color: inherit;
   text-decoration: none;
 }

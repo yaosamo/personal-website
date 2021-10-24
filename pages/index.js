@@ -1,290 +1,341 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Layout from '../components/layout'
-import Things from '../components/things'
-import ThingCss from '../components/things.module.css'
-import PeopleCss from '../components/people.module.css'
-import ThingsData from '../components/things-data.js'
-import People from '../components/people'
-
+import Head from "next/head";
+import Link from "next/link";
+import Layout from "../components/layout";
+import Things from "../components/things";
+import ThingCss from "../components/things.module.css";
+import PeopleCss from "../components/people.module.css";
+import ThingsData from "../components/things-data.js";
+import PeopleData from "../components/people-data";
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>YS</title>
+        <title>👨‍💻</title>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
         <meta property="og:url" content="https://yaosamo.com" />
         <meta property="og:title" content="Yaroslav Samoylov" />
-        <meta property="og:description" content="Curious designer based in Oregon" />
+        <meta
+          property="og:description"
+          content="Curious designer based in Oregon"
+        />
         <meta property="og:image" content="https://yaosamo.com/intro.jpg" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="Yaroslav Samoylov"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Yaroslav Samoylov" />
         <meta name="description" content="Curious designer based in Oregon" />
         <link rel="icon" href="favicon.svg" />
-        <link rel="mask-icon" href="favicon.svg" color="#000000;"/>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
+        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <div className="content">
         <div className="header">
           <p>
-          Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro, Oregon 🌲. Interested in cars, hardware user interfaces, science & developer tools, human interactions, productivity, ethics. Currently Lead Product Designer & Interim Head of Design at <a className="link" alt="Gubagoo.com" href="https://www.gubagoo.com" target="_blank">Gubagoo</a>, where we're building modern service to buy car online. 
+            Hello! I’m Yaroslav Samoylov — curious designer based in Hillsboro,
+            Oregon 🌲. Interested in cars, hardware user interfaces, science &
+            developer tools, human interactions, productivity, ethics. Currently
+            Lead Product Designer & Interim Head of Design at{" "}
+            <a
+              className="link"
+              alt="Gubagoo.com"
+              href="https://www.gubagoo.com"
+              target="_blank"
+            >
+              Gubagoo
+            </a>
+            , where we're building modern service to buy car online.
           </p>
           <div className="buttons">
-            <Link href="/about/"><a className="primary-button">About me</a></Link>
-            <a className="button" href="https://twitter.com/yaosamo/" target="_blank">Follow me on Twitter</a>
+            <Link href="/about/">
+              <a className="primary-button">About me</a>
+            </Link>
+            <a
+              className="button"
+              href="https://twitter.com/yaosamo/"
+              target="_blank"
+            >
+              Follow me on Twitter
+            </a>
           </div>
         </div>
       </div>
 
-        {/* VR */}
-        <div className="work_item">
-          <div className="bg-container">
-              <div className="bg-mask">
-              <div className="beautiful-circle-1"></div>
-              <div className="beautiful-circle-2"></div>
-                <div className="bg"></div>
-              </div>
-            </div>
-          <div className="work">
-            <div className="__wraper">
+      {/* VR */}
+      <div className="work_item">
+        <div className="bg-container">
+          <div className="bg-mask">
+            <div className="beautiful-circle-1"></div>
+            <div className="beautiful-circle-2"></div>
+            <div className="bg"></div>
+          </div>
+        </div>
+        <div className="work">
+          <div className="__wraper">
             <div className="__header">
-                <div className="__title">
-                  <p>2020 — Current</p>
-                  <h2>Gubagoo Virtual Retailing</h2>
-                </div>
-                <p className="description">I was in charge of design “Virtual Retailing” service for dealerships, we build several industry breaking features such as real-time payments from lenders and approval under 90 seconds, trade-in with conditions evaluated to the pennies, checkout payments with Stripe integration. You can see live product on one of our customer's website <a className="link" href="https://www.nalleybmw.com/new-inventory/index.htm" alt="Nalley BMW" target="_blank">Nalley BMW</a></p>
-            </div>
-            </div>
-          {/* Pics */}
-            <div className="pics">
-              <div className="pics-container">
-                 
-                  <picture>
-                  <source srcset="../images/work/VR/Loader_mob.webp 4.3x" />
-                  <img src="../images/work/VR/Loader_mob.webp" alt="Loader" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Menu.webp 4.3x" />
-                  <img src="../images/work/VR/Menu.webp" alt="Menu" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Payments_mob.webp 4.3x" />
-                  <img src="../images/work/VR/Payments_mob.webp" alt="Payments" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Rebates_mob.webp 4.3x" />
-                  <img src="../images/work/VR/Rebates_mob.webp" alt="Rebates" /> 
-                  </picture>
-                
-                  <picture>
-                  <source srcset="../images/work/VR/FI_mob.webp 4.3x" />
-                  <img src="../images/work/VR/FI_mob.webp" alt="Rebates" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Review_mob.webp 4.3x" />
-                  <img src="../images/work/VR/Review_mob.webp" alt="Review" /> 
-                  </picture>
-                
-                  <picture>
-                  <source srcset="../images/work/VR/Checkout_mob.webp 4.3x" />
-                  <img src="../images/work/VR/Checkout_mob.webp" alt="Checkout" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Loader_desk.webp 3x" />
-                  <img src="../images/work/VR/Loader_desk.webp" alt="Loader" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/FI_desk.webp 3x" />
-                  <img src="../images/work/VR/FI_desk.webp" alt="F&I" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/VR/Review_desk.webp 3x" />
-                  <img src="../images/work/VR/Review_desk.webp" alt="F&I" /> 
-                  </picture>
-                  
-                  
+              <div className="__title">
+                <p>2020 — Current</p>
+                <h2>Gubagoo Virtual Retailing</h2>
               </div>
+              <p className="description">
+                I was in charge of design “Virtual Retailing” service for
+                dealerships, we build several industry breaking features such as
+                real-time payments from lenders and approval under 90 seconds,
+                trade-in with conditions evaluated to the pennies, checkout
+                payments with Stripe integration. You can see live product on
+                one of our customer's website{" "}
+                <a
+                  className="link"
+                  href="https://www.nalleybmw.com/new-inventory/index.htm"
+                  alt="Nalley BMW"
+                  target="_blank"
+                >
+                  Nalley BMW
+                </a>
+              </p>
             </div>
+          </div>
+          {/* Pics */}
+          <div className="pics">
+            <div className="pics-container">
+              <picture>
+                <source srcset="../images/work/VR/Loader_mob.webp 4.3x" />
+                <img src="../images/work/VR/Loader_mob.webp" alt="Loader" />
+              </picture>
 
+              <picture>
+                <source srcset="../images/work/VR/Menu.webp 4.3x" />
+                <img src="../images/work/VR/Menu.webp" alt="Menu" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Payments_mob.webp 4.3x" />
+                <img src="../images/work/VR/Payments_mob.webp" alt="Payments" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Rebates_mob.webp 4.3x" />
+                <img src="../images/work/VR/Rebates_mob.webp" alt="Rebates" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/FI_mob.webp 4.3x" />
+                <img src="../images/work/VR/FI_mob.webp" alt="Rebates" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Review_mob.webp 4.3x" />
+                <img src="../images/work/VR/Review_mob.webp" alt="Review" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Checkout_mob.webp 4.3x" />
+                <img src="../images/work/VR/Checkout_mob.webp" alt="Checkout" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Loader_desk.webp 3x" />
+                <img src="../images/work/VR/Loader_desk.webp" alt="Loader" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/FI_desk.webp 3x" />
+                <img src="../images/work/VR/FI_desk.webp" alt="F&I" />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/VR/Review_desk.webp 3x" />
+                <img src="../images/work/VR/Review_desk.webp" alt="F&I" />
+              </picture>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Showroom */}
-        <div className="work_item">
-          <div className="bg-container">
-              <div className="bg-mask">
-                <div className="beautiful-elipsis-1"></div>
-                <div className="beautiful-elipsis-2"></div>
-                <div className="bg"></div>
-              </div>
-            </div>
-          <div className="work">
-            <div className="__wraper">
+      {/* Showroom */}
+      <div className="work_item">
+        <div className="bg-container">
+          <div className="bg-mask">
+            <div className="beautiful-elipsis-1"></div>
+            <div className="beautiful-elipsis-2"></div>
+            <div className="bg"></div>
+          </div>
+        </div>
+        <div className="work">
+          <div className="__wraper">
             <div className="__header">
-                <div className="__title">
-                  <p>2020</p>
-                  <h2>Gubagoo Showroom</h2>
-                </div>
-                <p className="description">I was responsible for design of a crucial part of online purchase experience — online showroom. That dealerships would use on their website and in-store with shoppers side-by-side. Design strategy here was to make it a little bit different from what's out there while keeping all requirements in place. And another challenge was to make it scalable to work with dealer speficic tools.</p>
-            </div>
-            </div>
-          {/* Pics */}
-            <div className="pics">
-              <div className="pics-container">
-                 
-                  <picture>
-                  <source srcset="../images/work/showroom/Mobile.webp 4.3x" />
-                  <img src="../images/work/showroom/Mobile.webp" alt="Main screen mobile" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/showroom/Desktop-models.webp 3x" />
-                  <img src="../images/work/showroom/Desktop-models.webp" alt="Vehicles screen desktop" /> 
-                  </picture>
-
-                  <picture>
-                  <source srcset="../images/work/showroom/Desktop-vin.webp 3x" />
-                  <img src="../images/work/showroom/Desktop-vin.webp" alt="Vehicles screen desktop" /> 
-                  </picture>
-                  
+              <div className="__title">
+                <p>2020</p>
+                <h2>Gubagoo Showroom</h2>
               </div>
+              <p className="description">
+                I was responsible for design of a crucial part of online
+                purchase experience — online showroom. That dealerships would
+                use on their website and in-store with shoppers side-by-side.
+                Design strategy here was to make it a little bit different from
+                what's out there while keeping all requirements in place. And
+                another challenge was to make it scalable to work with dealer
+                speficic tools.
+              </p>
             </div>
+          </div>
+          {/* Pics */}
+          <div className="pics">
+            <div className="pics-container">
+              <picture>
+                <source srcset="../images/work/showroom/Mobile.webp 4.3x" />
+                <img
+                  src="../images/work/showroom/Mobile.webp"
+                  alt="Main screen mobile"
+                />
+              </picture>
 
+              <picture>
+                <source srcset="../images/work/showroom/Desktop-models.webp 3x" />
+                <img
+                  src="../images/work/showroom/Desktop-models.webp"
+                  alt="Vehicles screen desktop"
+                />
+              </picture>
+
+              <picture>
+                <source srcset="../images/work/showroom/Desktop-vin.webp 3x" />
+                <img
+                  src="../images/work/showroom/Desktop-vin.webp"
+                  alt="Vehicles screen desktop"
+                />
+              </picture>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Things */}
-        <div className="content">
-          <div className={ThingCss.things}>
-              <h2>Things I create</h2>
-              {ThingsData.map(function(Data, i) { 
-                return <Things thing={Data} key={i} />
-              })}    
-          </div>
+      {/* Things */}
+      <div className="content">
+        <div className={ThingCss.things}>
+          <h2>Things I create</h2>
+          {ThingsData.map(function (Data, i) {
+            return <Things thing={Data} key={i} />;
+          })}
         </div>
+      </div>
 
-        {/* People */}
-        <div className="content">
-          <h4>Some great people & friends (A → Z):</h4>
-          <div className={PeopleCss.people}>
-              <People/>
-          </div>
+      {/* People */}
+      <div className="content">
+        <h4>Some great people & friends (A → Z):</h4>
+        <div className={PeopleCss.people}>
+          {PeopleData.map(function (Person) {
+            if (Person.new != null) {
+              <a className={PeopleCss.__new}>New</a>;
+            }
+            return (
+              <a href={Person.link} alt={Person.name} target="_blank">
+                <div className={PeopleCss.person}>
+                  <p>{Person.name}</p>
+                </div>
+              </a>
+            );
+          })}
         </div>
-    
-        {/* Studios */}
-        <div className="content">
+      </div>
+
+      {/* Studios */}
+      <div className="content">
         <div className="people">
-          
-          <h4>
-          Cool studios (A → Z):
-          </h4>
-          
+          <h4>Cool studios (A → Z):</h4>
+
           <div className="__links">
-            
-          {/* Collins */}
-          <a href="https://www.wearecollins.com" alt="Collins" target="_blank">
-          <div className="person">
-              <p>Collins</p>
-          </div>
-          </a>
+            {/* Collins */}
+            <a
+              href="https://www.wearecollins.com"
+              alt="Collins"
+              target="_blank"
+            >
+              <div className="person">
+                <p>Collins</p>
+              </div>
+            </a>
 
-          {/* Play */}
-          <a href="https://www.play.studio" alt="Play" target="_blank">
-          <div className="person">
-              <p>Play</p>
-          </div>
-          </a>
+            {/* Play */}
+            <a href="https://www.play.studio" alt="Play" target="_blank">
+              <div className="person">
+                <p>Play</p>
+              </div>
+            </a>
 
-          {/* Red Antler */}
-          <a href="https://redantler.com" alt="Red Antler" target="_blank">
-          <div className="person">
-              <p>Red Antler</p>
+            {/* Red Antler */}
+            <a href="https://redantler.com" alt="Red Antler" target="_blank">
+              <div className="person">
+                <p>Red Antler</p>
+              </div>
+            </a>
           </div>
-          </a>
-          
-          </div>
-          
         </div>
-        </div>
-   
-         {/* Footer */}
-         <div className="footer">
-           <p>Design and code by me using NextJS. This website is fully private, no trackers being used. © 2021.</p>
-         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="footer">
+        <p>
+          Design and code by me using NextJS. This website is fully private, no
+          trackers being used. © 2021.
+        </p>
+      </div>
 
       <style jsx>{`
-      
-
-      @keyframes spin {
-        from {
-            transform:rotate(0deg);
+        .work_item {
+          padding-block-end: 6.5rem;
+          padding-block-start: 5rem;
         }
-        to {
-            transform:rotate(360deg);
+
+        .footer {
+          max-width: 75rem;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+          color: var(--gray-40);
         }
-      }
-      
-      .work_item {
-        padding-block-end: 6.5rem;
-        padding-block-start: 5rem;
-      }
-      
-      .footer {
-        max-width: 75rem;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        color: var(--gray-40);
-      }
 
-      .__wraper {
-        margin: 4rem 1.5rem;
-      }
+        .__wraper {
+          margin: 4rem 1.5rem;
+        }
 
-      .pics {
-        overflow: scroll;
-      }
+        .pics {
+          overflow: scroll;
+        }
 
-      .pics::-webkit-scrollbar {
-        display: none;
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+        .pics::-webkit-scrollbar {
+          display: none;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
 
-      .bg-mask {
-        position: relative;
-        overflow: hidden;
-        transform: translateZ(0);
-        border-radius: 1rem;
-      }
+        .bg-mask {
+          position: relative;
+          overflow: hidden;
+          transform: translateZ(0);
+          border-radius: 1rem;
+        }
 
-      .bg {
-        background: var(--blur-bg);
-        backdrop-filter: saturate(180%) blur(3rem);
-        height: 63rem;
-        z-index: 1;
-    }
+        .bg {
+          background: var(--blur-bg);
+          backdrop-filter: saturate(180%) blur(3rem);
+          height: 63rem;
+          z-index: 1;
+        }
 
-      .bg-container {
-        z-index: 0;
-        position: absolute;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 calc((100% - 1200px) / 2);
-        overflow: hidden;
-    }
-    
-      .pics-container {
+        .bg-container {
+          z-index: 0;
+          position: absolute;
+          width: 100%;
+          max-width: 1200px;
+          padding: 0 calc((100% - 1200px) / 2);
+          overflow: hidden;
+        }
+
+        .pics-container {
           z-index: 1;
           display: grid;
           gap: 4rem;
@@ -293,343 +344,333 @@ export default function Home() {
           grid-auto-flow: column;
           width: fit-content;
           overflow: visible;
-      }
-
-      .pics-container picture:first-child {
-        padding-left: 1.5rem;
-      }
-
-      .pics-container picture:last-child {
-        padding-right: 1.5rem;
-      }
-
-      .pics-container img {
-        border-radius: 1rem;
-      }
-
-      .pics-container picture {
-        margin: auto;
-      }
-
-      .header {
-        padding-block-start: 8rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-
-      .beautiful-elipsis-1 {
-        position: absolute;
-        transform-origin: center;
-        animation: elipsis-1 8s ease-in-out infinite alternate-reverse;
-        background-color: red;
-        width: 500px;
-        height: 600px;
-        border-radius: 40rem;
-        transform: translateY(300px) translateX(300px);
-        z-index: -1;
-      }
-
-      @keyframes elipsis-1 {
-        0% {
-          background-color: #FB461E;
-        }
-        100% {
-          background-color: #FB461E;
-          transform: translateY(0px) translateX(450px) rotate(180deg);
-        }
-      }
-
-      .beautiful-elipsis-2 {
-        position: absolute;
-        transform-origin: center;
-        animation: elipsis-2 5s ease-in-out infinite alternate-reverse;
-        background-color: red;
-        width: 700px;
-        height: 600px;
-        border-radius: 40rem;
-        transform: translateY(300px) translateX(300px);
-        z-index: -1;
-      }
-
-      @keyframes elipsis-2 {
-        0% {
-          background-color: #FB461E;
-        }
-        100% {
-          background-color: #FB461E;
-          transform: translateY(750px) translateX(-50px) rotate(180deg);
-        }
-      }
-
-      .beautiful-circle-1 {
-        position: absolute;
-        transform-origin: center;
-        animation: circle-1 8s ease-in-out infinite alternate;
-        background-color: #FF6645;
-        width: 500px;
-        height: 600px;
-        border-radius: 40rem;
-        transform: translateY(300px) translateX(300px);
-        z-index: -1;
-      }
-
-      @keyframes circle-1 {
-        0% {
-          background-color: #5F45FF;
         }
 
-        100% {
-          background-color: #5F45FF;
-          transform: translateY(0px) translateX(-100px) rotate(180deg);
-        }
-      }
-
-      .beautiful-circle-2 {
-        position: absolute;
-        transform-origin: center;
-        animation: circle-2 10s ease-in-out infinite alternate;
-        background-color: #FF6645;
-        width: 500px;
-        height: 600px;
-        border-radius: 40rem;
-        transform: translateY(500px) translateX(200px) rotate(180deg);
-        z-index: -1;
-      }
-
-      @keyframes circle-2 {
-        0% {
-          background-color: #5F45FF;
+        .pics-container picture:first-child {
+          padding-left: 1.5rem;
         }
 
-        100% {
-          background-color: #5F45FF;
-          transform: translateY(300px) translateX(300px) rotate(180deg);
+        .pics-container picture:last-child {
+          padding-right: 1.5rem;
         }
-      }
 
-      .work {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-      }
+        .pics-container img {
+          border-radius: 1rem;
+        }
 
-      .work h2 {
-        margin-block-start: 0.5rem;
-      }
+        .pics-container picture {
+          margin: auto;
+        }
 
-      .work p {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
+        .header {
+          padding-block-start: 8rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
 
-      .work .__header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        max-width: 67rem;
-        width: 100%;
-      }
+        .beautiful-elipsis-1 {
+          position: absolute;
+          transform-origin: center;
+          animation: elipsis-1 8s ease-in-out infinite alternate-reverse;
+          background-color: red;
+          width: 500px;
+          height: 600px;
+          border-radius: 40rem;
+          transform: translateY(300px) translateX(300px);
+          z-index: -1;
+        }
 
-      .work .__header .__title {
-        width: 16rem;
-      }
+        @keyframes elipsis-1 {
+          0% {
+            background-color: #fb461e;
+          }
+          100% {
+            background-color: #fb461e;
+            transform: translateY(0px) translateX(450px) rotate(180deg);
+          }
+        }
 
-      @media (max-width:414px)  { 
+        .beautiful-elipsis-2 {
+          position: absolute;
+          transform-origin: center;
+          animation: elipsis-2 5s ease-in-out infinite alternate-reverse;
+          background-color: red;
+          width: 700px;
+          height: 600px;
+          border-radius: 40rem;
+          transform: translateY(300px) translateX(300px);
+          z-index: -1;
+        }
+
+        @keyframes elipsis-2 {
+          0% {
+            background-color: #fb461e;
+          }
+          100% {
+            background-color: #fb461e;
+            transform: translateY(750px) translateX(-50px) rotate(180deg);
+          }
+        }
+
+        .beautiful-circle-1 {
+          position: absolute;
+          transform-origin: center;
+          animation: circle-1 8s ease-in-out infinite alternate;
+          background-color: #ff6645;
+          width: 500px;
+          height: 600px;
+          border-radius: 40rem;
+          transform: translateY(300px) translateX(300px);
+          z-index: -1;
+        }
+
+        @keyframes circle-1 {
+          0% {
+            background-color: #5f45ff;
+          }
+
+          100% {
+            background-color: #5f45ff;
+            transform: translateY(0px) translateX(-100px) rotate(180deg);
+          }
+        }
+
+        .beautiful-circle-2 {
+          position: absolute;
+          transform-origin: center;
+          animation: circle-2 10s ease-in-out infinite alternate;
+          background-color: #ff6645;
+          width: 500px;
+          height: 600px;
+          border-radius: 40rem;
+          transform: translateY(500px) translateX(200px) rotate(180deg);
+          z-index: -1;
+        }
+
+        @keyframes circle-2 {
+          0% {
+            background-color: #5f45ff;
+          }
+
+          100% {
+            background-color: #5f45ff;
+            transform: translateY(300px) translateX(300px) rotate(180deg);
+          }
+        }
+
+        .work {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .work h2 {
+          margin-block-start: 0.5rem;
+        }
+
+        .work p {
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+
+        .work .__header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          max-width: 67rem;
+          width: 100%;
+        }
+
         .work .__header .__title {
-          width: 100%; // to make header one line
+          width: 16rem;
         }
-        .buttons {width: 100%}
-      }
-      
-      .work .__header p {
-        max-width: 48rem;
-      }
 
-      .header p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 160%;
-        width: 40rem;
-      }
+        @media (max-width: 414px) {
+          .work .__header .__title {
+            width: 100%; // to make header one line
+          }
+          .buttons {
+            width: 100%;
+          }
+        }
 
-      .arrow {
-        filter: var(--icon);
-      }
-      
-      
+        .work .__header p {
+          max-width: 48rem;
+        }
 
-      .link-preview {
-        opacity: .5;
-      }
+        .header p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 160%;
+          width: 40rem;
+        }
 
-      .description {
-        line-height: 160%;
-        font-size: 1.25rem;
-      }
+        .arrow {
+          filter: var(--icon);
+        }
 
-      .things {
-        max-width: 30rem;
-        padding-top: 10rem;
-      }
+        .link-preview {
+          opacity: 0.5;
+        }
 
-      .things h2 {
-        margin-block-end: 4rem;
-      }
+        .description {
+          line-height: 160%;
+          font-size: 1.25rem;
+        }
 
-      .things a {
-        color: inherit;
-        text-decoration: none;
-      }
+        .things {
+          max-width: 30rem;
+          padding-top: 10rem;
+        }
 
-      .thing {
-        margin-block-end: 4rem;
-        
-      }
+        .things h2 {
+          margin-block-end: 4rem;
+        }
 
-      .arrow-shape {
-        transition: all .3s;
-        opacity: 0;
-      }
+        .things a {
+          color: inherit;
+          text-decoration: none;
+        }
 
-      .thing:hover .arrow-shape {
-        opacity: 1;
-        transform: translateX(8px);
-      } 
+        .thing {
+          margin-block-end: 4rem;
+        }
 
-      .thing p {
-        margin-block-start: 0rem;
-        margin-block-end: 0rem;
-        color: var(--gray-40);
-      }
+        .arrow-shape {
+          transition: all 0.3s;
+          opacity: 0;
+        }
 
-      .thing .__title {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        margin-block-end: 0.5rem;
-        
-      }
+        .thing:hover .arrow-shape {
+          opacity: 1;
+          transform: translateX(8px);
+        }
 
-      .thing .arrow {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
+        .thing p {
+          margin-block-start: 0rem;
+          margin-block-end: 0rem;
+          color: var(--gray-40);
+        }
 
-      h4 {
-        margin-right: 0.5rem;
-        margin-block-end: 0rem;
-      }
+        .thing .__title {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-block-end: 0.5rem;
+        }
 
-      .buttons {
-        margin-block-start: 2rem;
-        display: flex;
-        flex-direction: column;
-        min-width: 20rem;
-      }
+        .thing .arrow {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
 
-      .primary-button {
-        font-weight: 600;
-        color: var(--button-text);
-        background: var(--primary-button);
-        text-decoration: none; 
-        box-sizing: border-box;
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        cursor: pointer;
-        transition: all .1s;
-        height: 4rem;
-      }
+        h4 {
+          margin-right: 0.5rem;
+          margin-block-end: 0rem;
+        }
 
-      .primary-button:hover{
-        background: var(--primary-button-hover);
-      }
+        .buttons {
+          margin-block-start: 2rem;
+          display: flex;
+          flex-direction: column;
+          min-width: 20rem;
+        }
 
-      .button {
-        margin: 24px 0px;
-        font-weight: 600;
-        color: var(--button-text);
-        text-decoration: none; 
-        border: 1px solid;
-        border-color: var(--secondary-button);
-        box-sizing: border-box;
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        cursor: pointer;
-        transition: all .1s;
-        height: 4rem;
-      }
+        .primary-button {
+          font-weight: 600;
+          color: var(--button-text);
+          background: var(--primary-button);
+          text-decoration: none;
+          box-sizing: border-box;
+          border-radius: 0.5rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          cursor: pointer;
+          transition: all 0.1s;
+          height: 4rem;
+        }
 
-      .button:active,
-      .primary-button:active,
-      .card:active,
-      .person:active {
-        transform: scale(0.98); 
-      }
+        .primary-button:hover {
+          background: var(--primary-button-hover);
+        }
 
-      .button:hover {
-        cursor: pointer;
-        border: 1px solid var(--secondary-button-hover);
-      }
+        .button {
+          margin: 24px 0px;
+          font-weight: 600;
+          color: var(--button-text);
+          text-decoration: none;
+          border: 1px solid;
+          border-color: var(--secondary-button);
+          box-sizing: border-box;
+          border-radius: 0.5rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          cursor: pointer;
+          transition: all 0.1s;
+          height: 4rem;
+        }
 
-      @media (max-width:1024px)  { 
-        // ipad
+        .button:active,
+        .primary-button:active,
+        .card:active,
+        .person:active {
+          transform: scale(0.98);
+        }
+
+        .button:hover {
+          cursor: pointer;
+          border: 1px solid var(--secondary-button-hover);
+        }
+
+        @media (max-width: 1024px) {
+          // ipad
 
           .bg {
             height: 71rem;
           }
-
         }
 
-      
-      @media (max-width:414px)  { 
-        // plus size work bg height.
+        @media (max-width: 414px) {
+          // plus size work bg height.
 
-        .button {
-          width: 100%;
+          .button {
+            width: 100%;
+          }
+
+          .bg {
+            height: 82rem;
+          }
         }
 
-        .bg {
-          height: 82rem;
+        @media (max-width: 375px) {
+          // standard work bg height
+
+          .bg {
+            height: 84rem;
+          }
         }
 
-      }
+        @media (max-width: 320px) {
+          // why am I doing this
 
-      @media (max-width:375px)  { 
-        // standard work bg height
-
-        .bg {
-          height: 84rem;
+          .bg {
+            height: 90rem;
+          }
         }
-
-      }
-
-      @media (max-width:320px)  { 
-        // why am I doing this
-
-        .bg {
-          height: 90rem;
-        }
-
-      }
-
       `}</style>
-
     </Layout>
-  )
+  );
 }
