@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
-import Things from "../components/things";
 import ThingCss from "../components/things.module.css";
-import PeopleCss from "../components/people.module.css";
-import ThingsData from "../components/things-data.js";
+import LinkCss from "../components/links.module.css";
+import ThingsData from "../components/things-data";
 import PeopleData from "../components/people-data";
+import StudiosData from "../components/studios-data";
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
             developer tools, human interactions, productivity, ethics. Currently
             Lead Product Designer & Interim Head of Design at{" "}
             <a
-              className="link"
+              className="url"
               alt="Gubagoo.com"
               href="https://www.gubagoo.com"
               target="_blank"
@@ -89,7 +89,7 @@ export default function Home() {
                 payments with Stripe integration. You can see live product on
                 one of our customer's website{" "}
                 <a
-                  className="link"
+                  className="url"
                   href="https://www.nalleybmw.com/new-inventory/index.htm"
                   alt="Nalley BMW"
                   target="_blank"
@@ -218,8 +218,25 @@ export default function Home() {
       <div className="content">
         <div className={ThingCss.things}>
           <h2>Things I create</h2>
-          {ThingsData.map(function (Data, i) {
-            return <Things thing={Data} key={i} />;
+          {ThingsData.map(function (Thing) {
+            return (
+              <a href={Thing.link} alt={Thing.name}>
+                <Link href={Thing.link}>
+                  <div className={ThingCss.thing}>
+                    <div className={ThingCss.__title}>
+                      <h4>{Thing.name}</h4>
+                      <div className={ThingCss.arrow_shape}>
+                        <img
+                          src="../images/home/Arrow-right.svg"
+                          className={ThingCss.arrow}
+                        />
+                      </div>
+                    </div>
+                    <p>{Thing.description}</p>
+                  </div>
+                </Link>
+              </a>
+            );
           })}
         </div>
       </div>
@@ -227,15 +244,13 @@ export default function Home() {
       {/* People */}
       <div className="content">
         <h4>Some great people & friends (A → Z):</h4>
-        <div className={PeopleCss.people}>
+        <div className={LinkCss.link}>
           {PeopleData.map(function (Person) {
-            if (Person.new != null) {
-              <a className={PeopleCss.__new}>New</a>;
-            }
             return (
-              <a href={Person.link} alt={Person.name} target="_blank">
-                <div className={PeopleCss.person}>
+              <a href={Person.url} alt={Person.name} target="_blank">
+                <div className={LinkCss.item}>
                   <p>{Person.name}</p>
+                  {Person.new != null && <a className={LinkCss.__new}>New</a>}
                 </div>
               </a>
             );
@@ -245,35 +260,19 @@ export default function Home() {
 
       {/* Studios */}
       <div className="content">
-        <div className="people">
-          <h4>Cool studios (A → Z):</h4>
-
-          <div className="__links">
-            {/* Collins */}
-            <a
-              href="https://www.wearecollins.com"
-              alt="Collins"
-              target="_blank"
-            >
-              <div className="person">
-                <p>Collins</p>
+        <h4>Cool studios (A → Z):</h4>
+        <div className={LinkCss.link}>
+          {StudiosData.map(function (Studio) {
+            return (
+              <div className={LinkCss.url}>
+                <a href={Studio.link} alt={Studio.name} target="_blank">
+                  <div className={LinkCss.item}>
+                    <p>{Studio.name}</p>
+                  </div>
+                </a>
               </div>
-            </a>
-
-            {/* Play */}
-            <a href="https://www.play.studio" alt="Play" target="_blank">
-              <div className="person">
-                <p>Play</p>
-              </div>
-            </a>
-
-            {/* Red Antler */}
-            <a href="https://redantler.com" alt="Red Antler" target="_blank">
-              <div className="person">
-                <p>Red Antler</p>
-              </div>
-            </a>
-          </div>
+            );
+          })}
         </div>
       </div>
 
