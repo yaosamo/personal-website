@@ -1,145 +1,240 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../../components/layout'
-
+import Link from "next/link";
+import Head from "next/head";
+import Layout from "../../components/layout";
 
 export default function Podcast() {
-  return ( 
+  return (
     <Layout>
-  <Head>
+      <Head>
         <title>Podcast "And Designer"</title>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
         <meta property="og:url" content="https://yaosamo.com" />
         <meta property="og:title" content="Podcast 'And Designer'" />
-        <meta property="og:description" content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov." />
-        <meta property="og:image" content="https://yaosamo.com/static/meta/hi.jpg" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="And designer"/>
-        <meta name="description" content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov." />
-        <link rel="apple-touch-icon" sizes="57x57" href="/static/meta/apple-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/static/meta/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/static/meta/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/static/meta/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/static/meta/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/static/meta/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/static/meta/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/static/meta/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/meta/apple-icon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="192x192"  href="/static/meta/android-icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/static/metafavicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/static/meta/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/static/meta/favicon-16x16.png" />
+        <meta
+          property="og:description"
+          content="Here we expose designs to other areas such as engineering, management, business and all other aspects related to design. Hosted by Yaric Samoylov."
+        />
+        <meta
+          property="og:image"
+          content="https://yaosamo.com/static/meta/hi.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="And designer" />
+        <meta
+          name="description"
+          content="And designer is a podcast where we expose designs to other areas. Hosted by Yaric Samoylov."
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/static/meta/apple-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/static/meta/apple-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/static/meta/apple-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/static/meta/apple-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/static/meta/apple-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/static/meta/apple-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/static/meta/apple-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/static/meta/apple-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/static/meta/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/static/meta/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/static/metafavicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/static/meta/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/static/meta/favicon-16x16.png"
+        />
         <link rel="manifest" href="/static/meta/manifest.json" />
-        <meta name="msapplication-TileImage" content="/static/meta/ms-icon-144x144.png" />
+        <meta
+          name="msapplication-TileImage"
+          content="/static/meta/ms-icon-144x144.png"
+        />
         <meta name="theme-color" content="#fafafa" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></link>
-      </Head>  
-      
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          rel="stylesheet"
+        ></link>
+      </Head>
+
       <Link href="/">
         <div className="arrow-shape">
-              <img src="../images/home/Arrow-right.svg" className="arrow"/>
-            </div></Link>
-            <div className="content">
-      <div className="header">
-        <div className="logo">
-            <img src="../images/podcast/logo.svg" alt="And designer podcast" />
+          <img src="../images/home/Arrow-right.svg" className="arrow" />
         </div>
-        <h1 className="title">And Designer</h1>
-        <p className="subtitle">A podcast where we explore different aspects of design, technology and business through the lenses of a product designer. Hosted by <a href="https://twitter.com/yaosamo" className="link"  target="_blank">Yaroslav Samoylov.</a></p>
-      </div>
-      </div>
-   
-      
+      </Link>
       <div className="content">
-      <div className="listen">
-        {/* Title */}
-        <div>
-          <h2>Listen on</h2>
+        <div className="header">
+          <div className="logo">
+            <img src="../images/podcast/logo.svg" alt="And designer podcast" />
+          </div>
+          <h1 className="title">And Designer</h1>
+          <p className="subtitle">
+            A podcast where we explore different aspects of design, technology
+            and business through the lenses of a product designer. Hosted by{" "}
+            <a
+              href="https://twitter.com/yaosamo"
+              className="url"
+              target="_blank"
+            >
+              Yaroslav Samoylov.
+            </a>
+          </p>
         </div>
+      </div>
+
+      <div className="content">
+        <div className="listen">
+          {/* Title */}
+          <div>
+            <h2>Listen on</h2>
+          </div>
 
           {/* Apple Podcasts */}
-          <a href="https://podcasts.apple.com/us/podcast/and-designer/id1555995946" target="_blank">
-          <div className="column">
-            
-            <div className="row">
-              <div>
-                <img src="../images/podcast/ApplePodcasts@2x.jpg" alt="Apple Podcasts" className="source-logo"/>
-              </div>
-              
-              <div>
-                <p className="source-name">Apple Podcasts</p>
+          <a
+            href="https://podcasts.apple.com/us/podcast/and-designer/id1555995946"
+            target="_blank"
+          >
+            <div className="column">
+              <div className="row">
+                <div>
+                  <img
+                    src="../images/podcast/ApplePodcasts@2x.jpg"
+                    alt="Apple Podcasts"
+                    className="source-logo"
+                  />
+                </div>
+
+                <div>
+                  <p className="source-name">Apple Podcasts</p>
+                </div>
               </div>
             </div>
-            
-          </div>
           </a>
 
           {/* Spotify */}
-          <a href="https://open.spotify.com/show/6xViWjyWUsCap3Dh3qJ0uq" target="_blank">
-          <div className="column">
+          <a
+            href="https://open.spotify.com/show/6xViWjyWUsCap3Dh3qJ0uq"
+            target="_blank"
+          >
+            <div className="column">
+              <div className="row">
+                <div>
+                  <img
+                    src="../images/podcast/Spotify@2x.svg"
+                    alt="Spotify"
+                    className="source-logo"
+                  />
+                </div>
 
-            <div className="row">
-              <div>
-                <img src="../images/podcast/Spotify@2x.svg" alt="Spotify" className="source-logo"/>
-              </div>
-              
-              <div>
-                <p className="source-name">Spotify</p>
+                <div>
+                  <p className="source-name">Spotify</p>
+                </div>
               </div>
             </div>
+          </a>
 
-          </div>
-          </a>
-          
-           {/* Google Podcasts */}
-           <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjk1NDU0ODM4MC9zb3VuZHMucnNz" target="_blank">
-           <div className="column">
-             
-            <div className="row">
-              <div>
-                <img src="../images/podcast/GooglePodcasts@2x.svg" alt="Google Podcasts" className="source-logo"/>
+          {/* Google Podcasts */}
+          <a
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjk1NDU0ODM4MC9zb3VuZHMucnNz"
+            target="_blank"
+          >
+            <div className="column">
+              <div className="row">
+                <div>
+                  <img
+                    src="../images/podcast/GooglePodcasts@2x.svg"
+                    alt="Google Podcasts"
+                    className="source-logo"
+                  />
+                </div>
+
+                <div>
+                  <p className="source-name">Google Podcasts</p>
+                </div>
               </div>
-              
-              <div>
-                <p className="source-name">Google Podcasts</p>
-              </div>
-          
             </div>
-          </div>
           </a>
-           
+
           {/* SoundCloud */}
           <a href="https://soundcloud.com/and-designer" target="_blank">
-          <div className="column">
-            <div className="row">
-              
-              <div>
-                <img src="../images/podcast/SoundCloud@2x.svg" alt="SoundCloud" className="source-logo"/>
+            <div className="column">
+              <div className="row">
+                <div>
+                  <img
+                    src="../images/podcast/SoundCloud@2x.svg"
+                    alt="SoundCloud"
+                    className="source-logo"
+                  />
+                </div>
+
+                <div>
+                  <p className="source-name">SoundCloud</p>
+                </div>
               </div>
-              
-              <div>
-                <p className="source-name">SoundCloud</p>
-              </div>
-          
             </div>
-          </div>
           </a>
-
-          </div>
+        </div>
       </div>
-      
-     
-      <style jsx>{`
-      .listen {
-        max-width: 30rem;
-        margin: 0 auto;
-      }
 
-      .content {
-        padding-bottom: 5rem;
-      }
+      <style jsx>{`
+        .listen {
+          max-width: 30rem;
+          margin: 0 auto;
+        }
+
+        .content {
+          padding-bottom: 5rem;
+        }
 
         .arrow-shape {
           background: var(--gray-10);
@@ -155,14 +250,14 @@ export default function Podcast() {
         }
 
         .arrow-shape:active {
-          transform: scale(-0.9); 
+          transform: scale(-0.9);
         }
 
         .arrow {
           filter: var(--icon);
           padding-right: 1px;
         }
-        
+
         .logo {
           display: flex;
           justify-content: center;
@@ -177,9 +272,8 @@ export default function Podcast() {
           margin: 0 auto;
           text-align: center;
           margin-block-start: 0.5em;
-          max-width: 20rem; 
+          max-width: 20rem;
         }
-
 
         h1 {
           margin-block-start: 1em;
@@ -191,7 +285,6 @@ export default function Podcast() {
           margin-block-end: 0em;
         }
 
-
         .column {
           background-color: var(--element-background);
           border-radius: 1rem;
@@ -199,7 +292,7 @@ export default function Podcast() {
           flex-direction: column;
           padding: 8px;
           margin-block-end: 1rem;
-          transition: all .1s;
+          transition: all 0.1s;
         }
 
         .column:hover {
@@ -222,7 +315,7 @@ export default function Podcast() {
         .row div {
           display: inherit;
         }
-        
+
         .source-logo {
           border-radius: 1rem;
           width: 3rem;
@@ -251,12 +344,8 @@ export default function Podcast() {
           text-align: left;
           margin-block-start: 0em;
           margin-block-end: 0em;
-        }  
-
-
-      `}</style> 
-     
+        }
+      `}</style>
     </Layout>
-    )
+  );
 }
-
