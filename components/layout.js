@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         {children}
         <div className="footer">
           <p>
-            The website build on NextJS. It'a private, no trackers being used.
+            The website build on NextJS. It's private, no trackers being used.
             Thanks for visiting & have a nice!
           </p>
         </div>

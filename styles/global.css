@@ -74,6 +74,7 @@ p {
   color: var(--active);
   text-decoration: none;
   border-bottom: 1px solid var(--active);
+  cursor: pointer;
   /* margin-left: -.15rem;
     margin-right: -.15rem;
     padding-left: .15rem;

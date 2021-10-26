@@ -264,13 +264,11 @@ export default function Home() {
         <div className={LinkCss.link}>
           {StudiosData.map(function (Studio) {
             return (
-              <div className={LinkCss.url}>
-                <a href={Studio.link} alt={Studio.name} target="_blank">
-                  <div className={LinkCss.item}>
-                    <p>{Studio.name}</p>
-                  </div>
-                </a>
-              </div>
+              <a href={Studio.url} alt={Studio.name} target="_blank">
+                <div className={LinkCss.item}>
+                  <p>{Studio.name}</p>
+                </div>
+              </a>
             );
           })}
         </div>

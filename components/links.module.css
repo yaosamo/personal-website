@@ -7,11 +7,9 @@
   margin-block-start: 1.5rem;
 }
 
-.link .__url {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+.link a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .item {
@@ -43,6 +41,7 @@
 .item:hover p {
   border-bottom: 0.5px solid var(--active);
   color: var(--active);
+  cursor: pointer;
 }
 
 .item p {
@@ -56,9 +55,4 @@
     /* Light mode */
     border-bottom: 0.5px solid var(--dark);
   }
-}
-
-.link a {
-  color: inherit;
-  text-decoration: none;
 }

@@ -1,14 +1,14 @@
 [
   {
     "name": "Collins",
-    "link": "https://www.wearecollins.com"
+    "url": "https://www.wearecollins.com"
   },
   {
     "name": "Play",
-    "link": "https://www.play.studio"
+    "url": "https://www.play.studio"
   },
   {
     "name": "Red Antler",
-    "link": "https://redantler.com"
+    "url": "https://redantler.com"
   }
 ]
