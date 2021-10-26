@@ -80,6 +80,13 @@ p {
     padding-right: .15rem; */
 }
 
+.footer {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: var(--gray-40);
+}
+
 /* Dark theme */
 
 @media (prefers-color-scheme: dark) {

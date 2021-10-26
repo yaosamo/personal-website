@@ -277,24 +277,11 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="footer">
-        <p>
-          Design and code by me using NextJS. This website is fully private, no
-          trackers being used. © 2021.
-        </p>
-      </div>
 
       <style jsx>{`
         .work_item {
           padding-block-end: 6.5rem;
           padding-block-start: 5rem;
-        }
-
-        .footer {
-          max-width: 75rem;
-          margin: 0 auto;
-          padding: 0 1.5rem;
-          color: var(--gray-40);
         }
 
         .__wraper {

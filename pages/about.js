@@ -353,13 +353,6 @@ export default function About() {
             <li>Email yaosamo@gmail.com</li>
           </ul>
         </div>
-
-        <div className="item">
-          <p className="thanks">
-            Thank you very much for visiting! I do not use tracking of anykind
-            on this website. Enjoy and be safe!
-          </p>
-        </div>
       </div>
 
       <style jsx>{`
