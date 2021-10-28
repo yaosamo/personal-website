@@ -124,7 +124,7 @@ export default function GamesScreenshots() {
       </Head>
 
       <Link href="/">
-        <div className="arrow-shape">
+        <div className="arrowShape">
           <img src="../images/home/Arrow-right.svg" className="arrow" />
         </div>
       </Link>
@@ -168,28 +168,6 @@ export default function GamesScreenshots() {
         max-width: 40rem;
         padding-bottom: 3.5rem;
       }
-
-        .arrow-shape {
-          background: var(--gray-10);
-          width: 2.5rem;
-          transform: rotate(180deg);
-          flex-direction: row-reverse;
-          margin-left: 1.5rem;
-        }
-
-        .arrow-shape:hover {
-          cursor: pointer;
-          background: var(--gray-20);
-        }
-
-        .arrow-shape:active {
-          transform: scale(-0.9); 
-        }
-
-        .arrow {
-          filter: var(--icon);
-          padding-right: 1px;
-        }
         
         .title {
           text-align: left;

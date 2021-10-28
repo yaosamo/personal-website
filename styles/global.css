@@ -44,12 +44,31 @@ p {
 
 /* Icons */
 
+.arrowShape {
+  background: var(--gray-10);
+  width: 2.5rem;
+  transform: rotate(180deg);
+  flex-direction: row-reverse;
+  margin-left: 1.5rem;
+}
+
+.arrowShape:hover {
+  cursor: pointer;
+  background: var(--gray-20);
+}
+
+.arrowShape:active {
+  transform: scale(-0.9);
+}
+
 .arrow {
+  filter: var(--icon);
+  padding-right: 1px;
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.arrow-shape {
+.arrowShape {
   transition: all 0.1s;
   background: var(--gray-20);
   border-radius: 3rem;
@@ -60,7 +79,6 @@ p {
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 1.5rem 10rem;
-  /* border: 1px solid red; */
 }
 
 .url {

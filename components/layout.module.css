@@ -17,14 +17,3 @@
     transform: translateY(0px);
   }
 }
-
-/* .container {
-  border: 1px dashed red;
-} */
-
-@media (max-width: 414px) {
-  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-  .container {
-    margin: 0rem;
-  }
-}

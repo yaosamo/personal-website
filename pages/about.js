@@ -29,7 +29,7 @@ export default function About() {
       </Head>
 
       <Link href="/">
-        <div className="arrow-shape">
+        <div className="arrowShape">
           <img src="../images/home/Arrow-right.svg" className="arrow" />
         </div>
       </Link>
@@ -548,28 +548,6 @@ export default function About() {
           height: 7rem;
           background-color: var(--sidebar-background);
           border-radius: 0.25rem;
-        }
-
-        .arrow-shape {
-          background: var(--gray-10);
-          width: 2.5rem;
-          transform: rotate(180deg);
-          flex-direction: row-reverse;
-          margin-left: 1.5rem;
-        }
-
-        .arrow-shape:hover {
-          cursor: pointer;
-          background: var(--gray-20);
-        }
-
-        .arrow-shape:active {
-          transform: scale(-0.9);
-        }
-
-        .arrow {
-          filter: var(--icon);
-          padding-right: 1px;
         }
 
         .subtitle {
