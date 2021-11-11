@@ -4,8 +4,12 @@ import styles from "./layout.module.css";
 export default function Layout({ children }) {
   return (
     <div className={styles.layout}>
-      {/* Contitional arrow back */}
+      {/* Conditional back button */}
+      {/* <div>Will be here</div> */}
+
       {children}
+
+      {/* Footer */}
       <div className="footer">
         <p>
           The website build on NextJS. It's private, no trackers being used.
