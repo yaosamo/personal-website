@@ -1,29 +1,19 @@
 .layout {
-  animation: hello ease-out .3s;
-    width: 100%;
-    /* max-width: 78rem; */
-    padding-block-start: 1.5rem;
-    padding-block-end: 4rem;
-    margin: 0 auto;
+  animation: hello ease-out 0.3s;
+  width: 100%;
+  /* max-width: 78rem; */
+  padding-block-start: 1.5rem;
+  padding-block-end: 4rem;
+  margin: 0 auto;
+}
+
+@keyframes hello {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
   }
-  
-  @keyframes hello {
-    0% {opacity: 0;
-        transform: translateY(4px);
-    }
-    100% {opacity: 100%;
-        transform: translateY(0px);}
-}
-
-
-.container {
-  /* border: 1px dashed red; */
-}
-
-@media (max-width:414px)  { 
-  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
-  .container {
-    margin: 0rem;
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
   }
 }
-  

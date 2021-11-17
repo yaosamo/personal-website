@@ -108,7 +108,7 @@ export default function Podcast() {
       </Head>
 
       <Link href="/">
-        <div className="arrow-shape">
+        <div className="arrowShape">
           <img src="../images/home/Arrow-right.svg" className="arrow" />
         </div>
       </Link>
@@ -236,7 +236,7 @@ export default function Podcast() {
           padding-bottom: 5rem;
         }
 
-        .arrow-shape {
+        .arrowShape {
           background: var(--gray-10);
           width: 2.5rem;
           transform: rotate(180deg);
@@ -244,12 +244,12 @@ export default function Podcast() {
           margin-left: 1.5rem;
         }
 
-        .arrow-shape:hover {
+        .arrowShape:hover {
           cursor: pointer;
           background: var(--gray-20);
         }
 
-        .arrow-shape:active {
+        .arrowShape:active {
           transform: scale(-0.9);
         }
 

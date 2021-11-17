@@ -1,0 +1,378 @@
+.workItem {
+  padding-block-end: 6.5rem;
+  padding-block-start: 5rem;
+}
+
+.__wraper {
+  margin: 4rem 1.5rem;
+}
+
+.pics {
+  overflow: scroll;
+}
+
+.pics::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.bgMask {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  border-radius: 1rem;
+}
+
+.bg {
+  background: var(--blur-bg);
+  backdrop-filter: saturate(180%) blur(3rem);
+  -webkit-backdrop-filter: saturate(180%) blur(3rem);
+  height: 63rem;
+  z-index: 1;
+}
+
+.bgContainer {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 calc((100% - 1200px) / 2);
+  overflow: hidden;
+}
+
+.picsContainer {
+  z-index: 1;
+  display: grid;
+  gap: 4rem;
+  padding-left: calc((100% - 1120px) / 2);
+  padding-right: calc((100% - 1120px) / 2);
+  grid-auto-flow: column;
+  width: fit-content;
+  overflow: visible;
+}
+
+.picsContainer picture:first-child {
+  padding-left: 1.5rem;
+}
+
+.picsContainer picture:last-child {
+  padding-right: 1.5rem;
+}
+
+.picsContainer img {
+  border-radius: 1rem;
+}
+
+.picsContainer picture {
+  margin: auto;
+}
+
+.header {
+  padding-block-start: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.beautifulElipsis1 {
+  position: absolute;
+  transform-origin: center;
+  animation: elipsis-1 8s ease-in-out infinite alternate-reverse;
+  background-color: red;
+  width: 500px;
+  height: 600px;
+  border-radius: 40rem;
+  transform: translateY(300px) translateX(300px);
+  z-index: -1;
+}
+
+@keyframes elipsis-1 {
+  0% {
+    background-color: #fb461e;
+  }
+  100% {
+    background-color: #fb461e;
+    transform: translateY(0px) translateX(450px) rotate(180deg);
+  }
+}
+
+.beautifulElipsis2 {
+  position: absolute;
+  transform-origin: center;
+  animation: elipsis-2 5s ease-in-out infinite alternate-reverse;
+  background-color: red;
+  width: 700px;
+  height: 600px;
+  border-radius: 40rem;
+  transform: translateY(300px) translateX(300px);
+  z-index: -1;
+}
+
+@keyframes elipsis-2 {
+  0% {
+    background-color: #fb461e;
+  }
+  100% {
+    background-color: #fb461e;
+    transform: translateY(750px) translateX(-50px) rotate(180deg);
+  }
+}
+
+.beautifulCircle1 {
+  position: absolute;
+  transform-origin: center;
+  animation: circle-1 8s ease-in-out infinite alternate;
+  background-color: #ff6645;
+  width: 500px;
+  height: 600px;
+  border-radius: 40rem;
+  transform: translateY(300px) translateX(300px);
+  z-index: -1;
+}
+
+@keyframes circle-1 {
+  0% {
+    background-color: #5f45ff;
+  }
+
+  100% {
+    background-color: #5f45ff;
+    transform: translateY(0px) translateX(-100px) rotate(180deg);
+  }
+}
+
+.beautifulCircle2 {
+  position: absolute;
+  transform-origin: center;
+  animation: circle-2 10s ease-in-out infinite alternate;
+  background-color: #ff6645;
+  width: 500px;
+  height: 600px;
+  border-radius: 40rem;
+  transform: translateY(500px) translateX(200px) rotate(180deg);
+  z-index: -1;
+}
+
+@keyframes circle-2 {
+  0% {
+    background-color: #5f45ff;
+  }
+
+  100% {
+    background-color: #5f45ff;
+    transform: translateY(300px) translateX(300px) rotate(180deg);
+  }
+}
+
+.work {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work h2 {
+  margin-block-start: 0.5rem;
+}
+
+.work p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.work .__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 67rem;
+  width: 100%;
+}
+
+.work .__header .__title {
+  width: 16rem;
+}
+
+@media (max-width: 414px) {
+  .work .__header .__title {
+    width: 100%;
+  }
+  .buttons {
+    width: 100%;
+  }
+}
+
+.work .__header p {
+  max-width: 48rem;
+}
+
+.header p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 160%;
+  width: 40rem;
+}
+
+.arrow {
+  filter: var(--icon);
+}
+
+.link-preview {
+  opacity: 0.5;
+}
+
+.description {
+  line-height: 160%;
+  font-size: 1.25rem;
+}
+
+.things {
+  max-width: 30rem;
+  padding-top: 10rem;
+}
+
+.things h2 {
+  margin-block-end: 4rem;
+}
+
+.things a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.thing {
+  margin-block-end: 4rem;
+}
+
+.arrowShape {
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.thing:hover .arrowShape {
+  opacity: 1;
+  transform: translateX(8px);
+}
+
+.thing p {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  color: var(--gray-40);
+}
+
+.thing .__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block-end: 0.5rem;
+}
+
+.thing .arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.content h4 {
+  margin-right: 0.5rem;
+  margin-block-end: 0rem;
+}
+
+.buttons {
+  margin-block-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+}
+
+.primaryButton {
+  font-weight: 600;
+  color: var(--button-text);
+  background: var(--primary-button);
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  height: 4rem;
+}
+
+.primaryButton:hover {
+  background: var(--primary-button-hover);
+}
+
+.button {
+  margin: 24px 0px;
+  font-weight: 600;
+  color: var(--button-text);
+  text-decoration: none;
+  border: 1px solid;
+  border-color: var(--secondary-button);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  height: 4rem;
+}
+
+.button:active,
+.primary-button:active,
+.card:active,
+.person:active {
+  transform: scale(0.98);
+}
+
+.button:hover {
+  cursor: pointer;
+  border: 1px solid var(--secondary-button-hover);
+}
+
+@media (max-width: 1024px) {
+  /* ipad */
+
+  .bg {
+    height: 71rem;
+  }
+}
+
+@media (max-width: 414px) {
+  /* iphone bigger sizes for background */
+
+  .button {
+    width: 100%;
+  }
+
+  .bg {
+    height: 82rem;
+  }
+}
+
+@media (max-width: 375px) {
+  /* standard work bg height */
+
+  .bg {
+    height: 84rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* why am I doing this */
+
+  .bg {
+    height: 90rem;
+  }
+}
