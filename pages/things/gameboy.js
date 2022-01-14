@@ -133,8 +133,8 @@ export default function GamesScreenshots() {
         <div className="header">
           <h1 className="title">Gameboy games screenshots</h1>
           <p className="subtitle">
-            Over 1500 screenshots of official releases for your inspiration.{" "}
-            <br /> Credits:{" "}
+            Some screenshots of official releases for your inspiration. <br />{" "}
+            Credits:{" "}
             <a
               className="url"
               href="https://retroshark.itch.io/"
