@@ -33,6 +33,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/things/gameboy": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/things/gameboy.js"
     ]
   },
   "ampFirstPages": []
