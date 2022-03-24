@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "chameleon.yaosamo.com"
+        }
+      ],
+      "destination": "/things/chameleon/:path*"
+    }
+  ]
+}
