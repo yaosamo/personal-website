@@ -21,5 +21,7 @@ venv
 node_modules
 .sass-cache
 
+#.next
 .next/cache
 .next
+.next/static
