@@ -18,8 +18,13 @@ Thumbs.db
 
 # Application specific files
 venv
-node_modules
 .sass-cache
 
+#.next
+.next   
 .next/cache
-.next
+.next/static
+next
+
+#node
+node_modules
