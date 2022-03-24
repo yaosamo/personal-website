@@ -22,6 +22,7 @@ node_modules
 .sass-cache
 
 #.next
-.next/cache
 .next
+.next/cache
 .next/static
+next
