@@ -1,0 +1,38 @@
+.roundedFont {
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, san-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stickyHead {
+  top: 14em;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 30em;
+}
+
+.stickyHead h1 {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.contentScroll {
+  width: 50%;
+}
+
+.title {
+  font-size: 4.5em;
+}
+
+.subTitle {
+  font-size: 2em;
+  margin-block-end: -1rem;
+  font-weight: 600;
+}
