@@ -5,7 +5,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
 }
 
 .stickyHead {
@@ -24,7 +24,27 @@
 }
 
 .contentScroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
+}
+
+.logo {
+  display: flex;
+  background: radial-gradient(
+    94.27% 94.27% at 17.71% 5.73%,
+    #2f3133 0%,
+    #1f2022 100%
+  );
+  flex-direction: row;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.logo img {
+  width: 5em;
+  height: 5em;
 }
 
 .title {
@@ -35,4 +55,44 @@
   font-size: 2em;
   margin-block-end: -1rem;
   font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 1em;
+  gap: 1em;
+}
+
+.button {
+  width: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 56px;
+  background: linear-gradient(
+    79.96deg,
+    #9dc8c8 5.05%,
+    #4a57ca 50.07%,
+    #c081d0 98.11%
+  );
+}
+
+.button,
+.buttonShare a {
+  color: white;
+}
+
+.buttonShare {
+  width: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 56px;
+  background: #191a1d;
 }

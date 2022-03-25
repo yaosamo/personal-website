@@ -13,12 +13,29 @@ export default function Icons() {
         <div className="content">
           <div className={css.container}>
             <div className={css.stickyHead}>
+              <div className={css.logo}>
+                <img src="../../images/chameleon/logo@2x.png" />
+              </div>
               <p className={css.subTitle}>Audiobook player</p>
               <h1 className={css.title}>Chameleon</h1>
-              <button>Get App</button>
-              <button>Share</button>
+              <div className={css.buttons}>
+                <a href="/">
+                  <div className={css.button}>Get App</div>
+                </a>
+                <div className={css.buttonShare}>
+                  <a>Share</a>
+                </div>
+              </div>
             </div>
             <div className={css.contentScroll}>
+              <video
+                width="414"
+                autoPlay
+                muted
+                playsinline=""
+                loop="true"
+                src="../../images/chameleon/Design.mp4"
+              ></video>
               <video
                 width="414"
                 autoPlay
