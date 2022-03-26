@@ -28,22 +28,32 @@ export default function Icons() {
               </div>
             </div>
             <div className={css.contentScroll}>
-              <video
-                width="414"
-                autoPlay
-                muted
-                playsinline=""
-                loop="true"
-                src="../../images/chameleon/Design.mp4"
-              ></video>
-              <video
-                width="414"
-                autoPlay
-                muted
-                playsinline=""
-                loop="true"
-                src="../../images/chameleon/Design.mp4"
-              ></video>
+              <div className={css.contentItem}>
+                <video
+                  width="414"
+                  autoPlay
+                  muted
+                  playsinline=""
+                  loop="true"
+                  src="../../images/chameleon/Design.mp4"
+                ></video>
+                <a>Design</a>
+              </div>
+              <div className={css.contentItem}>
+                <img width="414" src="../../images/chameleon/2@2x.png" />
+                <a>Playlists</a>
+              </div>
+              <div className={css.contentItem}>
+                <img width="414" src="../../images/chameleon/3@2x.png" />
+                <a>Import</a>
+              </div>
+              <div className={css.contentItem}>
+                <img width="414" src="../../images/chameleon/4@2x.png" />
+                <a>
+                  Remembers
+                  <br /> Last Book Played
+                </a>
+              </div>
             </div>
           </div>
         </div>
