@@ -56,6 +56,14 @@ export default function Icons() {
               </div>
             </div>
           </div>
+          <div className={css.about}>
+            <p>
+              Hi, my name is Yaroslav Samoylov. I made this app for myself
+              because I love to listen my library of audiobooks that I store on
+              iCloud. If you’d like you can support it by sharing it. Thank you
+              for checking it out!
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

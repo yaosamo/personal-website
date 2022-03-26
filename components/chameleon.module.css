@@ -125,3 +125,20 @@
   line-height: 140%;
   text-align: center;
 }
+
+.about {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.about p {
+  margin-block-start: 10em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  line-height: 150%;
+}
