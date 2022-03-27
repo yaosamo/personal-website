@@ -133,12 +133,17 @@
   transform: translateZ(0);
   border-radius: 1em;
   width: 100%;
+  max-width: 25em;
 }
 
 .contentItem {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contentItem img {
+  max-width: 25em;
 }
 
 .contentItem a {

@@ -59,13 +59,10 @@ export default function Icons() {
             </div>
             <div className={css.contentScroll}>
               <div className={css.contentItem}>
-                <video
-                  autoPlay
-                  muted
-                  playsinline=""
-                  loop="true"
-                  src="../../images/chameleon/Design.mp4"
-                ></video>
+                <video autoPlay muted playsinline="" loop="true">
+                  <source src="../../images/chameleon/Design.mp4"></source>
+                  <img src="../../images/chameleon/design.png" />
+                </video>
                 <a>Design</a>
               </div>
               <div className={css.contentItem}>
