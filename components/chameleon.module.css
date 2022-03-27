@@ -1,0 +1,157 @@
+.roundedFont {
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, san-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}
+
+.stickyHead {
+  top: 13vw;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 30em;
+}
+
+.stickyHead h1 {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.contentScroll {
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  gap: 6em;
+}
+
+.logo {
+  display: flex;
+  background: radial-gradient(
+    94.27% 94.27% at 17.71% 5.73%,
+    #2f3133 0%,
+    #1f2022 100%
+  );
+  flex-direction: row;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.logo img {
+  width: 5em;
+  height: 5em;
+}
+
+.title {
+  font-size: 4.5em;
+}
+
+.subTitle {
+  font-size: 2em;
+  margin-block-end: -1rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 2em;
+  gap: 1em;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.button {
+  color: var(--white);
+  width: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 3.5em;
+  background: linear-gradient(
+    79.96deg,
+    #9dc8c8 5.05%,
+    #4a57ca 50.07%,
+    #c081d0 98.11%
+  );
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.buttonShare {
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 3.5em;
+  background: var(--primary-button-hover);
+  color: var(--button-text);
+}
+
+.buttonFollow {
+  font-size: 1.5em;
+  font-weight: 600;
+  max-width: 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 3.5em;
+  background: var(--primary-button-hover);
+  color: var(--button-text);
+  margin-block-start: 3em;
+}
+
+.contentItem video {
+  transform: translateZ(0);
+  border-radius: 1em;
+}
+
+.contentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentItem a {
+  padding-top: 2em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+}
+
+.about {
+  margin: 0 auto;
+  max-width: 40em;
+  margin-block-end: 4em;
+}
+
+.about a {
+  text-decoration: none;
+}
+
+.about p {
+  margin-block-start: 10em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  line-height: 150%;
+}

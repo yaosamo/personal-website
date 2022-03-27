@@ -9,11 +9,7 @@ export default function Icons() {
   return (
     <Layout>
       <Head>
-        <title>Love making icons</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-          rel="stylesheet"
-        ></link>
+        <title>Chameleon / Audiobook Player</title>
       </Head>
       <div className="content">
         <h1>My new icons page</h1>
