@@ -9,7 +9,7 @@
 }
 
 .stickyHead {
-  top: 14em;
+  top: 13vw;
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,7 @@
 }
 
 .button {
+  color: var(--white);
   width: 5em;
   display: flex;
   flex-direction: row;
@@ -89,11 +90,6 @@
   font-size: 1.5em;
 }
 
-.button,
-.buttonShare a {
-  color: var(--white);
-}
-
 .buttonShare {
   font-size: 1.5em;
   font-weight: 600;
@@ -104,7 +100,23 @@
   align-items: center;
   padding: 1em;
   border-radius: 3.5em;
-  background: #191a1d;
+  background: var(--primary-button-hover);
+  color: var(--button-text);
+}
+
+.buttonFollow {
+  font-size: 1.5em;
+  font-weight: 600;
+  max-width: 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 3.5em;
+  background: var(--primary-button-hover);
+  color: var(--button-text);
+  margin-block-start: 3em;
 }
 
 .contentItem video {
@@ -127,12 +139,13 @@
 }
 
 .about {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-
   margin: 0 auto;
   max-width: 40em;
+  margin-block-end: 4em;
+}
+
+.about a {
+  text-decoration: none;
 }
 
 .about p {

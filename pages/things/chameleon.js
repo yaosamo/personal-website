@@ -8,6 +8,21 @@ export default function Icons() {
     <Layout>
       <Head>
         <title>Chameleon / Audiobook Player</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yaosamo" />
+        <meta name="twitter:creator" content="@yaosamo" />
+        <meta property="og:url" content="https://yaosamo.com" />
+        <meta property="og:title" content="Yaroslav Samoylov" />
+        <meta
+          property="og:description"
+          content="Curious designer based in Oregon"
+        />
+        <meta property="og:image" content="https://yaosamo.com/intro.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Yaroslav Samoylov" />
+        <meta name="description" content="Curious designer based in Oregon" />
+        <link rel="icon" href="favicon.svg" />
+        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
       </Head>
       <div className={css.roundedFont}>
         <div className="content">
@@ -19,12 +34,18 @@ export default function Icons() {
               <p className={css.subTitle}>Audiobook player</p>
               <h1 className={css.title}>Chameleon</h1>
               <div className={css.buttons}>
-                <a href="/">
+                <a
+                  target="_blank"
+                  href="https://apps.apple.com/us/app/chameleon-audiobook-player/id1615705830"
+                >
                   <div className={css.button}>Get App</div>
                 </a>
-                <div className={css.buttonShare}>
-                  <a>Share</a>
-                </div>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fyaosamo.com%2Fthings%2Fchameleon&via=yaosamo&text=I%27m%20listening%20my%20books%20on"
+                >
+                  <div className={css.buttonShare}>Share</div>
+                </a>
               </div>
             </div>
             <div className={css.contentScroll}>
@@ -63,6 +84,9 @@ export default function Icons() {
               iCloud. If you’d like you can support it by sharing it. Thank you
               for checking it out!
             </p>
+            <a target="_blank" href="http://twitter.com/yaosamo">
+              <div className={css.buttonFollow}>Follow me on Twitter</div>
+            </a>
           </div>
         </div>
       </div>
