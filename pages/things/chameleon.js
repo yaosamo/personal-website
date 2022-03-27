@@ -11,19 +11,28 @@ export default function Icons() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
-        <meta property="og:url" content="https://yaosamo.com" />
-        <meta property="og:title" content="Yaroslav Samoylov" />
+        <meta
+          property="og:url"
+          content="https://yaosamo.com/things/chameleon"
+        />
+        <meta property="og:title" content="Chameleon / Audiobook Player" />
         <meta
           property="og:description"
-          content="Curious designer based in Oregon"
+          content="Listen your audiobooks on iCloud."
         />
-        <meta property="og:image" content="https://yaosamo.com/intro.jpg" />
+        <meta
+          property="og:image"
+          content="https://yaosamo.com/images/chameleon/intro.png"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Yaroslav Samoylov" />
-        <meta name="description" content="Curious designer based in Oregon" />
-        <link rel="icon" href="favicon.svg" />
-        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
+        <meta property="og:site_name" content="Chameleon / Audiobook Player" />
+        <meta name="description" content="Listen your audiobooks on iCloud." />
       </Head>
+      <Link href="/">
+        <div className="arrowShape">
+          <img src="../images/home/Arrow-right.svg" className="arrow" />
+        </div>
+      </Link>
       <div className={css.roundedFont}>
         <div className="content">
           <div className={css.container}>
@@ -51,7 +60,6 @@ export default function Icons() {
             <div className={css.contentScroll}>
               <div className={css.contentItem}>
                 <video
-                  width="414"
                   autoPlay
                   muted
                   playsinline=""
@@ -61,15 +69,15 @@ export default function Icons() {
                 <a>Design</a>
               </div>
               <div className={css.contentItem}>
-                <img width="414" src="../../images/chameleon/2@2x.png" />
+                <img src="../../images/chameleon/2@2x.png" />
                 <a>Playlists</a>
               </div>
               <div className={css.contentItem}>
-                <img width="414" src="../../images/chameleon/3@2x.png" />
+                <img src="../../images/chameleon/3@2x.png" />
                 <a>Import</a>
               </div>
               <div className={css.contentItem}>
-                <img width="414" src="../../images/chameleon/4@2x.png" />
+                <img src="../../images/chameleon/4@2x.png" />
                 <a>
                   Remembers
                   <br /> Last Book Played
