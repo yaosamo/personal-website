@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import css from "../../components/chameleon.module.css";
+import Image from "next/image";
 
 export default function Icons() {
   return (
@@ -59,13 +60,12 @@ export default function Icons() {
             </div>
             <div className={css.contentScroll}>
               <div className={css.contentItem}>
-                <video
-                  autoPlay
-                  muted
-                  playsinline
-                  loop
-                  src="../../images/chameleon/Design.mp4"
-                ></video>
+                <video autoplay="" playsinline="" muted="" loop="">
+                  <source
+                    src="../../images/chameleon/Design.mp4"
+                    type="video/mp4"
+                  />
+                </video>
                 <a>Design</a>
               </div>
               <div className={css.contentItem}>
