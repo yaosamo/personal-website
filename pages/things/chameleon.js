@@ -66,7 +66,6 @@ export default function Icons() {
                   playsinline=""
                   loop="true"
                   src="../../images/chameleon/Design.mp4"
-                  type="video/mp4"
                 ></video>
                 <a>Design</a>
               </div>
