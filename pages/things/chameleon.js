@@ -60,7 +60,7 @@ export default function Icons() {
             </div>
             <div className={css.contentScroll}>
               <div className={css.contentItem}>
-                <video autoplay="" playsinline="" muted="" loop="">
+                <video autoplay="" playsinline="" muted="" loop="true">
                   <source
                     src="../../images/chameleon/Design.mp4"
                     type="video/mp4"
