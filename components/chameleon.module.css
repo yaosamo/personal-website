@@ -130,7 +130,6 @@
 }
 
 .contentItem video {
-  transform: translateZ(0);
   border-radius: 1em;
   width: 100%;
   max-width: 25em;
