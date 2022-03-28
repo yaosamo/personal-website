@@ -65,15 +65,13 @@ export default function Icons() {
                   muted
                   playsinline=""
                   loop="true"
-                  src="../images/about/me.mp4"
-                ></video>
-                <video
-                  autoPlay
-                  muted
-                  playsinline=""
-                  loop="true"
                   src="../../images/chameleon/Design.mp4"
-                ></video>
+                >
+                  <img
+                    src="../../images/chameleon/design.png"
+                    title="Image of User Interface Design"
+                  />
+                </video>
                 <a>Design</a>
               </div>
               <div className={css.contentItem}>
