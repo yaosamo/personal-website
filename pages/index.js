@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../styles/index.module.css";
+import Case from "../components/case";
 
 export default function Home() {
   return (
@@ -36,10 +37,14 @@ export default function Home() {
           </Link>
         </p>
         <h1 className="headingL weightMedium">
-          Yaroslav Samoylov, <br />
-          product designer & design engineer <br /> see my work below.
+          Yaroslav Samoylov,
+          <br />
+          product designer & design engineer
+          <br />
+          see my work below.
         </h1>
       </div>
+      <Case />
     </Layout>
   );
 }
