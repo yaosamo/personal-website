@@ -1,2 +1,24 @@
-@media (max-width: 428px) {
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 12.5rem 0;
+  gap: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 130%;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  color: hsl(0, 0%, 74%, 1);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.link {
+  color: var(--primary-accent);
+  text-decoration: none;
+}
+
+@media (max-width: 1199px) {
 }

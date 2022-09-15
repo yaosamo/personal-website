@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../styles/index.module.css";
-import ThingCss from "../components/things.module.css";
 
 export default function Home() {
   return (
@@ -25,17 +24,21 @@ export default function Home() {
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="favicon.svg" color="#000000;" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
-      <div className="content">
-        <div className={styles.header}>
-          <h1>
-            Yaroslav Samoylov, product designer & design engineer see my work
-            below.
-          </h1>
-        </div>
+      <div className={styles.header}>
+        <p className={styles.subtitle}>
+          about me & other things I do ->{" "}
+          <Link href="/about">
+            <a className={styles.link}>see info</a>
+          </Link>
+        </p>
+        <h1 className="headingL weightMedium">
+          Yaroslav Samoylov, <br />
+          product designer & design engineer <br /> see my work below.
+        </h1>
       </div>
     </Layout>
   );

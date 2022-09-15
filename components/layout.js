@@ -1,4 +1,3 @@
-import styles from "./layout.module.css";
 import PeopleData from "../components/people-data";
 import StudiosData from "../components/studios-data";
 import LinkCss from "../components/links.module.css";
@@ -6,12 +5,12 @@ import LinkCss from "../components/links.module.css";
 // Main container that being used everywhere with imported CSS class
 export default function Layout({ children }) {
   return (
-    <div className={styles.layout}>
+    <div className="content">
       {children}
       {/* Footer */}
-      <div className="footer">
+      <div className="footer" key={0}>
         {/* People */}
-        <div className="content">
+        <div key={0}>
           <h4>Some great people & friends (A → Z):</h4>
           <div className={LinkCss.link}>
             {PeopleData.map(function (Person) {
@@ -19,7 +18,6 @@ export default function Layout({ children }) {
                 <a href={Person.url} alt={Person.name} target="_blank">
                   <div className={LinkCss.item}>
                     <p>{Person.name}</p>
-                    {Person.new != null && <a className={LinkCss.__new}>New</a>}
                   </div>
                 </a>
               );
@@ -28,7 +26,7 @@ export default function Layout({ children }) {
         </div>
 
         {/* Studios */}
-        <div className="content">
+        <div key={0}>
           <h4>Cool studios (A → Z):</h4>
           <div className={LinkCss.link}>
             {StudiosData.map(function (Studio) {
