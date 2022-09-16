@@ -41,7 +41,7 @@ export default function Home() {
           <br />
           product designer & design engineer
           <br />
-          see my work below.
+          see my work below
         </h1>
       </div>
       <Case />
