@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 7.5rem 0;
+}
+
+.contributors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 7.5rem 0;
+  align-items: center;
+  background: #f4f5f6;
+  border-radius: 0.5rem;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 7.5rem;
+}
