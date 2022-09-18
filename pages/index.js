@@ -3,6 +3,9 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../components/index.module.css";
 import Case from "../components/case";
+import Portfolio from "../components/cases.json";
+
+const density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
 
 export default function Home() {
   return (
@@ -44,7 +47,9 @@ export default function Home() {
           see my work below
         </h1>
       </div>
-      <Case />
+      {Portfolio.map((Work, i) => (
+        <Case Work={Work} key={i} />
+      ))}
     </Layout>
   );
 }

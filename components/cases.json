@@ -1,0 +1,27 @@
+[
+  {
+    "client": "2019-2022 / Gubagoo -> Released",
+    "title": "A service to sell cars fully online. Clients include Audi, BMW, Land Rover, Nissan, Toyota, Volvo, Porsche and other brands",
+    "description": [
+      {
+        "text": "Product design: Emrah Demirag, Eugene Belyakoff, Tim Marks, Yaroslav Samoylov"
+      },
+      {
+        "text": "Direction: Alyssa Bouranova, John Ellithorp, Miran Maric and whole Asbury AG, Ryan Osten, Tim Marks"
+      }
+    ],
+    "items": [
+      {
+        "addbg": true,
+        "bgcolor": "#f4f4f4",
+        "images": {
+          "addborder": true,
+          "bordercolor": "#E7E7E8",
+          "img-one": "1.png",
+          "img-two": "1.png"
+        },
+        "caption": "Title"
+      }
+    ]
+  }
+]
