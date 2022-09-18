@@ -1,7 +1,10 @@
 const density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
 import styles from "../components/case.module.css";
 
-export default function Case() {
+export default function Case({}) {
+  const addborder = true;
+  const bordercolor = "#c65431";
+  const backgroundcolor = "#f4f5f6";
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -23,10 +26,26 @@ export default function Case() {
       </div>
       <div className={styles.items}>
         {/* Individual pics */}
-        <div className={styles.item}>
+        <div
+          style={addborder ? { background: backgroundcolor } : {}}
+          className={styles.item}
+        >
           <div className={styles.images}>
-            <img width="428" height="844" />
-            <img width="428" height="844" />
+            {/* if border? add border color */}
+            <img
+              style={
+                addborder ? { border: "1px " + bordercolor + " solid" } : {}
+              }
+              width="390"
+              height="844"
+            />
+            <img
+              style={
+                addborder ? { border: "1px " + bordercolor + " solid" } : {}
+              }
+              width="390"
+              height="844"
+            />
           </div>
           <p>Title</p>
         </div>
