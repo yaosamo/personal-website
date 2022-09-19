@@ -4,30 +4,33 @@ function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;
 }
 
-function Item({ Item }) {
+function Items({ Item, i }) {
   return (
     <div
-      style={Item.addbg ? { background: Item.bgcolor } : {}}
+      style={Item.bgcolor ? { background: Item.bgcolor } : {}}
       className={styles.item}
     >
-      <div className={styles.images}>
-        {/* if border? add border color */}
-        <img
-          style={{ border: "1px " + Item + " solid" }}
-          width="390"
-          height="844"
-        />
+      <div
+        className={styles.images}
+        // If there's no bgcolor we want to add padding because image is probably full width
+        style={Item.bgcolor ? { padding: "0 7.5rem" } : {}}
+      >
+        {/* images of the item */}
+        {Item.images.map((img, i) => (
+          <img
+            src={img.img}
+            style={
+              Item.bordercolor ? { border: "1px solid" + Item.bordercolor } : {}
+            }
+          />
+        ))}
       </div>
-      <p>Title</p>
+      <p>{Item.caption}</p>
     </div>
   );
 }
 
 export default function Case({ Work }) {
-  const addborder = true;
-  const bordercolor = "#c65431";
-  const backgroundcolor = "#f4f5f6";
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -41,7 +44,7 @@ export default function Case({ Work }) {
       </div>
       <div className={styles.items}>
         {Work.items.map((item, i) => (
-          <Item Item={item} key={i} />
+          <Items Item={item} key={i} />
         ))}
       </div>
     </div>

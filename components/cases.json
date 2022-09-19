@@ -12,15 +12,14 @@
     ],
     "items": [
       {
-        "addbg": true,
-        "bgcolor": "#f4f4f4",
-        "images": {
-          "addborder": true,
-          "bordercolor": "#E7E7E8",
-          "img-one": "1.png",
-          "img-two": "1.png"
-        },
-        "caption": "Title"
+        "bordercolor": "#E7E7E8",
+        "caption": "Loading View",
+        "images": [{ "img": "images/work/case-one/item-1/img-one@2x.png" }]
+      },
+      {
+        "bordercolor": "#E7E7E8",
+        "caption": "Payments View",
+        "images": [{ "img": "images/work/case-one/item-2/img-one@2x.png" }]
       }
     ]
   }

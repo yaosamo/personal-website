@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       {/* Footer */}
       <div className={styles.footer} key={0}>
         {/* People */}
-        <div key={0}>
+        <div>
           <h4>Some great people & friends (A → Z):</h4>
           <div className={styles.link}>
             {PeopleData.map(function (Person) {

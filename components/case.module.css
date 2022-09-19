@@ -33,5 +33,9 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 7.5rem;
-  padding: 0 7.5rem;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 1rem;
 }
