@@ -19,6 +19,7 @@ function Items({ Item, i }) {
         {Item.images.map((img, i) => (
           <img
             src={img.img}
+            width={Item.width ? Item.width : "100%"}
             style={
               Item.bordercolor ? { border: "1px solid" + Item.bordercolor } : {}
             }

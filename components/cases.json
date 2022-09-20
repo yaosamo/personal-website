@@ -14,12 +14,50 @@
       {
         "bordercolor": "#E7E7E8",
         "caption": "Loading View",
-        "images": [{ "img": "images/work/case-one/item-1/img-one@2x.png" }]
+        "images": [{ "img": "images/work/case-one/item-1/img-1@2x.png" }]
       },
       {
         "bordercolor": "#E7E7E8",
         "caption": "Payments View",
-        "images": [{ "img": "images/work/case-one/item-2/img-one@2x.png" }]
+        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Find your car view",
+        "width": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-3/img-1@2x.png" },
+          { "img": "images/work/case-one/item-3/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Result / Value distribution view",
+        "width": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-4/img-1@2x.png" },
+          { "img": "images/work/case-one/item-4/img-2@2x.png" }
+        ]
+      },
+      {
+        "caption": "Color library roles",
+
+        "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
+      },
+      {
+        "bordercolor": "#E7E7E8",
+        "caption": "Payments View",
+        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+      },
+      {
+        "bordercolor": "#E7E7E8",
+        "caption": "Payments View",
+        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+      },
+      {
+        "bordercolor": "#E7E7E8",
+        "caption": "Payments View",
+        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
       }
     ]
   }
