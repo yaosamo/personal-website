@@ -1,3 +1,7 @@
+.container {
+  background: #000;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -36,5 +40,17 @@
 }
 
 .images img {
+  width: 100%;
   border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding: 3.5rem 0;
+  }
+
+  .images {
+    padding: 0 3.5rem !important;
+    gap: 3.5rem;
+  }
 }

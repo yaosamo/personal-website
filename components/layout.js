@@ -5,12 +5,12 @@ import styles from "../components/layout.module.css";
 // Main container that being used everywhere with imported CSS class
 export default function Layout({ children }) {
   return (
-    <div className="content">
+    <div>
       {children}
       {/* Footer */}
       <div className={styles.footer} key={0}>
         {/* People */}
-        <div>
+        <div className="content">
           <h4>Some great people & friends (A → Z):</h4>
           <div className={styles.link}>
             {PeopleData.map(function (Person) {
@@ -26,7 +26,7 @@ export default function Layout({ children }) {
         </div>
 
         {/* Studios */}
-        <div key={0}>
+        <div className="content">
           <h4>Cool studios (A → Z):</h4>
           <div className={styles.link}>
             {StudiosData.map(function (Studio) {

@@ -32,20 +32,22 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <div className={styles.header}>
-        <p className={styles.subtitle}>
-          about me & other things I do ->{" "}
-          <Link href="/about">
-            <a className={styles.link}>see info</a>
-          </Link>
-        </p>
-        <h1 className="headingL weightMedium">
-          Yaroslav Samoylov,
-          <br />
-          product designer & design engineer
-          <br />
-          see my work below
-        </h1>
+      <div className="content">
+        <div className={styles.header}>
+          <p className={styles.subtitle}>
+            about me & other things I do ->{" "}
+            <Link href="/about">
+              <a className={styles.link}>see info</a>
+            </Link>
+          </p>
+          <h1 className="headingL weightMedium">
+            Yaroslav Samoylov,
+            <br />
+            product designer & design engineer
+            <br />
+            see my work below
+          </h1>
+        </div>
       </div>
       {Portfolio.map((Work, i) => (
         <Case Work={Work} key={i} />

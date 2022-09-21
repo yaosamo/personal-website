@@ -13,18 +13,18 @@
     "items": [
       {
         "bordercolor": "#E7E7E8",
-        "caption": "Loading View",
+        "caption": "Loading view",
         "images": [{ "img": "images/work/case-one/item-1/img-1@2x.png" }]
       },
       {
         "bordercolor": "#E7E7E8",
-        "caption": "Payments View",
+        "caption": "Payments view",
         "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
       },
       {
         "bgcolor": "#F4F5F6",
         "caption": "Find your car view",
-        "width": "390px",
+        "maxwidth": "390px",
         "images": [
           { "img": "images/work/case-one/item-3/img-1@2x.png" },
           { "img": "images/work/case-one/item-3/img-2@2x.png" }
@@ -33,7 +33,7 @@
       {
         "bgcolor": "#F4F5F6",
         "caption": "Result / Value distribution view",
-        "width": "390px",
+        "maxwidth": "390px",
         "images": [
           { "img": "images/work/case-one/item-4/img-1@2x.png" },
           { "img": "images/work/case-one/item-4/img-2@2x.png" }
@@ -41,23 +41,101 @@
       },
       {
         "caption": "Color library roles",
-
         "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
       },
       {
+        "bgcolor": "#F4F5F6",
+        "caption": "Checkout view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-6/img-1@2x.png" },
+          { "img": "images/work/case-one/item-6/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Submition SVG animation",
+        "code": true,
+        "images": [{ "img": "images/work/case-one/item-7/img-1@2x.png" }]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Final home page view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-8/img-1@2x.png" },
+          { "img": "images/work/case-one/item-8/img-2@2x.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "bgcolor": "#000",
+    "headingcolor": "#fff",
+    "bodycolor": "ccc",
+    "client": "2022 / Personal -> Released to the App Store",
+    "title": "Audiobook player designed to listen long books",
+    "description": [
+      {
+        "text": "Product designer and developer: Yaroslav Samoylov"
+      }
+    ],
+    "items": [
+      {
         "bordercolor": "#E7E7E8",
-        "caption": "Payments View",
-        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+        "caption": "Loading view",
+        "images": [{ "img": "images/work/case-one/item-1/img-1@2x.png" }]
       },
       {
         "bordercolor": "#E7E7E8",
-        "caption": "Payments View",
+        "caption": "Payments view",
         "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
       },
       {
-        "bordercolor": "#E7E7E8",
-        "caption": "Payments View",
-        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+        "bgcolor": "#F4F5F6",
+        "caption": "Find your car view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-3/img-1@2x.png" },
+          { "img": "images/work/case-one/item-3/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Result / Value distribution view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-4/img-1@2x.png" },
+          { "img": "images/work/case-one/item-4/img-2@2x.png" }
+        ]
+      },
+      {
+        "caption": "Color library roles",
+        "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Checkout view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-6/img-1@2x.png" },
+          { "img": "images/work/case-one/item-6/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Submition SVG animation",
+        "code": true,
+        "images": [{ "img": "images/work/case-one/item-7/img-1@2x.png" }]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Final home page view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-one/item-8/img-1@2x.png" },
+          { "img": "images/work/case-one/item-8/img-2@2x.png" }
+        ]
       }
     ]
   }
