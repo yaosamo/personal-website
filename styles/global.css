@@ -25,6 +25,7 @@ h1 {
   margin-block-start: 0rem;
   margin-block-end: 0rem;
   letter-spacing: -0.03em;
+  white-space: pre-wrap;
 }
 
 .bodyMD {
@@ -42,6 +43,11 @@ h1 {
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 1.5rem 7.5rem;
+}
+
+.link {
+  color: var(--primary-accent);
+  text-decoration: none;
 }
 
 /* Light theme */

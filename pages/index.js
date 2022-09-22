@@ -37,7 +37,7 @@ export default function Home() {
           <p className={styles.subtitle}>
             about me & other things I do ->{" "}
             <Link href="/about">
-              <a className={styles.link}>see info</a>
+              <a className="link">see info</a>
             </Link>
           </p>
           <h1 className="headingL weightMedium">

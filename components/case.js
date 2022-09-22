@@ -8,7 +8,7 @@ function CustomCode({}) {
   return <p>custom code</p>;
 }
 
-function Items({ Item, i }) {
+function Items({ Work, Item, i }) {
   return (
     <div
       style={
@@ -41,7 +41,9 @@ function Items({ Item, i }) {
           )
         )}
       </div>
-      <p>{Item.caption}</p>
+      <p style={Work.captioncolor ? { color: Work.captioncolor } : {}}>
+        {Item.caption}
+      </p>
     </div>
   );
 }
@@ -50,11 +52,18 @@ export default function Case({ Work }) {
   return (
     // Apply custom text color
     <div
-      style={Work.bgcolor ? { color: "#fff", background: Work.bgcolor } : {}}
+      style={Work.bgcolor ? { color: "#DFDFDF", background: Work.bgcolor } : {}}
     >
       <div className="content">
         <div className={styles.header}>
-          <p className="bodyMD">{Work.client}</p>
+          <p className="bodyMD">
+            {Work.client}
+            {Work.url && (
+              <a className="link" href={Work.url} target="_blank">
+                {Work.link}
+              </a>
+            )}
+          </p>
           <h1 className="headingL weightMedium">{Work.title}</h1>
           <div className={styles.contributors}>
             {Work.description.map((desc, i) => (
@@ -64,7 +73,7 @@ export default function Case({ Work }) {
         </div>
         <div className={styles.items}>
           {Work.items.map((item, i) => (
-            <Items Item={item} key={i} />
+            <Items Work={Work} Item={item} key={i} />
           ))}
         </div>
       </div>
