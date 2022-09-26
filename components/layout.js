@@ -1,17 +1,27 @@
 import PeopleData from "../components/people-data";
 import StudiosData from "../components/studios-data";
+import Links from "../components/links-data.json";
 import styles from "../components/layout.module.css";
 
-// Main container that being used everywhere with imported CSS class
-export default function Layout({ children }) {
+function Footer() {
   return (
-    <div>
-      {children}
-      {/* Footer */}
-      <div className={styles.footer} key={0}>
-        {/* People */}
-        <div className="content">
-          <h4>Some great people & friends (A → Z):</h4>
+    <div className="content">
+      <div className={styles.footer}>
+        <div className={styles.group}>
+          <div className={styles.link}>
+            {Links.map(function (Link) {
+              return (
+                <a href={Link.url} alt={Link.name} target="_blank">
+                  <div className={styles.item}>
+                    <p>{Link.name}</p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className={styles.group}>
+          <h4>Some great people & friends:</h4>
           <div className={styles.link}>
             {PeopleData.map(function (Person) {
               return (
@@ -24,10 +34,9 @@ export default function Layout({ children }) {
             })}
           </div>
         </div>
-
         {/* Studios */}
-        <div className="content">
-          <h4>Cool studios (A → Z):</h4>
+        <div className={styles.group}>
+          <h4>Cool design collectives:</h4>
           <div className={styles.link}>
             {StudiosData.map(function (Studio) {
               return (
@@ -40,7 +49,28 @@ export default function Layout({ children }) {
             })}
           </div>
         </div>
+        <div className={styles.group}>
+          <p>
+            I designed and built this website on NextJS. Check on{" "}
+            <a href="https://github.com/yaosamo/personal-website">github.</a>{" "}
+            It's private, no trackers being used.
+            <br />
+            Let’s meet on Twitter or talk over email yaosamo@gmail.com -> copy
+            <br />
+            Thanks for visiting & have a nice!
+          </p>
+        </div>
       </div>
+    </div>
+  );
+}
+
+// Main container that being used everywhere with imported CSS class
+export default function Layout({ children }) {
+  return (
+    <div>
+      {children}
+      <Footer />
     </div>
   );
 }

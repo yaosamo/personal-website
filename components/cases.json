@@ -41,6 +41,7 @@
       },
       {
         "caption": "Color library roles",
+        "maxwidth": "960px",
         "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
       },
       {
@@ -109,6 +110,52 @@
         "images": [
           { "img": "images/work/case-two/item-4/img-1@2x.png" },
           { "img": "images/work/case-two/item-4/img-2@2x.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "client": "2022 / Gubagoo -> Released",
+    "url": "https://apps.apple.com/us/app/chameleon-audiobook-player/id1615705830",
+    "title": "As part of buying car at dealeship user selects protection for their vehicle and I was in charge of designing and integrating it into the buying process",
+
+    "description": [
+      {
+        "text": "Product design: Yaroslav Samoylov"
+      }
+    ],
+    "items": [
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Main bundles view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-three/item-1/img-1@2x.png" },
+          { "img": "images/work/case-three/item-1/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Protection details pop-up",
+        "maxwidth": "588px",
+        "images": [{ "img": "images/work/case-three/item-2/img-1@2x.png" }]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Protection details view",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-three/item-3/img-1@2x.png" },
+          { "img": "images/work/case-three/item-3/img-2@2x.png" }
+        ]
+      },
+      {
+        "bgcolor": "#F4F5F6",
+        "caption": "Animated SVG hint icon",
+        "maxwidth": "390px",
+        "images": [
+          { "img": "images/work/case-three/item-4/img-1@2x.png" },
+          { "img": "images/work/case-three/item-4/img-2@2x.png" }
         ]
       }
     ]
