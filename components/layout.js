@@ -2,8 +2,22 @@ import PeopleData from "../components/people-data";
 import StudiosData from "../components/studios-data";
 import Links from "../components/links-data.json";
 import styles from "../components/layout.module.css";
+import { useState } from "react";
 
 function Footer() {
+  const [copyText, setcopyText] = useState("copy");
+  const copytoClipboard = async (copyMe) => {
+    try {
+      await navigator.clipboard.writeText(copyMe);
+      setcopyText("copied!");
+      setTimeout(() => {
+        setcopyText("copy");
+      }, 1000);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="content">
       <div className={styles.footer}>
@@ -52,10 +66,30 @@ function Footer() {
         <div className={styles.group}>
           <p>
             I designed and built this website on NextJS. Check on{" "}
-            <a href="https://github.com/yaosamo/personal-website">github.</a>{" "}
+            <a
+              className="link"
+              href="https://github.com/yaosamo/personal-website"
+              target="_blank"
+            >
+              github.
+            </a>{" "}
             It's private, no trackers being used.
             <br />
-            Let’s meet on Twitter or talk over email yaosamo@gmail.com -> copy
+            Let’s meet on{" "}
+            <a
+              className="link"
+              href="https://github.com/yaosamo/personal-website"
+              target="_blank"
+            >
+              Twitter
+            </a>{" "}
+            or talk over email yaosamo@gmail.com ->{" "}
+            <a
+              className="link"
+              onClick={() => copytoClipboard("yaosamo@gmail.com")}
+            >
+              {copyText}
+            </a>
             <br />
             Thanks for visiting & have a nice!
           </p>

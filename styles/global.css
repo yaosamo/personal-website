@@ -48,6 +48,13 @@ h1 {
 .link {
   color: var(--primary-accent);
   text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.link:hover {
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid;
 }
 
 /* Light theme */

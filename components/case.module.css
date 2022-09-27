@@ -44,7 +44,7 @@
   border-radius: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .item {
     padding: 3.5rem 0;
   }
@@ -52,5 +52,9 @@
   .images {
     padding: 0 3.5rem !important;
     gap: 3.5rem;
+  }
+
+  .images img {
+    max-width: 390px !important;
   }
 }
