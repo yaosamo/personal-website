@@ -16,6 +16,12 @@
   font-size: 1rem;
   border-radius: 0.5rem;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.button:hover {
+  transform: scale(1.02);
 }
 
 .num {
