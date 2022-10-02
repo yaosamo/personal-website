@@ -1,11 +1,8 @@
 import styles from "../components/case.module.css";
+import CustomCode from "../components/customcode/customcode";
 
 function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;
-}
-
-function CustomCode({}) {
-  return <p>custom code</p>;
 }
 
 function Items({ Work, Item, i }) {
@@ -25,12 +22,13 @@ function Items({ Work, Item, i }) {
         {/* images of the item */}
         {Item.images.map((img, i) =>
           // check for custom code > insert custom code ;)
-          Item.code ? (
-            <CustomCode />
+          Item.tag ? (
+            <CustomCode tag={Item.tag} />
           ) : (
             <img
               src={img.img}
               style={
+                // if item has border - add it. If item has maxwidth apply it
                 Item.bordercolor
                   ? { border: "1px solid" + Item.bordercolor }
                   : {} && Item.maxwidth

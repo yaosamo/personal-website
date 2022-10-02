@@ -13,16 +13,18 @@
     "items": [
       {
         "bordercolor": "#E7E7E8",
+        "bgcolor": "#E6E6E6",
         "caption": "Loading view",
         "images": [{ "img": "images/work/case-one/item-1/img-1@2x.png" }]
       },
       {
         "bordercolor": "#E7E7E8",
+        "bgcolor": "#E6E6E6",
         "caption": "Payments view",
         "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Find your car view",
         "maxwidth": "40%",
         "images": [
@@ -31,7 +33,7 @@
         ]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Result / Value distribution view",
         "maxwidth": "40%",
         "images": [
@@ -40,12 +42,13 @@
         ]
       },
       {
+        "bgcolor": "#E6E6E6",
         "caption": "Color library roles",
         "maxwidth": "960px",
         "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Checkout view",
         "maxwidth": "40%",
         "images": [
@@ -54,13 +57,13 @@
         ]
       },
       {
-        "bgcolor": "#F4F5F6",
-        "caption": "Submition SVG animation",
-        "code": true,
-        "images": [{ "img": "images/work/case-one/item-7/img-1@2x.png" }]
+        "bgcolor": "#E6E6E6",
+        "caption": "Submition animation",
+        "tag": "Submission",
+        "images": [{}]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Final home page view",
         "maxwidth": "40%",
         "images": [

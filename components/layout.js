@@ -1,6 +1,6 @@
-import PeopleData from "../components/people-data";
-import StudiosData from "../components/studios-data";
-import Links from "../components/links-data.json";
+import PeopleData from "../components/data/people-data";
+import StudiosData from "../components/data/studios-data";
+import Links from "../components/data/links-data.json";
 import styles from "../components/layout.module.css";
 import { useState } from "react";
 
