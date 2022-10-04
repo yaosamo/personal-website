@@ -26,7 +26,7 @@
       {
         "bgcolor": "#E6E6E6",
         "caption": "Find your car view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-one/item-3/img-1@2x.png" },
           { "img": "images/work/case-one/item-3/img-2@2x.png" }
@@ -35,7 +35,7 @@
       {
         "bgcolor": "#E6E6E6",
         "caption": "Result / Value distribution view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-one/item-4/img-1@2x.png" },
           { "img": "images/work/case-one/item-4/img-2@2x.png" }
@@ -50,7 +50,7 @@
       {
         "bgcolor": "#E6E6E6",
         "caption": "Checkout view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-one/item-6/img-1@2x.png" },
           { "img": "images/work/case-one/item-6/img-2@2x.png" }
@@ -65,7 +65,7 @@
       {
         "bgcolor": "#E6E6E6",
         "caption": "Final home page view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-one/item-8/img-1@2x.png" },
           { "img": "images/work/case-one/item-8/img-2@2x.png" }
@@ -90,7 +90,7 @@
       {
         "bgcolor": "#0C0C0E",
         "caption": "Playlist view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-two/item-1/img-1@2x.png" },
           { "img": "images/work/case-two/item-1/img-2@2x.png" }
@@ -105,10 +105,11 @@
       {
         "bgcolor": "#0C0C0E",
         "caption": "New playlist view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [{ "img": "images/work/case-two/item-3/img-1@2x.png" }]
       },
       {
+        "bgcolor": "#0C0C0E",
         "caption": "App Store & Xcode",
         "images": [
           { "img": "images/work/case-two/item-4/img-1@2x.png" },
@@ -120,7 +121,7 @@
   {
     "client": "2022 / Gubagoo -> Released",
     "url": "https://apps.apple.com/us/app/chameleon-audiobook-player/id1615705830",
-    "title": "As part of buying car at dealeship user selects protection for their vehicle and I was in charge of designing and integrating it into the buying process",
+    "title": "Vehicle protection as part \nof buying process",
 
     "description": [
       {
@@ -129,33 +130,33 @@
     ],
     "items": [
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Main bundles view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-three/item-1/img-1@2x.png" },
           { "img": "images/work/case-three/item-1/img-2@2x.png" }
         ]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Protection details pop-up",
         "maxwidth": "588px",
         "images": [{ "img": "images/work/case-three/item-2/img-1@2x.png" }]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Protection details view",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-three/item-3/img-1@2x.png" },
           { "img": "images/work/case-three/item-3/img-2@2x.png" }
         ]
       },
       {
-        "bgcolor": "#F4F5F6",
+        "bgcolor": "#E6E6E6",
         "caption": "Animated SVG hint icon",
-        "maxwidth": "40%",
+        "maxwidth": "42%",
         "images": [
           { "img": "images/work/case-three/item-4/img-1@2x.png" },
           { "img": "images/work/case-three/item-4/img-2@2x.png" }

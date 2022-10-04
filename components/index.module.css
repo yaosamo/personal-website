@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  padding: 12.5rem 0;
+  padding: 12.5rem 0 8rem 0;
   gap: 2.5rem;
   box-sizing: border-box;
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../components/index.module.css";
 import Case from "../components/case";
-import Portfolio from "../components/cases.json";
+import Portfolio from "../components/data/cases.json";
 
 const density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
 

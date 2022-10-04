@@ -5,6 +5,10 @@ import styles from "../components/layout.module.css";
 import { useState } from "react";
 
 function Footer() {
+  const PeopleSorted = []
+    .concat(PeopleData)
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
+
   const [copyText, setcopyText] = useState("copy");
   const copytoClipboard = async (copyMe) => {
     try {
@@ -37,7 +41,7 @@ function Footer() {
         <div className={styles.group}>
           <h4>Some great people & friends:</h4>
           <div className={styles.link}>
-            {PeopleData.map(function (Person) {
+            {PeopleSorted.map(function (Person) {
               return (
                 <a href={Person.url} alt={Person.name} target="_blank">
                   <div className={styles.item}>
