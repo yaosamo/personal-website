@@ -1,63 +1,19 @@
 [
-  {
-    "name": "Andreas Gysin",
-    "url": "https://ertdfgcvb.xyz"
-  },
-  {
-    "name": "Anton Repponen",
-    "url": "https://repponen.com"
-  },
-  {
-    "name": "Brian Lovin",
-    "url": "http://brianlovin.com"
-  },
-  {
-    "name": "Denis Sharypin",
-    "url": "http://sharypin.cool"
-  },
-  {
-    "name": "Gadzhi Kharkharov",
-    "url": "https://kkga.me/"
-  },
-  {
-    "name": "Ilya Kolganov",
-    "url": "https://ilyakolganov.com/"
-  },
-  {
-    "name": "Jason Yuan",
-    "url": "https://jasonyuan.design"
-  },
-  {
-    "name": "Louis Berger",
-    "url": "https://louisberger.de"
-  },
-  {
-    "name": "Luc Mikelsons",
-    "url": "http://mikelsons.ca"
-  },
-  {
-    "name": "Nick Pryde",
-    "url": "https://www.nickp.design"
-  },
-  {
-    "name": "Nila",
-    "url": "http://nila.myportfolio.com"
-  },
-  {
-    "name": "Noah Stokes",
-    "url": "http://noahstokes.com"
-  },
-  {
-    "name": "Rasmus Andersson",
-    "url": "http://rsms.me"
-  },
-  {
-    "name": "Sean Sevestre",
-    "url": "https://www.seansevestre.com"
-  },
-  {
-    "name": "Shola Anozie",
-    "url": "https://soulprovidr.fm"
-  },
-  { "name": "Meritt Thomas", "url": "https://meritt.me" }
+  { "name": "Andreas Gysin", "url": "https://ertdfgcvb.xyz" },
+  { "name": "Anton Repponen", "url": "https://repponen.com" },
+  { "name": "Brian Lovin", "url": "http://brianlovin.com" },
+  { "name": "Denis Sharypin", "url": "http://sharypin.cool" },
+  { "name": "Gadzhi Kharkharov", "url": "https://kkga.me/" },
+  { "name": "Ilya Kolganov", "url": "https://ilyakolganov.com/" },
+  { "name": "Jason Yuan", "url": "https://jasonyuan.design" },
+  { "name": "Louis Berger", "url": "https://louisberger.de" },
+  { "name": "Luc Mikelsons", "url": "http://mikelsons.ca" },
+  { "name": "Nick Pryde", "url": "https://www.nickp.design" },
+  { "name": "Nila", "url": "http://nila.myportfolio.com" },
+  { "name": "Noah Stokes", "url": "http://noahstokes.com" },
+  { "name": "Rasmus Andersson", "url": "http://rsms.me" },
+  { "name": "Sean Sevestre", "url": "https://www.seansevestre.com" },
+  { "name": "Shola Anozie", "url": "https://soulprovidr.fm" },
+  { "name": "Meritt Thomas", "url": "https://meritt.me" },
+  { "name": "Rauno Freiberg", "url": "https://rauno.me" }
 ]

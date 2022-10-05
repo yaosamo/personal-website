@@ -44,8 +44,6 @@ export default function Home() {
             Yaroslav Samoylov,
             <br />
             product designer & design engineer
-            <br />
-            see my work below
           </h1>
         </div>
       </div>

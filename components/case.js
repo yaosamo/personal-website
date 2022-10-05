@@ -1,5 +1,7 @@
 import styles from "../components/case.module.css";
 import CustomCode from "../components/customcode/customcode";
+import Images from "./cases/images";
+import { useState } from "react";
 
 function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;
@@ -25,23 +27,10 @@ function Items({ Work, Item, i }) {
           Item.tag ? (
             <CustomCode tag={Item.tag} />
           ) : (
-            <img
-              src={img.img}
-              style={
-                // if item has border - add it. If item has maxwidth apply it
-                Item.bordercolor
-                  ? { border: "1px solid" + Item.bordercolor }
-                  : {} && Item.maxwidth
-                  ? { maxWidth: Item.maxwidth }
-                  : {}
-              }
-            />
+            <Images Item={Item} Img={img} key={i} />
           )
         )}
       </div>
-      <p style={Work.captioncolor ? { color: Work.captioncolor } : {}}>
-        {Item.caption}
-      </p>
     </div>
   );
 }

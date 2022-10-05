@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 7.5rem 0 3.5rem 0;
+  padding: 7.5rem 0;
   border-radius: 1.5rem;
 }
 
@@ -42,6 +42,34 @@
 .images img {
   width: 100%;
   border-radius: 1rem;
+  transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.eastereggA {
+  /* transform: rotateY(20deg); */
+  /* animation: filtermadness 1s ease-out; */
+  animation: cardhover 2s both ease-out;
+}
+
+@keyframes filtermadness {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  150% {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes cardhover {
+  0%,
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(-1, 1, 0, 20deg) scale(0.95);
+  }
 }
 
 @media (max-width: 920px) {
