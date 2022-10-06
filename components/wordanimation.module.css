@@ -8,6 +8,6 @@
     color: inherit;
   }
   50% {
-    color: blueviolet;
+    color: var(--primary-accent);
   }
 }

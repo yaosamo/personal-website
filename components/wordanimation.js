@@ -16,7 +16,7 @@ export default function WordAnimation({ char, i }) {
       setHover(true);
       setLetter(density[ind]);
       ind++;
-      setTimeout(HandleHover, 100);
+      setTimeout(HandleHover, 75);
     }
   }
 
