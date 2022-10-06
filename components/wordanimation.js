@@ -2,14 +2,14 @@ import styles from "../components/wordanimation.module.css";
 import { useState } from "react";
 
 export default function WordAnimation({ char, i }) {
-  const density = "Ñ@#W$9876543210?!abcdefghiklmnoprstuxwvz;:+=-,._";
+  const density = "Ñ@#W$9876543210?!abcdefghijklmnopqrstuvwxyz;:+=-,._";
   const [hover, setHover] = useState(false);
   var [letter, setLetter] = useState(char);
 
   var ind = 0;
 
   function HandleHover() {
-    if (ind < density.length && char != density[ind]) {
+    if (ind < density.length && char != density[ind] && char != " ") {
       setHover(true);
       setLetter(density[ind]);
       ind++;
@@ -25,7 +25,6 @@ export default function WordAnimation({ char, i }) {
   return (
     <span
       onMouseOver={() => HandleHover()}
-      //   onMouseLeave={() => HandleAnimeitonEnd()}
       onAnimationEnd={() => HandleAnimeitonEnd()}
       className={hover ? styles.letter : ""}
     >

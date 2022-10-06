@@ -1,7 +1,6 @@
 import styles from "../components/case.module.css";
 import CustomCode from "../components/customcode/customcode";
 import Images from "./cases/images";
-import { useState } from "react";
 
 function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;
