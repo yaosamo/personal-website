@@ -9,7 +9,10 @@ export default function WordAnimation({ char, i }) {
   var ind = 0;
 
   function HandleHover() {
-    if (ind < density.length && char != density[ind] && char != " ") {
+    if (density[ind] === char) {
+      setLetter(density[ind]);
+    }
+    if (ind < density.length && density[ind] != char && char != " ") {
       setHover(true);
       setLetter(density[ind]);
       ind++;
@@ -19,7 +22,6 @@ export default function WordAnimation({ char, i }) {
 
   function HandleAnimeitonEnd() {
     setHover(false);
-    setLetter(char);
   }
 
   return (
