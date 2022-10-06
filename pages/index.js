@@ -6,8 +6,7 @@ import Case from "../components/case";
 import Portfolio from "../components/data/cases.json";
 import WordAnimation from "../components/wordanimation";
 
-const density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
-const word = "engineer";
+const word = "design engineer";
 
 export default function Home() {
   return (
@@ -45,7 +44,7 @@ export default function Home() {
           <h1 className="headingL weightMedium">
             Yaroslav Samoylov,
             <br />
-            product designer & design{" "}
+            product designer &{" "}
             {word.split("").map((char, i) => {
               return <WordAnimation char={char} key={i} />;
             })}

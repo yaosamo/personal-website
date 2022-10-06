@@ -1,5 +1,5 @@
 .letter {
-  animation: test 0.4s both 1 ease;
+  animation: test 0.3s both 1 ease;
 }
 
 @keyframes test {
