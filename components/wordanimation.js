@@ -10,7 +10,7 @@ export default function WordAnimation({ char, id }) {
   var ind2 = 0;
 
   useEffect(() => {
-    setTimeout(HandleHover, id * 75);
+    setTimeout(HandleHover, id * 60);
   }, []);
 
   function HandleHover() {
@@ -21,7 +21,7 @@ export default function WordAnimation({ char, id }) {
       setHover(true);
       setLetter(density[ind]);
       ind++;
-      setTimeout(HandleHover, 75);
+      setTimeout(HandleHover, 60);
     }
   }
 
