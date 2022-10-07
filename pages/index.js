@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../components/index.module.css";
-import Case from "../components/case";
+import Case from "../components/cases/case";
 import Portfolio from "../components/data/cases.json";
 import WordAnimation from "../components/wordanimation";
 
@@ -46,7 +46,7 @@ export default function Home() {
             <br />
             product designer &{" "}
             {word.split("").map((char, i) => {
-              return <WordAnimation char={char} key={i} />;
+              return <WordAnimation char={char} key={i} id={i} />;
             })}
           </h1>
         </div>

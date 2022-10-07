@@ -75,9 +75,12 @@ function Footer() {
               href="https://github.com/yaosamo/personal-website"
               target="_blank"
             >
-              github.
-            </a>{" "}
+              github
+            </a>
+            .
+            <br />
             It's private, no trackers being used.
+            <br />
             <br />
             Let’s meet on{" "}
             <a
@@ -87,7 +90,7 @@ function Footer() {
             >
               Twitter
             </a>{" "}
-            or talk over email yaosamo@gmail.com ->{" "}
+            or talk over email yaosamo@gmail.com ->
             <a
               className="link"
               onClick={() => copytoClipboard("yaosamo@gmail.com")}

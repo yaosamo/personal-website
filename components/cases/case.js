@@ -1,6 +1,6 @@
-import styles from "../components/case.module.css";
-import CustomCode from "../components/customcode/customcode";
-import Images from "./cases/images";
+import styles from "../cases/case.module.css";
+import CustomCode from "../customcode/customcode";
+import Images from "./images";
 
 function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;

@@ -1,4 +1,4 @@
-import styles from "../../components/case.module.css";
+import styles from "../cases/case.module.css";
 import { useState } from "react";
 
 export default function Images({ Item, Img, i }) {

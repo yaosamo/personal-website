@@ -1,12 +1,17 @@
 import styles from "../components/wordanimation.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function WordAnimation({ char, i }) {
+export default function WordAnimation({ char, id }) {
   const density = ";:+=-,._Ñ@#W$9876543210?!abcdefghijklmnopqrstuvwxyz";
   const [hover, setHover] = useState(false);
   var [letter, setLetter] = useState(char);
 
   var ind = 0;
+  var ind2 = 0;
+
+  useEffect(() => {
+    setTimeout(HandleHover, id * 75);
+  }, []);
 
   function HandleHover() {
     if (density[ind] === char) {
