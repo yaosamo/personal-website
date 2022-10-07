@@ -1,0 +1,138 @@
+.Doc0 {
+  animation: doc-zero 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-zero {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(3.2px, -7px) scale(0.921);
+  }
+}
+
+.Doc1 {
+  animation: doc-one 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-one {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translate(5.7px, -5.9px) scale(0.865);
+  }
+}
+.Doc2 {
+  animation: doc-two 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-two {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translate(7.5px, -4.8px) scale(0.82);
+  }
+}
+.Doc3 {
+  animation: doc-three 1.5s infinite ease-in-out;
+}
+
+@keyframes doc-three {
+  0% {
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(7.5px, -4.8px) scale(0.82);
+  }
+}
+
+.envelope {
+  animation: fly 2s infinite ease-in-out;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translate(-4px, -15px) rotate(-6deg);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.shadow {
+  transform-origin: center;
+  animation: copy 2s infinite ease-in-out;
+}
+
+@keyframes copy {
+  0% {
+    transform: translateX(-3px) scaleX(0.8);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: translateX(4px) scaleX(1.05);
+  }
+  100% {
+    transform: translateX(-3px) scaleX(0.8);
+  }
+}
+
+.doc11 {
+  animation: dropdoc 1.5s infinite ease-in-out;
+}
+
+@keyframes dropdoc {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 1;
+  }
+  79% {
+    transform: translateY(62px);
+  }
+  80%,
+  100% {
+    transform: translateY(62px);
+  }
+}
+
+.docsmove {
+  animation: stack 1.5s infinite ease-in-out;
+}
+
+@keyframes stack {
+  48% {
+    transform: translateY(0px);
+  }
+
+  79% {
+    transform: translateY(8px);
+  }
+  80%,
+  100% {
+    transform: translateY(8px);
+  }
+}

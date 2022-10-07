@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  gap: 7.5rem;
+}
+
+.container img {
+  max-width: 24rem;
+}
+
+.container p {
+  text-align: left;
+  line-height: 180%;
+  width: 22rem;
+  color: var(--text-light);
+}

@@ -5,12 +5,13 @@ body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif, ui-sans-serif, system-ui, -apple-system,
+  font-family: "Space Mono", sans-serif, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  white-space: pre-wrap;
 }
 
 h1 {
@@ -25,7 +26,6 @@ h1 {
   margin-block-start: 0rem;
   margin-block-end: 0rem;
   letter-spacing: -0.03em;
-  white-space: pre-wrap;
 }
 
 .bodyMD {
@@ -62,6 +62,7 @@ h1 {
 :root {
   --text-dark: #272727;
   --primary-accent: #c65431;
+  --text-light: #a29ea5;
 }
 
 ::selection {

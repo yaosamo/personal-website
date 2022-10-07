@@ -2,7 +2,7 @@ import styles from "../components/wordanimation.module.css";
 import { useState } from "react";
 
 export default function WordAnimation({ char, i }) {
-  const density = "Ñ@#W$9876543210?!abcdefghijklmnopqrstuvwxyz;:+=-,._";
+  const density = ";:+=-,._Ñ@#W$9876543210?!abcdefghijklmnopqrstuvwxyz";
   const [hover, setHover] = useState(false);
   var [letter, setLetter] = useState(char);
 

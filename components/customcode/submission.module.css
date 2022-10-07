@@ -1,138 +1,84 @@
-.Doc0 {
-  animation: doc-zero 1.5s infinite ease-in-out;
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 18rem;
 }
 
-@keyframes doc-zero {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  30% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(3.2px, -7px) scale(0.921);
-  }
+.controls .button {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  background-color: #fff;
+  border: none;
+  gap: 1rem;
+  padding: 24px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
 }
 
-.Doc1 {
-  animation: doc-one 1.5s infinite ease-in-out;
+.button:hover {
+  transform: scale(1.02);
 }
 
-@keyframes doc-one {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translate(5.7px, -5.9px) scale(0.865);
-  }
-}
-.Doc2 {
-  animation: doc-two 1.5s infinite ease-in-out;
+.num {
+  display: flex;
+  border: 1px #272727 solid;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
 }
 
-@keyframes doc-two {
-  0% {
-    transform: translateY(0px);
-  }
-
-  100% {
-    transform: translate(7.5px, -4.8px) scale(0.82);
-  }
-}
-.Doc3 {
-  animation: doc-three 1.5s infinite ease-in-out;
-}
-
-@keyframes doc-three {
-  0% {
-    transform: translateY(0px);
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(7.5px, -4.8px) scale(0.82);
-  }
+.num_select {
+  display: flex;
+  border: 1px #272727 solid;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: #272727;
+  color: #fff;
 }
 
-.envelope {
-  animation: fly 2s infinite ease-in-out;
+.controls .button p {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
-@keyframes fly {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translate(-4px, -15px) rotate(-6deg);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+.submission_bg {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/images/work/case-one/item-7/Bg@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 390px;
+  height: 844px;
+  text-align: center;
+  align-items: center;
+  border-radius: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial;
 }
 
-.shadow {
-  transform-origin: center;
-  animation: copy 2s infinite ease-in-out;
+.submission_textcontainer {
+  padding-bottom: 6rem;
+  width: 70%;
 }
 
-@keyframes copy {
-  0% {
-    transform: translateX(-3px) scaleX(0.8);
-  }
-
-  50% {
-    opacity: 0.4;
-    transform: translateX(4px) scaleX(1.05);
-  }
-  100% {
-    transform: translateX(-3px) scaleX(0.8);
-  }
+.submission_text {
+  color: #707d95;
 }
 
-.doc11 {
-  animation: dropdoc 1.5s infinite ease-in-out;
-}
-
-@keyframes dropdoc {
-  0% {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  20% {
-    opacity: 1;
-  }
-  79% {
-    transform: translateY(62px);
-  }
-  80%,
-  100% {
-    transform: translateY(62px);
-  }
-}
-
-.docsmove {
-  animation: stack 1.5s infinite ease-in-out;
-}
-
-@keyframes stack {
-  48% {
-    transform: translateY(0px);
-  }
-
-  79% {
-    transform: translateY(8px);
-  }
-  80%,
-  100% {
-    transform: translateY(8px);
-  }
+.submission_svg {
+  transform: scale(1.6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

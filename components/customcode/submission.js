@@ -1,5 +1,5 @@
-import styles from "../../components/customcode/customcode.module.css";
-import iconstyle from "../../components/customcode/submission.module.css";
+import styles from "../../components/customcode/submission.module.css";
+import iconstyle from "../../components/customcode/submission-animation.module.css";
 
 import { useState } from "react";
 
