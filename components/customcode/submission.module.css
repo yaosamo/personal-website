@@ -36,13 +36,13 @@
 
 .num_select {
   display: flex;
-  border: 1px #272727 solid;
+  border: 1px var(--primary-accent) solid;
   width: 2rem;
   height: 2rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
-  background-color: #272727;
+  background-color: var(--primary-accent);
   color: #fff;
 }
 
