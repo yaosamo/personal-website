@@ -15,3 +15,10 @@
   font-weight: 500;
   letter-spacing: -0.03em;
 }
+
+@media (max-width: 900px) {
+  .subtitle {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
