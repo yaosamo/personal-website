@@ -109,9 +109,9 @@ function Footer() {
 // Main container that being used everywhere with imported CSS class
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
       {children}
       <Footer />
-    </div>
+    </>
   );
 }

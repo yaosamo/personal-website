@@ -9,16 +9,12 @@ function Descriptions({ Desc }) {
 function Items({ Work, Item, i }) {
   return (
     <div
-      style={
-        // if item has no bg - it's full width image and it doesn't need top and bottom padding
-        Item.bgcolor ? { background: Item.bgcolor } : { padding: "3.5rem 0" }
-      }
+      style={Item.bgcolor && { background: Item.bgcolor }}
       className={styles.item}
     >
       <div
         className={styles.images}
         // If there's no bgcolor we want to add padding because image is probably full width
-        style={Item.bgcolor ? { padding: "0 7.5rem" } : {}}
       >
         {/* images of the item */}
         {Item.images.map((img, i) =>
