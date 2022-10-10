@@ -30,5 +30,6 @@
 @media (max-width: 420px) {
   .header h1 {
     width: 92%;
+    border: 1px green dotted;
   }
 }
