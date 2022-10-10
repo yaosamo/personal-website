@@ -36,7 +36,7 @@ export default function Home() {
       <div className="content">
         <div className={styles.header}>
           <p className={styles.subtitle}>
-            about me & other things I do ->{" "}
+            about me & other things I do ->
             <Link href="/about">
               <a className="link">see info</a>
             </Link>
