@@ -693,12 +693,14 @@ export default function Submission() {
 
   return (
     <>
-      <div className={styles.submission_bg}>
-        <div className={styles.submission_svg}>{content[order].svg}</div>
-        <div className={styles.submission_textcontainer}>
-          <h3>{content[order].title}</h3>
-          <p className={styles.submission_text}>{content[order].subtitle}</p>
-          <p className={styles.submission_text}>{content[order].step}</p>
+      <div className={styles.submission_container}>
+        <div className={styles.submission_content}>
+          <div className={styles.submission_svg}>{content[order].svg}</div>
+          <div className={styles.submission_textcontainer}>
+            <h3>{content[order].title}</h3>
+            <p className={styles.submission_text}>{content[order].subtitle}</p>
+            <p className={styles.submission_text}>{content[order].step}</p>
+          </div>
         </div>
       </div>
       <div className={styles.controls}>
