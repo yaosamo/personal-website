@@ -75,6 +75,7 @@
 @media (max-width: 920px) {
   .item {
     padding: 2rem;
+    border-radius: 1rem;
   }
 
   .images {
@@ -83,5 +84,6 @@
 
   .images img {
     max-width: 390px !important;
+    border-radius: 0.5rem;
   }
 }

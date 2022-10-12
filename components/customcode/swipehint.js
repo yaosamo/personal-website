@@ -22,8 +22,10 @@ export default function Chameleonscroller() {
 
   return (
     <>
-      <div className={styles.swipe_bg}>
-        <div className={styles.swipeShape}>{svg}</div>
+      <div className={styles.swipe_container}>
+        <div className={styles.swipe_content}>
+          <div className={styles.swipeShape}>{svg}</div>
+        </div>
       </div>
       <div className={styles.image}>
         <img src="images/work/case-three/item-4/img-2@2x.png"></img>

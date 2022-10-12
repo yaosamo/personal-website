@@ -52,14 +52,6 @@
   margin-block-start: 0;
 }
 
-/*           src="../images/work/case-one/item-7/Bg@2x.png"
- */
-
-/* .submission_bg {
-  max-width: 390px;
-  z-index: 0;
-} */
-
 .submission_container {
   display: flex;
   flex-direction: column;
@@ -70,6 +62,13 @@
   max-width: 390px;
   background-image: url("/images/work/case-one/item-7/Bg@2x.png");
   background-size: cover;
+  height: 53rem;
+}
+
+@media (max-width: 480px) {
+  .submission_container {
+    height: 41rem;
+  }
 }
 
 .submission_content {
@@ -88,4 +87,5 @@
 
 .submission_svg {
   transform: scale(1.4);
+  height: 10rem;
 }
