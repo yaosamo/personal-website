@@ -92,6 +92,12 @@ export default function Auth() {
 
   const [sec, setSec] = useState(30);
 
+  if (sec >= 0) {
+    setTimeout(() => {
+      setSec(sec - 1);
+    }, 1000);
+  }
+
   return (
     <>
       <Head>
