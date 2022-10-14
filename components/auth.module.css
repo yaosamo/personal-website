@@ -66,6 +66,11 @@
   text-align: center;
 }
 
+.inputs input:focus {
+  border: 1px solid #2f3137;
+  outline: none;
+}
+
 .button {
   background: #046dec;
   border-radius: 0.25rem;
