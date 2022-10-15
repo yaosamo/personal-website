@@ -28,6 +28,8 @@ export default function Home() {
         <meta name="description" content="Curious designer based in Oregon" />
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="favicon.svg" color="#000000;" />
+        <meta name="theme-color" content="#FFF" />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
@@ -36,7 +38,7 @@ export default function Home() {
       <div className="content">
         <div className={styles.header}>
           <p className={styles.subtitle}>
-            about me & other things I do ->
+            about me & other things I do →{" "}
             <Link href="/about">
               <a className="link">see info</a>
             </Link>

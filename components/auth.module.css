@@ -72,6 +72,7 @@
 }
 
 .button {
+  outline: none;
   background: #046dec;
   border-radius: 0.25rem;
   text-decoration: none;

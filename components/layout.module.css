@@ -31,6 +31,11 @@
   text-decoration: none;
 }
 
+.copyCursor {
+  cursor: copy !important;
+  border: none !important;
+}
+
 .item {
   margin-block-end: 1rem;
   transition: all 0.1s;

@@ -13,6 +13,7 @@ export default function Auth() {
     dig1: "",
     dig2: "",
     dig3: "",
+    dig4: "",
   });
 
   const useSSNFields = () => {
@@ -27,8 +28,8 @@ export default function Auth() {
           );
           selectField(nextField);
         }
+
         setCode({
-          ...value,
           [`dig${parseInt(name)}`]: value,
         });
       },
@@ -39,14 +40,15 @@ export default function Auth() {
     const values = e.clipboardData.getData("text");
     const array = values.split("");
     setCode({ dig1: array[0], dig2: array[1], dig3: array[2], dig4: array[3] });
-    console.log(array);
   };
 
-  // const validate = (e) => {
-  //   if (!/[0-9]/.test(e.key)) {
-  //     e.preventDefault();
-  //   }
-  // };
+  const validate = (e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
+
+  const hotkeys = () => {};
 
   const handleKeyDown = (e) => {
     const { value, name } = e.target;

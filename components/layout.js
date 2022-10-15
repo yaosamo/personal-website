@@ -85,14 +85,14 @@ function Footer() {
             Let’s meet on{" "}
             <a
               className="link"
-              href="https://github.com/yaosamo/personal-website"
+              href="https://twitter.com/yaosamo"
               target="_blank"
             >
               Twitter
             </a>{" "}
-            or talk over email yaosamo@gmail.com ->
+            or talk over email yaosamo@gmail.com →{" "}
             <a
-              className="link"
+              className={`${styles.copyCursor} link`}
               onClick={() => copytoClipboard("yaosamo@gmail.com")}
             >
               {copyText}
