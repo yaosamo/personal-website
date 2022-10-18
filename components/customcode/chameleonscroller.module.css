@@ -6,15 +6,41 @@
   flex-wrap: wrap;
   border-radius: 1rem;
   gap: 7.5rem;
+  border: 1px dashed red;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  padding: 0 2rem;
+  width: 100%;
 }
 
 .container img {
   max-width: 24rem;
 }
 
-.container p {
+.video {
+  max-width: 440px;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.copy {
   text-align: left;
   line-height: 180%;
-  width: 22rem;
+  max-width: 23rem;
   color: var(--text-light);
+}
+
+@media (max-width: 920px) {
+  .video {
+    border-radius: 0.5rem;
+  }
+  .copy {
+    width: 100%;
+  }
 }

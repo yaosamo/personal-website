@@ -22,7 +22,7 @@ function Items({ Work, Item, i }) {
           Item.tag ? (
             <CustomCode tag={Item.tag} />
           ) : (
-            <Images Item={Item} Img={img} key={i} />
+            <Images Item={Item} Img={img} key={i} Vid={Item.Vid} />
           )
         )}
       </div>

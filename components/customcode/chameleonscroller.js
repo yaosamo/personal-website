@@ -4,27 +4,31 @@ import { useState } from "react";
 export default function Chameleonscroller() {
   return (
     <>
-      <div className={styles.container}>
-        <div>
-          <img src="images/work/case-two/item-2/img-1@2x.png"></img>
-        </div>
-        <div>
-          <p>
-            I made this app for myself. I had a problem with regular scrollers
-            because for long books it’s hard to be presice when scatter. It’s
-            not versatile enough to go 10 seconds, 2 minutes or 1 hour head.{" "}
-            <br />
-            <br />
-            So I designed custom scroller. Its width equels to the lenght of a
-            book in seconds and scrolls using native iOS ScrollView which allow
-            you to scroll very slow and very fast with few swipes.
-            <br />
-            <br />
-            This way scattering is joyful and easy on eany lengh, seconds,
-            munutes or hours.
-          </p>
-        </div>
-      </div>
+      <video
+        className={styles.video}
+        muted="muted"
+        autoPlay="true"
+        loop="true"
+        aria-label="A video of the player displaying horizontal s"
+        src="images/work/case-two/item-2/vid-1.mp4"
+      ></video>
+
+      <p className={styles.copy}>
+        I had a problem using one audioplayer and its scroll bar was small and
+        wasn't comfortable scrolling through my 10h+ long books. It was hard to
+        be presice when scatter for a certain moment. I wanted to be able to
+        scrub through an audio book for 10s or 4h in a convenient way.
+        <br />
+        <br />
+        So I designed custom scroller. Its width equals to the lenght of a book
+        in seconds the bar goes all the way off the screen and it scrolls using
+        native iOS ScrollView which allow you to scroll very slow and very fast
+        with few swipes.
+        <br />
+        <br />
+        This way scattering is joyful and easy on eany lengh, seconds, munutes
+        or hours.
+      </p>
     </>
   );
 }
