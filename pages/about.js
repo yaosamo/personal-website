@@ -1,35 +1,34 @@
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/layout";
+import styles from "../components/about.module.css";
 
 export default function About() {
   return (
     <Layout>
       <Head>
         <title>Hi, it's Yaric</title>
-        <meta name="msapplication-TileColor" content="#fafafa" />
-        <meta
-          name="msapplication-TileImage"
-          content="/static/meta/ms-icon-144x144.png"
-        />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#040407"
-          media="(prefers-color-scheme: dark)"
-        />
+        <meta name="theme-color" content="#ffffff" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
-
-      <Link href="/">
-        <div className="arrowShape">
-          <img src="../images/home/Arrow-right.svg" className="arrow" />
-        </div>
-      </Link>
-      <div className="content">Yo, come back on October 15th.</div>
+      <div className="content">
+        <Link href="/">
+          <div className={styles.arrowback}>
+            <img
+              src="../images/home/Arrow-right.svg"
+              className={styles.arrow}
+            />
+          </div>
+        </Link>
+        <p>
+          I love working on side projects especially on applications that solve
+          someone elses problem perfectly and not trying to be flexible to fit
+          everyone needs. Here’s the most notable things:
+        </p>
+      </div>
     </Layout>
   );
 }

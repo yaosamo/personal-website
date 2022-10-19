@@ -1,0 +1,17 @@
+.arrowback {
+  margin-block-start: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 56px;
+  background: #f1eff0;
+  border-radius: 48px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.arrow {
+  width: 2rem;
+  height: 2rem;
+}
