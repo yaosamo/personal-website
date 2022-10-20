@@ -8,11 +8,6 @@ export default function About() {
     <Layout>
       <Head>
         <title>Hi, it's Yaric</title>
-        <meta name="theme-color" content="#ffffff" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <div className="content">
         <Link href="/">
@@ -23,10 +18,12 @@ export default function About() {
             />
           </div>
         </Link>
-        <p>
-          I love working on side projects especially on applications that solve
-          someone elses problem perfectly and not trying to be flexible to fit
-          everyone needs. Here’s the most notable things:
+        <p className={styles.headingL}>
+          I love working on{" "}
+          <a className={styles.headingHighlight}> side projects </a>especially
+          on applications that solve someone elses problem perfectly and not
+          trying to be flexible to fit everyone needs. Here’s the most notable
+          things:
         </p>
       </div>
     </Layout>

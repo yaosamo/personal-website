@@ -1,5 +1,5 @@
 .arrowback {
-  margin-block-start: 4rem;
+  margin-block-start: 7.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,4 +14,20 @@
 .arrow {
   width: 2rem;
   height: 2rem;
+}
+
+.headingL {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  color: #272727;
+}
+
+.headingHighlight {
+  background: linear-gradient(90deg, #ee2a0f 30%, #b4b4b4 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
 }
