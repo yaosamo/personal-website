@@ -9,11 +9,16 @@
   background: #f1eff0;
   border-radius: 48px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  cursor: pointer;
 }
 
 .arrow {
   width: 2rem;
   height: 2rem;
+}
+
+.arrowback:hover {
+  background: #e9e9e9;
 }
 
 .headingL {
@@ -29,5 +34,4 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  /* text-fill-color: transparent; */
 }

@@ -2,6 +2,18 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/layout";
 import styles from "../components/about.module.css";
+import Projects from "../components/data/side-projects.json";
+
+function SideProjects({ Project, i }) {
+  return (
+    <>
+      <div>
+        {Project.name}
+        {Project.desc}
+      </div>
+    </>
+  );
+}
 
 export default function About() {
   return (
@@ -25,6 +37,9 @@ export default function About() {
           trying to be flexible to fit everyone needs. Here’s the most notable
           things:
         </p>
+        {Projects.map((Project, i) => (
+          <SideProjects Project={Project} key={i} />
+        ))}
       </div>
     </Layout>
   );
