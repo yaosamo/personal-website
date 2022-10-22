@@ -7,9 +7,13 @@ import Projects from "../components/data/side-projects.json";
 function SideProjects({ Project, i }) {
   return (
     <>
-      <div>
-        {Project.name}
-        {Project.desc}
+      {" "}
+      <div className={styles.project}>
+        <div className={styles.label}>
+          <p className={styles.title}>{Project.name}</p>
+          <p className={styles.desc}> {Project.desc}</p>
+        </div>
+        <img src="../images/home/Arrow-right.svg" className={styles.arrow} />
       </div>
     </>
   );
@@ -37,9 +41,11 @@ export default function About() {
           trying to be flexible to fit everyone needs. Here’s the most notable
           things:
         </p>
-        {Projects.map((Project, i) => (
-          <SideProjects Project={Project} key={i} />
-        ))}
+        <div className={styles.container}>
+          {Projects.map((Project, i) => (
+            <SideProjects Project={Project} key={i} />
+          ))}
+        </div>
       </div>
     </Layout>
   );

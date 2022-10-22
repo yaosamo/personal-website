@@ -1,5 +1,6 @@
 .arrowback {
   margin-block-start: 7.5rem;
+  margin-block-end: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,4 +35,37 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 0.5rem;
+  height: 5.5rem;
+  padding: 0 2rem;
+  width: -webkit-fill-available;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: -0.01em;
+  color: #272727;
+}
+
+.desc {
+  color: #a8a8a8;
 }
