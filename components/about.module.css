@@ -13,6 +13,12 @@
   cursor: pointer;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
 .arrow {
   width: 2rem;
   height: 2rem;
@@ -37,7 +43,7 @@
   background-clip: text;
 }
 
-.container {
+.projectscontainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -54,6 +60,7 @@
   height: 5.5rem;
   padding: 0 2rem;
   width: -webkit-fill-available;
+  cursor: pointer;
 }
 
 .label {
