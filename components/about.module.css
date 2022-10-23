@@ -76,3 +76,99 @@
 .desc {
   color: #a8a8a8;
 }
+
+.namesvg {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  background-color: #111115;
+  border-radius: 0.25rem;
+}
+
+.timestamp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.caret {
+  width: 2px;
+  height: 1.5rem;
+  background-color: var(--text-dark);
+  margin: 0px 8px;
+  animation: cursor 0.5s infinite alternate;
+}
+
+@keyframes cursor {
+  0%,
+  50% {
+    opacity: 100%;
+  }
+  51%,
+  100% {
+    opacity: 0%;
+  }
+}
+
+.svg {
+  transform: scale(2.5);
+  margin: auto;
+  fill: #fff;
+}
+.A_1,
+.Y_1,
+.R,
+.S_1,
+.A_2,
+.O_2,
+.L_2,
+.V_2 {
+  animation: yr 4s infinite;
+}
+@keyframes yr {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0.2;
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+}
+.A_3,
+.S_2,
+.M,
+.O_1,
+.Y_2,
+.L_1,
+.O_3,
+.V_1 {
+  animation: sm 4s infinite;
+}
+@keyframes sm {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 1;
+  }
+  30%,
+  70% {
+    opacity: 0.2;
+  }
+}
+
+.designs {
+  width: 100%;
+  grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 52%;
+}
+
+.designimage {
+  max-width: 20rem;
+  grid-auto-rows: 10rem;
+}
