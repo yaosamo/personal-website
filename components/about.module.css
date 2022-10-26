@@ -115,6 +115,7 @@
   margin: auto;
   fill: #fff;
 }
+
 .A_1,
 .Y_1,
 .R,
@@ -125,6 +126,7 @@
 .V_2 {
   animation: yr 4s infinite;
 }
+
 @keyframes yr {
   0%,
   20%,
@@ -164,11 +166,9 @@
   width: 100%;
   grid-gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-auto-rows: 52%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .designimage {
-  max-width: 20rem;
-  grid-auto-rows: 10rem;
+  width: 100%;
 }

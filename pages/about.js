@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import styles from "../components/about.module.css";
 import Projects from "../components/data/side-projects.json";
 import FriendlyDesigns from "../components/data/friendly-designs.json";
+import MyTech from "../components/data/my-tech.json";
 
 function SideProjects({ Project, i }) {
   return (
@@ -160,6 +161,12 @@ export default function About() {
                 <img className={styles.designimage} src={design.img} />
               ))}
             </div>
+          </div>
+          <div className={styles.tech}>
+            <p className={styles.headingL}>Software I use and my setup</p>
+            {MyTech.map((item, i) => (
+              <p>{item.name}</p>
+            ))}
           </div>
         </div>
       </div>
