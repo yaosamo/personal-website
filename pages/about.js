@@ -10,13 +10,15 @@ function SideProjects({ Project, i }) {
   return (
     <>
       {" "}
-      <div className={styles.project}>
-        <div className={styles.label}>
-          <p className={styles.title}>{Project.name}</p>
-          <p className={styles.desc}> {Project.desc}</p>
+      <a href={Project.url} target="_blank">
+        <div className={styles.project}>
+          <div className={styles.label}>
+            <p className={styles.title}>{Project.name}</p>
+            <p className={styles.desc}> {Project.desc}</p>
+          </div>
+          <img src="../images/home/Arrow-right.svg" className={styles.arrow} />
         </div>
-        <img src="../images/home/Arrow-right.svg" className={styles.arrow} />
-      </div>
+      </a>
     </>
   );
 }
@@ -164,9 +166,17 @@ export default function About() {
           </div>
           <div className={styles.tech}>
             <p className={styles.headingL}>Software I use and my setup</p>
-            {MyTech.map((item, i) => (
-              <p>{item.name}</p>
-            ))}
+            <div className={styles.items}>
+              {MyTech.map((item, i) =>
+                item.url ? (
+                  <a className={styles.link} href={item.url} target="_blank">
+                    <p>{item.name}</p>
+                  </a>
+                ) : (
+                  <p>{item.name}</p>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>

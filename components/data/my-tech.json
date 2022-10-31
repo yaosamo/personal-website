@@ -12,6 +12,8 @@
   { "name": "Godot" },
   { "name": "Vercel" },
   { "name": "iCloud" },
+  { "name": "NextJS, ThreeJS, a bit of React" },
+  { "name": "SwiftUI" },
   { "name": "iMac Pro 2017 (Xeon 8 core, 1tb, 32gb, Radeon Vega 56 8gb)" },
   { "name": "Macbook Air 2021 (M1, 16gb, 256gb)" },
   { "name": "Airpods Pro Max" },
@@ -19,9 +21,12 @@
   { "name": "iPhone 14 Pro Max" },
   { "name": "Redmi note 7" },
   { "name": "Wacom Intuos BT" },
-  { "name": "Microphone", "url": "/" },
-  { "name": "Bellroy", "url": "/" },
-  { "name": "Airbirds", "url": "/" },
-  { "name": "Sputnik bags", "url": "/" },
-  { "name": "Shwood Eyewear", "url": "/" }
+  {
+    "name": "Microphone",
+    "url": "https://www.amazon.com/ZINGYOU-Microphone-BM-800-Double-layer-Broadcasting/dp/B0756V2B6R/ref=asc_df_B0756V2B6R/?tag=hyprod-20&linkCode=df0&hvadid=312155612850&hvpos=&hvnetw=g&hvrand=7241119365179716924&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032905&hvtargid=pla-563974502298&psc=1"
+  },
+  { "name": "Bellroy", "url": "https://bellroy.com" },
+  { "name": "Airbirds", "url": "https://www.allbirds.com" },
+  { "name": "Sputnik bags", "url": "https://sputnik-bags.ru" },
+  { "name": "Shwood Eyewear", "url": "https://shwoodshop.com" }
 ]
