@@ -11,7 +11,7 @@ export default function WordAnimation({ char, id }) {
   var ind = 0;
 
   useEffect(() => {
-    setTimeout(HandleHover, id * 60);
+    setTimeout(HandleHover, id * 35);
   }, []);
 
   function HandleHover() {
@@ -23,7 +23,7 @@ export default function WordAnimation({ char, id }) {
     if (!roll && ind < density.length && density[ind] != char && char != " ") {
       setLetter(density[ind]);
       ind++;
-      setTimeout(HandleHover, 60);
+      setTimeout(HandleHover, 40);
       setRoll(true);
     }
   }
