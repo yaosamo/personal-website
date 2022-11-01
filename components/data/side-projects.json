@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Chameleon",
+    "desc": "Audiobook player for iOS",
+    "url": "https://apps.apple.com/us/app/chameleon-audiobook-player/id1615705830"
+  },
+  {
+    "name": "Nothing",
+    "desc": "Note taking app for iOS and Mac",
+    "url": "https://apps.apple.com/us/app/nothing-ascetic-writer/id1604460952"
+  },
+  {
+    "name": "Standartio",
+    "desc": "Open source icons",
+    "url": "https://standart.io/"
+  },
+  {
+    "name": "And designer podcast",
+    "desc": "A podcast where I talk to people about complex topics (On hold)",
+    "url": "https://soundcloud.com/and-designer"
+  },
+  {
+    "name": "Mockupiato",
+    "desc": "Beatiful 3d mockups (Archive)",
+    "url": "https://mockupiato.netlify.app"
+  }
+]

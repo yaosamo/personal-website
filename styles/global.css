@@ -1,6 +1,6 @@
 html,
 body {
-  color: var(--dark);
+  color: var(--text-dark);
   font-size: 1rem;
   line-height: 1.5em;
   margin: 0;
@@ -11,178 +11,77 @@ body {
     Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  white-space: pre-wrap;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: 140%;
   margin-block-end: 1.5rem;
 }
 
-h2 {
+.headingL {
+  font-size: 3.5rem;
+  line-height: 130%;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  letter-spacing: -0.03em;
+}
+
+.bodyMD {
   font-size: 1.5rem;
-  line-height: 140%;
-  margin-block-end: 1.5rem;
+  line-height: 160%;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
 }
 
-h3 {
-  font-size: 1.25rem;
-  line-height: 150%;
+.weightMedium {
+  font-weight: 500;
 }
 
-h4 {
-  font-size: 1rem;
-  line-height: 150%;
-  margin: 0 0 1rem 0;
-  margin-block-end: 0.5rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 150%;
-}
-
-/* Icons */
-
-.arrowShape {
-  background: var(--gray-10);
-  width: 2.5rem;
-  transform: rotate(180deg);
-  flex-direction: row-reverse;
-  margin-left: 1.5rem;
-}
-
-.arrowShape:hover {
-  cursor: pointer;
-  background: var(--gray-20);
-}
-
-.arrowShape:active {
-  transform: scale(-0.9);
-}
-
-.arrow {
-  filter: var(--icon);
-  padding-right: 1px;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.arrowShape {
-  transition: all 0.1s;
-  background: var(--gray-20);
-  border-radius: 3rem;
-  display: flex;
+@media (max-width: 900px) {
+  .headingL {
+    font-size: 2rem;
+    line-height: 130%;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    letter-spacing: -0.03em;
+  }
+  .bodyMD {
+    font-size: 1rem;
+    line-height: 160%;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+  }
 }
 
 .content {
-  max-width: 75rem;
+  max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.5rem 10rem;
+  padding: 0 1.5rem 7.5rem;
 }
 
-.url {
-  color: inherit;
+.link {
+  color: var(--primary-accent);
   text-decoration: none;
   border-bottom: 1px solid;
-  transition: all 0.1s;
 }
 
-.url:hover {
-  color: var(--active);
-  text-decoration: none;
-  border-bottom: 1px solid var(--active);
+.link:hover {
+  color: inherit;
   cursor: pointer;
-  /* margin-left: -.15rem;
-    margin-right: -.15rem;
-    padding-left: .15rem;
-    padding-right: .15rem; */
-}
-
-.footer {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  color: var(--gray-40);
-}
-
-/* Dark theme */
-
-@media (prefers-color-scheme: dark) {
-  /* All text and bg */
-  :root {
-    --active: #0ce877;
-    --dark: #040407;
-    --white: #e7e7e9;
-    --element-background: #111116;
-    --element-hover: #14141a;
-    --gray-10: #15151a;
-    --gray-20: #1e1e24;
-    --gray-40: #9797a0;
-    --green-10: #171a19;
-    --green-20: #262b2a;
-    --secondary-text: #838487;
-
-    --primary-button: rgba(71, 71, 74, 0.1);
-    --primary-button-hover: rgba(71, 71, 74, 0.2);
-    --secondary-button: #15151a;
-    --secondary-button-hover: #353540;
-    --button-text: #e7e7e9;
-
-    --sidebar-background: #111115;
-
-    --blur-bg: rgba(255, 255, 255, 0.07);
-
-    --icon: invert(99%) sepia(100%) saturate(2%) hue-rotate(306deg)
-      brightness(113%) contrast(100%);
-
-    --text-opacity: 0.7;
-  }
-
-  body {
-    background-color: var(--dark);
-    color: var(--white);
-  }
-
-  /* ::selection {
-        color: rgb(255, 103, 129);
-        background: var(--gray-10);
-    } */
+  border-bottom: 1px solid;
 }
 
 /* Light theme */
-@media (prefers-color-scheme: light) {
-  :root {
-    --active: #097c68;
-    --dark: #232426;
-    --white: #ffffff;
-    --element-background: #fafafa;
-    --element-hover: #ffffff;
-    --gray-10: #fafafa;
-    --gray-20: #f6f6f6;
-    --gray-40: #4a4a54;
-    --green-10: #f0f6f5;
-    --green-20: #e1e8e7;
-    --secondary-text: #53565a;
 
-    --primary-button: #f7f9f9;
-    --primary-button-hover: #eef2f2;
-    --secondary-button: #eff1f1;
-    --secondary-button-hover: #d7dddd;
-    --button-text: #232426;
+:root {
+  --text-dark: #272727;
+  --primary-accent: #f12f16;
+  --text-light: #a29ea5;
+}
 
-    --sidebar-background: #f8f9fa;
-
-    --blur-bg: rgba(170, 196, 200, 0.1);
-
-    --icon: invert(10%) sepia(5%) saturate(719%) hue-rotate(182deg)
-      brightness(99%) contrast(89%);
-
-    --text-opacity: 0.8;
-  }
-
-  /* ::selection {
-        color: red;
-        background: var(--gray-10);
-  } */
+::selection {
+  color: white;
+  background: rgb(166, 174, 248);
 }

@@ -1,0 +1,59 @@
+.swipe_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 1rem;
+  max-width: 390px;
+  background-image: url("/images/work/case-three/item-4/img-1@2x.png");
+  background-size: cover;
+  height: 53rem;
+}
+
+.swipe_content {
+  padding: 7rem;
+}
+
+@media (max-width: 480px) {
+  .swipe_content {
+    padding: 0rem;
+  }
+
+  .swipe_container {
+    width: 100%;
+    height: 41rem;
+  }
+}
+
+.swipeShape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  gap: 1em;
+  background: #ffffff;
+  /* Dropshadow-Regular */
+  width: 4em;
+  box-shadow: 0px 4px 20px rgba(117, 125, 136, 0.2);
+  border-radius: 10em;
+  margin-block-end: 8rem;
+}
+
+.image {
+  max-width: 420px;
+}
+
+.swipe {
+  transform-origin: center;
+  animation: move 0.8s alternate-reverse infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-13px) rotate(-30deg);
+  }
+
+  100% {
+    transform: translateX(13px) rotate(2deg);
+  }
+}

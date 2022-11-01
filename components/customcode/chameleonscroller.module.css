@@ -1,0 +1,22 @@
+.video {
+  max-width: 440px;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.copy {
+  text-align: left;
+  line-height: 180%;
+  max-width: 23rem;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 920px) {
+  .video {
+    border-radius: 0.5rem;
+  }
+  .copy {
+    width: 100%;
+  }
+}

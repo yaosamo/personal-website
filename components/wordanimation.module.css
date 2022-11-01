@@ -1,0 +1,13 @@
+.letter {
+  animation: test 0.3s both 1 ease;
+}
+
+@keyframes test {
+  0%,
+  100% {
+    color: inherit;
+  }
+  50% {
+    color: var(--primary-accent);
+  }
+}
