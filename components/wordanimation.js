@@ -2,7 +2,7 @@ import styles from "../components/wordanimation.module.css";
 import { useState, useEffect } from "react";
 
 export default function WordAnimation({ char, id }) {
-  const density = ";:+=-,._Ñ@#W$9876543210?!abcdefghijklmnopqrstuvwxyz";
+  const density = "@abcdefghijklmnopqrstuvwxyz";
   const [hover, setHover] = useState(false);
   const [roll, setRoll] = useState(false);
 
@@ -11,7 +11,7 @@ export default function WordAnimation({ char, id }) {
   var ind = 0;
 
   useEffect(() => {
-    setTimeout(HandleHover, id * 35);
+    setTimeout(HandleHover, id * 45);
   }, []);
 
   function HandleHover() {
@@ -23,7 +23,7 @@ export default function WordAnimation({ char, id }) {
     if (!roll && ind < density.length && density[ind] != char && char != " ") {
       setLetter(density[ind]);
       ind++;
-      setTimeout(HandleHover, 40);
+      setTimeout(HandleHover, 60);
       setRoll(true);
     }
   }
