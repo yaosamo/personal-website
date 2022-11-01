@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Welcome!
+You can fork my project and build your own website!
+
+yaosamo.com 
