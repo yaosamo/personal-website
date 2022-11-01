@@ -73,7 +73,7 @@
   background: #f7f7f7;
   border-radius: 0.5rem;
   min-height: 5.5rem;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 2rem;
   width: -webkit-fill-available;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: row;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 160%;
   letter-spacing: -0.01em;
   color: #272727;
@@ -92,9 +92,13 @@
 }
 
 @media (max-width: 480px) {
+  .project {
+    padding: 0 1rem;
+  }
+
   .label {
     gap: 0rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     flex-direction: column;
     padding: 0;
   }
