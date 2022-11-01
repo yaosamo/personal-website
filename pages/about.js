@@ -13,8 +13,8 @@ function SideProjects({ Project, i }) {
       <a href={Project.url} target="_blank">
         <div className={styles.project}>
           <div className={styles.label}>
-            <p className={styles.title}>{Project.name}</p>
-            <p className={styles.desc}> {Project.desc}</p>
+            <p>{Project.name}</p>
+            <p className={styles.desc}>{Project.desc}</p>
           </div>
           <img src="../images/home/Arrow-right.svg" className={styles.arrow} />
         </div>

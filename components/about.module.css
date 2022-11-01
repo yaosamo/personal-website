@@ -8,9 +8,13 @@
   width: 88px;
   height: 56px;
   background: #f1eff0;
-  border-radius: 48px;
+  border-radius: 3rem;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   cursor: pointer;
+}
+
+.me {
+  border-radius: 0.5rem;
 }
 
 .container {
@@ -38,7 +42,7 @@
 
 @media (max-width: 480px) {
   .headingL {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -68,8 +72,8 @@
   align-items: center;
   background: #f7f7f7;
   border-radius: 0.5rem;
-  height: 5.5rem;
-  padding: 0 2rem;
+  min-height: 5.5rem;
+  padding: 1.5rem 2rem;
   width: -webkit-fill-available;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -84,6 +88,21 @@
   line-height: 160%;
   letter-spacing: -0.01em;
   color: #272727;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .label {
+    gap: 0rem;
+    font-size: 1.25rem;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .label p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
 }
 
 .project:hover {
@@ -99,7 +118,7 @@
   width: 100%;
   height: 20rem;
   background-color: #111115;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .timestamp {
@@ -131,6 +150,12 @@
   transform: scale(2.5);
   margin: auto;
   fill: #fff;
+}
+
+@media (max-width: 480px) {
+  .svg {
+    transform: scale(1.5);
+  }
 }
 
 .A_1,
@@ -186,8 +211,15 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media (max-width: 480px) {
+  .designs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .designimage {
   width: 100%;
+  border-radius: 2rem;
 }
 
 .tech {
@@ -210,6 +242,16 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 36rem;
+}
+
+@media (max-width: 480px) {
+  .tech .items p {
+    font-size: 1.25rem;
+  }
+  .tech .items {
+    flex-wrap: nowrap;
+    max-height: 72rem;
+  }
 }
 
 .link {
