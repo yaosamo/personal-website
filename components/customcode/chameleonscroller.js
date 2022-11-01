@@ -26,8 +26,8 @@ export default function Chameleonscroller() {
         with few swipes.
         <br />
         <br />
-        This way scattering is joyful and easy on eany lengh, seconds, munutes
-        or hours.
+        This way scattering is joyful and easy on any lengh, seconds, minutes or
+        hours.
       </p>
     </>
   );
