@@ -31,28 +31,27 @@ export default function About() {
       </Head>
       <div className="content">
         <div className={styles.container}>
-          <div>
-            <Link href="/">
-              <div className={styles.arrowback}>
-                <img
-                  src="../images/home/Arrow-right.svg"
-                  className={styles.arrow}
-                />
-              </div>
-            </Link>
-            <p className={styles.headingL}>
-              I love working on{" "}
-              <a className={styles.headingHighlight}> side projects </a>
-              especially on applications that solve someone elses problem
-              perfectly and not trying to be flexible to fit everyone needs.
-              Here’s the most notable things:
-            </p>
-            <div className={styles.projectscontainer}>
-              {Projects.map((Project, i) => (
-                <SideProjects Project={Project} key={i} />
-              ))}
+          <Link href="/">
+            <div className={styles.arrowback}>
+              <img
+                src="../images/home/Arrow-right.svg"
+                className={styles.arrow}
+              />
             </div>
+          </Link>
+          <p className={styles.headingL}>
+            I love working on{" "}
+            <a className={styles.headingHighlight}> side projects </a>
+            especially on applications that solve someone elses problem
+            perfectly and not trying to be flexible to fit everyone needs.
+            Here’s the most notable things:
+          </p>
+          <div className={styles.projectscontainer}>
+            {Projects.map((Project, i) => (
+              <SideProjects Project={Project} key={i} />
+            ))}
           </div>
+
           <img className={styles.me} src="../images/about/me2@2x.webp" />
 
           <div>
