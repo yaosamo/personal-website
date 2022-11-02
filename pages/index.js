@@ -26,9 +26,9 @@ export default function Home() {
             Yaroslav Samoylov,
             <br />
             product designer &{" "}
-            {word.split("").map((char, i) => {
+            {/* {word.split("").map((char, i) => {
               return <WordAnimation char={char} key={i} id={i} />;
-            })}
+            })} */}
           </h1>
         </div>
       </div>
