@@ -18,11 +18,11 @@ function Items({ Work, Item, i }) {
       >
         {/* images of the item */}
         {Item.images.map((img, i) =>
-          // check for custom code > insert custom code ;)
+          // check for custom code tag > insert custom code ;)
           Item.tag ? (
             <CustomCode tag={Item.tag} />
           ) : (
-            <Images Item={Item} Img={img} key={i} Vid={Item.Vid} />
+            <Images Item={Item} Img={img} key={i} />
           )
         )}
       </div>
