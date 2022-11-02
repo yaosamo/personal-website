@@ -11,7 +11,7 @@ export default function Chameleonscroller() {
         loop="true"
         aria-label="A video of the player displaying horizontal scroll"
         src="images/work/case-two/item-2/vid-1.mp4"
-      ></video>
+      />
       <p className={styles.copy}>
         I had a problem using one audioplayer and its scroll bar was small and
         wasn't comfortable scrolling through my 10h+ long books. It was hard to
