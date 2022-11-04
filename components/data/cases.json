@@ -21,15 +21,15 @@
         "bordercolor": "#E7E7E8",
         "bgcolor": "#E6E6E6",
         "caption": "Payments view",
-        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.png" }]
+        "images": [{ "img": "images/work/case-one/item-2/img-1@2x.webp" }]
       },
       {
         "bgcolor": "#E6E6E6",
         "caption": "Find your car view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-one/item-3/img-1@2x.png" },
-          { "img": "images/work/case-one/item-3/img-2@2x.png" }
+          { "img": "images/work/case-one/item-3/img-1@2x.webp" },
+          { "img": "images/work/case-one/item-3/img-2@2x.webp" }
         ]
       },
       {
@@ -37,23 +37,23 @@
         "caption": "Result / Value distribution view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-one/item-4/img-1@2x.png" },
-          { "img": "images/work/case-one/item-4/img-2@2x.png" }
+          { "img": "images/work/case-one/item-4/img-1@2x.webp" },
+          { "img": "images/work/case-one/item-4/img-2@2x.webp" }
         ]
       },
       {
         "bgcolor": "#E6E6E6",
         "caption": "Color library roles",
         "maxwidth": "960px",
-        "images": [{ "img": "images/work/case-one/item-5/img-1@2x.png" }]
+        "images": [{ "img": "images/work/case-one/item-5/img-1@2x.webp" }]
       },
       {
         "bgcolor": "#E6E6E6",
         "caption": "Checkout view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-one/item-6/img-1@2x.png" },
-          { "img": "images/work/case-one/item-6/img-2@2x.png" }
+          { "img": "images/work/case-one/item-6/img-1@2x.webp" },
+          { "img": "images/work/case-one/item-6/img-2@2x.webp" }
         ]
       },
       {
@@ -67,8 +67,8 @@
         "caption": "Final home page view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-one/item-8/img-1@2x.png" },
-          { "img": "images/work/case-one/item-8/img-2@2x.png" }
+          { "img": "images/work/case-one/item-8/img-1@2x.webp" },
+          { "img": "images/work/case-one/item-8/img-2@2x.webp" }
         ]
       }
     ]
@@ -92,8 +92,8 @@
         "caption": "Playlist view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-two/item-1/img-1@2x.png" },
-          { "img": "images/work/case-two/item-1/img-2@2x.png" }
+          { "img": "images/work/case-two/item-1/img-1@2x.webp" },
+          { "img": "images/work/case-two/item-1/img-2@2x.webp" }
         ]
       },
       {
@@ -101,20 +101,20 @@
         "bgcolor": "#0C0C0E",
         "caption": "I made this app for myself. I had a problem with regular scrollers because for long books it’s hard to be presice when scatter. It’s not versatile enough to go 10 seconds, 2 minutes or 1 hour head. So I designed custom scroller. Its width equels to the lenght of a book in seconds and scrolls using native iOS ScrollView which allow you to scroll very slow and very fast with few swipes. This way scattering is joyful and easy on eany lengh, seconds, munutes or hours",
         "maxwidth": "574px",
-        "images": [{ "img": "images/work/case-two/item-2/img-1@2x.png" }]
+        "images": [{ "img": "images/work/case-two/item-2/img-1@2x.webp" }]
       },
       {
         "bgcolor": "#0C0C0E",
         "caption": "New playlist view",
         "maxwidth": "42%",
-        "images": [{ "img": "images/work/case-two/item-3/img-1@2x.png" }]
+        "images": [{ "img": "images/work/case-two/item-3/img-1@2x.webp" }]
       },
       {
         "bgcolor": "#0C0C0E",
         "caption": "App Store & Xcode",
         "images": [
-          { "img": "images/work/case-two/item-4/img-1@2x.png" },
-          { "img": "images/work/case-two/item-4/img-2@2x.png" }
+          { "img": "images/work/case-two/item-4/img-1@2x.webp" },
+          { "img": "images/work/case-two/item-4/img-2@2x.webp" }
         ]
       }
     ]
@@ -138,23 +138,23 @@
         "caption": "Main bundles view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-three/item-1/img-1@2x.png" },
-          { "img": "images/work/case-three/item-1/img-2@2x.png" }
+          { "img": "images/work/case-three/item-1/img-1@2x.webp" },
+          { "img": "images/work/case-three/item-1/img-2@2x.webp" }
         ]
       },
       {
         "bgcolor": "#E6E6E6",
         "caption": "Protection details pop-up",
         "maxwidth": "588px",
-        "images": [{ "img": "images/work/case-three/item-2/img-1@2x.png" }]
+        "images": [{ "img": "images/work/case-three/item-2/img-1@2x.webp" }]
       },
       {
         "bgcolor": "#E6E6E6",
         "caption": "Protection details view",
         "maxwidth": "42%",
         "images": [
-          { "img": "images/work/case-three/item-3/img-1@2x.png" },
-          { "img": "images/work/case-three/item-3/img-2@2x.png" }
+          { "img": "images/work/case-three/item-3/img-1@2x.webp" },
+          { "img": "images/work/case-three/item-3/img-2@2x.webp" }
         ]
       },
       {
