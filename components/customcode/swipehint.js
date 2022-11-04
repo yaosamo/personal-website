@@ -28,7 +28,7 @@ export default function Chameleonscroller() {
         </div>
       </div>
       <div className={styles.image}>
-        <img src="images/work/case-three/item-4/img-2@2x.png"></img>
+        <img src="images/work/case-three/item-4/img-2@2x.webp"></img>
       </div>
     </>
   );
