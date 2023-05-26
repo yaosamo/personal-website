@@ -25,6 +25,21 @@
       },
       {
         "bgcolor": "#E6E6E6",
+        "caption": "Credit decisions",
+        "images": [{ "img": "images/work/case-one/item-10/img-1@2x.webp" }]
+      },
+      {
+        "bgcolor": "#E6E6E6",
+        "caption": "UI elements",
+        "images": [{ "img": "images/work/case-one/item-9/img-1@2x.webp" }]
+      },
+      {
+        "bgcolor": "#E6E6E6",
+        "caption": "Illustrations",
+        "images": [{ "img": "images/work/case-one/item-11/img-1@2x.webp" }]
+      },
+      {
+        "bgcolor": "#E6E6E6",
         "caption": "Find your car view",
         "maxwidth": "42%",
         "images": [
@@ -101,7 +116,7 @@
         "bgcolor": "#0C0C0E",
         "caption": "I made this app for myself. I had a problem with regular scrollers because for long books it’s hard to be presice when scatter. It’s not versatile enough to go 10 seconds, 2 minutes or 1 hour head. So I designed custom scroller. Its width equels to the lenght of a book in seconds and scrolls using native iOS ScrollView which allow you to scroll very slow and very fast with few swipes. This way scattering is joyful and easy on eany lengh, seconds, munutes or hours",
         "maxwidth": "574px",
-        "images": [{ "img": "images/work/case-two/item-2/img-1@2x.webp" }]
+        "images": [{}]
       },
       {
         "bgcolor": "#0C0C0E",
