@@ -1,6 +1,7 @@
 import styles from "../cases/case.module.css";
 import CustomCode from "../customcode/customcode";
 import Images from "./images";
+import Videos from "./videos";
 
 function Descriptions({ Desc }) {
   return <p className="bodyMD">{Desc}</p>;
@@ -21,6 +22,8 @@ function Items({ Work, Item, i }) {
           // check for custom code tag > insert custom code ;)
           Item.tag ? (
             <CustomCode tag={Item.tag} />
+          ) : Item.video ? (
+            <Videos Item={Item} Img={img} key={i} />
           ) : (
             <Images Item={Item} Img={img} key={i} />
           )
@@ -40,11 +43,11 @@ export default function Case({ Work }) {
         <div className={styles.header}>
           <p className="bodyMD">
             {Work.client}
-            {Work.url && (
+            {
               <a className="link" href={Work.url} target="_blank">
                 {Work.link}
               </a>
-            )}
+            }
           </p>
           <h1 className="headingL weightMedium">{Work.title}</h1>
           <div className={styles.contributors}>

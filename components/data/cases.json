@@ -1,5 +1,25 @@
 [
   {
+    "client": "2022 / Personal -> Concepts",
+    "title": "Interactive prototypes using SwiftUI",
+    "description": [
+      {
+        "text": "Design & Code: Yaroslav Samoylov"
+      }
+    ],
+    "items": [
+      {
+        "video": true,
+        "maxwidth": "44%",
+        "bgcolor": "#E6E6E6",
+        "images": [
+          { "img": "images/work/case-four/item-1/img-1.mp4" },
+          { "img": "images/work/case-four/item-1/img-2.mp4" }
+        ]
+      }
+    ]
+  },
+  {
     "client": "2019-2022 / Gubagoo -> Released",
     "title": "A service to sell cars fully online. Clients include Audi, BMW, Land Rover, Nissan, Toyota, Volvo, Porsche and other brands",
     "description": [
@@ -12,13 +32,11 @@
     ],
     "items": [
       {
-        "bordercolor": "#E7E7E8",
         "bgcolor": "#E6E6E6",
         "caption": "Loading view",
         "images": [{ "img": "images/work/case-one/item-1/img-1@2x.webp" }]
       },
       {
-        "bordercolor": "#E7E7E8",
         "bgcolor": "#E6E6E6",
         "caption": "Payments view",
         "images": [{ "img": "images/work/case-one/item-2/img-1@2x.webp" }]
