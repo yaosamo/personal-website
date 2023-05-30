@@ -39,16 +39,15 @@
   gap: 6rem;
 }
 
+.video {
+  border-radius: 1rem;
+  width: 100%;
+}
+
 .images img {
   width: 100%;
   border-radius: 1rem;
   transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-.eastereggA {
-  /* transform: rotateY(20deg); */
-  /* animation: filtermadness 1s ease-out; */
-  animation: cardhover 2s both ease-out;
 }
 
 @keyframes filtermadness {
@@ -58,17 +57,6 @@
   }
   150% {
     transform: rotateZ(5deg);
-  }
-}
-
-@keyframes cardhover {
-  0%,
-  100% {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-
-  50% {
-    transform: rotate3d(-1, 1, 0, 20deg) scale(0.95);
   }
 }
 
