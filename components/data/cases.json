@@ -13,8 +13,8 @@
         "maxwidth": "44%",
         "bgcolor": "#E6E6E6",
         "images": [
-          { "img": "images/work/case-four/item-1/img-1@2x.mp4" },
-          { "img": "images/work/case-four/item-1/img-2@2x.mp4" }
+          { "img": "images/work/case-four/item-1/img-1.mp4" },
+          { "img": "images/work/case-four/item-1/img-2.mp4" }
         ]
       }
     ]
