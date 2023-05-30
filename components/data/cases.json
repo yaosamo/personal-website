@@ -1,7 +1,7 @@
 [
   {
-    "client": "2022 / Personal -> Concepts",
-    "title": "Interactive prototypes using SwiftUI",
+    "client": "2020-2022 / Various Clients",
+    "title": "Interactive prototypes using SwiftUI, ReactJS, NextJS, CSS/HTML",
     "description": [
       {
         "text": "Design & Code: Yaroslav Samoylov"
@@ -14,7 +14,11 @@
         "bgcolor": "#080808",
         "images": [
           { "img": "images/work/case-four/item-1/img-1.mp4" },
-          { "img": "images/work/case-four/item-1/img-2.mp4" }
+          { "img": "images/work/case-four/item-1/img-2.mp4" },
+          { "img": "images/work/case-four/item-1/img-3.mp4" },
+          { "img": "images/work/case-four/item-1/img-4.mp4" },
+          { "img": "images/work/case-four/item-1/img-5.mp4" },
+          { "img": "images/work/case-four/item-1/img-6.mp4" }
         ]
       }
     ]
