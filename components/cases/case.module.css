@@ -70,7 +70,8 @@
     gap: 2rem;
   }
 
-  .images img {
+  .images img,
+  .video {
     max-width: 390px !important;
     border-radius: 0.5rem;
   }
