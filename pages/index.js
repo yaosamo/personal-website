@@ -25,7 +25,7 @@ export default function Home() {
           <h1 className="headingL weightMedium">
             Yaroslav Samoylov,
             <br />
-            product designer &{" "}
+            software designer &{" "}
             {word.split("").map((char, i) => {
               return <WordAnimation char={char} key={i} id={i} />;
             })}
