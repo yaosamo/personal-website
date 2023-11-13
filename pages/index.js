@@ -18,8 +18,8 @@ export default function Home() {
         <div className={styles.header}>
           <p className={styles.subtitle}>
             about me & other things I do →{" "}
-            <Link href="/about">
-              <a className="link">see info</a>
+            <Link href="/about" className="link">
+              see info
             </Link>
           </p>
           <h1 className="headingL weightMedium">
