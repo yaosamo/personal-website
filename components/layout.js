@@ -31,7 +31,7 @@ function Footer() {
             {Links.map(function (Link) {
               return (
                 <a href={Link.url} alt={Link.name} target="_blank">
-                  <div className={styles.item}>
+                  <div className={styles.item} key={Link.name}>
                     <p>{Link.name}</p>
                   </div>
                 </a>
@@ -45,7 +45,7 @@ function Footer() {
             {PeopleSorted.map(function (Person) {
               return (
                 <a href={Person.url} alt={Person.name} target="_blank">
-                  <div className={styles.item}>
+                  <div className={styles.item} key={Person.name}>
                     <p>{Person.name}</p>
                   </div>
                 </a>
@@ -60,7 +60,7 @@ function Footer() {
             {StudiosData.map(function (Studio) {
               return (
                 <a href={Studio.url} alt={Studio.name} target="_blank">
-                  <div className={styles.item}>
+                  <div className={styles.item} key={Studio.name}>
                     <p>{Studio.name}</p>
                   </div>
                 </a>
@@ -128,10 +128,6 @@ export default function Layout({ children }) {
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="favicon.svg" color="#000000;" />
         <meta name="theme-color" content="#FFFFFF" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       {children}
       <Footer />
