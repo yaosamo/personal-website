@@ -8,8 +8,8 @@ export default function Chameleonscroller() {
         className={styles.video}
         muted="muted"
         playsInline
-        autoPlay="true"
-        loop="true"
+        autoPlay={true}
+        loop={true}
         aria-label="A video of the player displaying horizontal scroll"
         src="images/work/case-two/item-2/vid-1.mp4"
       />

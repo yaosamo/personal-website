@@ -28,9 +28,9 @@ const content = [
               rx="5.6699"
               fill="white"
               stroke="#0047AC"
-              stroke-width="1.41748"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.41748"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></rect>
             <rect
               id="Rectangle 282"
@@ -40,7 +40,7 @@ const content = [
               height="3.54369"
               rx="1.77184"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Star 1"
@@ -55,7 +55,7 @@ const content = [
               height="3.54369"
               rx="1.77184"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 283"
@@ -65,7 +65,7 @@ const content = [
               height="3.54369"
               rx="1.77184"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 284"
@@ -75,7 +75,7 @@ const content = [
               height="3.54369"
               rx="1.77184"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 286"
@@ -85,15 +85,15 @@ const content = [
               height="3.54369"
               rx="1.77184"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Vector 53"
               d="M55.4661 63.3686L57.2379 65.1405L60.0729 61.9512"
               stroke="white"
-              stroke-width="1.41748"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.41748"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
           <g className={iconstyle.Doc2}>
@@ -106,9 +106,9 @@ const content = [
               rx="6.91262"
               fill="white"
               stroke="#0047AC"
-              stroke-width="1.72816"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.72816"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></rect>
             <rect
               id="Rectangle 282_2"
@@ -118,7 +118,7 @@ const content = [
               height="4.32039"
               rx="2.16019"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Star 1_2"
@@ -133,7 +133,7 @@ const content = [
               height="4.32039"
               rx="2.16019"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 283_2"
@@ -143,7 +143,7 @@ const content = [
               height="4.32039"
               rx="2.16019"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 284_2"
@@ -153,7 +153,7 @@ const content = [
               height="4.32039"
               rx="2.16019"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 286_2"
@@ -163,15 +163,15 @@ const content = [
               height="4.32039"
               rx="2.16019"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Vector 53_2"
               d="M58.3883 83.0387L60.5485 85.1989L64.0048 81.3105"
               stroke="white"
-              stroke-width="1.72816"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.72816"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
           <g className={iconstyle.Doc1}>
@@ -184,9 +184,9 @@ const content = [
               rx="8"
               fill="white"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></rect>
             <rect
               id="Rectangle 282_3"
@@ -196,7 +196,7 @@ const content = [
               height="5"
               rx="2.5"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Star 1_3"
@@ -211,7 +211,7 @@ const content = [
               height="5"
               rx="2.5"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 283_3"
@@ -221,7 +221,7 @@ const content = [
               height="5"
               rx="2.5"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 284_3"
@@ -231,7 +231,7 @@ const content = [
               height="5"
               rx="2.5"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 286_3"
@@ -241,15 +241,15 @@ const content = [
               height="5"
               rx="2.5"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Vector 53_3"
               d="M61 103L63.5 105.5L67.5 101"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
           <g className={iconstyle.Doc0}>
@@ -262,9 +262,9 @@ const content = [
               rx="8.69903"
               fill="white"
               stroke="#0047AC"
-              stroke-width="2.17476"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2.17476"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></rect>
             <rect
               id="Rectangle 282_4"
@@ -274,7 +274,7 @@ const content = [
               height="5.43689"
               rx="2.71845"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Star 1_4"
@@ -289,7 +289,7 @@ const content = [
               height="5.43689"
               rx="2.71845"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 283_4"
@@ -299,7 +299,7 @@ const content = [
               height="5.43689"
               rx="2.71845"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 284_4"
@@ -309,7 +309,7 @@ const content = [
               height="5.43689"
               rx="2.71845"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <rect
               id="Rectangle 286_4"
@@ -319,15 +319,15 @@ const content = [
               height="5.43689"
               rx="2.71845"
               fill="#0047AC"
-              fill-opacity="0.2"
+              fillOpacity="0.2"
             ></rect>
             <path
               id="Vector 53_4"
               d="M62.6602 119.689L65.3786 122.408L69.7281 117.515"
               stroke="white"
-              stroke-width="2.17476"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2.17476"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
         </g>
@@ -357,36 +357,36 @@ const content = [
               height="60"
               rx="8"
               fill="#0047AC"
-              fill-opacity="0.1"
+              fillOpacity="0.1"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></rect>
             <path
               id="Rectangle 291"
               d="M1 9C1 4.58172 4.58172 1 9 1H83C87.4183 1 91 4.58172 91 9V11L50.2264 36.3702C47.6388 37.9803 44.3612 37.9803 41.7736 36.3702L1 11V9Z"
               fill="white"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               id="Vector 56"
               d="M1 53L37 33.5"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               id="Vector 57"
               d="M91 53L55 33.5"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
           <g className={iconstyle.shadow}>
@@ -397,7 +397,7 @@ const content = [
               rx="45"
               ry="2.5"
               fill="#0047AC"
-              fill-opacity="0.1"
+              fillOpacity="0.1"
             ></ellipse>
           </g>
         </g>
@@ -422,9 +422,9 @@ const content = [
             id="Envelope"
             d="M85 103L75.1672 78.7458C74.2493 76.4815 72.05 75 69.6068 75H16.3932C13.95 75 11.7507 76.4815 10.8328 78.7458L1 103"
             stroke="#0047AC"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
           <g className={iconstyle.docsmove}>
             <g id="Doc5">
@@ -433,9 +433,9 @@ const content = [
                 d="M17.7554 89.04C18.1672 87.8208 19.3107 87 20.5976 87H64.2153C65.4521 87 66.5622 87.759 67.0109 88.9116L74.4082 107.912C75.174 109.878 73.7232 112 71.6126 112H14.1799C12.1271 112 10.6807 109.985 11.3376 108.04L17.7554 89.04Z"
                 fill="white"
                 stroke="#0047AC"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <rect
                 id="Rectangle 296"
@@ -480,9 +480,9 @@ const content = [
                 d="M17.7554 81.04C18.1672 79.8208 19.3107 79 20.5976 79H64.2153C65.4521 79 66.5622 79.759 67.0109 80.9116L74.4082 99.9116C75.174 101.878 73.7232 104 71.6126 104H14.1799C12.1271 104 10.6807 101.985 11.3376 100.04L17.7554 81.04Z"
                 fill="white"
                 stroke="#0047AC"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <rect
                 id="Rectangle 296_2"
@@ -527,9 +527,9 @@ const content = [
                 d="M17.7554 73.04C18.1672 71.8208 19.3107 71 20.5976 71H64.2153C65.4521 71 66.5622 71.759 67.0109 72.9116L74.4082 91.9116C75.174 93.8784 73.7232 96 71.6126 96H14.1799C12.1271 96 10.6807 93.9847 11.3376 92.04L17.7554 73.04Z"
                 fill="white"
                 stroke="#0047AC"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <rect
                 id="Rectangle 296_3"
@@ -574,9 +574,9 @@ const content = [
                 d="M17.7554 65.04C18.1672 63.8208 19.3107 63 20.5976 63H64.2153C65.4521 63 66.5622 63.759 67.0109 64.9116L74.4082 83.9116C75.174 85.8784 73.7232 88 71.6126 88H14.1799C12.1271 88 10.6807 85.9847 11.3376 84.04L17.7554 65.04Z"
                 fill="white"
                 stroke="#0047AC"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <rect
                 id="Rectangle 296_4"
@@ -622,9 +622,9 @@ const content = [
               d="M17.7554 3.03996C18.1672 1.82075 19.3107 1 20.5976 1H64.2153C65.4521 1 66.5622 1.75904 67.0109 2.91158L74.4082 21.9116C75.174 23.8784 73.7232 26 71.6126 26H14.1799C12.1271 26 10.6807 23.9847 11.3376 22.04L17.7554 3.03996Z"
               fill="white"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <rect
               id="Rectangle 296_5"
@@ -669,17 +669,17 @@ const content = [
               d="M1 103H16.2609C18.2824 103 20.168 104.018 21.2772 105.708L22.9728 108.292C24.082 109.982 25.9676 111 27.9891 111H58.0109C60.0324 111 61.918 109.982 63.0272 108.292L64.7228 105.708C65.832 104.018 67.7176 103 69.7391 103H85V121C85 124.314 82.3137 127 79 127H7C3.68629 127 1 124.314 1 121V103Z"
               fill="#E6EDF7"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               id="Vector 58"
               d="M49 117L37 117"
               stroke="#0047AC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </g>
         </g>
