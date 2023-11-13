@@ -21,7 +21,7 @@ function Items({ Work, Item, i }) {
         {Item.images.map((img, i) =>
           // check for custom code tag > insert custom code ;)
           Item.tag ? (
-            <CustomCode tag={Item.tag} />
+            <CustomCode tag={Item.tag} key={i} />
           ) : Item.video ? (
             <Videos Item={Item} Img={img} key={i} />
           ) : (

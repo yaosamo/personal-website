@@ -8,8 +8,8 @@ export default function Videos({ Item, Img, i }) {
       className={styles.video}
       muted="muted"
       playsInline
-      autoPlay="true"
-      loop="true"
+      autoPlay={true}
+      loop={true}
       src={Img.img}
     />
   );
