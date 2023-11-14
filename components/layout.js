@@ -80,9 +80,6 @@ function Footer() {
             </a>
             .
             <br />
-            It's private, no trackers being used.
-            <br />
-            <br />
             Let’s meet on{" "}
             <a
               className="link"
@@ -98,6 +95,7 @@ function Footer() {
             >
               {copyText}
             </a>
+            <br />
             <br />
             Thanks for visiting & have a nice!
           </p>
