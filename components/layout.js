@@ -24,6 +24,7 @@ function Footer() {
   };
 
   return (
+    // Links dribble and linkedin
     <div className="content">
       <div className={styles.footer}>
         <div className={styles.group}>
@@ -39,6 +40,7 @@ function Footer() {
             })}
           </div>
         </div>
+        {/* people */}
         <div className={styles.group}>
           <h4>Some great people & friends:</h4>
           <div className={styles.link}>
