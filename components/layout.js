@@ -31,8 +31,13 @@ function Footer() {
           <div className={styles.link}>
             {Links.map(function (Link) {
               return (
-                <a href={Link.url} alt={Link.name} target="_blank">
-                  <div className={styles.item} key={Link.name}>
+                <a
+                  key={Link.name}
+                  href={Link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.item}>
                     <p>{Link.name}</p>
                   </div>
                 </a>
@@ -46,8 +51,13 @@ function Footer() {
           <div className={styles.link}>
             {PeopleSorted.map(function (Person) {
               return (
-                <a href={Person.url} alt={Person.name} target="_blank">
-                  <div className={styles.item} key={Person.name}>
+                <a
+                  key={Person.name}
+                  href={Person.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.item}>
                     <p>{Person.name}</p>
                   </div>
                 </a>
@@ -61,8 +71,13 @@ function Footer() {
           <div className={styles.link}>
             {StudiosData.map(function (Studio) {
               return (
-                <a href={Studio.url} alt={Studio.name} target="_blank">
-                  <div className={styles.item} key={Studio.name}>
+                <a
+                  key={Studio.name}
+                  href={Studio.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.item}>
                     <p>{Studio.name}</p>
                   </div>
                 </a>
