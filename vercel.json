@@ -9,6 +9,16 @@
         }
       ],
       "destination": "/things/chameleon/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "lilthings.yaosamo.com"
+        }
+      ],
+      "destination": "/things/lilthings/:path*"
     }
   ]
 }
