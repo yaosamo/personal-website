@@ -49,6 +49,21 @@ export default function LilThings() {
         />
       </Head>
 
+
+      <style jsx global>{`
+        html,
+        body {
+          background: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          html,
+          body {
+            background: #0e0e0e;
+          }
+        }
+      `}</style>
+
       <div className={styles.pageWrap}>
         <section className={styles.page}>
           <h1 className={styles.title}>Lil Things</h1>
