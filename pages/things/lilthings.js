@@ -60,24 +60,24 @@ export default function LilThings() {
           <div className={styles.masonry}>
             {cards.map((project) => (
               <article key={project.name} className={styles.card}>
+                <div className={styles.topRow}>
+                  <h2 className={styles.name}>{project.name}</h2>
+                  <p className={styles.date}>{project.date}</p>
+                </div>
+
                 <div
                   className={styles.imagePlaceholder}
                   style={{ backgroundColor: project.color, paddingTop: project.ratio }}
                 />
-                <div className={styles.cardBody}>
-                  <div>
-                    <h2 className={styles.name}>{project.name}</h2>
-                    <p className={styles.date}>{project.date}</p>
-                  </div>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.openBtn}
-                  >
-                    Open
-                  </a>
-                </div>
+
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.openBtn}
+                >
+                  Open
+                </a>
               </article>
             ))}
           </div>

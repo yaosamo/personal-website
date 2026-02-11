@@ -37,48 +37,51 @@
   break-inside: avoid;
   border: 1px solid #e8e8e8;
   border-radius: 16px;
-  overflow: hidden;
   margin-bottom: 18px;
   background: #fff;
+  padding: 8px;
 }
 
-.imagePlaceholder {
-  width: 100%;
-  border-bottom: 1px solid #ebebeb;
-}
-
-.cardBody {
-  padding: 14px;
+.topRow {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
+  margin-bottom: 8px;
 }
 
 .name {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.06rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
 .date {
-  margin: 5px 0 0;
-  font-size: 13px;
+  margin: 0;
+  font-size: 12px;
   color: #757575;
+  white-space: nowrap;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
 .openBtn {
   display: inline-flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: #111;
   border: 1px solid #d8d8d8;
-  border-radius: 999px;
-  padding: 6px 12px;
+  border-radius: 10px;
+  padding: 9px 12px;
   font-size: 13px;
-  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .openBtn:hover {
