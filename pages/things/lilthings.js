@@ -50,6 +50,7 @@ export default function LilThings() {
       </Head>
 
       <section className={styles.page}>
+        <h1 className={styles.title}>Lil Things</h1>
         <div className={styles.masonry}>
           {cards.map((project) => (
             <article key={project.name} className={styles.card}>

@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+
+.title {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
 .masonry {
   column-count: 3;
   column-gap: 18px;
