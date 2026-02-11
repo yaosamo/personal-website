@@ -1,0 +1,108 @@
+.page {
+  max-width: 760px;
+  margin: 72px auto 128px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #767676;
+}
+
+.title {
+  margin: 12px 0 10px;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 540px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5d5d5d;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.index {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.06em;
+}
+
+.copy {
+  display: grid;
+  gap: 4px;
+}
+
+.name {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #999;
+  transform: translateX(0);
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.link:hover .arrow {
+  transform: translateX(4px) translateY(-2px);
+  color: #111;
+}
+
+.link:hover .name {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+@media (max-width: 640px) {
+  .page {
+    margin-top: 44px;
+  }
+
+  .link {
+    grid-template-columns: 32px 1fr auto;
+    gap: 12px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
