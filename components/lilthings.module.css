@@ -1,3 +1,8 @@
+.pageWrap {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
 .page {
   width: min(100%, 1920px);
   margin: 0 auto;
@@ -74,6 +79,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .pageWrap {
+    background: #0e0e0e;
+  }
+
   .page {
     color: #f3f3f3;
   }

@@ -49,33 +49,35 @@ export default function LilThings() {
         />
       </Head>
 
-      <section className={styles.page}>
-        <h1 className={styles.title}>Lil Things</h1>
-        <div className={styles.masonry}>
-          {cards.map((project) => (
-            <article key={project.name} className={styles.card}>
-              <div className={styles.topRow}>
-                <h2 className={styles.name}>{project.name}</h2>
-                <p className={styles.date}>{project.date}</p>
-              </div>
+      <div className={styles.pageWrap}>
+        <section className={styles.page}>
+          <h1 className={styles.title}>Lil Things</h1>
+          <div className={styles.masonry}>
+            {cards.map((project) => (
+              <article key={project.name} className={styles.card}>
+                <div className={styles.topRow}>
+                  <h2 className={styles.name}>{project.name}</h2>
+                  <p className={styles.date}>{project.date}</p>
+                </div>
 
-              <div
-                className={styles.imagePlaceholder}
-                style={{ backgroundColor: project.color, paddingTop: project.ratio }}
-              />
+                <div
+                  className={styles.imagePlaceholder}
+                  style={{ backgroundColor: project.color, paddingTop: project.ratio }}
+                />
 
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.openBtn}
-              >
-                Open
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.openBtn}
+                >
+                  Open
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 }
