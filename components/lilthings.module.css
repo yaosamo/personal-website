@@ -3,8 +3,8 @@
   margin: 0 auto;
   padding: 56px 24px 120px;
   box-sizing: border-box;
+  color: #111111;
 }
-
 
 .title {
   margin: 0 0 24px;
@@ -23,7 +23,7 @@
   border: 1px solid #e8e8e8;
   border-radius: 16px;
   margin-bottom: 18px;
-  background: #fff;
+  background: #ffffff;
   padding: 8px;
 }
 
@@ -71,6 +71,35 @@
 
 .openBtn:hover {
   border-color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    color: #f3f3f3;
+  }
+
+  .card {
+    background: #161616;
+    border-color: #2f2f2f;
+  }
+
+  .date {
+    color: #a7a7a7;
+  }
+
+  .imagePlaceholder {
+    filter: brightness(0.72) saturate(0.85);
+  }
+
+  .openBtn {
+    color: #f3f3f3;
+    border-color: #3d3d3d;
+    background: transparent;
+  }
+
+  .openBtn:hover {
+    border-color: #8f8f8f;
+  }
 }
 
 @media (max-width: 980px) {
