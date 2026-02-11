@@ -5,7 +5,7 @@ import styles from "../../components/lilthings.module.css";
 
 export default function LilThings() {
   return (
-    <Layout>
+    <Layout hideFooter>
       <Head>
         <title>Lil Things by Yaroslav Samoylov</title>
         <meta property="og:url" content="https://lilthings.yaosamo.com" />
@@ -20,24 +20,18 @@ export default function LilThings() {
         />
       </Head>
 
-      <div className="content">
-        <section className={styles.container}>
-          <p className={styles.eyebrow}>lilthings.yaosamo.com</p>
-          <h1 className={styles.title}>My Projects</h1>
-          <p className={styles.subtitle}>Simple things I made for fun and learning.</p>
-
-          <ul className={styles.list}>
-            {projects.map((project) => (
-              <li className={styles.item} key={project.name}>
-                <a href={project.url} target="_blank" rel="noreferrer">
-                  <h2>{project.name}</h2>
-                  <p>{project.desc}</p>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
+      <section className={styles.container}>
+        <ul className={styles.list}>
+          {projects.map((project) => (
+            <li className={styles.item} key={project.name}>
+              <a href={project.url} target="_blank" rel="noreferrer">
+                <h2>{project.name}</h2>
+                <p>{project.desc}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   );
 }
