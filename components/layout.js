@@ -123,7 +123,7 @@ function Footer() {
 }
 
 // Main container that being used everywhere with imported CSS class
-export default function Layout({ children }) {
+export default function Layout({ children, hideFooter = false }) {
   return (
     <>
       <Head>
@@ -145,7 +145,7 @@ export default function Layout({ children }) {
         <meta name="theme-color" content="#FFFFFF" />
       </Head>
       {children}
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   );
 }
