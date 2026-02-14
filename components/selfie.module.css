@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 .pageWrap {
   min-height: 100vh;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -19,6 +28,7 @@
   background: white;
   pointer-events: none;
   z-index: 1000;
+<<<<<<< HEAD
   opacity: 0;
 }
 
@@ -30,6 +40,144 @@
   0% { opacity: 1; }
   50% { opacity: 0.8; }
   100% { opacity: 0; }
+=======
+  animation: flash 0.25s ease-out forwards;
+}
+
+.gridOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+}
+
+.gridHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.gridHeader h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.closeBtn {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 1.25rem;
+  transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+  background: #cbd5e1;
+}
+
+.photo {
+  position: absolute;
+  border-radius: 8px;
+  overflow: visible;
+  user-select: none;
+}
+
+.photoContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  transition: box-shadow 0.2s, transform 0.3s;
+}
+
+.photo:hover .photoContainer {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.photoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photo:hover .photoContainer img {
+  transform: scale(1.02);
+}
+
+.styleLabel {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.photoActions {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 999;
+}
+
+.photo:hover .photoActions {
+  opacity: 1;
+}
+
+.photoBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+  font-size: 0.875rem;
+}
+
+.photoBtn:hover {
+  transform: scale(1.05);
+  background: #f8fafc;
+}
+
+.photoBtn:active {
+  transform: scale(0.95);
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 .card {
@@ -51,14 +199,24 @@
 }
 
 .title {
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+=======
+>>>>>>> 30b890aa (Add polished selfie app with all features)
   margin: 0 0 8px;
   font-size: 1.5rem;
   font-weight: 600;
   color: #1e293b;
+<<<<<<< HEAD
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 .subtitle {
@@ -100,8 +258,17 @@
 }
 
 .placeholderIcon {
+<<<<<<< HEAD
   width: 48px;
   height: 48px;
+=======
+  font-size: 3rem;
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: 0.875rem;
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 .controls {
@@ -125,6 +292,10 @@
   justify-content: center;
   backdrop-filter: blur(8px);
   transition: background-color 0.2s;
+<<<<<<< HEAD
+=======
+  font-size: 1rem;
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 .controlBtn:hover {
@@ -150,6 +321,10 @@
   justify-content: center;
   gap: 8px;
   transition: all 0.2s;
+<<<<<<< HEAD
+=======
+  box-sizing: border-box;
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 .primaryButton {
@@ -188,6 +363,7 @@
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
 .photos {
   position: absolute;
   top: 0;
@@ -264,6 +440,18 @@
 
 .photoBtn:active {
   transform: scale(0.95);
+=======
+/* Responsive Design */
+@media (max-width: 640px) {
+  .card {
+    padding: 20px;
+    margin: 8px;
+  }
+
+  .photo {
+    width: min(80vw, 280px) !important;
+  }
+>>>>>>> 30b890aa (Add polished selfie app with all features)
 }
 
 /* Dark mode support */
@@ -299,6 +487,7 @@
     background: rgba(30, 41, 59, 0.9);
     border-color: #64748b;
   }
+<<<<<<< HEAD
 }
 
 @media (max-width: 640px) {
@@ -309,5 +498,27 @@
 
   .photo {
     width: min(80vw, 280px);
+=======
+
+  .gridOverlay {
+    background: rgba(15, 23, 42, 0.95);
+  }
+
+  .gridHeader {
+    background: rgba(30, 41, 59, 0.8);
+  }
+
+  .gridHeader h2 {
+    color: #f1f5f9;
+  }
+
+  .closeBtn {
+    background: #475569;
+    color: #94a3b8;
+  }
+
+  .closeBtn:hover {
+    background: #64748b;
+>>>>>>> 30b890aa (Add polished selfie app with all features)
   }
 }
