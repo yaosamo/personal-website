@@ -1,0 +1,388 @@
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+.pageWrap {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  pointer-events: none;
+  z-index: 1000;
+  animation: flash 0.25s ease-out forwards;
+}
+
+/* Grid overlay — scrollable backdrop */
+.gridOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+}
+
+.gridHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.gridTitle {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.closeBtn {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+  background: #cbd5e1;
+}
+
+/* Photos — unified, transition between scattered ↔ grid */
+.photo {
+  position: absolute;
+  border-radius: 8px;
+  overflow: visible;
+  user-select: none;
+}
+
+.photoGroup:hover .photoActions {
+  opacity: 1;
+}
+
+.photoContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.photoGroup:hover .photoContainer {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photoGroup:hover .photoImage {
+  transform: scale(1.02);
+}
+
+.styleLabel {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.photoActions {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.photoBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+  color: #64748b;
+}
+
+.photoBtn:hover {
+  transform: scale(1.05);
+  background: #f8fafc;
+}
+
+.photoBtn:active {
+  transform: scale(0.95);
+}
+
+/* Camera card */
+.card {
+  width: 100%;
+  max-width: 512px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.cardContent {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .cardContent {
+    padding: 24px;
+  }
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #3b82f6;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.cameraContainer {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: #64748b;
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.controlBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.2s;
+}
+
+.controlBtn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+  height: 44px;
+}
+
+@media (min-width: 640px) {
+  .button {
+    height: 48px;
+    font-size: 1rem;
+  }
+}
+
+.primaryButton {
+  background: #3b82f6;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #2563eb;
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.captureButton {
+  background: #ef4444;
+  color: white;
+  font-weight: 500;
+}
+
+.captureButton:hover {
+  background: #dc2626;
+}
+
+.captureButton:focus-visible {
+  outline: 2px solid #fca5a5;
+  outline-offset: 2px;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.8);
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  backdrop-filter: blur(8px);
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #d1d5db;
+}
+
+.captureIcon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.hiddenCanvas {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .cardContent {
+    padding: 20px 16px;
+  }
+
+  .photo {
+    width: min(80vw, 280px) !important;
+  }
+
+  .pageWrap {
+    padding: 8px;
+  }
+
+  .card {
+    margin: 8px;
+  }
+}
