@@ -1,6 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import Head from "next/head";
-import Layout from "../../components/layout";
 import styles from "../../components/selfie.module.css";
 
 const PHOTO_STYLES = [
@@ -314,7 +313,7 @@ export default function SelfieApp() {
   })();
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Quick Selfie</title>
         <meta name="description" content="Look good, capture it, share it ✨" />
@@ -513,6 +512,6 @@ export default function SelfieApp() {
         
         <canvas ref={canvasRef} className={styles.hiddenCanvas} />
       </div>
-    </Layout>
+    </>
   );
 }
