@@ -16,6 +16,77 @@ const PHOTO_STYLES = [
   { name: 'Dither', filter: 'grayscale(80%) contrast(2.5) brightness(1.2)' },
 ];
 
+// SVG Icons to match Lucide React icons exactly
+const CameraIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+    <circle cx="12" cy="13" r="4"/>
+  </svg>
+);
+
+const SparklesIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+    <path d="M5 3v4"/>
+    <path d="M19 17v4"/>
+    <path d="M3 5h4"/>
+    <path d="M17 19h4"/>
+  </svg>
+);
+
+const RotateCcwIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+    <path d="M3 3v5h5"/>
+  </svg>
+);
+
+const XIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+);
+
+const Grid3x3Icon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+    <line x1="9" y1="3" x2="9" y2="21"/>
+    <line x1="15" y1="3" x2="15" y2="21"/>
+    <line x1="3" y1="9" x2="21" y2="9"/>
+    <line x1="3" y1="15" x2="21" y2="15"/>
+  </svg>
+);
+
+const Wand2Icon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 4V2"/>
+    <path d="M15 16v-2"/>
+    <path d="M8 9h2"/>
+    <path d="M20 9h2"/>
+    <path d="M17.8 11.8 19 13"/>
+    <path d="M15 9h0"/>
+    <path d="M17.8 6.2 19 5"/>
+    <path d="m3 21 9-9"/>
+    <path d="M12.2 6.2 11 5"/>
+  </svg>
+);
+
+const DownloadIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7,10 12,15 17,10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+);
+
+const CameraPlaceholderIcon = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+    <circle cx="12" cy="13" r="4"/>
+  </svg>
+);
+
 export default function SelfieApp() {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -245,8 +316,8 @@ export default function SelfieApp() {
   return (
     <Layout>
       <Head>
-        <title>Quick Selfie | Yaosamo</title>
-        <meta name="description" content="Take quick selfies with filters and instant download" />
+        <title>Quick Selfie</title>
+        <meta name="description" content="Look good, capture it, share it ✨" />
       </Head>
       
       <div className={styles.pageWrap}>
@@ -255,7 +326,7 @@ export default function SelfieApp() {
           <div className={styles.flash} />
         )}
 
-        {/* Grid overlay */}
+        {/* Grid overlay — scrollable backdrop */}
         {showGrid && (
           <div
             ref={gridScrollRef}
@@ -263,20 +334,23 @@ export default function SelfieApp() {
             style={{ overflowY: 'auto' }}
             onClick={() => setShowGrid(false)}
           >
+            {/* Spacer to create scroll height */}
             <div style={{ height: `${gridTotalHeight}px`, pointerEvents: 'none' }} />
+
+            {/* Header */}
             <div className={styles.gridHeader}>
-              <h2>All Photos ({scatteredPhotos.length})</h2>
+              <h2 className={styles.gridTitle}>All Photos ({scatteredPhotos.length})</h2>
               <button
                 onClick={() => setShowGrid(false)}
                 className={styles.closeBtn}
               >
-                ✕
+                <XIcon />
               </button>
             </div>
           </div>
         )}
 
-        {/* Photos */}
+        {/* Photos — unified, transition between scattered ↔ grid */}
         {scatteredPhotos.map((photo, idx) => {
           const gridPos = showGrid ? gridPositions[idx] : null;
           const tx = showGrid && gridPos ? gridPos.x : photo.x + photo.dragX;
@@ -288,7 +362,7 @@ export default function SelfieApp() {
           return (
             <div
               key={photo.id}
-              className={styles.photo}
+              className={`${styles.photo} ${styles.photoGroup}`}
               style={{
                 left: '50%',
                 top: '50%',
@@ -308,39 +382,43 @@ export default function SelfieApp() {
               onMouseDown={(e) => { if (showGrid) return; e.preventDefault(); startDrag(photo.id, e.clientX, e.clientY); }}
               onTouchStart={(e) => { if (showGrid) return; startDrag(photo.id, e.touches[0].clientX, e.touches[0].clientY); }}
             >
-              <div className={styles.photoContainer}>
+              <div className={styles.photoContainer} style={{
+                boxShadow: showGrid ? '0 4px 20px rgba(0,0,0,0.1)' : '0 8px 30px rgba(0,0,0,0.2)',
+                border: '3px solid white',
+              }}>
                 <img
                   src={photo.src}
                   alt=""
+                  className={styles.photoImage}
                   style={{ filter: style.filter }}
                   draggable={false}
                 />
               </div>
 
+              {/* Style label */}
               {photo.styleIdx !== 0 && (
                 <div className={styles.styleLabel}>
                   {style.name}
                 </div>
               )}
 
-              <div className={styles.photoActions}>
+              {/* Action buttons */}
+              <div className={styles.photoActions} style={{ zIndex: 999 }}>
                 <button
                   onClick={(e) => { e.stopPropagation(); randomizeStyle(photo.id); }}
                   onMouseDown={(e) => e.stopPropagation()}
                   onTouchStart={(e) => e.stopPropagation()}
                   className={styles.photoBtn}
-                  title="Change style"
                 >
-                  🎨
+                  <Wand2Icon />
                 </button>
                 <button
                   onClick={(e) => { e.stopPropagation(); downloadScatteredPhoto(photo.src, photo.id, photo.styleIdx); }}
                   onMouseDown={(e) => e.stopPropagation()}
                   onTouchStart={(e) => e.stopPropagation()}
                   className={styles.photoBtn}
-                  title="Download"
                 >
-                  ⬇️
+                  <DownloadIcon />
                 </button>
               </div>
             </div>
@@ -348,83 +426,92 @@ export default function SelfieApp() {
         })}
 
         {/* Camera card */}
-        <div ref={cameraCardRef} className={styles.card}>
-          <div className={styles.header}>
-            <h1 className={styles.title}>
-              ✨ Quick Selfie
-            </h1>
-            <p className={styles.subtitle}>Look good, capture it, share it ✨</p>
-          </div>
-
-          <div className={styles.cameraContainer}>
-            <video
-              ref={videoRef}
-              autoPlay
-              playsInline
-              muted
-              className={styles.video}
-              style={{
-                transform: facingMode === 'user' ? 'scaleX(-1)' : 'scaleX(1)'
-              }}
-            />
-            
-            {!isStreaming && (
-              <div className={styles.placeholder}>
-                <div className={styles.placeholderIcon}>📸</div>
-                <p>Tap "Start Camera" below</p>
+        <div
+          ref={cameraCardRef}
+          className={styles.card}
+          style={{ zIndex: showGrid ? 50 : 100 }}
+        >
+          <div className={styles.cardContent}>
+            <div className={styles.header}>
+              <div className={styles.titleRow}>
+                <SparklesIcon />
+                <h1 className={styles.title}>Quick Selfie</h1>
               </div>
-            )}
+              <p className={styles.subtitle}>Look good, capture it, share it ✨</p>
+            </div>
 
-            {isStreaming && (
-              <div className={styles.controls}>
-                <button
-                  className={styles.controlBtn}
-                  onClick={flipCamera}
-                  title="Flip camera"
-                >
-                  🔄
-                </button>
-                <button
-                  className={styles.controlBtn}
-                  onClick={stopCamera}
-                  title="Stop camera"
-                >
-                  ✕
-                </button>
-              </div>
-            )}
-          </div>
+            <div className={styles.cameraContainer}>
+              <video
+                ref={videoRef}
+                autoPlay
+                playsInline
+                muted
+                className={styles.video}
+                style={{
+                  transform: facingMode === 'user' ? 'scaleX(-1)' : 'scaleX(1)'
+                }}
+              />
+              
+              {!isStreaming && (
+                <div className={styles.placeholder}>
+                  <CameraPlaceholderIcon />
+                  <p>Tap "Start Camera" below</p>
+                </div>
+              )}
 
-          <div className={styles.actions}>
-            {!isStreaming ? (
-              <button
-                className={`${styles.button} ${styles.primaryButton}`}
-                onClick={() => startCamera()}
-              >
-                📸 Start Camera
-              </button>
-            ) : (
-              <button
-                className={`${styles.button} ${styles.captureButton}`}
-                onClick={capturePhoto}
-              >
-                <div className={styles.captureIcon} />
-                Capture
-              </button>
-            )}
-            
-            {scatteredPhotos.length > 0 && (
-              <button
-                className={`${styles.button} ${styles.secondaryButton}`}
-                onClick={() => setShowGrid(!showGrid)}
-              >
-                🔳 All ({scatteredPhotos.length})
-              </button>
-            )}
+              {isStreaming && (
+                <div className={styles.controls}>
+                  <button
+                    className={styles.controlBtn}
+                    onClick={flipCamera}
+                    title="Flip camera"
+                  >
+                    <RotateCcwIcon />
+                  </button>
+                  <button
+                    className={styles.controlBtn}
+                    onClick={stopCamera}
+                    title="Stop camera"
+                  >
+                    <XIcon />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className={styles.actions}>
+              {!isStreaming ? (
+                <button
+                  className={`${styles.button} ${styles.primaryButton}`}
+                  onClick={() => startCamera()}
+                >
+                  <CameraIcon />
+                  Start Camera
+                </button>
+              ) : (
+                <button
+                  className={`${styles.button} ${styles.captureButton}`}
+                  onClick={capturePhoto}
+                >
+                  <div className={styles.captureIcon} />
+                  Capture
+                </button>
+              )}
+              
+              {scatteredPhotos.length > 0 && (
+                <button
+                  className={`${styles.button} ${styles.secondaryButton}`}
+                  onClick={() => setShowGrid(!showGrid)}
+                >
+                  <Grid3x3Icon />
+                  All ({scatteredPhotos.length})
+                </button>
+              )}
+            </div>
           </div>
         </div>
         
-        <canvas ref={canvasRef} style={{ display: 'none' }} />
+        <canvas ref={canvasRef} className={styles.hiddenCanvas} />
       </div>
     </Layout>
   );
