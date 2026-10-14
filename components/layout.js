@@ -130,13 +130,13 @@ export default function Layout({ children, hideFooter = false }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
-        <meta property="og:url" content="https://portfolio.yaosamo.com" />
+        <meta property="og:url" content="https://design.yaosamo.com" />
         <meta property="og:title" content="Yaroslav Samoylov" />
         <meta
           property="og:description"
           content="Curious designer based in Oregon"
         />
-        <meta property="og:image" content="https://portfolio.yaosamo.com/intro.jpg" />
+        <meta property="og:image" content="https://design.yaosamo.com/intro.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Yaroslav Samoylov" />
         <meta name="description" content="Curious designer based in Oregon" />

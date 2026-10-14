@@ -5,10 +5,10 @@ const HOST_REWRITES = {
   "lilthings.yaosamo.com": "/things/lilthings",
 };
 
-// The portfolio moved to portfolio.yaosamo.com; the apex now shows a
+// The portfolio moved to design.yaosamo.com; the apex now shows a
 // "moved" note and sends every other path to the same path there.
 const MOVED_HOSTS = ["yaosamo.com", "www.yaosamo.com"];
-const PORTFOLIO_ORIGIN = "https://portfolio.yaosamo.com";
+const PORTFOLIO_ORIGIN = "https://design.yaosamo.com";
 
 export function middleware(request) {
   const host = request.headers.get("host")?.split(":")[0] ?? "";

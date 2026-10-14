@@ -13,7 +13,7 @@ export default function Icons() {
         <meta name="twitter:creator" content="@yaosamo" />
         <meta
           property="og:url"
-          content="https://portfolio.yaosamo.com/things/chameleon"
+          content="https://design.yaosamo.com/things/chameleon"
         />
         <meta property="og:title" content="Chameleon / Audiobook Player" />
         <meta
@@ -22,7 +22,7 @@ export default function Icons() {
         />
         <meta
           property="og:image"
-          content="https://portfolio.yaosamo.com/images/chameleon/intro.png"
+          content="https://design.yaosamo.com/images/chameleon/intro.png"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Chameleon / Audiobook Player" />
@@ -51,7 +51,7 @@ export default function Icons() {
                 </a>
                 <a
                   target="_blank"
-                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fportfolio.yaosamo.com%2Fthings%2Fchameleon&via=yaosamo&text=I%27m%20listening%20my%20books%20on"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdesign.yaosamo.com%2Fthings%2Fchameleon&via=yaosamo&text=I%27m%20listening%20my%20books%20on"
                 >
                   <div className={css.buttonShare}>Share</div>
                 </a>

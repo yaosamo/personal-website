@@ -25,7 +25,7 @@ export default function GamesScreenshots() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
-        <meta property="og:url" content="https://portfolio.yaosamo.com" />
+        <meta property="og:url" content="https://design.yaosamo.com" />
         <meta property="og:title" content="Games Screenshots" />
         <meta
           property="og:description"
@@ -33,7 +33,7 @@ export default function GamesScreenshots() {
         />
         <meta
           property="og:image"
-          content="https://portfolio.yaosamo.com/static/meta/hi.jpg"
+          content="https://design.yaosamo.com/static/meta/hi.jpg"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="And designer" />
