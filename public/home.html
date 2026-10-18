@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaosamo</title>
+  <meta name="description" content="Applications, services and games designed by Yaosamo." />
+  <meta property="og:url" content="https://yaosamo.com" />
+  <meta property="og:title" content="Yaosamo" />
+  <meta property="og:description" content="Applications, services and games designed by Yaosamo." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@yaosamo" />
+  <meta name="theme-color" content="#FDFDFD" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fdfdfd;
+      --text: #000000;
+      --focus: #3c7bff;
+      /* Three 150px icons 112px apart, as in the design; smaller on narrow screens. */
+      --icon: min(150px, calc((100vw - 32px) / 4.5));
+      --gap: calc(var(--icon) * 0.7467);
+      --u: calc(var(--icon) / 150); /* one design pixel at the icon's current size */
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    main {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 96px 16px;
+    }
+    .apps {
+      display: flex;
+      gap: var(--gap);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .app {
+      position: relative;
+      display: block;
+      width: var(--icon);
+      height: var(--icon);
+      color: inherit;
+      outline: none;
+    }
+    .icon {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: calc(32 * var(--u));
+    }
+    .icon img { position: absolute; display: block; max-width: none; }
+    .app:focus-visible .icon { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--focus); }
+
+    /* Nothing: the black-hole render behind an orange cursor. */
+    .nothing { background: #000; }
+    .nothing img { inset: 0; width: 100%; height: 100%; }
+    .nothing .bar {
+      position: absolute;
+      left: calc(26 * var(--u));
+      top: calc(26 * var(--u));
+      width: calc(12 * var(--u));
+      height: calc(37 * var(--u));
+      border-radius: calc(2 * var(--u));
+      background: #ff731c;
+    }
+
+    /* Dots & Clouds: sky, then clouds, the sun, and clouds again in front of it. */
+    .dots { background: linear-gradient(#6fc1e1, #b8ebfb); }
+    .dots .clouds { inset: 0; width: 100%; height: 100%; }
+    .dots .sun {
+      left: calc(45 * var(--u));
+      top: calc(45 * var(--u));
+      width: calc(60 * var(--u));
+      height: calc(60 * var(--u));
+    }
+
+    /* Appmarks: two windows, a yellow one and a white one on top. */
+    .appmarks { background: #404040; }
+    .card {
+      position: absolute;
+      width: calc(51 * var(--u));
+      height: calc(42 * var(--u));
+      overflow: hidden;
+      border-radius: calc(8 * var(--u));
+      background: linear-gradient(var(--c) 0 calc(12 * var(--u)), var(--body) calc(12 * var(--u)));
+    }
+    .card.yellow { left: calc(35 * var(--u)); top: calc(43 * var(--u)); --c: rgb(255 238 0 / 0.9); --body: rgb(255 238 0 / 0.2); }
+    .card.white { left: calc(64 * var(--u)); top: calc(64 * var(--u)); --c: rgb(248 248 248 / 0.9); --body: rgb(248 248 248 / 0.2); }
+
+    /* The app's name over its icon, the way the Dock labels one. */
+    .tip {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 14px);
+      z-index: 2;
+      padding: 4px 10px 5px;
+      border: 0.5px solid rgb(0 0 0 / 0.14);
+      border-radius: 7px;
+      background: rgb(236 236 236 / 0.86);
+      -webkit-backdrop-filter: blur(20px) saturate(1.8);
+      backdrop-filter: blur(20px) saturate(1.8);
+      box-shadow: 0 6px 16px rgb(0 0 0 / 0.12), 0 1px 2px rgb(0 0 0 / 0.08);
+      color: #1d1d1f;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.25;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, 4px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+    .tip::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 14px;
+      height: 7px;
+      margin-left: -7px;
+      background: rgb(236 236 236 / 0.86);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+    .app:hover .tip, .app:focus-visible .tip {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 56px;
+      padding: 0 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+    footer p { margin: 0; }
+    footer a {
+      position: relative;
+      z-index: 6; /* above the warp, so it stays clickable */
+      color: inherit;
+      text-decoration: underline;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+    footer a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+    /* While warping, the name is drawn bent on the patch; the link stays here to be clicked. */
+    .warping footer a { color: transparent; }
+
+    /* The patch of warped space around the name, sized and placed by the script. */
+    .lens {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      pointer-events: none;
+      visibility: hidden;
+    }
+    .warping .lens { visibility: visible; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Yaosamo</h1>
+    <ul class="apps">
+      <li>
+        <a class="app" href="https://nothing.yaosamo.com" aria-label="Nothing">
+          <span class="icon nothing" aria-hidden="true">
+            <img src="/images/apps/nothing-art.png" alt="" />
+            <span class="bar"></span>
+          </span>
+          <span class="tip" aria-hidden="true">Nothing</span>
+        </a>
+      </li>
+      <li>
+        <a class="app" href="https://dots.yaosamo.com" aria-label="Dots &amp; Clouds">
+          <span class="icon dots" aria-hidden="true">
+            <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+            <img class="sun" src="/images/apps/dots-sun.svg" alt="" />
+            <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+          </span>
+          <span class="tip" aria-hidden="true">Dots &amp; Clouds</span>
+        </a>
+      </li>
+      <li>
+        <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
+          <span class="icon appmarks" aria-hidden="true">
+            <span class="card yellow"></span>
+            <span class="card white"></span>
+          </span>
+          <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
+        </span>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <p><span class="lead">Applications services and games designed by </span><a href="https://design.yaosamo.com">Yaosamo</a></p>
+  </footer>
+  <canvas class="lens" aria-hidden="true"></canvas>
+
+  <script>
+  (() => {
+    // Hovering the name warps the space right around it, like light bending round a mass: the name
+    // and the text beside it curve in, a faint dot grid shows the bend, and the edges pick up a rainbow.
+    // Only a patch around the name moves; it fades back to flat well before the edge of the patch.
+    const link = document.querySelector("footer a");
+    const lead = document.querySelector("footer .lead");
+    const lens = document.querySelector(".lens");
+    const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const gl = !calm && matchMedia("(hover: hover)").matches &&
+      lens.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: false });
+    if (!gl) return;
+
+    const REACH_X = 190; // half the patch, CSS pixels
+    const REACH_Y = 90;
+    const RING = 38; // Einstein radius at full strength, CSS pixels
+
+    const vertex = "attribute vec2 corner; void main() { gl_Position = vec4(corner, 0.0, 1.0); }";
+    const fragment = `
+      precision highp float;
+      uniform sampler2D uPage;
+      uniform vec2 uRes;     // the patch, device pixels
+      uniform vec2 uOrigin;  // the patch's top left on the page, device pixels (keeps the grid still)
+      uniform float uMass;   // 0 → 1 as the warp comes in
+      uniform float uRing;   // Einstein radius at full strength, device pixels
+      uniform float uGrid;   // dot spacing, device pixels
+      uniform float uDot;    // dot radius, device pixels
+      uniform float uTime;
+
+      // Point-mass lens, softened at the core: each pixel shows the light from where it was before
+      // the mass pulled it round, with a slow twist. Inside the ring the view flips over.
+      vec2 bend(vec2 p, vec2 c, float ring) {
+        vec2 d = p - c;
+        float r2 = dot(d, d);
+        float twist = uMass * (0.45 + 0.15 * sin(uTime * 0.9)) * ring * ring / (r2 + ring * ring);
+        d = mat2(cos(twist), sin(twist), -sin(twist), cos(twist)) * d;
+        float soft = ring * 0.3;
+        return c + d - d * ring * ring / (r2 + soft * soft);
+      }
+
+      vec3 page(vec2 q, float grid) {
+        vec2 uv = q / uRes;
+        vec3 col = vec3(0.992);
+        if (uv.x >= 0.0 && uv.y >= 0.0 && uv.x <= 1.0 && uv.y <= 1.0) col = texture2D(uPage, uv).rgb;
+        vec2 g = mod(q + uOrigin, uGrid) - 0.5 * uGrid;
+        float dotMask = 1.0 - smoothstep(uDot * 0.6, uDot * 1.4, length(g));
+        return mix(col, vec3(0.0), dotMask * 0.18 * grid);
+      }
+
+      void main() {
+        vec2 p = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y);
+        vec2 c = 0.5 * uRes;
+        // How far into the patch: 0 at the name, 1 at the patch's oval edge.
+        float edge = length((p - c) / c);
+        float hold = 1.0 - smoothstep(0.3, 0.9, edge);  // how much the lens acts here
+        float show = 1.0 - smoothstep(0.75, 1.0, edge); // how much of the patch shows
+        float ring = uRing * uMass;
+        float grid = uMass * hold;
+        // Each colour bends a touch differently, which leaves a rainbow at the edges.
+        vec3 col = vec3(
+          page(mix(p, bend(p, c, ring * 1.04), hold), grid).r,
+          page(mix(p, bend(p, c, ring), hold), grid).g,
+          page(mix(p, bend(p, c, ring * 0.96), hold), grid).b);
+        float alpha = show * min(1.0, uMass * 4.0);
+        gl_FragColor = vec4(col * alpha, alpha);
+      }`;
+    const compile = (type, source) => {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      return gl.getShaderParameter(shader, gl.COMPILE_STATUS) ? shader : null;
+    };
+    const vs = compile(gl.VERTEX_SHADER, vertex);
+    const fs = compile(gl.FRAGMENT_SHADER, fragment);
+    if (!vs || !fs) return;
+    const program = gl.createProgram();
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
+    gl.useProgram(program);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const corner = gl.getAttribLocation(program, "corner");
+    gl.enableVertexAttribArray(corner);
+    gl.vertexAttribPointer(corner, 2, gl.FLOAT, false, 0, 0);
+    const texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    const u = {};
+    for (const name of ["uRes", "uOrigin", "uMass", "uRing", "uGrid", "uDot", "uTime"]) u[name] = gl.getUniformLocation(program, name);
+
+    // Copies what sits under the patch (the background, the text and the underlined name) and
+    // places the patch over the name.
+    let dpr = 1;
+    let origin = { x: 0, y: 0 };
+    const copyPatch = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const box = link.getBoundingClientRect();
+      origin = { x: box.left + box.width / 2 - REACH_X, y: box.top + box.height / 2 - REACH_Y };
+      Object.assign(lens.style, {
+        left: `${origin.x}px`,
+        top: `${origin.y}px`,
+        width: `${REACH_X * 2}px`,
+        height: `${REACH_Y * 2}px`,
+      });
+      const patch = document.createElement("canvas");
+      patch.width = lens.width = Math.round(REACH_X * 2 * dpr);
+      patch.height = lens.height = Math.round(REACH_Y * 2 * dpr);
+      const ctx = patch.getContext("2d");
+      ctx.scale(dpr, dpr);
+      ctx.fillStyle = "#fdfdfd";
+      ctx.fillRect(0, 0, REACH_X * 2, REACH_Y * 2);
+      const range = document.createRange();
+      range.selectNodeContents(lead);
+      const text = range.getBoundingClientRect();
+      ctx.font = `400 16px ${getComputedStyle(lead).fontFamily}`;
+      ctx.fillStyle = "#000";
+      const m = ctx.measureText(lead.textContent);
+      const ascent = m.fontBoundingBoxAscent || 15.5;
+      const descent = m.fontBoundingBoxDescent || 3.9;
+      const baseline = text.top - origin.y + (text.height - ascent - descent) / 2 + ascent;
+      ctx.fillText(lead.textContent, text.left - origin.x, baseline);
+      const name = link.getBoundingClientRect();
+      ctx.fillText(link.textContent, name.left - origin.x, baseline);
+      ctx.fillRect(name.left - origin.x, baseline + 1.5, name.width, 1);
+      gl.viewport(0, 0, lens.width, lens.height);
+      gl.bindTexture(gl.TEXTURE_2D, texture);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, patch);
+    };
+
+    let mass = 0;
+    let target = 0;
+    let frame = 0;
+    let last = 0;
+    const draw = (now) => {
+      frame = 0;
+      const dt = last ? Math.min(now - last, 50) : 16;
+      last = now;
+      // Eases toward the target: quick to pull in, a little slower to let go.
+      mass += (target - mass) * (1 - Math.exp(-dt / (target ? 150 : 120)));
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.uniform2f(u.uRes, lens.width, lens.height);
+      gl.uniform2f(u.uOrigin, (origin.x + window.scrollX) * dpr, (origin.y + window.scrollY) * dpr);
+      gl.uniform1f(u.uMass, mass);
+      gl.uniform1f(u.uRing, RING * dpr);
+      gl.uniform1f(u.uGrid, 14 * dpr);
+      gl.uniform1f(u.uDot, 0.9 * dpr);
+      gl.uniform1f(u.uTime, now / 1000);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      if (!target && mass < 0.004) {
+        document.body.classList.remove("warping");
+        last = 0;
+        return;
+      }
+      frame = requestAnimationFrame(draw);
+    };
+    const warp = (on) => {
+      target = on ? 1 : 0;
+      if (on && !document.body.classList.contains("warping")) {
+        copyPatch();
+        document.body.classList.add("warping");
+      }
+      if (!frame) frame = requestAnimationFrame(draw);
+    };
+    link.addEventListener("mouseenter", () => warp(true));
+    link.addEventListener("mouseleave", () => warp(false));
+    link.addEventListener("focus", () => warp(true));
+    link.addEventListener("blur", () => warp(false));
+    addEventListener("resize", () => { if (document.body.classList.contains("warping")) copyPatch(); });
+  })();
+  </script>
+</body>
+</html>

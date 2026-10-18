@@ -5,8 +5,8 @@ const HOST_REWRITES = {
   "lilthings.yaosamo.com": "/things/lilthings",
 };
 
-// The portfolio moved to design.yaosamo.com; the apex now shows a
-// "moved" note and sends every other path to the same path there.
+// The portfolio moved to design.yaosamo.com; the apex now shows the apps
+// page and sends every other path to the same path there.
 const MOVED_HOSTS = ["yaosamo.com", "www.yaosamo.com"];
 const PORTFOLIO_ORIGIN = "https://design.yaosamo.com";
 
@@ -17,7 +17,7 @@ export function middleware(request) {
   if (MOVED_HOSTS.includes(host)) {
     if (pathname === "/" || pathname === "") {
       const url = request.nextUrl.clone();
-      url.pathname = "/moved.html";
+      url.pathname = "/home.html";
       return NextResponse.rewrite(url);
     }
     return NextResponse.redirect(
