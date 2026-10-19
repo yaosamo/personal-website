@@ -19,9 +19,15 @@
       --bg: #fdfdfd;
       --text: #000000;
       --focus: #3c7bff;
-      /* Three 150px icons 112px apart, as in the design; smaller on narrow screens. */
-      --icon: min(150px, calc((100vw - 32px) / 4.5));
-      --gap: calc(var(--icon) * 0.7467);
+      /* 150px icons, as in the design; smaller on narrow screens so the Dock still fits. */
+      --icon-size: 88; /* the app icons, in CSS pixels; everything in the Dock scales with them */
+      --dock-pad: 54; /* the Dock's padding, in design pixels (an icon is 150) */
+      --dock-grow: 1.6; /* magnification: how big the icon under the pointer gets, × its size */
+      --dock-reach: 2.5; /* how many icons either side the magnification spreads over */
+      --dock-lift: 0.12; /* how far a grown icon rises off the floor, as a share of what it grew */
+      --dock-speed: 70; /* how long the icons take to catch up, in ms; 0 is instant */
+      --dock-ease: smooth; /* smooth, ease (in-out, no overshoot), spring (overshoots) or linear */
+      --icon: min(calc(var(--icon-size) * 1px), calc((100vw - 32px) / (3.7 + var(--dock-pad) / 75)));
       --u: calc(var(--icon) / 150); /* one design pixel at the icon's current size */
       color-scheme: light;
     }
@@ -50,18 +56,58 @@
       justify-content: center;
       padding: 96px 16px;
     }
+
+    /* The Dock, in frosted glass the way macOS draws it: a light tint, a bright rim that catches
+       the light top left, a hairline to hold the edge on a white page, a soft shadow. It keeps its
+       height; icons grow up out of it as the pointer passes. Gaps, padding and corners are
+       measured off the macOS Dock: 49, 54 and 55 for a 150 icon. The script redraws it with Apple's continuous
+       corners (.shaped); until then, or without it, it's a plain rounded box. */
+    .dock {
+      --pad: calc(var(--dock-pad) * var(--u));
+      position: relative;
+      border-radius: calc(44 * var(--u));
+      background: linear-gradient(rgb(255 255 255 / 0.62), rgb(244 244 247 / 0.5));
+      -webkit-backdrop-filter: blur(24px) saturate(1.8);
+      backdrop-filter: blur(24px) saturate(1.8);
+      box-shadow:
+        inset 0 1px 0 rgb(255 255 255 / 0.9),
+        0 0 0 0.5px rgb(0 0 0 / 0.09),
+        0 2px 6px rgb(0 0 0 / 0.05),
+        0 18px 40px -12px rgb(0 0 0 / 0.2);
+    }
+    .dock.shaped {
+      background: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      box-shadow: none;
+    }
+    .dock-shape {
+      position: absolute;
+      inset: 0;
+      display: none;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.05)) drop-shadow(0 14px 22px rgb(0 0 0 / 0.12));
+    }
+    .shaped .dock-shape { display: block; }
     .apps {
+      position: relative;
       display: flex;
-      gap: var(--gap);
+      align-items: flex-end;
+      gap: calc(49 * var(--u));
+      height: calc(var(--icon) + 2 * var(--pad));
       margin: 0;
-      padding: 0;
+      padding: var(--pad);
       list-style: none;
     }
     .app {
+      --u: calc(var(--icon) * var(--s, 1) / 150);
       position: relative;
       display: block;
-      width: var(--icon);
-      height: var(--icon);
+      width: calc(var(--icon) * var(--s, 1));
+      height: calc(var(--icon) * var(--s, 1));
+      margin-bottom: calc(var(--icon) * (var(--s, 1) - 1) * var(--dock-lift)); /* a grown icon lifts off the floor a little */
       color: inherit;
       outline: none;
     }
@@ -70,9 +116,29 @@
       inset: 0;
       overflow: hidden;
       border-radius: calc(32 * var(--u));
+      box-shadow: 0 calc(1 * var(--u)) calc(2 * var(--u)) rgb(0 0 0 / 0.04), 0 calc(6 * var(--u)) calc(20 * var(--u)) rgb(0 0 0 / 0.06);
     }
     .icon img { position: absolute; display: block; max-width: none; }
     .app:focus-visible .icon { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--focus); }
+    /* With the script, icons take the app-icon squircle (--squircle). A mask would clip a box
+       shadow, so the shadow comes from a squircle of the same shape just behind the icon. */
+    .squircles .icon {
+      border-radius: 0;
+      box-shadow: none;
+      -webkit-mask: var(--squircle) center / 100% 100% no-repeat;
+      mask: var(--squircle) center / 100% 100% no-repeat;
+    }
+    .squircles .app::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--squircle) center / 100% 100% no-repeat;
+      filter: drop-shadow(0 calc(1 * var(--u)) calc(2 * var(--u)) rgb(0 0 0 / 0.04)) drop-shadow(0 calc(6 * var(--u)) calc(20 * var(--u)) rgb(0 0 0 / 0.06));
+    }
+    .squircles .app:focus-visible::before {
+      transform: scale(1.07);
+      filter: drop-shadow(0 0 1px var(--focus)) drop-shadow(0 0 1px var(--focus));
+    }
 
     /* Nothing: the black-hole render behind an orange cursor. */
     .nothing { background: #000; }
@@ -110,24 +176,24 @@
     .card.yellow { left: calc(35 * var(--u)); top: calc(43 * var(--u)); --c: rgb(255 238 0 / 0.9); --body: rgb(255 238 0 / 0.2); }
     .card.white { left: calc(64 * var(--u)); top: calc(64 * var(--u)); --c: rgb(248 248 248 / 0.9); --body: rgb(248 248 248 / 0.2); }
 
-    /* The app's name over its icon, the way the Dock labels one. */
+    /* The app's name over the Dock, the way macOS labels one: a soft pill with a
+       tail that curves out of it, rather than a hard triangle. Pill and tail share one flat
+       fill, so they read as one shape. */
     .tip {
+      --fill: #e9e9eb;
       position: absolute;
       left: 50%;
-      bottom: calc(100% + 14px);
+      /* Just above the Dock's top edge, or the icon's when it has grown past it. */
+      bottom: calc(100% + max(16px, var(--pad) - var(--icon) * (var(--s, 1) - 1) * (1 + var(--dock-lift)) + 12px));
       z-index: 2;
-      padding: 4px 10px 5px;
-      border: 0.5px solid rgb(0 0 0 / 0.14);
-      border-radius: 7px;
-      background: rgb(236 236 236 / 0.86);
-      -webkit-backdrop-filter: blur(20px) saturate(1.8);
-      backdrop-filter: blur(20px) saturate(1.8);
-      box-shadow: 0 6px 16px rgb(0 0 0 / 0.12), 0 1px 2px rgb(0 0 0 / 0.08);
-      color: #1d1d1f;
+      padding: 4px 15px;
+      border-radius: 10px;
+      background: var(--fill);
+      color: #2a2a2c;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
       font-size: 13px;
-      font-weight: 500;
-      line-height: 1.25;
+      font-weight: 400;
+      line-height: 16px;
       white-space: nowrap;
       pointer-events: none;
       opacity: 0;
@@ -139,11 +205,12 @@
       position: absolute;
       left: 50%;
       top: 100%;
-      width: 14px;
-      height: 7px;
-      margin-left: -7px;
-      background: rgb(236 236 236 / 0.86);
-      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      width: 34px;
+      height: 8px;
+      margin-left: -17px;
+      margin-top: -0.5px; /* tucks under the pill so no seam shows between them */
+      background: var(--fill);
+      clip-path: path("M0 0 C9 0 12.5 1.4 15 5.4 Q17 8.6 19 5.4 C21.5 1.4 25 0 34 0 Z"); /* flares wide into the pill */
     }
     .app:hover .tip, .app:focus-visible .tip {
       opacity: 1;
@@ -169,10 +236,10 @@
       text-decoration-skip-ink: none;
     }
     footer a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
-    /* While warping, the name is drawn bent on the patch; the link stays here to be clicked. */
+    /* While warping, the line is drawn bent on the patch; the link stays here to be clicked. */
     .warping footer a { color: transparent; }
 
-    /* The patch of warped space around the name, sized and placed by the script. */
+    /* The patch of warped space around the line, sized and placed by the script. */
     .lens {
       position: fixed;
       left: 0;
@@ -187,47 +254,202 @@
 <body>
   <main>
     <h1 class="visually-hidden">Yaosamo</h1>
-    <ul class="apps">
-      <li>
-        <a class="app" href="https://nothing.yaosamo.com" aria-label="Nothing">
-          <span class="icon nothing" aria-hidden="true">
-            <img src="/images/apps/nothing-art.png" alt="" />
-            <span class="bar"></span>
+    <nav class="dock" aria-label="Apps">
+      <svg class="dock-shape" aria-hidden="true">
+        <defs>
+          <linearGradient id="dock-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+            <stop offset="1" stop-color="#f4f4f7" stop-opacity="0.82" />
+          </linearGradient>
+          <linearGradient id="dock-rim" x1="0" y1="0" x2="0.45" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity="1" />
+            <stop offset="0.3" stop-color="#fff" stop-opacity="0.25" />
+            <stop offset="0.55" stop-color="#fff" stop-opacity="0" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0.7" />
+          </linearGradient>
+        </defs>
+        <path class="edge" fill="url(#dock-fill)" stroke="rgb(0 0 0 / 0.09)" stroke-width="1" />
+        <path class="rim" fill="none" stroke="url(#dock-rim)" stroke-width="1" />
+      </svg>
+      <ul class="apps">
+        <li>
+          <a class="app" href="https://nothing.yaosamo.com" aria-label="Nothing">
+            <span class="icon nothing" aria-hidden="true">
+              <img src="/images/apps/nothing-art.png" alt="" />
+              <span class="bar"></span>
+            </span>
+            <span class="tip" aria-hidden="true">Nothing</span>
+          </a>
+        </li>
+        <li>
+          <a class="app" href="https://dots.yaosamo.com" aria-label="Dots &amp; Clouds">
+            <span class="icon dots" aria-hidden="true">
+              <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+              <img class="sun" src="/images/apps/dots-sun.svg" alt="" />
+              <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+            </span>
+            <span class="tip" aria-hidden="true">Dots &amp; Clouds</span>
+          </a>
+        </li>
+        <li>
+          <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
+            <span class="icon appmarks" aria-hidden="true">
+              <span class="card yellow"></span>
+              <span class="card white"></span>
+            </span>
+            <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
           </span>
-          <span class="tip" aria-hidden="true">Nothing</span>
-        </a>
-      </li>
-      <li>
-        <a class="app" href="https://dots.yaosamo.com" aria-label="Dots &amp; Clouds">
-          <span class="icon dots" aria-hidden="true">
-            <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
-            <img class="sun" src="/images/apps/dots-sun.svg" alt="" />
-            <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
-          </span>
-          <span class="tip" aria-hidden="true">Dots &amp; Clouds</span>
-        </a>
-      </li>
-      <li>
-        <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
-          <span class="icon appmarks" aria-hidden="true">
-            <span class="card yellow"></span>
-            <span class="card white"></span>
-          </span>
-          <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
-        </span>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </nav>
   </main>
   <footer>
-    <p><span class="lead">Applications services and games designed by </span><a href="https://design.yaosamo.com">Yaosamo</a></p>
+    <p><span class="lead">Applications, services and games designed by </span><a href="https://design.yaosamo.com" target="_blank" rel="noopener">Yaosamo</a></p>
   </footer>
   <canvas class="lens" aria-hidden="true"></canvas>
 
   <script>
   (() => {
-    // Hovering the name warps the space right around it, like light bending round a mass: the name
-    // and the text beside it curve in, a faint dot grid shows the bend, and the edges pick up a rainbow.
-    // Only a patch around the name moves; it fades back to flat well before the edge of the patch.
+    // Apple's continuous corners, the "squircle": instead of a quarter circle meeting a straight
+    // edge, the curve starts earlier and eases in, so there's no kink where they meet. This is
+    // Figma's corner smoothing (60% is what iOS and macOS use), as an SVG path.
+    const corner = (radius, smoothing, budget) => {
+      const r = Math.min(radius, budget);
+      let p = (1 + smoothing) * r;
+      if (p > budget) { smoothing = Math.max(0, budget / r - 1); p = budget; }
+      const rad = (deg) => (deg * Math.PI) / 180;
+      const arcMeasure = 90 * (1 - smoothing);
+      const arc = Math.sin(rad(arcMeasure / 2)) * r * Math.SQRT2;
+      const alpha = (90 - arcMeasure) / 2;
+      const beta = 45 * smoothing;
+      const c = r * Math.tan(rad(alpha / 2)) * Math.cos(rad(beta));
+      const d = c * Math.tan(rad(beta));
+      const b = (p - arc - c - d) / 3;
+      return { r, p, arc, a: 2 * b, b, c, d };
+    };
+    const squircle = (w, h, radius, inset = 0, smoothing = 0.6) => {
+      const x = inset, y = inset;
+      w -= 2 * inset;
+      h -= 2 * inset;
+      const { r, p, arc, a, b, c, d } = corner(Math.max(0, radius - inset), smoothing, Math.min(w, h) / 2);
+      const n = (v) => +v.toFixed(3);
+      const e = a + b + c;
+      return `M${n(x + w - p)} ${n(y)}` +
+        `c${n(a)} 0 ${n(a + b)} 0 ${n(e)} ${n(d)}a${n(r)} ${n(r)} 0 0 1 ${n(arc)} ${n(arc)}c${n(d)} ${n(c)} ${n(d)} ${n(b + c)} ${n(d)} ${n(e)}` +
+        `L${n(x + w)} ${n(y + h - p)}` +
+        `c0 ${n(a)} 0 ${n(a + b)} ${n(-d)} ${n(e)}a${n(r)} ${n(r)} 0 0 1 ${n(-arc)} ${n(arc)}c${n(-c)} ${n(d)} ${n(-(b + c))} ${n(d)} ${n(-e)} ${n(d)}` +
+        `L${n(x + p)} ${n(y + h)}` +
+        `c${n(-a)} 0 ${n(-(a + b))} 0 ${n(-e)} ${n(-d)}a${n(r)} ${n(r)} 0 0 1 ${n(-arc)} ${n(-arc)}c${n(-d)} ${n(-c)} ${n(-d)} ${n(-(b + c))} ${n(-d)} ${n(-e)}` +
+        `L${n(x)} ${n(y + p)}` +
+        `c0 ${n(-a)} 0 ${n(-(a + b))} ${n(d)} ${n(-e)}a${n(r)} ${n(r)} 0 0 1 ${n(arc)} ${n(-arc)}c${n(c)} ${n(-d)} ${n(b + c)} ${n(-d)} ${n(e)} ${n(-d)}Z`;
+    };
+
+    // App icons: one squircle, 150 across with a 33.5 radius (Apple's 22.37%), used as a mask.
+    const ICON_RADIUS = 33.5 / 150;
+    const icon = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><path fill='white' d='${squircle(150, 150, 150 * ICON_RADIUS)}'/></svg>`;
+    document.documentElement.style.setProperty("--squircle", `url("data:image/svg+xml,${encodeURIComponent(icon)}")`);
+    document.documentElement.classList.add("squircles");
+
+    // The Dock: redrawn whenever it changes size (it widens as icons swell). Its corners are
+    // tighter than the icons' plus the padding: 55 for a 150 icon, as on the Mac.
+    const DOCK_RADIUS = 55 / 150;
+    const dock = document.querySelector(".dock");
+    const list = dock.querySelector(".apps");
+    const svg = dock.querySelector(".dock-shape");
+    const edge = svg.querySelector(".edge");
+    const rim = svg.querySelector(".rim");
+    const draw = () => {
+      const w = dock.offsetWidth;
+      const h = dock.offsetHeight;
+      const pad = parseFloat(getComputedStyle(list).paddingTop);
+      const radius = (h - 2 * pad) * DOCK_RADIUS;
+      svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      edge.setAttribute("d", squircle(w, h, radius));
+      rim.setAttribute("d", squircle(w, h, radius, 1));
+    };
+    draw();
+    new ResizeObserver(draw).observe(dock);
+    dock.classList.add("shaped");
+  })();
+
+  (() => {
+    // Dock magnification, as macOS does it: the icon under the pointer swells (--dock-grow), and
+    // the swell falls off over a few icons either side (--dock-reach); the gaps widen with the icons,
+    // so the Dock stretches, staying centred. Distances are measured from where the icons sit at
+    // rest, so growing doesn't feed back.
+    const dock = document.querySelector(".dock");
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(hover: hover)").matches) return;
+    const apps = [...dock.querySelectorAll(".app")];
+    const scale = apps.map(() => 1);
+    const speed = apps.map(() => 0); // how fast each scale is changing, a second
+    const list = dock.querySelector(".apps");
+    let pointer = null;
+    let frame = 0;
+    let last = 0;
+    // Moves icon i's scale toward want. The target moves with the pointer, so these are motions
+    // that pick up from wherever they are rather than tweens that would restart every frame.
+    // The springs take about `time` to settle.
+    const approach = (i, want, dt, time, ease) => {
+      if (time <= 0) { scale[i] = want; speed[i] = 0; return; }
+      if (ease === "linear") {
+        const step = (dt / time) * Math.max(1, Math.abs(want - 1)); // the full swing in `time`
+        scale[i] += Math.max(-step, Math.min(step, want - scale[i]));
+        return;
+      }
+      if (ease === "ease" || ease === "spring") {
+        const omega = (ease === "spring" ? 7 : 6) / time;
+        const damping = ease === "spring" ? 0.4 : 1; // 1 is critical: no overshoot
+        for (let left = dt; left > 0; left -= 0.004) {
+          const h = Math.min(left, 0.004);
+          speed[i] += (omega * omega * (want - scale[i]) - 2 * damping * omega * speed[i]) * h;
+          scale[i] += speed[i] * h;
+        }
+        return;
+      }
+      scale[i] += (want - scale[i]) * (1 - Math.exp(-dt / time)); // smooth: an exponential ease-out
+    };
+    const tick = (now) => {
+      frame = 0;
+      const dt = last ? Math.min(now - last, 50) : 16;
+      last = now;
+      const root = getComputedStyle(document.documentElement);
+      const grow = parseFloat(root.getPropertyValue("--dock-grow")) - 1;
+      const reach = parseFloat(root.getPropertyValue("--dock-reach")); // in icons, with their gaps
+      const time = Math.max(0, parseFloat(root.getPropertyValue("--dock-speed")) || 0) / 1000;
+      const ease = root.getPropertyValue("--dock-ease").trim();
+      const icon = parseFloat(getComputedStyle(apps[0]).width) / scale[0];
+      const style = getComputedStyle(list);
+      const gap = parseFloat(style.columnGap) || 0;
+      const box = dock.getBoundingClientRect();
+      const mid = box.left + box.width / 2;
+      let settled = true;
+      apps.forEach((app, i) => {
+        const rest = mid + (i - (apps.length - 1) / 2) * (icon + gap);
+        const away = pointer === null ? reach : Math.abs(pointer - rest) / (icon + gap);
+        const want = away >= reach ? 1 : 1 + grow * (1 + Math.cos((Math.PI * away) / reach)) / 2;
+        approach(i, want, dt / 1000, time, ease);
+        if (Math.abs(want - scale[i]) > 0.001 || Math.abs(speed[i]) > 0.01) settled = false;
+        else { scale[i] = want; speed[i] = 0; }
+        app.style.setProperty("--s", scale[i].toFixed(4));
+      });
+      // Each gap grows with the icons either side of it.
+      apps.forEach((app, i) => {
+        if (i) app.parentElement.style.marginLeft = `${(gap * ((scale[i - 1] + scale[i]) / 2 - 1)).toFixed(2)}px`;
+      });
+      if (settled) { last = 0; return; }
+      frame = requestAnimationFrame(tick);
+    };
+    const go = () => { if (!frame) frame = requestAnimationFrame(tick); };
+    dock.addEventListener("pointermove", (e) => { pointer = e.clientX; go(); });
+    dock.addEventListener("pointerleave", () => { pointer = null; go(); });
+  })();
+
+  (() => {
+    // Hovering the name bends the space around the footer line, like light round a mass: the
+    // text curves in and the edges pick up a rainbow. The mass follows the pointer on a spring,
+    // so it trails and wobbles, until the pointer leaves the patch; the bend fades to flat well
+    // before the patch's edge.
+    const line = document.querySelector("footer p");
     const link = document.querySelector("footer a");
     const lead = document.querySelector("footer .lead");
     const lens = document.querySelector(".lens");
@@ -236,56 +458,58 @@
       lens.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: false });
     if (!gl) return;
 
-    const REACH_X = 190; // half the patch, CSS pixels
-    const REACH_Y = 90;
+    const MARGIN_X = 150; // patch beyond the ends of the line, CSS pixels
+    const MARGIN_Y = 140; // patch above and below the line's middle
+    const FADE = 90; // the bend fades to flat over this much of the patch's edge
     const RING = 38; // Einstein radius at full strength, CSS pixels
 
     const vertex = "attribute vec2 corner; void main() { gl_Position = vec4(corner, 0.0, 1.0); }";
     const fragment = `
       precision highp float;
       uniform sampler2D uPage;
-      uniform vec2 uRes;     // the patch, device pixels
-      uniform vec2 uOrigin;  // the patch's top left on the page, device pixels (keeps the grid still)
-      uniform float uMass;   // 0 → 1 as the warp comes in
-      uniform float uRing;   // Einstein radius at full strength, device pixels
-      uniform float uGrid;   // dot spacing, device pixels
-      uniform float uDot;    // dot radius, device pixels
-      uniform float uTime;
+      uniform vec2 uRes;      // the patch, device pixels
+      uniform float uScale;   // device pixels per CSS pixel
+      uniform float uMass;    // 0 → 1 as the warp comes in
+      uniform float uRing;    // Einstein radius at full strength, device pixels
+      uniform float uFade;    // width of the flat-out edge, device pixels
+      uniform float uTime;    // seconds
+      uniform vec2 uSpring;   // where the mass is: chasing the pointer on a spring, device pixels
+      uniform vec2 uVel;      // its velocity, device pixels a second
 
-      // Point-mass lens, softened at the core: each pixel shows the light from where it was before
-      // the mass pulled it round, with a slow twist. Inside the ring the view flips over.
-      vec2 bend(vec2 p, vec2 c, float ring) {
-        vec2 d = p - c;
-        float r2 = dot(d, d);
-        float twist = uMass * (0.45 + 0.15 * sin(uTime * 0.9)) * ring * ring / (r2 + ring * ring);
-        d = mat2(cos(twist), sin(twist), -sin(twist), cos(twist)) * d;
+      mat2 rot(float a) { float c = cos(a), s = sin(a); return mat2(c, s, -s, c); }
+
+      // A point mass, softened at the core: each pixel shows the light from where it was before the
+      // mass pulled it round, with a slow twist. The ring breathes and swells a little while the
+      // mass moves. Inside the ring the view flips over. Returns the offset to that light.
+      vec2 bend(vec2 p) {
+        vec2 d0 = p - uSpring;
+        float r2 = dot(d0, d0);
+        float rush = min(length(uVel) / (2400.0 * uScale), 0.22);
+        float ring = uRing * uMass * (1.0 + 0.08 * sin(uTime * 2.3) + rush);
+        float near = ring * ring / (r2 + ring * ring);
+        float twist = uMass * (0.5 + 0.25 * sin(uTime * 0.9)) * near * near; // dies off fast, so the line doesn't tilt
+        vec2 d = rot(twist) * d0;
         float soft = ring * 0.3;
-        return c + d - d * ring * ring / (r2 + soft * soft);
+        return d - d0 - d * ring * ring / (r2 + soft * soft + 0.0001);
       }
 
-      vec3 page(vec2 q, float grid) {
+      vec3 page(vec2 q) {
         vec2 uv = q / uRes;
-        vec3 col = vec3(0.992);
-        if (uv.x >= 0.0 && uv.y >= 0.0 && uv.x <= 1.0 && uv.y <= 1.0) col = texture2D(uPage, uv).rgb;
-        vec2 g = mod(q + uOrigin, uGrid) - 0.5 * uGrid;
-        float dotMask = 1.0 - smoothstep(uDot * 0.6, uDot * 1.4, length(g));
-        return mix(col, vec3(0.0), dotMask * 0.18 * grid);
+        if (uv.x < 0.0 || uv.y < 0.0 || uv.x > 1.0 || uv.y > 1.0) return vec3(0.992);
+        return texture2D(uPage, uv).rgb;
       }
 
       void main() {
         vec2 p = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y);
-        vec2 c = 0.5 * uRes;
-        // How far into the patch: 0 at the name, 1 at the patch's oval edge.
-        float edge = length((p - c) / c);
-        float hold = 1.0 - smoothstep(0.3, 0.9, edge);  // how much the lens acts here
-        float show = 1.0 - smoothstep(0.75, 1.0, edge); // how much of the patch shows
-        float ring = uRing * uMass;
-        float grid = uMass * hold;
+        // How deep into the patch, from its rounded edge: the bend fades out over uFade.
+        vec2 h = 0.5 * uRes;
+        vec2 e = abs(p - h) - h + uFade;
+        float depth = uFade - length(max(e, 0.0)) - min(max(e.x, e.y), 0.0);
+        float hold = smoothstep(0.0, uFade, depth);
+        float show = smoothstep(0.0, 4.0 * uScale, depth);
+        vec2 off = bend(p) * hold;
         // Each colour bends a touch differently, which leaves a rainbow at the edges.
-        vec3 col = vec3(
-          page(mix(p, bend(p, c, ring * 1.04), hold), grid).r,
-          page(mix(p, bend(p, c, ring), hold), grid).g,
-          page(mix(p, bend(p, c, ring * 0.96), hold), grid).b);
+        vec3 col = vec3(page(p + off * 1.05).r, page(p + off).g, page(p + off * 0.95).b);
         float alpha = show * min(1.0, uMass * 4.0);
         gl_FragColor = vec4(col * alpha, alpha);
       }`;
@@ -316,30 +540,33 @@
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     const u = {};
-    for (const name of ["uRes", "uOrigin", "uMass", "uRing", "uGrid", "uDot", "uTime"]) u[name] = gl.getUniformLocation(program, name);
+    for (const name of ["uRes", "uScale", "uMass", "uRing", "uFade", "uTime", "uSpring", "uVel"]) u[name] = gl.getUniformLocation(program, name);
 
-    // Copies what sits under the patch (the background, the text and the underlined name) and
-    // places the patch over the name.
+    // Copies what sits under the patch (the background and the line, name underlined) and
+    // places the patch over the line.
     let dpr = 1;
     let origin = { x: 0, y: 0 };
+    let size = { w: 0, h: 0 };
     const copyPatch = () => {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const box = link.getBoundingClientRect();
-      origin = { x: box.left + box.width / 2 - REACH_X, y: box.top + box.height / 2 - REACH_Y };
+      const range = document.createRange();
+      range.selectNodeContents(line);
+      const box = range.getBoundingClientRect();
+      size = { w: Math.round(box.width + MARGIN_X * 2), h: MARGIN_Y * 2 };
+      origin = { x: box.left + box.width / 2 - size.w / 2, y: box.top + box.height / 2 - MARGIN_Y };
       Object.assign(lens.style, {
         left: `${origin.x}px`,
         top: `${origin.y}px`,
-        width: `${REACH_X * 2}px`,
-        height: `${REACH_Y * 2}px`,
+        width: `${size.w}px`,
+        height: `${size.h}px`,
       });
       const patch = document.createElement("canvas");
-      patch.width = lens.width = Math.round(REACH_X * 2 * dpr);
-      patch.height = lens.height = Math.round(REACH_Y * 2 * dpr);
+      patch.width = lens.width = Math.round(size.w * dpr);
+      patch.height = lens.height = Math.round(size.h * dpr);
       const ctx = patch.getContext("2d");
       ctx.scale(dpr, dpr);
       ctx.fillStyle = "#fdfdfd";
-      ctx.fillRect(0, 0, REACH_X * 2, REACH_Y * 2);
-      const range = document.createRange();
+      ctx.fillRect(0, 0, size.w, size.h);
       range.selectNodeContents(lead);
       const text = range.getBoundingClientRect();
       ctx.font = `400 16px ${getComputedStyle(lead).fontFamily}`;
@@ -357,25 +584,43 @@
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, patch);
     };
 
+    // The pointer, in CSS pixels on the patch, held inside the part that bends fully; and the
+    // spring chasing it (a little loose, so it overshoots and wobbles).
+    let client = { x: 0, y: 0 };
+    const at = { x: 0, y: 0 };
+    const spring = { x: 0, y: 0, vx: 0, vy: 0 };
+    const hold = () => {
+      const inset = FADE + 16;
+      at.x = Math.min(Math.max(client.x - origin.x, inset), size.w - inset);
+      at.y = Math.min(Math.max(client.y - origin.y, MARGIN_Y - 34), MARGIN_Y + 34);
+    };
+
     let mass = 0;
     let target = 0;
     let frame = 0;
     let last = 0;
     const draw = (now) => {
       frame = 0;
-      const dt = last ? Math.min(now - last, 50) : 16;
+      const dt = last ? Math.min(now - last, 33) : 16;
       last = now;
       // Eases toward the target: quick to pull in, a little slower to let go.
       mass += (target - mass) * (1 - Math.exp(-dt / (target ? 150 : 120)));
+      hold();
+      const s = dt / 1000;
+      spring.vx += (170 * (at.x - spring.x) - 13 * spring.vx) * s;
+      spring.vy += (170 * (at.y - spring.y) - 13 * spring.vy) * s;
+      spring.x += spring.vx * s;
+      spring.y += spring.vy * s;
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.uniform2f(u.uRes, lens.width, lens.height);
-      gl.uniform2f(u.uOrigin, (origin.x + window.scrollX) * dpr, (origin.y + window.scrollY) * dpr);
+      gl.uniform1f(u.uScale, dpr);
       gl.uniform1f(u.uMass, mass);
       gl.uniform1f(u.uRing, RING * dpr);
-      gl.uniform1f(u.uGrid, 14 * dpr);
-      gl.uniform1f(u.uDot, 0.9 * dpr);
+      gl.uniform1f(u.uFade, FADE * dpr);
       gl.uniform1f(u.uTime, now / 1000);
+      gl.uniform2f(u.uSpring, spring.x * dpr, spring.y * dpr);
+      gl.uniform2f(u.uVel, spring.vx * dpr, spring.vy * dpr);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       if (!target && mass < 0.004) {
         document.body.classList.remove("warping");
@@ -388,13 +633,27 @@
       target = on ? 1 : 0;
       if (on && !document.body.classList.contains("warping")) {
         copyPatch();
+        hold();
+        Object.assign(spring, { x: at.x, y: at.y, vx: 0, vy: 0 });
         document.body.classList.add("warping");
       }
       if (!frame) frame = requestAnimationFrame(draw);
     };
-    link.addEventListener("mouseenter", () => warp(true));
-    link.addEventListener("mouseleave", () => warp(false));
-    link.addEventListener("focus", () => warp(true));
+    addEventListener("pointermove", (e) => {
+      client = { x: e.clientX, y: e.clientY };
+      if (!target) return;
+      // Stays on while the pointer is over the patch, not just the name.
+      const x = e.clientX - origin.x;
+      const y = e.clientY - origin.y;
+      if (x < 24 || y < 24 || x > size.w - 24 || y > size.h - 24) warp(false);
+    });
+    document.documentElement.addEventListener("pointerleave", () => warp(false));
+    link.addEventListener("pointerenter", (e) => { client = { x: e.clientX, y: e.clientY }; warp(true); });
+    link.addEventListener("focus", () => {
+      const name = link.getBoundingClientRect();
+      client = { x: name.left + name.width / 2, y: name.top + name.height / 2 };
+      warp(true);
+    });
     link.addEventListener("blur", () => warp(false));
     addEventListener("resize", () => { if (document.body.classList.contains("warping")) copyPatch(); });
   })();
