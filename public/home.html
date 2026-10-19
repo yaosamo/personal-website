@@ -27,13 +27,17 @@
       --dock-lift: 0.12; /* how far a grown icon rises off the floor, as a share of what it grew */
       --dock-speed: 70; /* how long the icons take to catch up, in ms; 0 is instant */
       --dock-ease: smooth; /* smooth, ease (in-out, no overshoot), spring (overshoots) or linear */
-      --icon: min(calc(var(--icon-size) * 1px), calc((100vw - 32px) / (3.7 + var(--dock-pad) / 75)));
+      /* On narrow screens icons shrink so the widest Dock fits: 4 icons, 3 gaps, 2 paddings. */
+      --icon: min(calc(var(--icon-size) * 1px), calc((100vw - 32px) / (5.05 + var(--dock-pad) / 75)));
       --u: calc(var(--icon) / 150); /* one design pixel at the icon's current size */
       color-scheme: light;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; height: 100%; }
+    html, body { margin: 0; min-height: 100%; }
+    html { height: 100%; }
     body {
+      display: flex;
+      flex-direction: column;
       background: var(--bg);
       color: var(--text);
       font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -50,12 +54,65 @@
       white-space: nowrap;
     }
     main {
-      min-height: 100%;
+      flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 96px 16px;
+      gap: 72px;
+      padding: 96px 16px 72px;
+      overflow-x: clip; /* the edge icons' hidden name labels would otherwise widen the page */
     }
+    /* A shelf: a small title over a Dock. The gap leaves room for icons swelling up out of it;
+       a name label may cover the title while it shows. */
+    .shelf {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(var(--icon) * 0.45);
+    }
+    .shelf h2 {
+      margin: 0;
+      color: rgb(0 0 0 / 0.45);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 16px;
+    }
+
+    /* Web tools: a list, each with a screenshot and its name and what it does beside it. */
+    .tools-shelf { gap: 20px; }
+    .tools {
+      display: grid;
+      gap: 8px;
+      width: min(100%, 560px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .tool {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px;
+      border-radius: 14px;
+      color: inherit;
+      text-decoration: none;
+      transition: background-color 0.12s ease;
+    }
+    .tool:hover { background: rgb(0 0 0 / 0.035); }
+    .tool:focus-visible { outline: 2px solid var(--focus); outline-offset: 0; }
+    .tool img {
+      flex: none;
+      width: 128px;
+      height: 80px;
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: top;
+      box-shadow: 0 0 0 0.5px rgb(0 0 0 / 0.12), 0 2px 8px rgb(0 0 0 / 0.06);
+    }
+    .about { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .name { font-size: 15px; font-weight: 500; line-height: 20px; }
+    .blurb { color: rgb(0 0 0 / 0.5); font-size: 13px; line-height: 18px; }
 
     /* The Dock, in frosted glass the way macOS draws it: a light tint, a bright rim that catches
        the light top left, a hairline to hold the edge on a white page, a soft shadow. It keeps its
@@ -163,6 +220,9 @@
       height: calc(60 * var(--u));
     }
 
+    /* Time: the App Store icon, edge to edge. */
+    .picture img { inset: 0; width: 100%; height: 100%; }
+
     /* Appmarks: two windows, a yellow one and a white one on top. */
     .appmarks { background: #404040; }
     .card {
@@ -218,11 +278,7 @@
     }
 
     footer {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 56px;
-      padding: 0 16px;
+      padding: 0 16px 56px;
       text-align: center;
       font-size: 16px;
     }
@@ -252,56 +308,108 @@
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="dock-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+        <stop offset="1" stop-color="#f4f4f7" stop-opacity="0.82" />
+      </linearGradient>
+      <linearGradient id="dock-rim" x1="0" y1="0" x2="0.45" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="1" />
+        <stop offset="0.3" stop-color="#fff" stop-opacity="0.25" />
+        <stop offset="0.55" stop-color="#fff" stop-opacity="0" />
+        <stop offset="1" stop-color="#fff" stop-opacity="0.7" />
+      </linearGradient>
+    </defs>
+  </svg>
   <main>
     <h1 class="visually-hidden">Yaosamo</h1>
-    <nav class="dock" aria-label="Apps">
-      <svg class="dock-shape" aria-hidden="true">
-        <defs>
-          <linearGradient id="dock-fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
-            <stop offset="1" stop-color="#f4f4f7" stop-opacity="0.82" />
-          </linearGradient>
-          <linearGradient id="dock-rim" x1="0" y1="0" x2="0.45" y2="1">
-            <stop offset="0" stop-color="#fff" stop-opacity="1" />
-            <stop offset="0.3" stop-color="#fff" stop-opacity="0.25" />
-            <stop offset="0.55" stop-color="#fff" stop-opacity="0" />
-            <stop offset="1" stop-color="#fff" stop-opacity="0.7" />
-          </linearGradient>
-        </defs>
-        <path class="edge" fill="url(#dock-fill)" stroke="rgb(0 0 0 / 0.09)" stroke-width="1" />
-        <path class="rim" fill="none" stroke="url(#dock-rim)" stroke-width="1" />
-      </svg>
-      <ul class="apps">
-        <li>
-          <a class="app" href="https://nothing.yaosamo.com" aria-label="Nothing">
-            <span class="icon nothing" aria-hidden="true">
-              <img src="/images/apps/nothing-art.png" alt="" />
-              <span class="bar"></span>
+    <section class="shelf" aria-labelledby="apps-title">
+      <h2 id="apps-title">Mac and iPhone apps</h2>
+      <nav class="dock" aria-labelledby="apps-title">
+        <svg class="dock-shape" aria-hidden="true">
+          <path class="edge" fill="url(#dock-fill)" stroke="rgb(0 0 0 / 0.09)" stroke-width="1" />
+          <path class="rim" fill="none" stroke="url(#dock-rim)" stroke-width="1" />
+        </svg>
+        <ul class="apps">
+          <li>
+            <a class="app" href="https://nothing.yaosamo.com" aria-label="Nothing">
+              <span class="icon nothing" aria-hidden="true">
+                <img src="/images/apps/nothing-art.png" alt="" />
+                <span class="bar"></span>
+              </span>
+              <span class="tip" aria-hidden="true">Nothing</span>
+            </a>
+          </li>
+          <li>
+            <a class="app" href="https://dots.yaosamo.com" aria-label="Dots &amp; Clouds">
+              <span class="icon dots" aria-hidden="true">
+                <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+                <img class="sun" src="/images/apps/dots-sun.svg" alt="" />
+                <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+              </span>
+              <span class="tip" aria-hidden="true">Dots &amp; Clouds</span>
+            </a>
+          </li>
+          <li>
+            <a class="app" href="https://apps.apple.com/us/app/yaosamo-time-timezone-clock/id6759643546" aria-label="Time">
+              <span class="icon picture" aria-hidden="true"><img src="/images/apps/time-art.png" alt="" /></span>
+              <span class="tip" aria-hidden="true">Time</span>
+            </a>
+          </li>
+          <li>
+            <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
+              <span class="icon appmarks" aria-hidden="true">
+                <span class="card yellow"></span>
+                <span class="card white"></span>
+              </span>
+              <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
             </span>
-            <span class="tip" aria-hidden="true">Nothing</span>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="shelf tools-shelf" aria-labelledby="tools-title">
+      <h2 id="tools-title">Web tools</h2>
+      <ul class="tools">
+        <li>
+          <a class="tool" href="https://qr.yaosamo.com">
+            <img src="/images/tools/qr.jpg" alt="" width="640" height="400" loading="lazy" />
+            <span class="about">
+              <span class="name">QR Code Machine</span>
+              <span class="blurb">The simplest QR code generator on the internet.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="app" href="https://dots.yaosamo.com" aria-label="Dots &amp; Clouds">
-            <span class="icon dots" aria-hidden="true">
-              <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
-              <img class="sun" src="/images/apps/dots-sun.svg" alt="" />
-              <img class="clouds" src="/images/apps/dots-clouds-art.png" alt="" />
+          <a class="tool" href="https://time.yaosamo.com">
+            <img src="/images/tools/time.jpg" alt="" width="640" height="400" loading="lazy" />
+            <span class="about">
+              <span class="name">When There</span>
+              <span class="blurb">Compare the time across cities and find an hour that works.</span>
             </span>
-            <span class="tip" aria-hidden="true">Dots &amp; Clouds</span>
           </a>
         </li>
         <li>
-          <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
-            <span class="icon appmarks" aria-hidden="true">
-              <span class="card yellow"></span>
-              <span class="card white"></span>
+          <a class="tool" href="https://internet.yaosamo.com">
+            <img src="/images/tools/internet.jpg" alt="" width="640" height="400" loading="lazy" />
+            <span class="about">
+              <span class="name">What internet knows about me</span>
+              <span class="blurb">Check what everyone can see.</span>
             </span>
-            <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
-          </span>
+          </a>
+        </li>
+        <li>
+          <a class="tool" href="https://keyboard-checker.yaosamo.com">
+            <img src="/images/tools/keyboard-checker.jpg" alt="" width="640" height="400" loading="lazy" />
+            <span class="about">
+              <span class="name">Keyboard Checker</span>
+              <span class="blurb">Press every key to test a split or regular keyboard.</span>
+            </span>
+          </a>
         </li>
       </ul>
-    </nav>
+    </section>
   </main>
   <footer>
     <p><span class="lead">Applications, services and games designed by </span><a href="https://design.yaosamo.com" target="_blank" rel="noopener">Yaosamo</a></p>
@@ -353,23 +461,24 @@
     // The Dock: redrawn whenever it changes size (it widens as icons swell). Its corners are
     // tighter than the icons' plus the padding: 55 for a 150 icon, as on the Mac.
     const DOCK_RADIUS = 55 / 150;
-    const dock = document.querySelector(".dock");
-    const list = dock.querySelector(".apps");
-    const svg = dock.querySelector(".dock-shape");
-    const edge = svg.querySelector(".edge");
-    const rim = svg.querySelector(".rim");
-    const draw = () => {
-      const w = dock.offsetWidth;
-      const h = dock.offsetHeight;
-      const pad = parseFloat(getComputedStyle(list).paddingTop);
-      const radius = (h - 2 * pad) * DOCK_RADIUS;
-      svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
-      edge.setAttribute("d", squircle(w, h, radius));
-      rim.setAttribute("d", squircle(w, h, radius, 1));
-    };
-    draw();
-    new ResizeObserver(draw).observe(dock);
-    dock.classList.add("shaped");
+    for (const dock of document.querySelectorAll(".dock")) {
+      const list = dock.querySelector(".apps");
+      const svg = dock.querySelector(".dock-shape");
+      const edge = svg.querySelector(".edge");
+      const rim = svg.querySelector(".rim");
+      const draw = () => {
+        const w = dock.offsetWidth;
+        const h = dock.offsetHeight;
+        const pad = parseFloat(getComputedStyle(list).paddingTop);
+        const radius = (h - 2 * pad) * DOCK_RADIUS;
+        svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+        edge.setAttribute("d", squircle(w, h, radius));
+        rim.setAttribute("d", squircle(w, h, radius, 1));
+      };
+      draw();
+      new ResizeObserver(draw).observe(dock);
+      dock.classList.add("shaped");
+    }
   })();
 
   (() => {
@@ -377,71 +486,72 @@
     // the swell falls off over a few icons either side (--dock-reach); the gaps widen with the icons,
     // so the Dock stretches, staying centred. Distances are measured from where the icons sit at
     // rest, so growing doesn't feed back.
-    const dock = document.querySelector(".dock");
     if (matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(hover: hover)").matches) return;
-    const apps = [...dock.querySelectorAll(".app")];
-    const scale = apps.map(() => 1);
-    const speed = apps.map(() => 0); // how fast each scale is changing, a second
-    const list = dock.querySelector(".apps");
-    let pointer = null;
-    let frame = 0;
-    let last = 0;
-    // Moves icon i's scale toward want. The target moves with the pointer, so these are motions
-    // that pick up from wherever they are rather than tweens that would restart every frame.
-    // The springs take about `time` to settle.
-    const approach = (i, want, dt, time, ease) => {
-      if (time <= 0) { scale[i] = want; speed[i] = 0; return; }
-      if (ease === "linear") {
-        const step = (dt / time) * Math.max(1, Math.abs(want - 1)); // the full swing in `time`
-        scale[i] += Math.max(-step, Math.min(step, want - scale[i]));
-        return;
-      }
-      if (ease === "ease" || ease === "spring") {
-        const omega = (ease === "spring" ? 7 : 6) / time;
-        const damping = ease === "spring" ? 0.4 : 1; // 1 is critical: no overshoot
-        for (let left = dt; left > 0; left -= 0.004) {
-          const h = Math.min(left, 0.004);
-          speed[i] += (omega * omega * (want - scale[i]) - 2 * damping * omega * speed[i]) * h;
-          scale[i] += speed[i] * h;
+    for (const dock of document.querySelectorAll(".dock")) {
+      const apps = [...dock.querySelectorAll(".app")];
+      const scale = apps.map(() => 1);
+      const speed = apps.map(() => 0); // how fast each scale is changing, a second
+      const list = dock.querySelector(".apps");
+      let pointer = null;
+      let frame = 0;
+      let last = 0;
+      // Moves icon i's scale toward want. The target moves with the pointer, so these are motions
+      // that pick up from wherever they are rather than tweens that would restart every frame.
+      // The springs take about `time` to settle.
+      const approach = (i, want, dt, time, ease) => {
+        if (time <= 0) { scale[i] = want; speed[i] = 0; return; }
+        if (ease === "linear") {
+          const step = (dt / time) * Math.max(1, Math.abs(want - 1)); // the full swing in `time`
+          scale[i] += Math.max(-step, Math.min(step, want - scale[i]));
+          return;
         }
-        return;
-      }
-      scale[i] += (want - scale[i]) * (1 - Math.exp(-dt / time)); // smooth: an exponential ease-out
-    };
-    const tick = (now) => {
-      frame = 0;
-      const dt = last ? Math.min(now - last, 50) : 16;
-      last = now;
-      const root = getComputedStyle(document.documentElement);
-      const grow = parseFloat(root.getPropertyValue("--dock-grow")) - 1;
-      const reach = parseFloat(root.getPropertyValue("--dock-reach")); // in icons, with their gaps
-      const time = Math.max(0, parseFloat(root.getPropertyValue("--dock-speed")) || 0) / 1000;
-      const ease = root.getPropertyValue("--dock-ease").trim();
-      const icon = parseFloat(getComputedStyle(apps[0]).width) / scale[0];
-      const style = getComputedStyle(list);
-      const gap = parseFloat(style.columnGap) || 0;
-      const box = dock.getBoundingClientRect();
-      const mid = box.left + box.width / 2;
-      let settled = true;
-      apps.forEach((app, i) => {
-        const rest = mid + (i - (apps.length - 1) / 2) * (icon + gap);
-        const away = pointer === null ? reach : Math.abs(pointer - rest) / (icon + gap);
-        const want = away >= reach ? 1 : 1 + grow * (1 + Math.cos((Math.PI * away) / reach)) / 2;
-        approach(i, want, dt / 1000, time, ease);
-        if (Math.abs(want - scale[i]) > 0.001 || Math.abs(speed[i]) > 0.01) settled = false;
-        else { scale[i] = want; speed[i] = 0; }
-        app.style.setProperty("--s", scale[i].toFixed(4));
-      });
-      // Each gap grows with the icons either side of it.
-      apps.forEach((app, i) => {
-        if (i) app.parentElement.style.marginLeft = `${(gap * ((scale[i - 1] + scale[i]) / 2 - 1)).toFixed(2)}px`;
-      });
-      if (settled) { last = 0; return; }
-      frame = requestAnimationFrame(tick);
-    };
-    const go = () => { if (!frame) frame = requestAnimationFrame(tick); };
-    dock.addEventListener("pointermove", (e) => { pointer = e.clientX; go(); });
-    dock.addEventListener("pointerleave", () => { pointer = null; go(); });
+        if (ease === "ease" || ease === "spring") {
+          const omega = (ease === "spring" ? 7 : 6) / time;
+          const damping = ease === "spring" ? 0.4 : 1; // 1 is critical: no overshoot
+          for (let left = dt; left > 0; left -= 0.004) {
+            const h = Math.min(left, 0.004);
+            speed[i] += (omega * omega * (want - scale[i]) - 2 * damping * omega * speed[i]) * h;
+            scale[i] += speed[i] * h;
+          }
+          return;
+        }
+        scale[i] += (want - scale[i]) * (1 - Math.exp(-dt / time)); // smooth: an exponential ease-out
+      };
+      const tick = (now) => {
+        frame = 0;
+        const dt = last ? Math.min(now - last, 50) : 16;
+        last = now;
+        const root = getComputedStyle(document.documentElement);
+        const grow = parseFloat(root.getPropertyValue("--dock-grow")) - 1;
+        const reach = parseFloat(root.getPropertyValue("--dock-reach")); // in icons, with their gaps
+        const time = Math.max(0, parseFloat(root.getPropertyValue("--dock-speed")) || 0) / 1000;
+        const ease = root.getPropertyValue("--dock-ease").trim();
+        const icon = parseFloat(getComputedStyle(apps[0]).width) / scale[0];
+        const style = getComputedStyle(list);
+        const gap = parseFloat(style.columnGap) || 0;
+        const box = dock.getBoundingClientRect();
+        const mid = box.left + box.width / 2;
+        let settled = true;
+        apps.forEach((app, i) => {
+          const rest = mid + (i - (apps.length - 1) / 2) * (icon + gap);
+          const away = pointer === null ? reach : Math.abs(pointer - rest) / (icon + gap);
+          const want = away >= reach ? 1 : 1 + grow * (1 + Math.cos((Math.PI * away) / reach)) / 2;
+          approach(i, want, dt / 1000, time, ease);
+          if (Math.abs(want - scale[i]) > 0.001 || Math.abs(speed[i]) > 0.01) settled = false;
+          else { scale[i] = want; speed[i] = 0; }
+          app.style.setProperty("--s", scale[i].toFixed(4));
+        });
+        // Each gap grows with the icons either side of it.
+        apps.forEach((app, i) => {
+          if (i) app.parentElement.style.marginLeft = `${(gap * ((scale[i - 1] + scale[i]) / 2 - 1)).toFixed(2)}px`;
+        });
+        if (settled) { last = 0; return; }
+        frame = requestAnimationFrame(tick);
+      };
+      const go = () => { if (!frame) frame = requestAnimationFrame(tick); };
+      dock.addEventListener("pointermove", (e) => { pointer = e.clientX; go(); });
+      dock.addEventListener("pointerleave", () => { pointer = null; go(); });
+    }
   })();
 
   (() => {
@@ -655,7 +765,10 @@
       warp(true);
     });
     link.addEventListener("blur", () => warp(false));
-    addEventListener("resize", () => { if (document.body.classList.contains("warping")) copyPatch(); });
+    // The patch is fixed to the window, so it follows the line when the page resizes or scrolls.
+    const follow = () => { if (document.body.classList.contains("warping")) copyPatch(); };
+    addEventListener("resize", follow);
+    addEventListener("scroll", follow, { passive: true });
   })();
   </script>
 </body>
