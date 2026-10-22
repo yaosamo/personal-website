@@ -220,21 +220,8 @@
       height: calc(60 * var(--u));
     }
 
-    /* Time: the App Store icon, edge to edge. */
+    /* Time and Bubbleg: the app's own icon, edge to edge. */
     .picture img { inset: 0; width: 100%; height: 100%; }
-
-    /* Appmarks: two windows, a yellow one and a white one on top. */
-    .appmarks { background: #404040; }
-    .card {
-      position: absolute;
-      width: calc(51 * var(--u));
-      height: calc(42 * var(--u));
-      overflow: hidden;
-      border-radius: calc(8 * var(--u));
-      background: linear-gradient(var(--c) 0 calc(12 * var(--u)), var(--body) calc(12 * var(--u)));
-    }
-    .card.yellow { left: calc(35 * var(--u)); top: calc(43 * var(--u)); --c: rgb(255 238 0 / 0.9); --body: rgb(255 238 0 / 0.2); }
-    .card.white { left: calc(64 * var(--u)); top: calc(64 * var(--u)); --c: rgb(248 248 248 / 0.9); --body: rgb(248 248 248 / 0.2); }
 
     /* The app's name over the Dock, the way macOS labels one: a soft pill with a
        tail that curves out of it, rather than a hard triangle. Pill and tail share one flat
@@ -358,13 +345,10 @@
             </a>
           </li>
           <li>
-            <span class="app" tabindex="0" role="img" aria-label="Appmarks, coming soon">
-              <span class="icon appmarks" aria-hidden="true">
-                <span class="card yellow"></span>
-                <span class="card white"></span>
-              </span>
-              <span class="tip" aria-hidden="true">Appmarks — coming soon</span>
-            </span>
+            <a class="app" href="https://bubbleg.yaosamo.com" aria-label="Bubbleg" target="_blank" rel="noopener">
+              <span class="icon picture" aria-hidden="true"><img src="/images/apps/bubbleg-art.png" alt="" /></span>
+              <span class="tip" aria-hidden="true">Bubbleg</span>
+            </a>
           </li>
         </ul>
       </nav>
