@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Layout from "../components/layout";
 import styles from "../components/about.module.css";
 import Projects from "../components/data/side-projects.json";
@@ -16,7 +15,11 @@ function SideProjects({ Project, i }) {
             <p>{Project.name}</p>
             <p className={styles.desc}>{Project.desc}</p>
           </div>
-          <img src="../images/home/Arrow-right.svg" className={styles.arrow} />
+          <img
+            src="../images/home/Arrow-right.svg"
+            className={styles.arrow}
+            alt=""
+          />
         </div>
       </a>
     </>
@@ -25,10 +28,10 @@ function SideProjects({ Project, i }) {
 
 export default function About() {
   return (
-    <Layout>
-      <Head>
-        <title>Hi, it's Yaric</title>
-      </Head>
+    <Layout
+      title="Hi, it's Yaric: About Yaroslav Samoylov"
+      description="Yaroslav Samoylov is a product designer and design engineer in Oregon. His side projects, designs for friends, and the software and setup he uses."
+    >
       <div className="content">
         <div className={styles.container}>
           <Link href="/">
@@ -36,6 +39,7 @@ export default function About() {
               <img
                 src="../images/home/Arrow-right.svg"
                 className={styles.arrow}
+                alt="Back"
               />
             </div>
           </Link>
@@ -52,7 +56,11 @@ export default function About() {
             ))}
           </div>
 
-          <img className={styles.me} src="../images/about/me2@2x.webp" />
+          <img
+            className={styles.me}
+            src="../images/about/me2@2x.webp"
+            alt="Yaroslav Samoylov"
+          />
 
           <div>
             <div className={styles.timestamp}>
@@ -159,7 +167,12 @@ export default function About() {
             </p>
             <div className={styles.designs}>
               {FriendlyDesigns.map((design, i) => (
-                <img className={styles.designimage} src={design.img} />
+                <img
+                  className={styles.designimage}
+                  src={design.img}
+                  alt="A design for a friend"
+                  key={i}
+                />
               ))}
             </div>
           </div>

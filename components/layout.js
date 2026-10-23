@@ -3,7 +3,8 @@ import StudiosData from "../components/data/studios-data";
 import Links from "../components/data/links-data.json";
 import styles from "../components/layout.module.css";
 import { useState } from "react";
-import Head from "next/dist/shared/lib/head";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 function Footer() {
   const PeopleSorted = []
@@ -122,26 +123,40 @@ function Footer() {
   );
 }
 
-// Main container that being used everywhere with imported CSS class
-export default function Layout({ children, hideFooter = false }) {
+const SITE = "https://design.yaosamo.com";
+const DEFAULT_TITLE = "Yaroslav Samoylov, Product Designer & Design Engineer";
+const DEFAULT_DESCRIPTION =
+  "Yaroslav Samoylov is a product designer and design engineer in Oregon. Portfolio of car-buying products, SwiftUI and React prototypes, and side projects.";
+
+// Main container that being used everywhere with imported CSS class.
+// Pages pass their own title, description and share image; the canonical URL comes from the route.
+export default function Layout({
+  children,
+  hideFooter = false,
+  title = DEFAULT_TITLE,
+  description = DEFAULT_DESCRIPTION,
+  image = `${SITE}/intro.jpg`,
+}) {
+  const url = `${SITE}${useRouter().pathname}`;
   return (
     <>
       <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yaosamo" />
         <meta name="twitter:creator" content="@yaosamo" />
-        <meta property="og:url" content="https://design.yaosamo.com" />
-        <meta property="og:title" content="Yaroslav Samoylov" />
-        <meta
-          property="og:description"
-          content="Curious designer based in Oregon"
-        />
-        <meta property="og:image" content="https://design.yaosamo.com/intro.jpg" />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Yaroslav Samoylov" />
-        <meta name="description" content="Curious designer based in Oregon" />
-        <link rel="icon" href="favicon.svg" />
-        <link rel="mask-icon" href="favicon.svg" color="#000000;" />
+        <meta name="author" content="Yaroslav Samoylov" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#FFFFFF" />
       </Head>
       {children}

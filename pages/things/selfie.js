@@ -317,6 +317,7 @@ export default function SelfieApp() {
       <Head>
         <title>Quick Selfie</title>
         <meta name="description" content="Look good, capture it, share it ✨" />
+        <link rel="canonical" href="https://selfie.yaosamo.com/" />
       </Head>
       
       <div className={styles.pageWrap}>

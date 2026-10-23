@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../../components/layout";
 import projects from "../../components/data/side-projects.json";
 import styles from "../../components/lilthings.module.css";
@@ -34,20 +33,11 @@ const cards = projects.map((project, index) => ({
 
 export default function LilThings() {
   return (
-    <Layout hideFooter>
-      <Head>
-        <title>Lil Things by Yaroslav Samoylov</title>
-        <meta property="og:url" content="https://lilthings.yaosamo.com" />
-        <meta property="og:title" content="Lil Things" />
-        <meta
-          property="og:description"
-          content="A small collection of side projects by Yaroslav Samoylov."
-        />
-        <meta
-          name="description"
-          content="A small collection of side projects by Yaroslav Samoylov."
-        />
-      </Head>
+    <Layout
+      hideFooter
+      title="Lil Things by Yaroslav Samoylov"
+      description="A small collection of side projects by Yaroslav Samoylov: apps, web tools and experiments."
+    >
 
 
       <style jsx global>{`

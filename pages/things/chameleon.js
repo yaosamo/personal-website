@@ -1,36 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Layout from "../../components/layout";
 import css from "../../components/chameleon.module.css";
 
 export default function Icons() {
   return (
-    <Layout>
-      <Head>
-        <title>Chameleon / Audiobook Player</title>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yaosamo" />
-        <meta name="twitter:creator" content="@yaosamo" />
-        <meta
-          property="og:url"
-          content="https://design.yaosamo.com/things/chameleon"
-        />
-        <meta property="og:title" content="Chameleon / Audiobook Player" />
-        <meta
-          property="og:description"
-          content="Listen your audiobooks on iCloud."
-        />
-        <meta
-          property="og:image"
-          content="https://design.yaosamo.com/images/chameleon/intro.png"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Chameleon / Audiobook Player" />
-        <meta name="description" content="Listen your audiobooks on iCloud." />
-      </Head>
+    <Layout
+      title="Chameleon: Audiobook Player"
+      description="Chameleon is an audiobook player designed for long books: listen to your audiobooks from iCloud, with playlists and the last book remembered."
+      image="https://design.yaosamo.com/images/chameleon/intro.png"
+    >
       <Link href="/">
         <div className="arrowShape">
-          <img src="../images/home/Arrow-right.svg" className="arrow" />
+          <img src="../images/home/Arrow-right.svg" className="arrow" alt="Back" />
         </div>
       </Link>
       <div className={css.roundedFont}>
@@ -38,7 +19,7 @@ export default function Icons() {
           <div className={css.container}>
             <div className={css.stickyHead}>
               <div className={css.logo}>
-                <img src="../../images/chameleon/logo@2x.png" />
+                <img src="../../images/chameleon/logo@2x.png" alt="Chameleon app icon" />
               </div>
               <p className={css.subTitle}>Audiobook player</p>
               <h1 className={css.title}>Chameleon</h1>
@@ -66,21 +47,22 @@ export default function Icons() {
                   />
                   <img
                     src="../../images/chameleon/design.png"
+                    alt="Chameleon user interface design"
                     title="Image of User Interface Design"
                   />
                 </video>
                 <a>Design</a>
               </div>
               <div className={css.contentItem}>
-                <img src="../../images/chameleon/2@2x.png" />
+                <img src="../../images/chameleon/2@2x.png" alt="Chameleon playlists" />
                 <a>Playlists</a>
               </div>
               <div className={css.contentItem}>
-                <img src="../../images/chameleon/3@2x.png" />
+                <img src="../../images/chameleon/3@2x.png" alt="Importing books into Chameleon" />
                 <a>Import</a>
               </div>
               <div className={css.contentItem}>
-                <img src="../../images/chameleon/4@2x.png" />
+                <img src="../../images/chameleon/4@2x.png" alt="Chameleon remembers the last book played" />
                 <a>
                   Remembers
                   <br /> Last Book Played

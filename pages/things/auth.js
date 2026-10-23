@@ -116,7 +116,8 @@ export default function Auth() {
   return (
     <>
       <Head>
-        {" "}
+        {/* A sign-in screen mockup, not a page for search */}
+        <meta name="robots" content="noindex" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"

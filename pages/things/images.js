@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs'
 import path from 'path'
+import Head from 'next/head'
 
 
 
@@ -8,6 +9,10 @@ import path from 'path'
 function Blog({ posts }) {
   return (
     <ul>
+      {/* A build-time listing of the screenshots, not a page for search */}
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       {posts.map((post) => (
         <li>
           <h3>{post.filename}</h3>

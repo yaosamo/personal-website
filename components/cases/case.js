@@ -25,7 +25,7 @@ function Items({ Work, Item, i }) {
           ) : Item.video ? (
             <Videos Item={Item} Img={img} key={i} />
           ) : (
-            <Images Item={Item} Img={img} key={i} />
+            <Images Item={Item} Img={img} Alt={Work.title} key={i} />
           )
         )}
       </div>
@@ -49,7 +49,7 @@ export default function Case({ Work }) {
               </a>
             }
           </p>
-          <h1 className="headingL weightMedium">{Work.title}</h1>
+          <h2 className="headingL weightMedium">{Work.title}</h2>
           <div className={styles.contributors}>
             {Work.description.map((desc, i) => (
               <Descriptions Desc={desc.text} key={i} />

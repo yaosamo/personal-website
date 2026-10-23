@@ -9,6 +9,8 @@ const HOST_REWRITES = {
 // page and sends every other path to the same path there.
 const MOVED_HOSTS = ["yaosamo.com", "www.yaosamo.com"];
 const PORTFOLIO_ORIGIN = "https://design.yaosamo.com";
+// The apex's own robots, sitemap, share image and touch icon live in public/apex.
+const APEX_FILES = ["/robots.txt", "/sitemap.xml", "/og.png", "/apple-touch-icon.png"];
 
 export function middleware(request) {
   const host = request.headers.get("host")?.split(":")[0] ?? "";
@@ -19,6 +21,15 @@ export function middleware(request) {
       const url = request.nextUrl.clone();
       url.pathname = "/home.html";
       return NextResponse.rewrite(url);
+    }
+    if (APEX_FILES.includes(pathname)) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/apex${pathname}`;
+      return NextResponse.rewrite(url);
+    }
+    // The apps page's own images load here rather than through a redirect.
+    if (pathname.startsWith("/images/")) {
+      return NextResponse.next();
     }
     return NextResponse.redirect(
       `${PORTFOLIO_ORIGIN}${pathname}${request.nextUrl.search}`,
